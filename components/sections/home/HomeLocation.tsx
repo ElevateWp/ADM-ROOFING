@@ -21,7 +21,7 @@ export default function HomeLocation() {
               Localização & Horário de Atendimento
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Visite a Clínica em Itapiranga
+              Visite a Clínica em Manaus
             </h2>
           </div>
         </AnimateOnScroll>
@@ -108,13 +108,13 @@ export default function HomeLocation() {
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/logo.png"
-                  alt="DentalDreams - Itapiranga"
+                  alt="Saude do Sorriso - Manaus"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  DentalDreams • Itapiranga
+                  Saude do Sorriso • Manaus
                 </div>
               </div>
             </AnimateOnScroll>
@@ -126,10 +126,10 @@ export default function HomeLocation() {
                     Atendimento Odontológico de Excelência
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Clínica odontológica em Itapiranga
+                    Clínica odontológica em Manaus
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    DentalDreams em Itapiranga, Amazonas.
+                    Saude do Sorriso em Manaus, Amazonas.
                   </p>
                   <p className="font-body text-13 text-forest-ink/70 mb-3 leading-relaxed">
                     Ambiente LGBTQ+ friendly · Identifica-se como empresa de propriedade feminina.
