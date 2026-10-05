@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'braces')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Aparelhos Ortodônticos & Aligners em Manaus',
+  title: 'Aparelhos Ortodônticos & Aligners em Santarém',
   description:
-    'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Manaus com planejamento cuidadoso e atendimento humanizado.',
+    'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Santarém com planejamento cuidadoso e atendimento humanizado.',
   pathname: '/braces/',
 });
 

@@ -10,17 +10,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('http://127.0.0.1:3001'),
   title: {
-    default: 'Saude do Sorriso | Clínica Odontológica em Manaus',
+    default: 'Clinica Odonto Castro | Clínica Odontológica em Santarém',
     template: '%s',
   },
   description:
-    'Saude do Sorriso, em Manaus - Amazonas. Telefone: +55 92 9412-6974.',
+    'Clinica Odonto Castro, em Santarém - Pará. Telefone: +55 93 99203-8371.',
   keywords: [
-    'Saude do Sorriso',
-    'Clínica Odontológica Manaus',
-    'Dentista Manaus, Amazonas',
+    'Clinica Odonto Castro',
+    'Clínica Odontológica Santarém',
+    'Dentista Santarém, Pará',
   ],
-  authors: [{ name: 'Saude do Sorriso' }],
+  authors: [{ name: 'Clinica Odonto Castro' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F1FAFC] selection:text-[#163F55]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F2FAFC] selection:text-[#123B52]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

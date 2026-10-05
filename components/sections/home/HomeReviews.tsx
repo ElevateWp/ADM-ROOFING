@@ -16,6 +16,7 @@ export default function HomeReviews() {
               <h2 className="font-display text-33 md:text-41 text-paper">
                 O que nossos pacientes dizem sobre nosso atendimento
               </h2>
+              <p className="mt-3 font-body text-14 text-paper/70">4,9 de 5 · 24 avaliações no Google</p>
             </div>
           </div>
         </AnimateOnScroll>
@@ -29,7 +30,7 @@ export default function HomeReviews() {
             >
               <div className="flex flex-col justify-between p-8 border border-mist/20 bg-paper/5 h-full hover:bg-paper/10 transition-colors shadow-sm">
                 <div>
-                  <div className="flex items-center gap-1 text-[#16C9D8] text-14 mb-4">
+                  <div className="flex items-center gap-1 text-[#12B5D8] text-14 mb-4">
                     ★★★★★
                   </div>
                   <blockquote className="font-display text-20 md:text-23 text-paper leading-relaxed mb-8">

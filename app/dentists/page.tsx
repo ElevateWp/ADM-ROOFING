@@ -14,7 +14,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Equipe Clínica',
   description:
-    'Conheça Dra. Francisca Ferreira, dentista da Saude do Sorriso em Manaus.',
+    'Conheça o dentista da Clinica Odonto Castro em Santarém.',
   pathname: '/dentists/',
 });
 
@@ -34,7 +34,7 @@ export default function DentistsPage() {
                 </span>
                 <WordRevealH1 text="Atendimento odontológico dedicado, ágil e humanizado." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Dra. Francisca Ferreira atendem na Saude do Sorriso, em Manaus." />
+                  <ScrubbedParagraph text="Nosso dentista atende na Clinica Odonto Castro, em Santarém." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -44,7 +44,7 @@ export default function DentistsPage() {
                 <div className="p-6 bg-paper border border-mist space-y-2 font-body text-13 text-forest-ink/80 shadow-sm">
                   <span className="font-medium text-forest block">Atendimento odontológico</span>
                   <p className="text-forest-ink/70">
-                    Atendimento realizado na Saude do Sorriso, com atendimento em consultório e serviço domiciliar.
+                    Atendimento realizado na Clinica Odonto Castro, com atendimento em consultório e serviço domiciliar.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -62,7 +62,7 @@ export default function DentistsPage() {
                 Nossa equipe
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça nossas dentistas
+                Conheça nosso dentista
               </h2>
             </div>
           </AnimateOnScroll>
@@ -117,7 +117,7 @@ export default function DentistsPage() {
                     Odontologia Domiciliar
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Atendimento domiciliar humanizado e completo em Manaus para pacientes que necessitam de cuidados em casa.
+                    Atendimento domiciliar humanizado e completo em Santarém para pacientes que necessitam de cuidados em casa.
                   </p>
                 </div>
                 <Link href="/contact/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -219,7 +219,7 @@ export default function DentistsPage() {
                   “Implantes carga imediata pode trazer seu sorriso em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — Dra. Francisca Ferreira
+                  — Gerlande Castro
                 </span>
               </div>
             </div>

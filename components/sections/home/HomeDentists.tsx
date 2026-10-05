@@ -15,7 +15,7 @@ export default function HomeDentists() {
                 Nossa equipe
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça nossas dentistas
+                Conheça nosso dentista
               </h2>
             </div>
             <Link

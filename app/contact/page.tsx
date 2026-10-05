@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contato & Localização',
   description:
-    'Entre em contato com a Saude do Sorriso em Manaus, Amazonas. Telefone: +55 92 9412-6974.',
+    'Entre em contato com a Clinica Odonto Castro em Santarém, Pará. Telefone: +55 93 99203-8371.',
   pathname: '/contact/',
 });
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
                 </span>
                 <WordRevealH1 text="Fale com nossa equipe odontológica." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Entre em contato com a Saude do Sorriso em Manaus, Amazonas.
+                  Entre em contato com a Clinica Odonto Castro em Santarém, Pará.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
                       <div>
                         <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=559294126974"
+                          href="https://api.whatsapp.com/send?phone=5593992038371"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
@@ -156,7 +156,7 @@ export default function ContactPage() {
                       Abrir no Google Maps
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=559294126974"
+                      href="https://api.whatsapp.com/send?phone=5593992038371"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"

@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Dra. Francisca Ferreira',
+      name: author?.name || 'Gerlande Castro',
     },
     publisher: {
       '@type': 'Organization',

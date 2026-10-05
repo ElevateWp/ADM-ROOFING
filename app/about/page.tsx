@@ -16,14 +16,14 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Sobre o Consultório',
   description:
-    'Conheça a Saude do Sorriso e sua equipe odontológica em Manaus.',
+    'Conheça a Clinica Odonto Castro e sua equipe odontológica em Santarém.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
     year: '1993',
-    title: 'Fundação do Consultório em Manaus',
+    title: 'Fundação do Consultório em Santarém',
     description: 'A clínica inicia sua trajetória com foco em reabilitação oral, implantodontia e atendimento odontológico domiciliar.',
   },
   {
@@ -58,7 +58,7 @@ const APPROACH_STEPS = [
   },
   {
     title: 'Atendimento Humanizado no Consultório & Domiciliar',
-    description: 'Cuidado atencioso, seguro e acolhedor na clínica ou no conforto da sua residência em Manaus.',
+    description: 'Cuidado atencioso, seguro e acolhedor na clínica ou no conforto da sua residência em Santarém.',
   },
 ];
 
@@ -78,7 +78,7 @@ export default function AboutPage() {
                 </span>
                 <WordRevealH1 text="Compromisso com seu sorriso, agilidade e excelência técnica." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Na Saude do Sorriso, Dra. Francisca Ferreira oferecem atendimento odontológico em Manaus." />
+                  <ScrubbedParagraph text="Na Clinica Odonto Castro, nosso dentista oferece atendimento odontológico em Santarém." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Dentistas</span>
-                    <span className="font-medium text-forest">Dra. Francisca Ferreira</span>
+                    <span className="font-medium text-forest">Gerlande Castro</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -180,7 +180,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Dra. Francisca Ferreira */}
+      {/* SECTION 4: Gerlande Castro */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -223,7 +223,7 @@ export default function AboutPage() {
                   Equipamentos modernos e ambiente acolhedor
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Nosso consultório em Manaus conta com ambiente esterilizado e equipamentos modernos para procedimentos cirúrgicos de implantes, restaurações, canal e ortodontia com total segurança biológica.
+                  Nosso consultório em Santarém conta com ambiente esterilizado e equipamentos modernos para procedimentos cirúrgicos de implantes, restaurações, canal e ortodontia com total segurança biológica.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -244,7 +244,7 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000"
-                      alt="Sala de atendimento odontológico da Clínica Saude do Sorriso"
+                      alt="Sala de atendimento odontológico da Clínica Clinica Odonto Castro"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
@@ -269,7 +269,7 @@ export default function AboutPage() {
                 Ambiente Clínico
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Nosso Espaço em Manaus
+                Nosso Espaço em Santarém
               </h2>
             </div>
           </AnimateOnScroll>
@@ -307,7 +307,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="https://images.unsplash.com/photo-1594824813583-e18e3848b814?auto=format&fit=crop&q=80&w=800"
-                  alt="Entrada da Clínica Saude do Sorriso"
+                  alt="Entrada da Clínica Clinica Odonto Castro"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
@@ -333,7 +333,7 @@ export default function AboutPage() {
                 Agende sua avaliação com a equipe odontológica
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Atendimento no consultório em Manaus e serviço de odontologia domiciliar com agilidade e qualidade.
+                Atendimento no consultório em Santarém e serviço de odontologia domiciliar com agilidade e qualidade.
               </p>
             </div>
           </AnimateOnScroll>

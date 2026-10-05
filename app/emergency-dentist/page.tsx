@@ -10,24 +10,24 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Atendimento Odontológico de Urgência em Manaus',
+  title: 'Atendimento Odontológico de Urgência em Santarém',
   description:
-    'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Manaus. WhatsApp/Telefone: +55 92 9412-6974.',
+    'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Santarém. WhatsApp/Telefone: +55 93 99203-8371.',
   pathname: '/emergency-dentist/',
 });
 
 const EMERGENCY_FAQS = [
   {
     question: 'Como funciona o atendimento de urgência para dor de dente?',
-    answer: 'Pacientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 92 9412-6974) para orientação e agendamento.',
+    answer: 'Pacientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 93 99203-8371) para orientação e agendamento.',
   },
   {
     question: 'O consultório oferece atendimento domiciliar de urgência?',
-    answer: 'Sim, o A equipe odontológica realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Manaus.',
+    answer: 'Sim, o A equipe odontológica realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Santarém.',
   },
   {
     question: 'O que fazer caso um dente quebre ou caia por trauma?',
-    answer: 'Segure o dente apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao consultório ou entre em contato pelo nosso WhatsApp (+55 92 9412-6974).',
+    answer: 'Segure o dente apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao consultório ou entre em contato pelo nosso WhatsApp (+55 93 99203-8371).',
   },
 ];
 

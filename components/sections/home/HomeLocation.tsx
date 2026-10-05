@@ -21,7 +21,7 @@ export default function HomeLocation() {
               Localização & Horário de Atendimento
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Visite a Clínica em Manaus
+              Visite a Clínica em Santarém
             </h2>
           </div>
         </AnimateOnScroll>
@@ -108,13 +108,13 @@ export default function HomeLocation() {
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/logo.png"
-                  alt="Saude do Sorriso - Manaus"
+                  alt="Clinica Odonto Castro - Santarém"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Saude do Sorriso • Manaus
+                  Clinica Odonto Castro • Santarém
                 </div>
               </div>
             </AnimateOnScroll>
@@ -126,10 +126,10 @@ export default function HomeLocation() {
                     Atendimento Odontológico de Excelência
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Clínica odontológica em Manaus
+                    Clínica odontológica em Santarém
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Saude do Sorriso em Manaus, Amazonas.
+                    Clinica Odonto Castro em Santarém, Pará.
                   </p>
                   <p className="font-body text-13 text-forest-ink/70 mb-3 leading-relaxed">
                     Ambiente LGBTQ+ friendly · Identifica-se como empresa de propriedade feminina.
@@ -142,7 +142,7 @@ export default function HomeLocation() {
 
                 <div className="pt-4 mt-4 border-t border-mist flex flex-wrap items-center justify-between gap-4">
                   <span className="font-body text-13 text-forest-ink/60">
-                    {CLINIC_INFO.primaryLocation.city}, Amazonas
+                    {CLINIC_INFO.primaryLocation.city}, Pará
                   </span>
                   <Button
                     href="/contact/"

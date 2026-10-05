@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Clínica Odontológica em Manaus',
+  title: 'Clínica Odontológica em Santarém',
   description:
-    'Saude do Sorriso, clínica odontológica em Manaus - Amazonas.',
+    'Clinica Odonto Castro, clínica odontológica em Santarém - Pará.',
   pathname: '/',
 });
 

@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Tratamento de Canal em Manaus',
+  title: 'Tratamento de Canal em Santarém',
   description:
-    'Tratamento de canal moderno, seguro e sem dor em Manaus com a equipe odontológica na Saude do Sorriso.',
+    'Tratamento de canal moderno, seguro e sem dor em Santarém com a equipe odontológica na Clinica Odonto Castro.',
   pathname: '/root-canal/',
 });
 

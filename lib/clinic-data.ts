@@ -74,52 +74,50 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: "Saude do Sorriso",
-  legalName: "Saude do Sorriso",
-  tagline: "Clínica odontológica em Manaus, Amazonas.",
+  name: "Clinica Odonto Castro",
+  legalName: "Clinica Odonto Castro",
+  tagline: "Clínica odontológica em Santarém, Pará.",
   establishedYear: 1993,
   primaryLocation: {
-    street: "R. José Clemente, 276 - Centro",
+    street: "Av. Mendonça Furtado, 4642 - Mapiri",
     suite: "",
-    city: "Manaus",
-    state: "AM",
-    postalCode: "69010-070",
-    country: "Brasil",
-    directions: "R. José Clemente, 276 - Centro, Manaus - AM, 69010-070, Brasil.",
-    landmarks: "",
+    city: "Santarém",
+    state: "PA",
+    postalCode: "68040-148",
+    country: "Brazil",
+    directions: "Av. Mendonça Furtado, 4642 - Mapiri, Santarém - PA, 68040-148, Brazil",
+    landmarks: "H7C4+75 Mapiri, Santarém - Pará, Brazil",
   },
   contact: {
-    phone: "+55 92 9412-6974",
-    emergencyPhone: "+55 92 9412-6974",
-    whatsapp: "+55 92 9412-6974",
+    phone: "+55 93 99203-8371",
+    emergencyPhone: "+55 93 99203-8371",
+    whatsapp: "+55 93 99203-8371",
   },
   schedule: [
-    { day: "Monday", hours: "08:10 – 16:00" },
-    { day: "Tuesday", hours: "08:10 – 16:00" },
-    { day: "Wednesday", hours: "08:10 – 16:00" },
-    { day: "Thursday", hours: "08:10 – 16:00" },
-    { day: "Friday", hours: "08:10 – 16:00" },
-    { day: "Saturday", hours: "08:10 – 12:00" },
+    { day: "Monday", hours: "08:00 – 18:00" },
+    { day: "Tuesday", hours: "08:00 – 18:00" },
+    { day: "Wednesday", hours: "08:00 – 18:00" },
+    { day: "Thursday", hours: "08:00 – 18:00" },
+    { day: "Friday", hours: "08:00 – 18:00" },
+    { day: "Saturday", hours: "08:00 – 12:00" },
     { day: "Sunday", hours: "Closed" },
   ],
   verifiedStats: [],
   accreditations: [
-    "Clínica odontológica em Manaus, Amazonas",
-    "Atendimento conforme informações da clínica",
-    "R. José Clemente, 276 - Centro, Manaus - AM, 69010-070, Brasil.",
+    "Clínica odontológica em Santarém, Pará",
+    "Av. Mendonça Furtado, 4642 - Mapiri, Santarém - PA, 68040-148, Brazil",
   ],
 };
-
 export const DENTISTS: DentistProfile[] = [
   {
-    id: "dra-francisca-ferreira",
-    slug: "dra-francisca-ferreira",
-    name: "Dra. Francisca Ferreira",
+    id: "our-doctor",
+    slug: "our-doctor",
+    name: "Gerlande Castro",
     title: "Dentista",
     qualifications: "",
     specialization: "Atendimento odontológico",
     experienceYears: 0,
-    bio: "Atendimento odontológico na Saude do Sorriso.",
+    bio: "Atendimento odontológico na Clinica Odonto Castro.",
     philosophy: "Atendimento acolhedor, respeitoso e atento às necessidades de cada paciente.",
     education: [],
     memberships: [],
@@ -136,7 +134,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Dental Implants",
     tagline: "Implantes carga imediata pode trazer seu sorriso em 1 dia com fixação precisa em titânio e zircônia.",
     shortDescription: "Substituição definitiva de dentes com tecnologia de carga imediata que pode devolver seu sorriso e mastigação em apenas 1 dia.",
-    clinicalExplanation: "Os implantes dentários do Saude do Sorriso utilizam fixações de titânio biocompatível e zircônia com planejamento de ponta. Com a técnica de carga imediata, o paciente pode recuperar seu sorriso e conforto mastigatório em 1 dia, com total estabilidade e estética natural sem desgastar dentes sadios adjacentes.",
+    clinicalExplanation: "Os implantes dentários do Clinica Odonto Castro utilizam fixações de titânio biocompatível e zircônia com planejamento de ponta. Com a técnica de carga imediata, o paciente pode recuperar seu sorriso e conforto mastigatório em 1 dia, com total estabilidade e estética natural sem desgastar dentes sadios adjacentes.",
     whoNeeds: [
       "Pacientes com perda de um ou mais dentes por cárie, trauma ou retração.",
       "Pessoas que buscam dentes fixos e recuperação rápida através de implantes de carga imediata em 1 dia.",
@@ -190,7 +188,7 @@ export const SERVICES: ServiceDetail[] = [
       { period: "Acompanhamento Contínuo", expectedSensations: "Sensação idêntica aos dentes naturais.", careProtocol: "Consultas de rotina semestrais para manutenção preventiva." },
     ],
     costTransparency: {
-      baseRange: "Valores personalizados com excelente custo-benefício em Manaus",
+      baseRange: "Valores personalizados com excelente custo-benefício em Santarém",
       factors: [
         "Complexidade cirúrgica e necessidade de enxerto ósseo prévio.",
         "Tipo de material protético escolhido (zircônia pura, metalocerâmica).",
@@ -213,7 +211,7 @@ export const SERVICES: ServiceDetail[] = [
       afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       timeframe: "Tratamento com Carga Imediata",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       {
         question: "Como funciona o implante de carga imediata em 1 dia?",
@@ -289,7 +287,7 @@ export const SERVICES: ServiceDetail[] = [
       { period: "Após Restauração", expectedSensations: "Dente saudável, funcional e totalmente sem dor.", careProtocol: "Manter acompanhamento clínico de rotina." },
     ],
     costTransparency: {
-      baseRange: "Valores justos e excelente custo-benefício em Manaus",
+      baseRange: "Valores justos e excelente custo-benefício em Santarém",
       factors: [
         "Número de raízes e canais do dente (anterior, pré-molar ou molar).",
         "Grau de calcificação ou necessidade de retratamento.",
@@ -310,7 +308,7 @@ export const SERVICES: ServiceDetail[] = [
       afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       timeframe: "Sessão Confortável",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       {
         question: "Tratamento de canal dói?",
@@ -328,7 +326,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Teeth Whitening",
     tagline: "Clareamento dental seguro e monitorado para um sorriso iluminado com proteção ao esmalte.",
     shortDescription: "Técnicas de clareamento em consultório e caseiro supervisionado para remoção de manchas e rejuvenescimento do sorriso sem agredir os dentes.",
-    clinicalExplanation: "O clareamento dental no Saude do Sorriso utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pela equipe odontológica, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
+    clinicalExplanation: "O clareamento dental no Clinica Odonto Castro utiliza géis clareadores certificados e proteção gengival rigorosa. Supervisionado pela equipe odontológica, o procedimento quebra moléculas de pigmentos acumuladas por café, chá e tempo sem alterar a densidade mineral do esmalte.",
     whoNeeds: [
       "Pessoas com dentes amarelados ou escurecidos por alimentação e hábitos diários.",
       "Pacientes que desejam valorizar o sorriso para eventos e autoestima.",
@@ -396,7 +394,7 @@ export const SERVICES: ServiceDetail[] = [
       afterImage: "/images/teeth-whitening-after.jpg",
       timeframe: "Sessão em Consultório",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       { question: "O clareamento enfraquece os dentes?", answer: "Não! O clareamento profissional não desgasta nem prejudica a estrutura do esmalte." },
       { question: "Quanto tempo dura o clareamento?", answer: "Com bons hábitos de higiene e profilaxia periódica, o resultado dura entre 1 a 2 anos." },
@@ -458,7 +456,7 @@ export const SERVICES: ServiceDetail[] = [
       { period: "Manutenção", expectedSensations: "Gengivas saudáveis sem sangramento.", careProtocol: "Escovação 3x ao dia e uso diário do fio dental." },
     ],
     costTransparency: {
-      baseRange: "Preço justo e acessível em Manaus",
+      baseRange: "Preço justo e acessível em Santarém",
       factors: ["Profilaxia simples de rotina vs. raspagem periodontal profunda."],
       whatIsIncluded: [
         "Avaliação completa da saúde bucal",
@@ -476,7 +474,7 @@ export const SERVICES: ServiceDetail[] = [
       afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       timeframe: "Sessão Rápida",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       { question: "Com que frequência devo fazer limpeza dental?", answer: "O recomendado é a cada 6 meses, ou a cada 3 a 4 meses em casos de tendência a problemas periodontais." },
       { question: "A limpeza com ultrassom desgasta o dente?", answer: "Não, o ultrassom apenas vibra na frequência ideal para soltar o tártaro sem afetar o esmalte." },
@@ -487,8 +485,8 @@ export const SERVICES: ServiceDetail[] = [
     name: "Aparelhos Ortodônticos & Aligners",
     navLabel: "Braces & Orthodontics",
     tagline: "Aparelhos ortodônticos convencionais, estéticos e alinhadores para o alinhamento ideal do seu sorriso.",
-    shortDescription: "Tratamento ortodôntico completo em Manaus com aparelhos metálicos, cerâmicos e alinhadores invisíveis para corrigir apinhamento, mordida e estética facial.",
-    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Saude do Sorriso, A equipe odontológica oferece opções metálicas, estéticas e alinhadores modernos.",
+    shortDescription: "Tratamento ortodôntico completo em Santarém com aparelhos metálicos, cerâmicos e alinhadores invisíveis para corrigir apinhamento, mordida e estética facial.",
+    clinicalExplanation: "O tratamento com aparelhos ortodônticos corrige o posicionamento dos dentes e das bases ósseas, proporcionando uma mordida equilibrada e um sorriso harmônico. Na Clinica Odonto Castro, A equipe odontológica oferece opções metálicas, estéticas e alinhadores modernos.",
     whoNeeds: [
       "Dentes tortos, apinhados ou com espaços (diastemas).",
       "Problemas de mordida cruzada, sobremordida ou mordida aberta.",
@@ -538,7 +536,7 @@ export const SERVICES: ServiceDetail[] = [
       { period: "Ao Longo do Tratamento", expectedSensations: "Evolução visível no alinhamento mês a mês.", careProtocol: "Higienização cuidadosa com escova ortodôntica e fio dental." },
     ],
     costTransparency: {
-      baseRange: "Mensalidades acessíveis e condições facilitadas em Manaus",
+      baseRange: "Mensalidades acessíveis e condições facilitadas em Santarém",
       factors: ["Tipo de aparelho (metálico convencional, estético de safira/cerâmica ou alinhador)."],
       whatIsIncluded: [
         "Planejamento ortodôntico completo",
@@ -549,14 +547,14 @@ export const SERVICES: ServiceDetail[] = [
     },
     beforeAfterCase: {
       category: "Ortodontia",
-      clinicalContext: "Correção completa de apinhamento e mordida com aparelho ortodôntico em Manaus.",
+      clinicalContext: "Correção completa de apinhamento e mordida com aparelho ortodôntico em Santarém.",
       beforeLabel: "Pré-tratamento: Dentes Apinhados",
       afterLabel: "Pós-tratamento: Arcada Alinhada e Harmônica",
       beforeImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
       afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       timeframe: "Acompanhamento Dedicado",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       { question: "Adultos podem usar aparelho ortodôntico?", answer: "Sim! Não há limite de idade para a movimentação dentária com saúde periodontal." },
       { question: "Quanto tempo dura o tratamento ortodôntico?", answer: "Em média entre 12 a 24 meses, dependendo da complexidade de cada caso e da assiduidade nas consultas." },
@@ -568,7 +566,7 @@ export const SERVICES: ServiceDetail[] = [
     navLabel: "Cosmetic Dentistry",
     tagline: "Lentes de contato dental, facetas em resina e cerâmica com planejamento estético.",
     shortDescription: "Reabilitação estética personalizada para transformar forma, cor e alinhamento do sorriso com naturalidade e alta resistência.",
-    clinicalExplanation: "A odontologia estética no Saude do Sorriso combina arte, precisão e materiais de alta tecnologia. Conduzido pela equipe odontológica, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
+    clinicalExplanation: "A odontologia estética no Clinica Odonto Castro combina arte, precisão e materiais de alta tecnologia. Conduzido pela equipe odontológica, o tratamento com facetas e restaurações estéticas reproduz a textura e translucidez do esmalte natural com mínima intervenção.",
     whoNeeds: [
       "Dentes desgastados, fraturados ou com formato irregular.",
       "Manchas resistentes que não saem com clareamento convencional.",
@@ -618,7 +616,7 @@ export const SERVICES: ServiceDetail[] = [
       { period: "Longo Prazo", expectedSensations: "Sensação e função completamente naturais.", careProtocol: "Consultas semestrais para polimento e controle." },
     ],
     costTransparency: {
-      baseRange: "Orçamentos claros e facilitados em Manaus",
+      baseRange: "Orçamentos claros e facilitados em Santarém",
       factors: ["Número de dentes envolvidos e tipo de material (resina composta estratificada ou cerâmica pura)."],
       whatIsIncluded: [
         "Planejamento estético individualizado",
@@ -636,7 +634,7 @@ export const SERVICES: ServiceDetail[] = [
       afterImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
       timeframe: "Sessões Clínicas",
     },
-    assignedDentistId: "dental-studio-doctor",
+    assignedDentistId: "our-doctor",
     faqs: [
       { question: "Facetas e lentes de contato duram quanto tempo?", answer: "Quando bem cuidadas com higiene e visitas regulares, facetas de cerâmica podem durar mais de 10 a 15 anos." },
       { question: "O sorriso vai parecer artificial?", answer: "Não! Trabalhamos com gradação de cores e translucidez personalizada para que o resultado pareça 100% natural." },
@@ -664,7 +662,7 @@ export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
       "Sensibilidade extrema ao calor e ao frio",
     ],
     immediateAction: [
-      "Entre em contato pelo nosso WhatsApp ou telefone +55 92 9412-6974.",
+      "Entre em contato pelo nosso WhatsApp ou telefone +55 93 99203-8371.",
       "Faça bochechos suaves com água morna.",
       "Aplique compressa fria no lado externo da bochecha (nunca coloque calor).",
     ],
@@ -681,7 +679,7 @@ export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
     immediateAction: [
       "Segure o dente apenas pela coroa, nunca pela raiz.",
       "Guarde o dente em leite ou saliva e venha imediatamente ao consultório.",
-      "Ligue para o nosso número de emergência: +55 92 9412-6974.",
+      "Ligue para o nosso número de emergência: +55 93 99203-8371.",
     ],
     clinicTreatment: "Reimplante imediato com contenção flexível ou reconstrução estética de urgência.",
   },
@@ -709,7 +707,7 @@ export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
       "Febre ou gosto ruim na boca",
     ],
     immediateAction: [
-      "Ligue imediatamente para nosso plantão de atendimento (+55 92 9412-6974).",
+      "Ligue imediatamente para nosso plantão de atendimento (+55 93 99203-8371).",
       "Use compressa fria externamente; NÃO aplique calor.",
       "Mantenha a cabeça elevada ao deitar.",
     ],
@@ -743,12 +741,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min de leitura",
     publishDate: "2026-08-11",
     lastUpdated: "2026-09-20",
-    authorId: "dental-studio-doctor",
+    authorId: "our-doctor",
     excerpt: "Entenda como a técnica de carga imediata desenvolvida na odontologia moderna permite restabelecer dentes fixos e o sorriso com agilidade e segurança.",
     leadImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "dental-implants",
     content: {
-      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos a equipe odontológica em Manaus, é possível recuperar seu sorriso em 1 dia.",
+      intro: "A tecnologia de implantes dentários com carga imediata representa uma grande evolução para quem deseja rapidez e conforto na reposição de dentes. Sob os protocolos a equipe odontológica em Santarém, é possível recuperar seu sorriso em 1 dia.",
       sections: [
         {
           heading: "O que é Carga Imediata?",
@@ -771,7 +769,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min de leitura",
     publishDate: "2026-07-15",
     lastUpdated: "2026-09-10",
-    authorId: "dental-studio-doctor",
+    authorId: "our-doctor",
     excerpt: "Por que manter sua raiz natural é sempre a melhor escolha e como as técnicas atuais tornam o tratamento de canal rápido e indolor.",
     leadImage: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "root-canal",
@@ -794,12 +792,12 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "clear-aligner-biomechanics-for-adults",
-    title: "Aparelhos Ortodônticos em Manaus: Alinhamento para Todas as Idades",
+    title: "Aparelhos Ortodônticos em Santarém: Alinhamento para Todas as Idades",
     category: "Braces & Orthodontics",
     readTime: "6 min de leitura",
     publishDate: "2026-06-20",
     lastUpdated: "2026-09-05",
-    authorId: "dental-studio-doctor",
+    authorId: "our-doctor",
     excerpt: "Como os aparelhos metálicos, estéticos e alinhadores invisíveis corrigem apinhamento e mordida com conforto em adultos e jovens.",
     leadImage: "https://images.unsplash.com/photo-1594824813583-e18e3848b814?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "braces",
@@ -820,12 +818,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min de leitura",
     publishDate: "2026-05-10",
     lastUpdated: "2026-09-01",
-    authorId: "dental-studio-doctor",
-    excerpt: "Como funciona o atendimento de odontologia domiciliar para idosos e pacientes com dificuldade de locomoção em Manaus.",
+    authorId: "our-doctor",
+    excerpt: "Como funciona o atendimento de odontologia domiciliar para idosos e pacientes com dificuldade de locomoção em Santarém.",
     leadImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800",
     relatedServiceSlug: "cosmetic-dentistry",
     content: {
-      intro: "A equipe odontológica realiza atendimentos de odontologia domiciliar em Manaus, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
+      intro: "A equipe odontológica realiza atendimentos de odontologia domiciliar em Santarém, levando consultório portátil e cuidado humanizado até a residência dos pacientes.",
       sections: [
         {
           heading: "Quem Pode se Beneficiar?",
@@ -838,17 +836,24 @@ export const BLOG_POSTS: BlogPost[] = [
 
 export const PATIENT_REVIEWS = [
   {
-    id: "review-1",
-    author: "Deysiane Evellyn",
-    treatment: "Avaliação no Google · 7 meses atrás",
-    quote: "Maravilhosa, a melhor dentista que já conheci. Minha filha, que tinha muito medo de dentista, sente-se segura com ela e perdeu o medo. Ela exerce a profissão com amor.",
+    id: "review-edilson-tenorio",
+    author: "Edilson Tenório",
+    treatment: "Avaliação no Google · 5 estrelas",
+    quote: "Adorei minha experiência na clínica. Fui muito bem atendido, o trabalho foi excelente e perfeito. Gostei muito.",
     year: "★★★★★",
   },
   {
-    id: "review-2",
-    author: "Suellen Vinente",
-    treatment: "Avaliação no Google · 8 meses atrás",
-    quote: "Atendimento impecável, profissionais altamente capacitados e uma clínica excelente.",
+    id: "review-katia-oliveira",
+    author: "Kátia Oliveira",
+    treatment: "Avaliação no Google · 5 estrelas",
+    quote: "A Odonto Castro é a clínica onde sei que vou encontrar alívio imediato. Sinto segurança em um ambiente limpo e acolhedor, com profissionais altamente qualificados que transmitem confiança e conforto. Recomendo para emergências odontológicas e cuidados preventivos.",
+    year: "★★★★★",
+  },
+  {
+    id: "review-marcia-batista",
+    author: "Marcia Batista",
+    treatment: "Avaliação no Google · 5 estrelas",
+    quote: "Foi maravilhoso! Atendimento personalizado com excelentes profissionais.",
     year: "★★★★★",
   },
 ];
