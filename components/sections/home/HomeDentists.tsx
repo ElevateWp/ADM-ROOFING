@@ -15,14 +15,14 @@ export default function HomeDentists() {
                 Nossa equipe
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça nosso dentista
+                Conheça a equipe de reparos
               </h2>
             </div>
             <Link
               href="/dentists/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
-              Ver perfis →
+              Conheça a equipe →
             </Link>
           </div>
         </AnimateOnScroll>

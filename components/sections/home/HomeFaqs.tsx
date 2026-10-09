@@ -7,29 +7,29 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'Como funciona o implante de carga imediata para ter o sorriso em 1 dia?',
-    answer: 'A técnica de carga imediata permite a fixação do implante e a colocação do dente no mesmo dia ou em até 24 a 48 horas quando há estabilidade óssea adequada, permitindo ao paciente voltar a sorrir rapidamente.',
-    relatedLink: { href: '/dental-implants/', label: 'Ver detalhes sobre Implantes e Carga Imediata →' },
+    question: 'Como funciona o reparo de infiltrações no telhado?',
+    answer: 'O prazo do serviço depende do tipo de cobertura, do acesso e da extensão do dano. A equipe informa a previsão após a inspeção.',
+    relatedLink: { href: '/dental-implants/', label: 'Ver detalhes sobre reparos e Reparo localizado →' },
   },
   {
-    question: 'O consultório realiza atendimento de odontologia domiciliar em Santarém?',
-    answer: 'Sim! O A equipe odontológica oferece atendimento domiciliar especializado para pacientes idosos, acamados ou com dificuldades de locomoção, com equipamentos portáteis modernos.',
-    relatedLink: { href: '/contact/', label: 'Solicitar Atendimento Domiciliar →' },
+    question: 'Como confirmar se a equipe atende minha região?',
+    answer: 'Entre em contato pelo telefone ou WhatsApp para confirmar se a equipe atende sua região.',
+    relatedLink: { href: '/contact/', label: 'Consultar área de atendimento →' },
   },
   {
-    question: 'Quais tipos de aparelhos ortodônticos são oferecidos?',
-    answer: 'Trabalhamos com aparelhos metálicos convencionais, estéticos (cerâmica e safira) e alinhadores transparentes, planejados minuciosamente pela nossa equipe.',
-    relatedLink: { href: '/braces/', label: 'Explorar Aparelhos Ortodônticos →' },
+    question: 'Quais serviços de reparo de telhado estão disponíveis?',
+    answer: 'Entre em contato para confirmar a disponibilidade do serviço desejado.',
+    relatedLink: { href: '/braces/', label: 'Explorar Inspeção de telhados →' },
   },
   {
-    question: 'Como agendar uma avaliação no consultório?',
-    answer: `Você pode entrar em contato diretamente pelo WhatsApp (${CLINIC_INFO.contact.phone}) ou preencher o formulário de agendamento online com antecedência.`,
-    relatedLink: { href: '/book-appointment/', label: 'Agendar Consulta Online →' },
+    question: 'Como solicitar uma avaliação?',
+    answer: `Você pode entrar em contato diretamente pelo WhatsApp (${CLINIC_INFO.contact.phone}) ou preencher o formulário de Orçamento online com antecedência.`,
+    relatedLink: { href: '/book-appointment/', label: 'Solicitar orçamento →' },
   },
   {
-    question: 'Onde fica localizada a Clinica Odonto Castro?',
+    question: 'Onde fica localizada a Campina Resolve?',
     answer: CLINIC_INFO.primaryLocation.directions,
-    relatedLink: { href: '/contact/', label: 'Ver Mapa e Rotas no Google Maps →' },
+    relatedLink: { href: '/contact/', label: 'Consultar área de atendimento →' },
   },
 ];
 
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Dúvidas Frequentes
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Perguntas frequentes sobre nossos tratamentos
+              Perguntas frequentes sobre nossos serviços
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Respostas claras sobre implantes de carga imediata, aparelhos ortodônticos e atendimento odontológico na Clinica Odonto Castro em Santarém.
+              Respostas claras sobre reparos, inspeção de telhados e atendimento da Campina Resolve.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
               </p>
               <a
-                href={`https://api.whatsapp.com/send?phone=5593992038371`}
+                href={`https://api.whatsapp.com/send?phone=5583989050948`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

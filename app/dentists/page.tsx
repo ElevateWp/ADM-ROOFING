@@ -12,9 +12,9 @@ import { DENTISTS, SERVICES, CLINIC_INFO } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Equipe Clínica',
+  title: 'Equipe Campina Resolve',
   description:
-    'Conheça o dentista da Clinica Odonto Castro em Santarém.',
+    'Conheça a equipe da Campina Resolve, especializada em soluções residenciais e consertos em geral.',
   pathname: '/dentists/',
 });
 
@@ -24,17 +24,17 @@ export default function DentistsPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Dentistas', path: '/dentists/' }]} />
+          <Breadcrumbs items={[{ name: 'Equipe Campina Resolve', path: '/dentists/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  Equipe Odontológica
+                  Equipe Campina Resolve
                 </span>
-                <WordRevealH1 text="Atendimento odontológico dedicado, ágil e humanizado." />
+                <WordRevealH1 text="Soluções residenciais com atendimento 24 horas." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Nosso dentista atende na Clinica Odonto Castro, em Santarém." />
+                  <ScrubbedParagraph text="Nossa equipe oferece soluções residenciais e consertos em geral." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -42,9 +42,9 @@ export default function DentistsPage() {
             <div className="lg:col-span-4 lg:pl-6 flex flex-col justify-end">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-2 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Atendimento odontológico</span>
+                  <span className="font-medium text-forest block">Atendimento 24 horas</span>
                   <p className="text-forest-ink/70">
-                    Atendimento realizado na Clinica Odonto Castro, com atendimento em consultório e serviço domiciliar.
+                    Fale com a equipe para confirmar o serviço que você precisa.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -62,7 +62,7 @@ export default function DentistsPage() {
                 Nossa equipe
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Conheça nosso dentista
+                Conheça a equipe de reparos
               </h2>
             </div>
           </AnimateOnScroll>
@@ -85,7 +85,7 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Atuação Clínica
+                Atuação empresa
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Áreas de Atuação
@@ -98,14 +98,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Implantes & Carga Imediata
+                    Reparo de telhados e infiltrações
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Técnica de carga imediata que pode trazer seu sorriso em 1 dia, sob responsabilidade da equipe odontológica.
+                    Avaliação de infiltrações, telhas soltas e acabamentos para definir o reparo indicado.
                   </p>
                 </div>
                 <Link href="/dental-implants/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Ver Implantes →
+                  Ver reparos →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -114,10 +114,10 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Odontologia Domiciliar
+                    serviços de telhados Domiciliar
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Atendimento domiciliar humanizado e completo em Santarém para pacientes que necessitam de cuidados em casa.
+                    Serviços demonstrativos para telhados residenciais; confirme a disponibilidade e a área atendida.
                   </p>
                 </div>
                 <Link href="/contact/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -130,14 +130,14 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Aparelhos Ortodônticos
+                    Inspeção de telhados
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Aparelhos metálicos, estéticos e alinhadores para todas as idades com a equipe odontológica.
+                    Inspeção e reparo de telhas, rufos, calhas e pontos de vedação.
                   </p>
                 </div>
                 <Link href="/braces/" className="font-body text-13 text-forest font-medium hover:underline">
-                  Ver Ortodontia →
+                  Ver Inspeção de Telhados →
                 </Link>
               </div>
             </AnimateOnScroll>
@@ -146,10 +146,10 @@ export default function DentistsPage() {
               <div className="p-6 bg-paper border border-mist h-full flex flex-col justify-between hover:border-forest/40 transition-colors shadow-sm">
                 <div>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
-                    Estética & Restaurações
+                    Acabamentos e reparos
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Clareamento dental, facetas, restaurações estéticas e reabilitação oral.
+                    Substituição de telhas e reparo de pontos de vedação e acabamento.
                   </p>
                 </div>
                 <Link href="/cosmetic-dentistry/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -206,20 +206,20 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Compromisso com o Paciente
+                Compromisso com o Proprietário
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                Nosso Compromisso Clínico
+                Nosso Compromisso técnico
               </h2>
               <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8">
-                Priorizamos o atendimento atencioso, a clareza nas orientações e a busca pelo melhor custo-benefício em cada plano de tratamento, seja no consultório ou na comodidade do atendimento domiciliar.
+                Priorizamos o atendimento atencioso, a clareza nas orientações e a busca pelo melhor custo-benefício em cada plano de reparo, seja no equipe ou na comodidade do atendimento domiciliar.
               </p>
               <div className="p-6 bg-mist/40 border-l-2 border-forest shadow-sm">
                 <span className="font-body text-15 text-forest-ink/80 block italic">
-                  “Implantes carga imediata pode trazer seu sorriso em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
+                  “reparos Reparo localizado pode trazer seu proteção em 1 dia — unindo tecnologia, agilidade e o acolhimento que você merece.”
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — Gerlande Castro
+                  — Equipe Campina Resolve
                 </span>
               </div>
             </div>
@@ -233,10 +233,10 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Tratamentos Oferecidos
+                serviços Oferecidos
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Procedimentos Clínicos
+                Serviços de Telhado
               </h2>
             </div>
           </AnimateOnScroll>
@@ -267,16 +267,16 @@ export default function DentistsPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Agendamento
+                Orçamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua consulta com a equipe odontológica
+                Solicite sua avaliação com a equipe de reparos de telhados
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar Agendamento
+              Solicitar Orçamento
             </Button>
           </AnimateOnScroll>
         </div>

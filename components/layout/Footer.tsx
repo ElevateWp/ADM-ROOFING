@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer className="w-full bg-forest text-paper border-t border-mist/20 pt-16 md:pt-24 pb-12">
       <div className="max-w-site mx-auto px-6 md:px-12">
-        {/* Top Section: Clinic Thesis & Immediate Emergency Alert */}
+        {/* Top Section: Clinic Thesis & Immediate Urgência Alert */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
-                  src="/images/logo.png"
-                  alt="Clinica Odonto Castro"
+                  src="/images/campina-resolve-logo.png"
+                  alt="Campina Resolve — soluções residenciais e consertos em geral"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,18 +22,18 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  Clinica Odonto Castro
+                  Campina Resolve
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Clínica odontológica • Santarém, Pará
+                  Reparos e manutenção de telhados
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Clinica Odonto Castro em Santarém, Pará.
+              Atendimento 24 horas todos os dias.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>Santarém, Pará</span>
+              <span>+55 83 98905-0948</span>
             </div>
           </div>
 
@@ -43,11 +43,11 @@ export default function Footer() {
                 Atendimento Rápido & WhatsApp
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Precisa agendar uma avaliação, tirar dúvidas ou solicitar atendimento odontológico?
+                Precisa agendar uma avaliação, tirar dúvidas ou solicitar atendimento de telhados?
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5593992038371`}
+                  href={`https://api.whatsapp.com/send?phone=5583989050948`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
@@ -58,7 +58,7 @@ export default function Footer() {
                   href="/book-appointment/"
                   className="font-body text-13 text-paper/80 underline underline-offset-4 hover:text-paper"
                 >
-                  Solicitar Agendamento Online
+                  Solicitar Orçamento Online
                 </Link>
               </div>
             </div>
@@ -67,10 +67,10 @@ export default function Footer() {
 
         {/* Middle Section: Complete Internal Linking Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 py-16 border-b border-mist/20">
-          {/* Column 1: Clinical Treatments */}
+          {/* Column 1: technical Treatments */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Tratamentos
+              serviços
             </span>
             <ul className="space-y-2.5 font-body text-15">
               {SERVICES.map((s) => (
@@ -86,15 +86,15 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 2: Clinical Team */}
+          {/* Column 2: technical Team */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              Profissional
+              Equipe
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/dentists/" className="text-paper/80 hover:text-lime transition-colors">
-                  Equipe Clínica
+                  Nossa equipe de telhados
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -110,25 +110,25 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: The Clinic */}
+          {/* Column 3: The company */}
           <div className="col-span-1">
             <span className="font-body text-13 text-paper/40 uppercase tracking-wider block mb-4 font-semibold">
-              O Consultório
+              A equipe
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/about/" className="text-paper/80 hover:text-lime transition-colors">
-                  Sobre Nós
+                  Sobre a empresa
                 </Link>
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Blog Clínico
+                  Blog técnico
                 </Link>
               </li>
               <li>
                 <Link href="/book-appointment/" className="text-paper/80 hover:text-lime transition-colors">
-                  Agendar Consulta
+                  Solicitar orçamento
                 </Link>
               </li>
               <li>
@@ -153,7 +153,7 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Telefone & WhatsApp:</span>
                 <a
-                  href={`https://api.whatsapp.com/send?phone=5593992038371`}
+                  href={`https://api.whatsapp.com/send?phone=5583989050948`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-lime transition-colors font-medium"
@@ -162,7 +162,7 @@ export default function Footer() {
                 </a>
               </div>
               <div>
-                <span className="text-paper/50 block text-13">Endereço:</span>
+                <span className="text-paper/50 block text-13">Área de atendimento:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
                   {CLINIC_INFO.primaryLocation.street}
                   <br />
@@ -179,8 +179,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. Todos os direitos reservados.
           </div>
           <div className="flex items-center gap-6">
-            <span>Santarém - Pará</span>
-            <span>Clinica Odonto Castro</span>
+            <span>Atendimento 24 horas</span>
+            <span>Campina Resolve</span>
           </div>
         </div>
       </div>

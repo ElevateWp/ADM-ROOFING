@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Clínica Odontológica em Santarém',
+  title: 'Reparo e manutenção de telhados',
   description:
-    'Clinica Odonto Castro, clínica odontológica em Santarém - Pará.',
+    'Campina Resolve: reparo e manutenção de telhados. Atendimento 24 horas.',
   pathname: '/',
 });
 
@@ -44,7 +44,7 @@ export default function HomePage() {
       {/* SECTION 3: Dental Services (Pinned Horizontal Track - Orchestrated Moment 2) */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Comprehensive Clinical Scope"
+        title="Comprehensive técnica Scope"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -52,10 +52,10 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Our Clinic (Asymmetric & Deliberately Still) */}
+      {/* SECTION 4: Why Choose Our company (Asymmetric & Deliberately Still) */}
       <HomeWhyUs />
 
-      {/* SECTION 5: Meet Our Dentists (Staggered Baseline Grid) */}
+      {/* SECTION 5: Meet Our Equipe (Staggered Baseline Grid) */}
       <HomeDentists />
 
       {/* SECTION 6: Featured Treatments (Curated Outcome Stories) */}
@@ -64,19 +64,19 @@ export default function HomePage() {
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 8: Patient Reviews (Full-Bleed Forest Pull-Quotes with Panel Wipe) */}
+      {/* SECTION 8: homeowner Reviews (Full-Bleed Forest Pull-Quotes with Panel Wipe) */}
       <HomeReviews />
 
-      {/* SECTION 9: Clinic Gallery (Irregular Parallax Grid) */}
+      {/* SECTION 9: company Gallery (Irregular Parallax Grid) */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}
       <HomeFaqs />
 
-      {/* SECTION 11: Location & Opening Hours */}
+      {/* SECTION 11: Área de atendimento & Opening Hours */}
       <HomeLocation />
 
-      {/* SECTION 12: Final Appointment Section (The One Centered Moment) */}
+      {/* SECTION 12: Final quote request Section (The One Centered Moment) */}
       <HomeFinalCTA />
     </div>
   );

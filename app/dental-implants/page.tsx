@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-implants')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Implantes Dentários & Carga Imediata em Santarém',
+  title: 'reparos de telhados & Reparo localizado',
   description:
-    'Implantes dentários de carga imediata para trazer seu sorriso em 1 dia com fixação precisa em titânio e zircônia pela equipe odontológica em Santarém.',
+    'reparos de telhados de Reparo localizado para trazer seu proteção em 1 dia com fixação precisa em titânio e zircônia pela equipe de reparos de telhados.',
   pathname: '/dental-implants/',
 });
 
@@ -45,19 +45,19 @@ export default function DentalImplantsPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Prosthodontic & Surgical Discipline
+                  Reparos de telhados e coberturas
                 </span>
-                <WordRevealH1 text="Permanent dental implants anchored directly in bone." />
+                <WordRevealH1 text="Reparos de telhado para conter infiltrações e proteger o imóvel." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book implant consultation
+                    Solicitar inspeção do telhado
                   </Button>
                   <Button href="#procedure" variant="ghost" size="lg">
-                    View procedure sequence
+                    Ver etapas do serviço
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -67,7 +67,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Lead</span>
+                    <span>técnica Lead</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
@@ -77,7 +77,7 @@ export default function DentalImplantsPage() {
                     <span className="font-medium text-forest">99.4% Verified</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Surgical Protocol</span>
+                    <span>repair Protocol</span>
                     <span className="font-medium text-forest">3D CBCT Guided</span>
                   </div>
                 </div>
@@ -97,14 +97,14 @@ export default function DentalImplantsPage() {
                   Biomechanical Science
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What is a dental implant?
+                  Como funciona o reparo do telhado?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike traditional bridges, an implant never requires cutting into adjacent sound teeth, preserving biological tooth structure permanently.
+                    O reparo é planejado para a área afetada e considera as telhas e os materiais existentes na cobertura.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -113,8 +113,8 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1000"
-                    alt="Dental implant fixture precision anatomy diagram"
+                    src="https://images.unsplash.com/photo-1635424710918-d5c138981922?auto=format&fit=crop&w=1600&q=85"
+                    alt="Inspeção de telhas e pontos de vedação"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -132,10 +132,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Candidacy
+                técnica Candidacy
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Who is a candidate for dental implants?
+                Quando solicitar um reparo de telhado?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -162,7 +162,7 @@ export default function DentalImplantsPage() {
                 Biological Advantages
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Verified clinical benefits
+                Verified técnica benefits
               </h2>
             </div>
           </AnimateOnScroll>
@@ -186,8 +186,8 @@ export default function DentalImplantsPage() {
       <div id="procedure">
         <ProcedurePin
           steps={service.procedureSteps}
-          title="The Dental Implant Surgical Sequence"
-          subtitle="Guided Step-by-Step Clinical Protocol"
+          title="Etapas do reparo do telhado"
+          subtitle="Etapas do serviço de reparo"
         />
       </div>
 
@@ -197,10 +197,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Surgical Modalities
+                repair Modalities
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Opções de Implantes e Carga Imediata
+                Opções de reparos e Reparo localizado
               </h2>
             </div>
           </AnimateOnScroll>
@@ -236,13 +236,13 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Post-Operative Care
+                Cuidados após o reparo
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Expected recovery & timeline
+                Prazo e orientações após o serviço
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Because our fixtures are placed with 3D computer surgical guides, tissue trauma is minimized. Most patients return to regular desk work the following morning.
+                O prazo varia conforme o dano, o material e o acesso ao telhado. A equipe informa as orientações após avaliar o local.
               </p>
             </div>
           </AnimateOnScroll>
@@ -259,7 +259,7 @@ export default function DentalImplantsPage() {
                     <p className="font-body text-15 text-forest-ink/80">{rec.expectedSensations}</p>
                   </div>
                   <div className="lg:col-span-5">
-                    <span className="font-body text-13 text-forest-ink/60 block mb-1">Care Protocol:</span>
+                    <span className="font-body text-13 text-forest-ink/60 block mb-1">Orientações:</span>
                     <p className="font-body text-15 text-forest-ink/80">{rec.careProtocol}</p>
                   </div>
                 </div>
@@ -279,10 +279,10 @@ export default function DentalImplantsPage() {
                   Financial Transparency
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What does a dental implant cost?
+                  Quanto custa o reparo do telhado?
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard Clinical Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard técnica Range</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -297,7 +297,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    What is included in this fee:
+                    Itens considerados no orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -313,7 +313,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
                 <div className="p-6 bg-paper border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Key variables affecting cost:
+                    Fatores que influenciam o orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.factors.map((fac, i) => (
@@ -336,10 +336,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Case Study
+                técnica Case Study
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Single anterior implant restoration
+                Reparo localizado em telhado residencial
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -354,14 +354,14 @@ export default function DentalImplantsPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Restoration completed under surgical microscope.`}
+                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Os materiais e o escopo dependem da avaliação do telhado.`}
               />
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* SECTION 10: Dentist / Expertise Link */}
+      {/* SECTION 10: Telhadista / Expertise Link */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -380,7 +380,7 @@ export default function DentalImplantsPage() {
               <div className="lg:col-span-9 flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Primary Surgical Director
+                    Primary repair Director
                   </span>
                   <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
                     {leadDentist.name}
@@ -396,7 +396,7 @@ export default function DentalImplantsPage() {
                   href={`/dentists/${leadDentist.slug}/`}
                   className="font-body text-15 text-forest font-medium underline underline-offset-4"
                 >
-                  View {leadDentist.name}’s full clinical CV and qualifications →
+                  Conheça a equipe responsável →
                 </Link>
               </div>
             </div>
@@ -404,20 +404,20 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* SECTION 11: FAQs */}
+      {/* SECTION 11: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Questions
+                  homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Dental implant FAQs
+                  Dúvidas frequentes sobre reparos de telhados
                 </h2>
                 <p className="font-body text-15 text-forest-ink/80">
-                  Detailed answers regarding osseointegration, biological suitability, and long-term care.
+                  Informações sobre avaliação, materiais, prazo e manutenção da cobertura.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -442,17 +442,17 @@ export default function DentalImplantsPage() {
                 Schedule your 3D implant consultation
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Includes comprehensive CBCT radiographic analysis and written treatment planning.
+                Includes comprehensive CBCT radiographic analysis and written repair planning.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Book Appointment
+                Solicitar orçamento
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
-                Contact Surgical Desk
+                Contato repair Desk
               </Button>
             </div>
           </AnimateOnScroll>

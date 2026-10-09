@@ -14,51 +14,36 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Sobre o Consultório',
+  title: 'Sobre a Campina Resolve',
   description:
-    'Conheça a Clinica Odonto Castro e sua equipe odontológica em Santarém.',
+    'Conheça a Campina Resolve e sua equipe de reparos de telhados.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: '1993',
-    title: 'Fundação do Consultório em Santarém',
-    description: 'A clínica inicia sua trajetória com foco em reabilitação oral, implantodontia e atendimento odontológico domiciliar.',
-  },
-  {
-    year: '2016',
-    title: 'Pioneirismo em Carga Imediata',
-    description: 'Implementação de protocolos avançados de implantes com carga imediata, permitindo a restauração do sorriso em 1 dia com alta previsibilidade.',
-  },
-  {
-    year: '2020',
-    title: 'Expansão do Atendimento Domiciliar',
-    description: 'Estruturação de consultório portátil completo para levar tratamento odontológico humanizado e com biossegurança ao lar de pacientes com dificuldades de locomoção.',
-  },
-  {
-    year: '2024',
-    title: 'Excelência em Ortodontia & Estética',
-    description: 'Integração de aparelhos estéticos, alinhadores e novos protocolos de clareamento e restaurações estéticas com a equipe odontológica.',
+    year: 'área de atendimento',
+    title: 'Campina Resolve',
+    description: 'Atendimento demonstrativo em área de atendimento; confirme a área real de serviço.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
     title: 'Diagnóstico e Planejamento Preciso',
-    description: 'Avaliação clínica minuciosa com foco nas reais necessidades do paciente, oferecendo soluções ágeis e eficientes.',
+    description: 'Inspeção da cobertura para localizar sinais visíveis de desgaste e explicar as opções de reparo.',
   },
   {
     title: 'Transparência e Custo-Benefício',
-    description: 'Planos de tratamento detalhados, valores justos e acessíveis e orientações claras sobre cada etapa antes do procedimento.',
+    description: 'Escopo, materiais, valores e prazos são apresentados para confirmação antes do início do serviço.',
   },
   {
-    title: 'Sorriso em 1 Dia com Carga Imediata',
-    description: 'Técnicas modernas de implantes que devolvem a função mastigatória e a estética com rapidez e conforto.',
+    title: 'Reparos de telhado conforme a necessidade',
+    description: 'Técnicas modernas de reparos que devolvem a função da cobertura e a estética com rapidez e conforto.',
   },
   {
-    title: 'Atendimento Humanizado no Consultório & Domiciliar',
-    description: 'Cuidado atencioso, seguro e acolhedor na clínica ou no conforto da sua residência em Santarém.',
+    title: 'Atendimento e avaliação no local',
+    description: 'Atendimento demonstrativo em imóveis residenciais; confirme a área de serviço e a disponibilidade.',
   },
 ];
 
@@ -68,17 +53,17 @@ export default function AboutPage() {
       {/* SECTION 1: Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Sobre Nós', path: '/about/' }]} />
+          <Breadcrumbs items={[{ name: 'Sobre a empresa', path: '/about/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  Sobre o Consultório
+                  Sobre a Campina Resolve
                 </span>
-                <WordRevealH1 text="Compromisso com seu sorriso, agilidade e excelência técnica." />
+                <WordRevealH1 text="Reparos de telhados com cuidado, clareza e atenção à segurança." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Na Clinica Odonto Castro, nosso dentista oferece atendimento odontológico em Santarém." />
+                  <ScrubbedParagraph text="Na Campina Resolve, nosso telhadista oferece atendimento de telhados." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -87,12 +72,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Fundação</span>
-                    <span className="font-medium text-forest">{CLINIC_INFO.establishedYear}</span>
-                  </div>
-                  <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Dentistas</span>
-                    <span className="font-medium text-forest">Gerlande Castro</span>
+                    <span>equipe de reparos de telhados</span>
+                    <span className="font-medium text-forest">Equipe Campina Resolve</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -110,7 +91,7 @@ export default function AboutPage() {
                 Trajetória da Prática
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Nossa Evolução Clínica
+                A trajetória da empresa
               </h2>
             </div>
           </AnimateOnScroll>
@@ -146,7 +127,7 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-16">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Diferenciais do Consultório
+                Como trabalhamos
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Quatro pilares do nosso atendimento
@@ -180,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Gerlande Castro */}
+      {/* SECTION 4: Equipe Campina Resolve */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -190,7 +171,7 @@ export default function AboutPage() {
                   Nossa equipe
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Conheça nossas dentistas
+                  Conheça a equipe Campina Resolve
                 </h2>
               </div>
               <Link
@@ -217,22 +198,22 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Estrutura Clínica
+                  Nosso trabalho em telhados
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Equipamentos modernos e ambiente acolhedor
+                  Inspeção e reparo com segurança
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Nosso consultório em Santarém conta com ambiente esterilizado e equipamentos modernos para procedimentos cirúrgicos de implantes, restaurações, canal e ortodontia com total segurança biológica.
+                  A Campina Resolve oferece, como conteúdo demonstrativo, serviços de inspeção, manutenção e reparo de telhados. Confirme os dados reais da empresa antes de publicar.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Protocolos rigorosos de biossegurança e esterilização</span>
+                    <span>Acesso e medidas de segurança são combinados antes do serviço</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Equipamentos portáteis especializados para odontologia domiciliar</span>
+                    <span>Ferramentas adequadas ao tipo de cobertura e reparo</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -243,15 +224,15 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000"
-                      alt="Sala de atendimento odontológico da Clínica Clinica Odonto Castro"
+                      src="https://images.unsplash.com/photo-1773438406512-e1ee0f194af1?auto=format&fit=crop&w=1600&q=85"
+                      alt="Sala de atendimento de telhados da empresa Campina Resolve"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Consultório Odontológico
+                    equipe de reparos de telhados
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -266,10 +247,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Ambiente Clínico
+                Ambiente técnico
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Nosso Espaço em Santarém
+                Nosso Espaço
               </h2>
             </div>
           </AnimateOnScroll>
@@ -278,8 +259,8 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.1}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800"
-                  alt="Área de espera da clínica"
+                  src="https://images.unsplash.com/photo-1653831926031-ad9a03f65354?auto=format&fit=crop&w=1600&q=85"
+                  alt="Área de espera da empresa"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
@@ -292,22 +273,22 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.2}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800"
-                  alt="Banheiro da clínica"
+                  src="https://images.unsplash.com/photo-1712947090314-ca7da0b90f24?auto=format&fit=crop&w=1600&q=85"
+                  alt="Banheiro da empresa"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Consultório
+                  equipe
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.3}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="https://images.unsplash.com/photo-1594824813583-e18e3848b814?auto=format&fit=crop&q=80&w=800"
-                  alt="Entrada da Clínica Clinica Odonto Castro"
+                  src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1600&q=85"
+                  alt="Entrada da empresa Campina Resolve"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
@@ -327,20 +308,20 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Agendamento
+                Orçamento
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Agende sua avaliação com a equipe odontológica
+                Solicite sua avaliação com a equipe de reparos de telhados
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Atendimento no consultório em Santarém e serviço de odontologia domiciliar com agilidade e qualidade.
+                Atendimento no equipe e serviço de serviços de telhados domiciliar com agilidade e qualidade.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Solicitar Agendamento
+                Solicitar Orçamento
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
                 Ver Contatos

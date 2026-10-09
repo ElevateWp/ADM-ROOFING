@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Biological Tooth Preservation',
-    description: 'We treat surgical extraction as a last resort. Operating microscopes allow us to preserve natural root structures and vital enamel whenever biologically viable.',
+    title: 'Proteção da cobertura',
+    description: 'Priorizamos avaliar o reparo localizado e a compatibilidade dos materiais com a cobertura existente.',
   },
   {
-    title: 'Microscopic & CBCT Guided Accuracy',
-    description: 'Every surgical fixture and root canal is pre-planned in three dimensions with low-dose digital tomography to prevent anatomical nerve or sinus complications.',
+    title: 'Inspeção detalhada da cobertura',
+    description: 'A equipe inspeciona os pontos visíveis de infiltração e combina o escopo antes de iniciar o reparo.',
   },
   {
-    title: 'Proactive Patient Comfort & Sedation',
-    description: 'We eliminate procedural stress through computer-controlled local anesthesia delivery, noise-canceling acoustics, and gentle anxiety-free care.',
+    title: 'Atendimento transparente e seguro',
+    description: 'O serviço é explicado com clareza e as medidas de acesso e segurança são combinadas previamente.',
   },
   {
-    title: 'Sterile Operating Environments',
-    description: 'Our surgical suites maintain medical-grade air filtration and autoclave sterilization protocols exceeding international dental guidelines.',
+    title: 'Ferramentas adequadas ao serviço',
+    description: 'A equipe utiliza ferramentas adequadas ao tipo de cobertura e às condições de acesso do imóvel.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Methodology
+                Nossa forma de trabalhar
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Por que escolher a Clínica Clinica Odonto Castro
+                Por que escolher a empresa Campina Resolve
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,37 +65,37 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                      src="/images/home-why-care-stock.jpg"
-                      alt="Imagem de banco ilustrativa de atendimento odontológico"
+                      src="https://images.unsplash.com/photo-1634750009079-6bf7bede038b?auto=format&fit=crop&w=1600&q=85"
+                      alt="Imagem de banco ilustrativa de atendimento de telhados"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#123B52]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Imagem ilustrativa · Atendimento odontológico
+                  <div className="absolute bottom-3 left-3 bg-[#18364A]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Imagem ilustrativa · Atendimento de telhados
                   </div>
                 </div>
                 {/* Second interior image */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/home-why-consult-stock.jpg"
-                    alt="Imagem de banco ilustrativa de consulta odontológica"
+                    src="https://images.unsplash.com/photo-1771479755055-6a305f50845e?auto=format&fit=crop&w=1600&q=85"
+                    alt="Imagem de banco ilustrativa de avaliação de telhados"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
                 {/* Doctor portrait */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F2FAFC] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F8F5] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/home-why-treatment-stock.jpg"
-                    alt="Imagem de banco ilustrativa de atendimento a um paciente"
+                    src="https://images.unsplash.com/photo-1760544137672-c22ce36ea818?auto=format&fit=crop&w=1600&q=85"
+                    alt="Imagem de banco ilustrativa de atendimento a um Proprietário"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#123B52]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#18364A]/80 text-paper font-body text-12 px-3 py-2 text-center">
                     Imagem ilustrativa · Atendimento
                   </div>
                 </div>

@@ -87,7 +87,7 @@ export default function HomeHero() {
       );
     }
 
-    // Location line
+    // Área de atendimento line
     if (locationRef.current) {
       tl.fromTo(
         locationRef.current,
@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Restorative dentistry shaped by clinical precision and calm.';
+  const headline = 'Reparos de telhados com cuidado, técnica e transparência.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -111,8 +111,8 @@ export default function HomeHero() {
       className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
     >
       <Image
-        src="/images/home-hero-stock.jpg"
-        alt="Imagem de banco ilustrativa de atendimento odontológico"
+        src="https://images.unsplash.com/photo-1635424824849-1b09bdcc55b1?auto=format&fit=crop&w=1600&q=85"
+        alt="Imagem de banco ilustrativa de atendimento de telhados"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#008FC4]" />
-              <span className="font-body text-[11px] text-[#6B8190] uppercase tracking-[0.14em]">
-                Your smile. Our priority.
+              <span aria-hidden="true" className="h-px w-8 bg-[#238B68]" />
+              <span className="font-body text-[11px] text-[#68777D] uppercase tracking-[0.14em]">
+                Seu telhado, protegido.
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#123B52] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#18364A] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['shaped', 'by', 'clinical'].includes(word) ? 'text-[#008FC4]' : ''}`}
+                      className={`inline-block will-change-transform ${['telhados', 'cuidado,', 'transparência.'].includes(word) ? 'text-[#238B68]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,7 +162,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              A Clinica Odonto Castro oferece atendimento odontológico em Santarém.
+              A Campina Resolve oferece serviços de reparo e manutenção de telhados.
             </p>
 
             <div
@@ -170,10 +170,10 @@ export default function HomeHero() {
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
               <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Agendar Consulta
+                Solicitar orçamento
               </Button>
               <Button
-                href={`https://api.whatsapp.com/send?phone=5593992038371`}
+                href={`https://api.whatsapp.com/send?phone=5583989050948`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
@@ -184,9 +184,9 @@ export default function HomeHero() {
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#123B52]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#18364A]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#123B52]">Santarém</span>
+              <span className="font-medium text-[#18364A]">Atendimento 24 horas</span>
               <span className="hidden sm:inline">•</span>
               <span>{CLINIC_INFO.primaryLocation.street}</span>
               <span className="hidden sm:inline">•</span>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F2FAFC] border border-[#D9E8ED] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#123B52] uppercase tracking-wider font-semibold">
-                Destaques Clínicos
+            <div className="p-6 sm:p-8 bg-[#F3F8F5] border border-[#DCE7E2] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#18364A] uppercase tracking-wider font-semibold">
+                Soluções em Telhados
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#123B52]/90 leading-relaxed">
-                <strong className="text-[#123B52] font-semibold">&ldquo;Clinica Odonto Castro&rdquo;</strong> &mdash; Clínica odontológica em Santarém, Pará.
+              <p className="font-body text-13 sm:text-15 text-[#18364A]/90 leading-relaxed">
+                <strong className="text-[#18364A] font-semibold">&ldquo;Campina Resolve&rdquo;</strong> &mdash; reparos e manutenção de telhados.
               </p>
-              <div className="pt-3 border-t border-[#D9E8ED] flex items-center justify-between text-13 font-body text-[#123B52]/70">
-                <span>Santarém - Pará</span>
-                <span className="text-[#123B52] font-semibold">Atendimento em Santarém</span>
+              <div className="pt-3 border-t border-[#DCE7E2] flex items-center justify-between text-13 font-body text-[#18364A]/70">
+                <span>Atendimento todos os dias</span>
+                <span className="text-[#18364A] font-semibold">5,0 · 15 avaliações</span>
               </div>
             </div>
           </div>

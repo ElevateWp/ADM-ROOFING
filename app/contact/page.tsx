@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contato & Localização',
   description:
-    'Entre em contato com a Clinica Odonto Castro em Santarém, Pará. Telefone: +55 93 99203-8371.',
+    'Entre em contato com a Campina Resolve pelo telefone +55 83 98905-0948. Atendimento 24 horas.',
   pathname: '/contact/',
 });
 
@@ -20,7 +20,7 @@ export default function ContactPage() {
     <div className="flex flex-col w-full bg-paper">
       {/* SECTION 1: Contact Introduction */}
       <section className="relative py-16 md:py-24 border-b border-mist overflow-hidden">
-        <TextureBackground variant="contact" className="opacity-30" />
+        <TextureBackground variant="Contato" className="opacity-30" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs items={[{ name: 'Contato', path: '/contact/' }]} />
@@ -29,11 +29,11 @@ export default function ContactPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Atendimento & Agendamento
+                  Atendimento & Orçamento
                 </span>
-                <WordRevealH1 text="Fale com nossa equipe odontológica." />
+                <WordRevealH1 text="Fale com nossa equipe de reparos de telhados." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Entre em contato com a Clinica Odonto Castro em Santarém, Pará.
+                  Entre em contato com a equipe pelo telefone ou WhatsApp.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Canais de Atendimento
+                    Fale com a nossa equipe
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
                     Fale Conosco
@@ -62,7 +62,7 @@ export default function ContactPage() {
                       <div>
                         <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=5593992038371"
+                          href="https://api.whatsapp.com/send?phone=5583989050948"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
@@ -70,7 +70,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.whatsapp}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Mensagens & Agendamento</span>
+                      <span className="font-body text-13 text-forest font-medium">Mensagens & Orçamento</span>
                     </div>
 
                     {/* Phone */}
@@ -91,11 +91,11 @@ export default function ContactPage() {
                 </div>
               </AnimateOnScroll>
 
-              {/* Physical Location & Directions */}
+              {/* Physical Área de atendimento & Directions */}
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Endereço do Consultório
+                    Área de atendimento
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
                     {CLINIC_INFO.name}
@@ -106,7 +106,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Localização:</strong> {CLINIC_INFO.primaryLocation.directions}
+                    <strong>Área de atendimento:</strong> {CLINIC_INFO.primaryLocation.directions}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -135,7 +135,7 @@ export default function ContactPage() {
                 <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-                      Localização no Google Maps
+                      Área de atendimento
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
                       {CLINIC_INFO.name}
@@ -147,16 +147,14 @@ export default function ContactPage() {
 
                   <div className="pt-6 border-t border-mist/20 flex flex-wrap items-center justify-between gap-4">
                     <Button
-                      href={`https://maps.google.com/?q=${encodeURIComponent(
-                        CLINIC_INFO.primaryLocation.directions
-                      )}`}
+                      href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
                       variant="lime"
                       size="sm"
                     >
-                      Abrir no Google Maps
+                      Consultar a equipe
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=5593992038371"
+                      href="https://api.whatsapp.com/send?phone=5583989050948"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
@@ -177,16 +175,16 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Agendamento de Consulta
+                Orçamento de avaliação
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Pronto para agendar sua avaliação?
+                Pronto para Solicitar orçamento?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar Agendamento Online
+              Solicitar Orçamento Online
             </Button>
           </AnimateOnScroll>
         </div>

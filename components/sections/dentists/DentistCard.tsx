@@ -21,15 +21,15 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Portrait frame with dual image crossfade on paper-toned ground */}
-        <div className="relative w-full aspect-[4/5] bg-mist overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
-          {/* Primary Clinical Portrait */}
+        {/* Campina Resolve logo */}
+        <div className="relative w-full aspect-[4/5] bg-paper overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
+          {/* Full logo stays visible inside the profile frame */}
           <Image
             src={dentist.image}
-            alt={`Clinical portrait of ${dentist.name}, ${dentist.title}`}
+            alt={`Logo da ${dentist.name}`}
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
-            className={`object-cover object-top transition-all duration-500 ease-nova-ease ${
+            className={`object-contain p-5 transition-all duration-500 ease-nova-ease ${
               isHovered ? 'scale-105' : 'scale-100'
             }`}
           />
@@ -42,7 +42,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
 
           {dentist.experienceYears > 0 && (
             <div className="absolute bottom-3 right-3 bg-forest text-paper font-body text-13 px-2.5 py-0.5">
-              {dentist.experienceYears}+ Yrs Experience
+              {dentist.experienceYears}+ anos de experiência
             </div>
           )}
         </div>

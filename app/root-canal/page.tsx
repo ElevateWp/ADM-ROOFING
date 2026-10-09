@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Tratamento de Canal em Santarém',
+  title: 'Reparo de infiltrações em telhados',
   description:
-    'Tratamento de canal moderno, seguro e sem dor em Santarém com a equipe odontológica na Clinica Odonto Castro.',
+    'Avaliação demonstrativa de infiltrações e reparos de telhados em área de atendimento.',
   pathname: '/root-canal/',
 });
 
@@ -44,19 +44,19 @@ export default function RootCanalPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Endodontic Microsurgery
+                  leak repair Microsurgery
                 </span>
-                <WordRevealH1 text="Microscopic root canal therapy to preserve natural teeth." />
+                <WordRevealH1 text="Reparo de infiltrações com avaliação da cobertura e das telhas." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Request endodontic evaluation
+                    Request leak repair evaluation
                   </Button>
                   <Button href="/emergency-dentist/" variant="ghost" size="lg">
-                    Emergency pain triage
+                    Urgência pain triage
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -66,7 +66,7 @@ export default function RootCanalPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Specialist</span>
+                    <span>Equipe responsável</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
@@ -96,7 +96,7 @@ export default function RootCanalPage() {
                   Biological Science
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What is root canal treatment?
+                  What is Reparo de Infiltrações?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
@@ -112,8 +112,8 @@ export default function RootCanalPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=1000"
-                    alt="Microscopic endodontic root canal procedure"
+                    src="https://images.unsplash.com/photo-1643509963821-563d2ddb0812?auto=format&fit=crop&w=1600&q=85"
+                    alt="Microscopic leak repair Infiltrações procedure"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -134,7 +134,7 @@ export default function RootCanalPage() {
                 Symptom Identification
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Clinical signs of pulpal inflammation
+                Sinais de infiltração e desgaste na cobertura
               </h2>
             </div>
           </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function RootCanalPage() {
                 Etiology & Pathology
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                What causes root canal infection?
+                O que pode causar infiltrações no telhado?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -182,8 +182,8 @@ export default function RootCanalPage() {
       {/* SECTION 5: Root Canal Procedure (Pinned Walkthrough) */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="Microscopic Endodontic Sequence"
-        subtitle="Surgical Step-by-Step Protocol"
+        title="Etapas do reparo de infiltrações"
+        subtitle="Como funciona o serviço"
       />
 
       {/* SECTION 6: Does Root Canal Treatment Hurt? */}
@@ -192,16 +192,16 @@ export default function RootCanalPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl">
               <span className="font-body text-13 text-forest uppercase tracking-wider block mb-3 font-medium">
-                Pain Management & Anesthesia
+                Avaliação dos danos
               </span>
               <h2 className="font-display text-33 md:text-52 text-forest-ink leading-[1.08] mb-6">
-                Does a root canal hurt?
+                Como é feita a avaliação do telhado?
               </h2>
               <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-6">
-                No. A root canal does not cause pain—it eliminates it. With modern buffered local anesthetics and microscopic rotary instruments, the procedure feels identical to receiving a routine restorative filling.
+                A inspeção ajuda a localizar o ponto de entrada de água e definir o reparo apropriado. O escopo depende das condições encontradas no telhado.
               </p>
               <p className="font-body text-15 text-forest-ink/70 leading-relaxed">
-                {leadDentist.name} monitors anesthesia depth continuously throughout the procedure, ensuring you remain completely numb and comfortable from initial access to final obturation.
+                A equipe explica os pontos avaliados e o serviço recomendado antes de iniciar qualquer reparo.
               </p>
             </div>
           </AnimateOnScroll>
@@ -217,7 +217,7 @@ export default function RootCanalPage() {
                 Post-Treatment Expectations
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Recovery timeline & guidelines
+                Prazos e orientações após o serviço
               </h2>
             </div>
           </AnimateOnScroll>
@@ -251,10 +251,10 @@ export default function RootCanalPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Fee Schedule
+                  Orçamento do serviço
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Root canal treatment pricing
+                  Reparo de Infiltrações pricing
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
                   <span className="font-body text-13 text-forest-ink/60 block mb-1">Base Specialist Range</span>
@@ -289,17 +289,17 @@ export default function RootCanalPage() {
         </div>
       </section>
 
-      {/* SECTION 9: FAQs */}
+      {/* SECTION 9: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Inquiries
+                  homeowner Inquiries
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Endodontic FAQs
+                  leak repair Dúvidas frequentes
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -330,7 +330,7 @@ export default function RootCanalPage() {
               </div>
               <div className="lg:col-span-9">
                 <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                  Endodontic Director
+                  leak repair Director
                 </span>
                 <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
                   {leadDentist.name}
@@ -343,13 +343,13 @@ export default function RootCanalPage() {
                     href={`/dentists/${leadDentist.slug}/`}
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    View {leadDentist.name}’s credentials →
+                    Conheça a equipe responsável →
                   </Link>
                   <Link
                     href="/emergency-dentist/"
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Emergency tooth pain service →
+                    Reparos urgentes de telhado →
                   </Link>
                 </div>
               </div>
@@ -367,17 +367,17 @@ export default function RootCanalPage() {
                 Relieve Pain
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your root canal consultation
+                Solicitar avaliação de infiltração
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Book Appointment
+                Solicitar orçamento
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
-                Contact Clinic
+                Contato company
               </Button>
             </div>
           </AnimateOnScroll>

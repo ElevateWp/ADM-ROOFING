@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Agendar Consulta Odontológica',
+  title: 'Solicitar orçamento de telhados',
   description:
-    'Solicite seu agendamento para implantes de carga imediata em 1 dia, odontologia domiciliar ou aparelhos ortodônticos com a equipe odontológica em Santarém.',
+    'Solicite um orçamento para reparo de infiltrações, substituição de telhas, limpeza de calhas ou manutenção. Atendimento 24 horas.',
   pathname: '/book-appointment/',
 });
 
@@ -19,12 +19,12 @@ const BOOKING_STEPS = [
   {
     step: 1,
     title: 'Envie sua Solicitação',
-    description: 'Selecione o tratamento de interesse, data e horário preferencial através do formulário.',
+    description: 'Selecione o reparo de interesse, data e horário preferencial através do formulário.',
   },
   {
     step: 2,
     title: 'Avaliação da Equipe',
-    description: 'Nossa equipe clínica analisa o pedido para reservar o tempo necessário para seu atendimento.',
+    description: 'A equipe confirma a disponibilidade e combina os próximos passos após receber a solicitação.',
   },
   {
     step: 3,
@@ -34,7 +34,7 @@ const BOOKING_STEPS = [
   {
     step: 4,
     title: 'Atendimento Atencioso',
-    description: 'Venha ao consultório ou receba o atendimento de odontologia domiciliar no conforto da sua casa.',
+    description: 'Venha ao equipe ou receba o atendimento de serviços de telhados domiciliar no conforto da sua casa.',
   },
 ];
 
@@ -44,7 +44,7 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Agendar Consulta', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Solicitar orçamento', path: '/book-appointment/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
@@ -52,9 +52,9 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Atendimento Personalizado
                 </span>
-                <WordRevealH1 text="Reserve sua avaliação odontológica." />
+                <WordRevealH1 text="Solicite uma avaliação do seu telhado." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Agende sua consulta para implantes de carga imediata (recuperação do sorriso em 1 dia), avaliação ortodôntica ou solicite atendimento domiciliar em Santarém com a equipe odontológica." />
+                  <ScrubbedParagraph text="Solicite uma avaliação para infiltrações, telhas danificadas, calhas, vedação ou manutenção preventiva. Consulte a equipe sobre a área de atendimento." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,12 +62,12 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Agendamento via WhatsApp:</span>
+                  <span className="font-medium text-forest block">Orçamento via WhatsApp:</span>
                   <p className="text-forest-ink/70">
                     Prefere falar diretamente conosco agora? Clique abaixo para abrir o WhatsApp.
                   </p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5593992038371"
+                    href="https://api.whatsapp.com/send?phone=5583989050948"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
@@ -93,10 +93,10 @@ export default function BookAppointmentPage() {
                     Como Funciona
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    Etapas do seu agendamento
+                    Como funciona a solicitação
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    Priorizamos a pontualidade e o tempo necessário para cada paciente, garantindo uma consulta completa e esclarecedora.
+                    Priorizamos a pontualidade e o tempo necessário para cada Proprietário, garantindo uma avaliação completa e esclarecedora.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -133,7 +133,7 @@ export default function BookAppointmentPage() {
         </div>
       </section>
 
-      {/* SECTION 4, 5, 6: Contact Options, Opening Hours, Location */}
+      {/* SECTION 4, 5, 6: Contact Options, Opening Hours, Área de atendimento */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,11 +141,11 @@ export default function BookAppointmentPage() {
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato Direto</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Canais de Atendimento</h3>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Fale com a nossa equipe</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
                     <span className="text-forest-ink/60 block">WhatsApp:</span>
-                    <a href="https://api.whatsapp.com/send?phone=5593992038371" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
+                    <a href="https://api.whatsapp.com/send?phone=5583989050948" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.whatsapp}
                     </a>
                   </div>
@@ -163,7 +163,7 @@ export default function BookAppointmentPage() {
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horário</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Horário de Atendimento</h3>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Horários de atendimento</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
@@ -175,16 +175,14 @@ export default function BookAppointmentPage() {
               </div>
             </AnimateOnScroll>
 
-            {/* Physical Location */}
+            {/* Physical Área de atendimento */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Clinica Odonto Castro em Santarém</h3>
-                <address className="not-italic font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  {CLINIC_INFO.primaryLocation.street}
-                  <br />
-                  {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, Brasil
-                </address>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Área de atendimento</h3>
+                <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
+                  Consulte a equipe sobre a área de atendimento.
+                </p>
               </div>
             </AnimateOnScroll>
           </div>

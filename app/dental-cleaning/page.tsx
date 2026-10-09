@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza Dental & Profilaxia em Santarém',
+  title: 'Limpeza de calhas e rufos',
   description:
-    'Profilaxia e limpeza dental com ultrassom para prevenção de tártaro e gengivite no Clinica Odonto Castro em Santarém.',
+    'Limpeza de calhas e rufos para ajudar a manter o escoamento da água da chuva.',
   pathname: '/dental-cleaning/',
 });
 
@@ -44,16 +44,16 @@ export default function DentalCleaningPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Periodontal Prevention & Airflow
+                  roofing Prevention & Airflow
                 </span>
-                <WordRevealH1 text="Airflow cleaning and periodontal preservation." />
+                <WordRevealH1 text="Limpeza de calhas e revisão dos pontos de escoamento." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book preventive hygiene visit
+                    Solicitar limpeza de calhas e rufos
                   </Button>
                   <Button href="#procedure" variant="ghost" size="lg">
                     View hygiene sequence
@@ -66,7 +66,7 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Technology</span>
+                    <span>Método de avaliação</span>
                     <span className="font-medium text-forest">Glycine Airflow / Piezo</span>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
@@ -75,7 +75,7 @@ export default function DentalCleaningPage() {
                   </div>
                   <div className="flex justify-between">
                     <span>Standard Interval</span>
-                    <span className="font-medium text-forest">Every 6 Months</span>
+                    <span className="font-medium text-forest">Inspeção periódica</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -94,14 +94,14 @@ export default function DentalCleaningPage() {
                   Preventive Science
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What is guided biofilm therapy?
+                  Como funciona a limpeza de calhas?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike traditional metal hand scrapers, glycine powder airflow reaches subgingival pockets safely without scratching enamel prisms or sensitive root cementum.
+                    Unlike traditional metal hand scrapers, glycine powder airflow reaches subgingival pockets safely without scratching roof tiles prisms or sensitive root cementum.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -110,8 +110,8 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1000"
-                    alt="Guided airflow dental cleaning treatment"
+                    src="https://images.unsplash.com/photo-1661930941624-f4b43e3079f1?auto=format&fit=crop&w=1600&q=85"
+                    alt="Guided airflow Calhas e Rufos repair"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -132,7 +132,7 @@ export default function DentalCleaningPage() {
                 Systemic Health Protection
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Why professional hygiene is critical
+                Por que manter as calhas limpas?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -157,7 +157,7 @@ export default function DentalCleaningPage() {
         <ProcedurePin
           steps={service.procedureSteps}
           title="Guided Hygiene & Debridement Sequence"
-          subtitle="Gentle 4-Stage Periodontal Protocol"
+          subtitle="Gentle 4-Stage roofing Protocol"
         />
       </div>
 
@@ -167,13 +167,13 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Periodontal Pathology
+                roofing Pathology
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
                 Understanding biofilm, calculus & bone loss
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                When soft bacterial plaque mineralizes into hard calculus (tartar), it cannot be brushed away at home. The resulting chronic inflammation triggers alveolar bone resorption over time.
+                Folhas e resíduos podem bloquear o escoamento da água. A limpeza ajuda a reduzir transbordamentos e a identificar sinais visíveis de vazamento.
               </p>
             </div>
           </AnimateOnScroll>
@@ -183,7 +183,7 @@ export default function DentalCleaningPage() {
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
                 <span className="font-display text-21 text-forest block mb-2">Stage 1: Plaque Biofilm</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Invisible sticky colony of oral bacteria. Reversible in days with proper brushing, flossing, and surface airflow polishing.
+                  Folhas e pequenos resíduos podem se acumular nas calhas e dificultar a drenagem da água da chuva.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -191,7 +191,7 @@ export default function DentalCleaningPage() {
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
                 <span className="font-display text-21 text-forest block mb-2">Stage 2: Calcified Tartar</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Plaque mineralized by saliva minerals into a rock-hard matrix. Requires gentle ultrasonic vibration to dislodge safely.
+                  Resíduos compactados podem exigir limpeza cuidadosa. O método é definido conforme o acesso e as condições do local.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -224,19 +224,19 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimateOnScroll animation="fade-right" duration={0.8}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Every 6 Months</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">Standard Preventive Recall</h3>
+                <span className="font-display text-26 text-forest block mb-2">Inspeção periódica</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">Revisão preventiva</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  For patients with healthy gum tissue, no active bone loss, and pocket depths measuring 1 to 3mm.
+                  Para coberturas sem sinais aparentes de dano; a frequência adequada depende do material e das condições do imóvel.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Every 3 to 4 Months</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">Periodontal Maintenance</h3>
+                <span className="font-display text-26 text-forest block mb-2">Após chuva forte ou ventos intensos</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">roofing Maintenance</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  For patients with a history of periodontal surgery, dental implants, diabetic conditions, or rapid calculus accumulation.
+                  Para telhados com histórico de infiltrações ou desgaste, uma avaliação pode ajudar a identificar pontos que merecem atenção.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -250,10 +250,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Post-Visit Care
+                Cuidados após a limpeza
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Hygiene aftercare recommendations
+                Cuidados de manutenção da cobertura
               </h2>
             </div>
           </AnimateOnScroll>
@@ -261,25 +261,25 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Fluoride Curing</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Remoção de detritos</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Avoid eating hot or crunchy foods for 30 minutes following protective mineral varnish application.
+                  Mantenha calhas e saídas de água desobstruídas; solicite limpeza quando houver acúmulo de folhas ou resíduos.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Interdental Brushing</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Inspeção de rufos e calhas</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Use sized interdental brushes daily to remove plaque in wide interproximal spaces.
+                  Verifique sinais de obstrução e vazamento a partir do chão. Não suba na cobertura sem acesso e equipamento adequados.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Gentle Angle Brushing</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Revisão das telhas</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Angle soft bristles at 45 degrees toward the gumline to sweep away daily biofilm without recession.
+                  Peças quebradas ou deslocadas devem ser avaliadas por uma equipe com acesso seguro ao telhado.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -297,7 +297,7 @@ export default function DentalCleaningPage() {
                   Transparent Fees
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Dental hygiene pricing
+                  de telhados hygiene pricing
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
                   <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard Hygiene Range</span>
@@ -315,7 +315,7 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Included in this appointment:
+                    Informações para preparar o orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -332,17 +332,17 @@ export default function DentalCleaningPage() {
         </div>
       </section>
 
-      {/* SECTION 9: FAQs */}
+      {/* SECTION 9: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Inquiries
+                  homeowner Inquiries
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Cleaning FAQs
+                  Cleaning Dúvidas frequentes
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -364,13 +364,13 @@ export default function DentalCleaningPage() {
                 Preventive Health
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your guided airflow cleaning
+                Solicitar limpeza de calhas
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Book Appointment
+              Solicitar orçamento
             </Button>
           </AnimateOnScroll>
         </div>

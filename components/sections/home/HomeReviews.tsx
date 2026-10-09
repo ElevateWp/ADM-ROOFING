@@ -1,7 +1,7 @@
 import React from 'react';
 import PanelWipe from '@/components/motion/PanelWipe';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
-import { PATIENT_REVIEWS, CLINIC_INFO } from '@/lib/clinic-data';
+import { PATIENT_REVIEWS } from '@/lib/clinic-data';
 
 export default function HomeReviews() {
   return (
@@ -11,18 +11,18 @@ export default function HomeReviews() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
             <div>
               <span className="font-body text-13 text-lime block mb-2 uppercase tracking-wider font-semibold">
-                Depoimentos de pacientes
+                Avaliações de clientes
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                O que nossos pacientes dizem sobre nosso atendimento
+                O que os clientes dizem sobre o atendimento
               </h2>
-              <p className="mt-3 font-body text-14 text-paper/70">4,9 de 5 · 24 avaliações no Google</p>
+              <p className="mt-3 font-body text-14 text-paper/70">5,0 de 5 · 15 avaliações no Google</p>
             </div>
           </div>
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-          {PATIENT_REVIEWS.slice(0, 3).map((review, idx) => (
+          {PATIENT_REVIEWS.map((review, idx) => (
             <AnimateOnScroll
               key={review.id}
               animation={idx % 2 === 0 ? 'fade-right' : 'fade-left'}
@@ -30,7 +30,7 @@ export default function HomeReviews() {
             >
               <div className="flex flex-col justify-between p-8 border border-mist/20 bg-paper/5 h-full hover:bg-paper/10 transition-colors shadow-sm">
                 <div>
-                  <div className="flex items-center gap-1 text-[#12B5D8] text-14 mb-4">
+                  <div className="flex items-center gap-1 text-[#32A77E] text-14 mb-4">
                     ★★★★★
                   </div>
                   <blockquote className="font-display text-20 md:text-23 text-paper leading-relaxed mb-8">

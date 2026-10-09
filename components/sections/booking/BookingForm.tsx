@@ -40,16 +40,16 @@ export default function BookingForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Please enter your full name.';
+      newErrors.fullName = 'Informe seu nome completo.';
     }
     if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      newErrors.phone = 'Please provide a valid contact telephone number.';
+      newErrors.phone = 'Please provide a valid Contato telephone number.';
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
       newErrors.email = 'Please provide a valid email address.';
     }
     if (!formData.preferredDate) {
-      newErrors.preferredDate = 'Please select a preferred appointment date.';
+      newErrors.preferredDate = 'Please select a preferred quote request date.';
     }
 
     setErrors(newErrors);
@@ -61,7 +61,7 @@ export default function BookingForm() {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate brief clinical triage intake
+    // Simulate brief technical triage intake
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -75,15 +75,15 @@ export default function BookingForm() {
           Request Received
         </span>
         <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          Appointment requested
+          quote request requested
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Thank you, {formData.fullName}. Our clinical coordinator will review your requested treatment and telephone you at <strong className="text-lime">{formData.phone}</strong> within two business hours to confirm your exact visit time.
+          Obrigado, {formData.fullName}. A equipe analisará sua solicitação e entrará em contato pelo telefone <strong className="text-lime">{formData.phone}</strong> para combinar a avaliação.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Requested Service:</span>
+            <span className="text-paper/60">Serviço solicitado:</span>
             <span className="text-paper font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
@@ -122,7 +122,7 @@ export default function BookingForm() {
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
             className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
           >
-            Need immediate assistance? Call {CLINIC_INFO.contact.phone}
+            Precisa de ajuda? Ligue: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
@@ -137,10 +137,10 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request an appointment
+          Request an quote request
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Complete this form to request your comprehensive consultation. No payment required today.
+          Preencha o formulário para solicitar uma avaliação. A equipe confirmará a disponibilidade e os próximos passos.
         </p>
       </div>
 
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#6B8190] transition-all duration-200">
+          <span className="font-body text-13 text-[#68777D] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="(415) 000-0000"
+          placeholder="(83) 98905-0948"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#6B8190]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#68777D]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#6B8190]">{errors.email}</span>
+            <span className="font-body text-13 text-[#68777D]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Requested Treatment Discipline <span className="text-forest">*</span>
+          Requested repair Discipline <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,8 +229,8 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Comprehensive New Patient Examination</option>
-          <option value="emergency">Emergency / Urgent Pain Relief</option>
+          <option value="general-consultation">Avaliação da cobertura</option>
+          <option value="Urgência">Urgência / Urgent Pain Relief</option>
         </select>
       </div>
 
@@ -253,13 +253,13 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#6B8190]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#68777D]">{errors.preferredDate}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredTime" className="font-body text-13 text-forest-ink/70">
-            Preferred Time of Day
+            Período preferido
           </label>
           <select
             id="preferredTime"
@@ -277,14 +277,14 @@ export default function BookingForm() {
       {/* Additional Medical / Clinical Notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Specific Symptoms or Clinical Questions (Optional)
+          Specific Symptoms or técnica Questions (Optional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Describe any previous dental history, dental anxiety, or specific tooth sensations..."
+          placeholder="Descreva o problema, quando começou e quais áreas da cobertura foram afetadas..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>
@@ -298,7 +298,7 @@ export default function BookingForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto"
         >
-          {isSubmitting ? 'Submitting request...' : 'Request appointment'}
+          {isSubmitting ? 'Submitting request...' : 'Request quote request'}
         </Button>
         <span className="font-body text-13 text-forest-ink/60">
           Confidential & HIPAA Protected

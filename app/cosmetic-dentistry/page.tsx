@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'cosmetic-dentistry')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Odontologia Estética & Facetas em Santarém',
+  title: 'serviços de telhados Estética & Facetas',
   description:
-    'Lentes de contato dental, facetas cerâmicas e estética do sorriso pela equipe odontológica em Santarém.',
+    'Avaliação de telhas, rufos e pontos de vedação após chuva e vento em área de atendimento.',
   pathname: '/cosmetic-dentistry/',
 });
 
@@ -45,16 +45,16 @@ export default function CosmeticDentistryPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Restorative Aesthetics & Ceramics
+                  Reparos e acabamentos da cobertura
                 </span>
-                <WordRevealH1 text="Minimally invasive porcelain veneers and smile design." />
+                <WordRevealH1 text="Reparos localizados após danos causados por chuva e vento." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book cosmetic assessment
+                    Solicitar avaliação da cobertura
                   </Button>
                   <Button href="#before-after" variant="ghost" size="lg">
                     View documented outcomes
@@ -67,13 +67,13 @@ export default function CosmeticDentistryPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Aesthetic Lead</span>
+                    <span>Equipe responsável</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Enamel Removal</span>
+                    <span>roof tiles Removal</span>
                     <span className="font-medium text-forest">0.3mm – 0.5mm Micro</span>
                   </div>
                   <div className="flex justify-between">
@@ -93,7 +93,7 @@ export default function CosmeticDentistryPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Procedures
+                Etapas do serviço
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Restorative cosmetic modalities
@@ -107,7 +107,7 @@ export default function CosmeticDentistryPage() {
                 <div className="p-8 bg-paper border border-mist flex flex-col justify-between h-full shadow-sm">
                   <div>
                     <span className="font-body text-13 text-forest font-medium block mb-2">
-                      Treatment 0{idx + 1}
+                      repair 0{idx + 1}
                     </span>
                     <h3 className="font-display text-21 md:text-26 text-forest-ink mb-3">
                       {ind.condition}
@@ -117,7 +117,7 @@ export default function CosmeticDentistryPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-mist text-13 text-forest-ink/60">
-                    Tailored to facial midline and lip dynamics
+                    Avaliação conforme o material e o formato do telhado
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -133,17 +133,17 @@ export default function CosmeticDentistryPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Digital Smile Design (DSD)
+                  Inspeção da cobertura
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  How we evaluate your smile architecture
+                  Como avaliamos a cobertura
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
-                  We analyze dynamic facial video, tooth exposure during speech, and lip symmetry. Before touching any enamel, we produce a 3D diagnostic wax-up and transfer it directly onto your teeth as an intraoral trial—allowing you to approve your new smile in natural light.
+                  Observamos telhas, emendas, rufos e pontos de infiltração. A equipe apresenta as opções e o escopo indicado antes do início do reparo.
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    You test-drive your exact smile aesthetics and phonetics with zero permanent modification.
+                    A equipe avalia o tipo de cobertura e explica as opções de reparo antes de qualquer serviço.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -152,8 +152,8 @@ export default function CosmeticDentistryPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1000"
-                    alt="Digital Smile Design aesthetic evaluation"
+                    src="https://images.unsplash.com/photo-1583345237708-add35a664d77?auto=format&fit=crop&w=1600&q=85"
+                    alt="Inspeção digital ilustrativa de telhado"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -171,10 +171,10 @@ export default function CosmeticDentistryPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Ceramic Stratification
+                Materiais de reparo
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Material selection & optical properties
+                Escolha dos materiais de cobertura
               </h2>
             </div>
           </AnimateOnScroll>
@@ -182,19 +182,19 @@ export default function CosmeticDentistryPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimateOnScroll animation="fade-right" duration={0.8}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Feldspathic Porcelain</span>
-                <h3 className="font-display text-21 text-forest-ink mb-3">Master-Layered Aesthetics</h3>
+                <span className="font-display text-26 text-forest block mb-2">Reparo de telhas cerâmicas</span>
+                <h3 className="font-display text-21 text-forest-ink mb-3">Acabamentos e vedação</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Hand-stratified ceramic powders recreating natural opalescence, mamelons, and incisal halo effects. The gold standard for anterior smile zone cases.
+                  A solução de acabamento é definida após verificar o material, a área afetada e as condições da cobertura.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Lithium Disilicate (e.max)</span>
-                <h3 className="font-display text-21 text-forest-ink mb-3">High-Strength Monolithic</h3>
+                <span className="font-display text-26 text-forest block mb-2">Reparo de coberturas metálicas</span>
+                <h3 className="font-display text-21 text-forest-ink mb-3">Vedação e acabamento</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Press ceramic offering exceptional flexural strength (500 MPa) combined with natural optical translucency. Ideal for patients with moderate bruxism.
+                  O material de reparo deve ser compatível com a cobertura existente e é especificado após a inspeção.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -211,7 +211,7 @@ export default function CosmeticDentistryPage() {
                 Documented Ceramic Outcomes
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Porcelain veneer case documentation
+                Porcelain roof repair case documentation
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -226,7 +226,7 @@ export default function CosmeticDentistryPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Restoration: 8 micro-layered feldspathic veneers by ${leadDentist.name}. Timeframe: ${service.beforeAfterCase.timeframe}.`}
+                clinicalNote={`Serviço demonstrativo de reparo de telhado. Prazo: ${service.beforeAfterCase.timeframe}.`}
               />
             </div>
           </AnimateOnScroll>
@@ -242,7 +242,7 @@ export default function CosmeticDentistryPage() {
                 Realistic Outcomes
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Clinical benefits & longevity
+                técnica benefits & longevity
               </h2>
             </div>
           </AnimateOnScroll>
@@ -280,7 +280,7 @@ export default function CosmeticDentistryPage() {
               </div>
               <div className="lg:col-span-9">
                 <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                  Esthetic Restorative Lead
+                  Equipe responsável pelo serviço
                 </span>
                 <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
                   {leadDentist.name}
@@ -292,7 +292,7 @@ export default function CosmeticDentistryPage() {
                   href={`/dentists/${leadDentist.slug}/`}
                   className="font-body text-15 text-forest font-medium underline underline-offset-4"
                 >
-                  View {leadDentist.name}’s restorative profile →
+                  Conheça a equipe responsável →
                 </Link>
               </div>
             </div>
@@ -313,7 +313,7 @@ export default function CosmeticDentistryPage() {
                   Cosmetic porcelain pricing
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Per Tooth Investment</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Per roof Investment</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -328,7 +328,7 @@ export default function CosmeticDentistryPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Included in this fee:
+                    Itens considerados no orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -345,17 +345,17 @@ export default function CosmeticDentistryPage() {
         </div>
       </section>
 
-      {/* SECTION 9: FAQs */}
+      {/* SECTION 9: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Inquiries
+                  homeowner Inquiries
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Cosmetic FAQs
+                  Cosmetic Dúvidas frequentes
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -374,16 +374,16 @@ export default function CosmeticDentistryPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Transform Your Smile
+                Proteja sua cobertura
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your Digital Smile Design consultation
+                Solicitar uma avaliação da cobertura
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Book Assessment
+              Solicitar avaliação
             </Button>
           </AnimateOnScroll>
         </div>

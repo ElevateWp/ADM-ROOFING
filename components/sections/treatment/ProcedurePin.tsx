@@ -26,8 +26,8 @@ interface ProcedurePinProps {
 
 export default function ProcedurePin({
   steps,
-  title = 'Clinical Procedure Walkthrough',
-  subtitle = 'Step-by-step treatment sequence',
+  title = 'Etapas do serviço',
+  subtitle = 'Sequência do reparo',
   className = '',
 }: ProcedurePinProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -71,7 +71,7 @@ export default function ProcedurePin({
           <div className="hidden lg:block lg:col-span-5">
             <div className="sticky top-28 p-8 bg-paper border border-mist">
               <span className="font-body text-13 text-forest uppercase tracking-wider block mb-2 font-medium">
-                Active Phase {activeStep + 1} of {steps.length}
+                Etapa ativa {activeStep + 1} de {steps.length}
               </span>
               <h3 className="font-display text-26 md:text-33 text-forest-ink mb-4">
                 {steps[activeStep]?.title}
@@ -118,7 +118,7 @@ export default function ProcedurePin({
                 }`}
               >
                 <div className="flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4">
-                  <span className="font-display text-21 sm:text-26 text-forest">Phase 0{step.stepNumber}</span>
+                  <span className="font-display text-21 sm:text-26 text-forest">Etapa 0{step.stepNumber}</span>
                   <span className="font-body text-13 text-forest-ink/60 bg-mist/50 px-2.5 py-0.5 rounded-full">
                     {step.duration}
                   </span>
@@ -131,7 +131,7 @@ export default function ProcedurePin({
                 </p>
                 <div className="p-3.5 sm:p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80 block">
-                    <strong className="text-forest font-medium">Clinical Standard:</strong>{' '}
+                    <strong className="text-forest font-medium">técnica Standard:</strong>{' '}
                     {step.clinicalDetails}
                   </span>
                 </div>

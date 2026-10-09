@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'teeth-whitening')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Clareamento Dental em Santarém',
+  title: 'Substituição de telhas',
   description:
-    'Clareamento dental em consultório e caseiro supervisionado com segurança e proteção ao esmalte pela equipe odontológica em Santarém.',
+    'Substituição de telhas em equipe e caseiro supervisionado com segurança e proteção ao telhas pela equipe de reparos de telhados.',
   pathname: '/teeth-whitening/',
 });
 
@@ -45,16 +45,16 @@ export default function TeethWhiteningPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Cosmetic Enamel Care
+                  Cosmetic roof tiles Care
                 </span>
-                <WordRevealH1 text="Prescription whitening with zero thermal damage." />
+                <WordRevealH1 text="Substituição de telhas e vedação de pontos vulneráveis." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book whitening session
+                    Book roof restoration session
                   </Button>
                   <Button href="/cosmetic-dentistry/" variant="ghost" size="lg">
                     Explore full cosmetic scope
@@ -67,7 +67,7 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Lead</span>
+                    <span>técnica Lead</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
@@ -77,7 +77,7 @@ export default function TeethWhiteningPage() {
                     <span className="font-medium text-forest">4–8 Vita Shades</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Enamel Safety</span>
+                    <span>roof tiles Safety</span>
                     <span className="font-medium text-forest">Neutral pH / ACP</span>
                   </div>
                 </div>
@@ -97,14 +97,14 @@ export default function TeethWhiteningPage() {
                   Oxidation Chemistry
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  How clinical whitening works
+                  How técnica roof restoration works
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike abrasive charcoal or over-the-counter strips, medical whitening dissolves chromogens without thinning enamel or creating micro-scratches.
+                    Unlike abrasive charcoal or over-the-counter strips, roofing roof restoration dissolves chromogens without thinning roof tiles or creating micro-scratches.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -113,8 +113,8 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=1000"
-                    alt="Professional teeth whitening treatment"
+                    src="https://images.unsplash.com/photo-1681049400158-0ff6249ac315?auto=format&fit=crop&w=1600&q=85"
+                    alt="Professional Reparo e Substituição de telhas repair"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -132,10 +132,10 @@ export default function TeethWhiteningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Patient Candidacy
+                homeowner Candidacy
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Who benefits from prescription whitening?
+                Who benefits from prescription roof restoration?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -183,7 +183,7 @@ export default function TeethWhiteningPage() {
       {/* SECTION 5: Whitening Procedure */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="Clinical In-Chair Whitening Sequence"
+        title="técnica In-Chair roof restoration Sequence"
         subtitle="Monitored Step-by-Step Protocol"
       />
 
@@ -196,7 +196,7 @@ export default function TeethWhiteningPage() {
                 Standardized Results
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Expected shade transformation
+                Comparação do telhado sem e com telhas
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -211,7 +211,7 @@ export default function TeethWhiteningPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Measured on Vita 3D-Master scale.`}
+                clinicalNote="Imagens ilustrativas: telhado sem telhas e cobertura com telhas."
               />
             </div>
           </AnimateOnScroll>
@@ -227,10 +227,10 @@ export default function TeethWhiteningPage() {
                 Shade Longevity
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                How long will whitening results last?
+                How long will roof restoration results last?
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Clinical shade brightness remains stable between 12 and 24 months. By wearing custom laboratory maintenance trays once every 6 to 12 months, shade stability can be maintained indefinitely.
+                técnica shade brightness remains stable between 12 and 24 months. By wearing custom laboratory maintenance trays once every 6 to 12 months, shade stability can be maintained indefinitely.
               </p>
             </div>
           </AnimateOnScroll>
@@ -250,7 +250,7 @@ export default function TeethWhiteningPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-mist font-body text-13 text-forest-ink/70">
                 <div>
                   <strong className="text-forest block font-medium">Post-Whitening Hydration:</strong>
-                  Enamel rehydrates fully within 48 hours for true final shade luminance.
+                  roof tiles rehydrates fully within 48 hours for true final shade luminance.
                 </div>
                 <div>
                   <strong className="text-forest block font-medium">Custom Tray Maintenance:</strong>
@@ -273,13 +273,13 @@ export default function TeethWhiteningPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Fee Schedule
+                  Orçamento do serviço
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Teeth whitening costs
+                  Reparo e Substituição de telhas costs
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard Clinical Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard técnica Range</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -294,7 +294,7 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    What is included in this fee:
+                    Itens considerados no orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -311,17 +311,17 @@ export default function TeethWhiteningPage() {
         </div>
       </section>
 
-      {/* SECTION 9: FAQs */}
+      {/* SECTION 9: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Questions
+                  homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Whitening FAQs
+                  roof restoration Dúvidas frequentes
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -340,16 +340,16 @@ export default function TeethWhiteningPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Brighten Your Enamel
+                Brighten Your roof tiles
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your prescription whitening visit
+                Schedule your prescription roof restoration visit
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Book Appointment
+              Solicitar orçamento
             </Button>
           </AnimateOnScroll>
         </div>

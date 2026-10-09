@@ -10,24 +10,24 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Atendimento Odontológico de Urgência em Santarém',
+  title: 'Atendimento de telhados de Urgência',
   description:
-    'Atendimento odontológico para dor de dente intensa, dente quebrado ou emergências em Santarém. WhatsApp/Telefone: +55 93 99203-8371.',
+    'Atendimento demonstrativo para infiltrações e danos na cobertura em área de atendimento. Contato: +55 83 98905-0948.',
   pathname: '/emergency-dentist/',
 });
 
 const EMERGENCY_FAQS = [
   {
-    question: 'Como funciona o atendimento de urgência para dor de dente?',
-    answer: 'Pacientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 93 99203-8371) para orientação e agendamento.',
+    question: 'Como funciona o atendimento de urgência para dor de telhado?',
+    answer: 'clientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 83 98905-0948) para orientação e Orçamento.',
   },
   {
-    question: 'O consultório oferece atendimento domiciliar de urgência?',
-    answer: 'Sim, o A equipe odontológica realiza odontologia domiciliar para pacientes acamados ou com limitações de locomoção em Santarém.',
+    question: 'A equipe oferece atendimento domiciliar de urgência?',
+    answer: 'Sim, o A equipe de reparos de telhados realiza serviços de telhados domiciliar para clientes acamados ou com limitações de locomoção.',
   },
   {
-    question: 'O que fazer caso um dente quebre ou caia por trauma?',
-    answer: 'Segure o dente apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao consultório ou entre em contato pelo nosso WhatsApp (+55 93 99203-8371).',
+    question: 'O que fazer caso um telhado quebre ou caia por trauma?',
+    answer: 'Segure o telhado apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao equipe ou entre em contato pelo nosso WhatsApp (+55 83 98905-0948).',
   },
 ];
 
@@ -38,22 +38,22 @@ export default function EmergencyDentistPage() {
 
 
 
-      {/* SECTION 1: Emergency Introduction & Immediate Action */}
+      {/* SECTION 1: Urgência Introduction & Immediate Action */}
       <section className="py-12 md:py-16 bg-paper border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Emergency Dentist', path: '/emergency-dentist/' }]} />
+          <Breadcrumbs items={[{ name: 'Reparo Emergencial', path: '/emergency-dentist/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-6 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-forest font-semibold block mb-2 uppercase tracking-wider">
-                Immediate Urgent Care
+                Reparos urgentes de telhado
               </span>
               <h1 className="font-display text-33 sm:text-41 md:text-52 text-forest-ink leading-tight mb-4">
-                Immediate relief for acute dental pain and trauma.
+                Reparo emergencial para goteiras e danos na cobertura.
               </h1>
               <p className="font-body text-17 text-forest-ink/90 leading-relaxed mb-6 max-w-2xl">
-                If you are suffering from severe throbbing tooth pain, a knocked-out tooth, dental abscess swelling, or a fractured restoration, our surgical specialists provide same-day emergency stabilization.
+                Se houver goteira ativa ou dano após chuva e vento, mantenha distância de áreas inseguras e solicite uma avaliação da cobertura.
               </p>
 
               {/* Direct Immediate Call Action */}
@@ -64,10 +64,10 @@ export default function EmergencyDentistPage() {
                   size="lg"
                   className="font-bold text-17"
                 >
-                  Call Emergency Hotline: {CLINIC_INFO.contact.emergencyPhone}
+                  Telefone: {CLINIC_INFO.contact.emergencyPhone}
                 </Button>
                 <Button href="/book-appointment/" variant="ghost" size="lg">
-                  Request Same-Day Slot Online
+                  Solicitar avaliação
                 </Button>
               </div>
               </AnimateOnScroll>
@@ -76,7 +76,7 @@ export default function EmergencyDentistPage() {
             <div className="lg:col-span-4 p-6 bg-forest text-paper">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime font-medium uppercase tracking-wider block mb-2">
-                Walk-In Clinical Location
+                Walk-In técnica Área de atendimento
               </span>
               <address className="not-italic font-body text-15 text-paper leading-relaxed mb-4">
                 {CLINIC_INFO.name}
@@ -86,7 +86,7 @@ export default function EmergencyDentistPage() {
                 {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}
               </address>
               <div className="pt-3 border-t border-mist/20 text-13 text-paper/80 font-body">
-                Civic Center Plaza • Direct Ground Floor Elevator
+                Área de atendimento e endereço a confirmar
               </div>
               </AnimateOnScroll>
             </div>
@@ -99,10 +99,10 @@ export default function EmergencyDentistPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Condition Identification & First-Aid
+              Sinais de danos e cuidados iniciais
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              What to do immediately before arriving at our clinic
+              O que fazer enquanto aguarda a avaliação do telhado
             </h2>
           </AnimateOnScroll>
 
@@ -124,7 +124,7 @@ export default function EmergencyDentistPage() {
 
                   <div className="mb-4">
                     <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-1 font-medium">
-                      Symptoms:
+                      Sinais observados:
                     </span>
                     <ul className="space-y-1 font-body text-13 text-forest-ink/80">
                       {cond.symptoms.map((s, i) => (
@@ -138,7 +138,7 @@ export default function EmergencyDentistPage() {
 
                   <div className="p-4 bg-mist/30 border-l-2 border-forest mb-4">
                     <span className="font-body text-13 text-forest font-semibold block mb-1">
-                      Immediate Action:
+                      Cuidados imediatos:
                     </span>
                     <ul className="space-y-1 font-body text-13 text-forest-ink/90">
                       {cond.immediateAction.map((act, i) => (
@@ -149,7 +149,7 @@ export default function EmergencyDentistPage() {
                 </div>
 
                 <div className="pt-4 border-t border-mist text-13 font-body text-forest-ink/70">
-                  <strong className="text-forest font-medium">Clinic Protocol:</strong> {cond.clinicTreatment}
+                  <strong className="text-forest font-medium">Avaliação do serviço:</strong> {cond.clinicTreatment}
                 </div>
               </div>
               </AnimateOnScroll>
@@ -163,105 +163,105 @@ export default function EmergencyDentistPage() {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="max-w-3xl mb-8">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Triage Criteria
+              Sinais que exigem atenção rápida
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-              When a dental issue is a genuine emergency
+              Quando um dano no telhado exige atenção rápida
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-              Dental infections can spread rapidly into deep facial spaces if untreated. You should seek same-day care if you experience any of the following critical indicators:
+              Goteiras ativas, partes da cobertura expostas ou água perto da instalação elétrica exigem cuidado. Afaste-se de áreas inseguras e peça uma avaliação.
             </p>
           </AnimateOnScroll>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimateOnScroll animation="zoom-in" duration={0.8}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Visible Facial Swelling</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Forro cedendo ou deformado</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Swelling extending toward the cheek, jawline, eye, or throat indicates active purulent infection requiring rapid drainage.
+                Um forro cedendo pode indicar acúmulo de água ou dano. Afaste-se do local e não tente pressionar a estrutura.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.1}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Uncontrolled Bleeding</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Goteira próxima à instalação elétrica</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Continuous oral bleeding that fails to stop after 20 minutes of firm, direct gauze pressure.
+                Não toque em luminárias, tomadas ou fiação atingidas pela umidade. Afaste-se e procure um profissional qualificado.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.2}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Traumatic Tooth Avulsion</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Telhas deslocadas após ventania</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                A permanent tooth dislodged by physical impact must be reimplanted within 60 minutes for highest survival rate.
+                Não suba no telhado para recolocar peças. Registre os danos do chão somente se for seguro.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.3}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Severe Pulpitis Pain</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Goteira ativa durante a chuva</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Throbbing pain that fails to respond to maximum permitted doses of ibuprofen or acetaminophen.
+                Afaste objetos da água e recolha a água apenas se não houver risco elétrico ou estrutural.
               </p>
             </div></AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: Emergency Treatment Options */}
+      {/* SECTION 5: Opções de reparo urgente */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Clinical Interventions
+              Serviços para danos urgentes
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Procedures performed during emergency visits
+              Serviços que podem ser avaliados
             </h2>
           </AnimateOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" duration={0.8}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Microscopic Pulpotomy / Debridement</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Reparo de infiltrações</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Immediate removal of inflamed pulpal nerve tissue to eliminate agonizing toothache pain instantly.
+                Avaliação dos pontos de entrada de água e definição do reparo indicado.
               </p>
               <Link href="/root-canal/" className="font-body text-13 text-forest underline">
-                Endodontic details →
+                Saiba mais sobre infiltrações →
               </Link>
             </div></AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.1}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Trauma Splinting & Reimplantation</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Substituição de telhas</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Biological socket debridement, gentle tooth repositioning, and flexible periodontal wire stabilization.
+                Inspeção das peças deslocadas e avaliação de substituição, com acesso seguro à cobertura.
               </p>
               <Link href="/dental-implants/" className="font-body text-13 text-forest underline">
-                Implant replacement options →
+                Saiba mais sobre reparo de telhados →
               </Link>
             </div></AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Abscess Incision & Decompression</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Vedação e revisão de rufos</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Localized surgical decompression to release trapped infection pressure, accompanied by targeted antibiotics.
+                Revisão dos encontros da cobertura e dos pontos de vedação que podem permitir a entrada de água.
               </p>
               <Link href="/contact/" className="font-body text-13 text-forest underline">
-                Clinic contact desk →
+                Fale com a equipe →
               </Link>
             </div></AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* SECTION 6 & 7: Same-Day Information & Direct Emergency Contact */}
+      {/* SECTION 6 & 7: Same-Day Information & Direct Urgência Contact */}
       <section className="py-16 md:py-24 border-b border-mist bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Immediate Telephone Triage
+                Solicite uma avaliação
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper mb-4">
-                Speak directly with our on-call dental team
+                Fale com a equipe sobre danos no telhado
               </h2>
               <p className="font-body text-17 text-paper/90 leading-relaxed mb-8 max-w-2xl">
-                Contact us during our posted hours for emergency appointment guidance. Our clinical staff will immediately assess your symptoms, advise on pain management, and prepare our surgical suite for your arrival.
+                Entre em contato para solicitar uma avaliação. A disponibilidade, o acesso e o escopo do reparo são confirmados com a equipe.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Button
@@ -270,7 +270,7 @@ export default function EmergencyDentistPage() {
                   size="lg"
                   className="font-bold text-17"
                 >
-                  Call {CLINIC_INFO.contact.emergencyPhone}
+                  Telefone: {CLINIC_INFO.contact.emergencyPhone}
                 </Button>
                 <Button
                   href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
@@ -278,7 +278,7 @@ export default function EmergencyDentistPage() {
                   size="lg"
                   className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
                 >
-                  WhatsApp Clinical Desk
+                  WhatsApp
                 </Button>
               </div>
               </AnimateOnScroll>
@@ -287,10 +287,10 @@ export default function EmergencyDentistPage() {
             <div className="lg:col-span-4 p-6 bg-paper/10 border border-mist/20">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime block mb-2 font-medium">
-                Walk-In Triage Policy
+                Área de atendimento
               </span>
               <p className="font-body text-13 text-paper/80 leading-relaxed">
-                While we recommend calling ahead so we can prepare a sterile suite, true acute dental trauma walk-ins are welcomed directly at {CLINIC_INFO.primaryLocation.directions} during business hours.
+                Consulte a equipe sobre a área de atendimento.
               </p>
               </AnimateOnScroll>
             </div>
@@ -298,15 +298,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 8: Location & Opening Hours */}
+      {/* SECTION 8: Área de atendimento & Opening Hours */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">Location</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Área de atendimento</span>
               <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                How to reach our emergency clinic
+                Área de atendimento
               </h2>
               <address className="not-italic font-body text-15 text-forest-ink/80 leading-relaxed mb-4">
                 {CLINIC_INFO.name}
@@ -323,7 +323,7 @@ export default function EmergencyDentistPage() {
 
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">Operating Hours</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Horários de atendimento</span>
               <div className="border border-mist divide-y divide-mist bg-paper font-body text-13">
                 {CLINIC_INFO.schedule.map((item) => (
                   <div key={item.day} className="p-3 flex justify-between">
@@ -338,15 +338,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Emergency FAQs */}
+      {/* SECTION 9: Urgência Dúvidas frequentes */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">FAQs</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Dúvidas frequentes</span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Emergency care FAQs
+                Urgência care Dúvidas frequentes
               </h2>
               </AnimateOnScroll>
             </div>
@@ -359,15 +359,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 10: Final Emergency Action CTA */}
+      {/* SECTION 10: Final Urgência Action CTA */}
       <section className="py-16 md:py-24 bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12 text-center flex flex-col items-center">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="flex flex-col items-center">
           <h2 className="font-display text-33 md:text-41 text-paper mb-4">
-            Do not endure severe dental pain.
+            Não suba no telhado em condições inseguras.
           </h2>
           <p className="font-body text-15 md:text-17 text-paper/80 mb-8 max-w-xl">
-            Our dental team can assess the problem and discuss ways to relieve pain and preserve natural tooth structure.
+            A equipe pode avaliar os danos visíveis e explicar as opções de reparo para a cobertura.
           </p>
           <Button
             href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}
@@ -375,7 +375,7 @@ export default function EmergencyDentistPage() {
             size="lg"
             className="font-bold text-17"
           >
-            Call {CLINIC_INFO.contact.emergencyPhone}
+            Telefone: {CLINIC_INFO.contact.emergencyPhone}
           </Button>
           </AnimateOnScroll>
         </div>

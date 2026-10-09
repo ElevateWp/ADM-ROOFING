@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'http://127.0.0.1:3001';
+export const BASE_URL = 'http://localhost:3456';
 
 export function createMetadata({
   title,
@@ -16,7 +16,7 @@ export function createMetadata({
 }): Metadata {
   const url = `${BASE_URL}${pathname}`;
   const fullTitle = `${title} | ${CLINIC_INFO.name}`;
-  const defaultImage = `${BASE_URL}/images/logo.png`;
+  const defaultImage = `${BASE_URL}/images/campina-resolve-logo.png`;
 
   return {
     title: fullTitle,
@@ -63,59 +63,50 @@ export function createMetadata({
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Dentist',
-    '@id': `${BASE_URL}/#dentist`,
+    '@type': 'LocalBusiness',
+    '@id': `${BASE_URL}/#business`,
     name: CLINIC_INFO.name,
     legalName: CLINIC_INFO.legalName,
     url: BASE_URL,
     telephone: CLINIC_INFO.contact.phone,
-    priceRange: '$$',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: 4.9,
-      reviewCount: 24,
+      ratingValue: '5.0',
+      reviewCount: '15',
+      bestRating: '5',
     },
-    address: {
+    ...(CLINIC_INFO.primaryLocation.city || CLINIC_INFO.primaryLocation.street ? { address: {
       '@type': 'PostalAddress',
-      streetAddress: CLINIC_INFO.primaryLocation.street,
-      addressLocality: CLINIC_INFO.primaryLocation.city,
-      addressRegion: CLINIC_INFO.primaryLocation.state,
-      postalCode: CLINIC_INFO.primaryLocation.postalCode,
+      ...(CLINIC_INFO.primaryLocation.street ? { streetAddress: CLINIC_INFO.primaryLocation.street } : {}),
+      ...(CLINIC_INFO.primaryLocation.city ? { addressLocality: CLINIC_INFO.primaryLocation.city } : {}),
+      ...(CLINIC_INFO.primaryLocation.state ? { addressRegion: CLINIC_INFO.primaryLocation.state } : {}),
+      ...(CLINIC_INFO.primaryLocation.postalCode ? { postalCode: CLINIC_INFO.primaryLocation.postalCode } : {}),
       addressCountry: CLINIC_INFO.primaryLocation.country,
-    },
+    } } : {}),
     ...(CLINIC_INFO.primaryLocation.coordinates ? { geo: {
       '@type': 'GeoCoordinates',
       latitude: CLINIC_INFO.primaryLocation.coordinates.lat,
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
-    openingHoursSpecification: [
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Monday', opens: '08:00', closes: '18:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Tuesday', opens: '08:00', closes: '18:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Wednesday', opens: '08:00', closes: '18:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Thursday', opens: '08:00', closes: '18:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Friday', opens: '08:00', closes: '18:00' },
-      { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '12:00' },
-    ],
-    medicalSpecialty: [
-      'Dentistry',
-      'Implantology',
-      'Orthodontics',
-      'Endodontics',
-      'Domiciliary Dentistry',
-    ],
+    openingHoursSpecification: [{
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '00:00',
+      closes: '23:59',
+    }],
   };
 }
 
 export function generateMedicalProcedureSchema(serviceName: string, description: string, url: string) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'MedicalProcedure',
+    '@type': 'Service',
     name: serviceName,
     description: description,
-    procedureType: 'https://schema.org/SurgicalProcedure',
+    serviceType: 'Roof repair',
     url: `${BASE_URL}${url}`,
-    performer: {
-      '@type': 'Organization',
+    provider: {
+      '@type': 'LocalBusiness',
       name: CLINIC_INFO.name,
     },
   };

@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Blog Odontológico & Artigos Clínicos',
+  title: 'Blog sobre telhados e coberturas',
   description:
-    'Artigos clínicos sobre implantes com carga imediata em 1 dia, odontologia domiciliar e aparelhos ortodônticos pela equipe odontológica.',
+    'Dicas demonstrativas sobre infiltrações, telhas, calhas e manutenção de telhados.',
   pathname: '/blog/',
 });
 
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Blog Clínico', path: '/blog/' }]} />
+          <Breadcrumbs items={[{ name: 'Blog técnico', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Blog Clínico & Orientações
+                  Blog técnico & Orientações
                 </span>
-                <WordRevealH1 text="Artigos e orientações sobre saúde bucal." />
+                <WordRevealH1 text="Dicas sobre manutenção e reparo de telhados." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Informações claras sobre técnicas de implantes de carga imediata para recuperação do sorriso em 1 dia, odontologia domiciliar e aparelhos ortodônticos em Santarém.
+                  Informações demonstrativas sobre reparos de infiltrações, substituição de telhas e manutenção da cobertura.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -69,7 +69,7 @@ export default function BlogIndexPage() {
                         </p>
                         {author && (
                           <span className="font-body text-13 text-forest-ink/60 block">
-                            By {author.name} • {author.title}
+                            Por {author.name} • {author.title}
                           </span>
                         )}
                       </div>
@@ -80,7 +80,7 @@ export default function BlogIndexPage() {
                           href={`/blog/${post.slug}/`}
                           className="font-body text-13 text-forest font-medium underline underline-offset-4 group-hover:text-forest-light"
                         >
-                          Read clinical paper →
+                          Read técnica paper →
                         </Link>
                       </div>
                     </div>

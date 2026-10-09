@@ -18,37 +18,16 @@ const service = SERVICES.find((s) => s.slug === 'braces')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Aparelhos Ortodônticos & Aligners em Santarém',
+  title: 'Inspeção e manutenção preventiva',
   description:
-    'Aparelhos ortodônticos convencionais, estéticos e alinhadores em Santarém com planejamento cuidadoso e atendimento humanizado.',
+    'Inspeção de telhados convencionais, estéticos e alinhadores com planejamento cuidadoso e atendimento humanizado.',
   pathname: '/braces/',
 });
 
 const BRACES_COMPARISON = [
-  {
-    type: 'Clear Aligners',
-    visibility: 'Nearly invisible transparent medical polymer',
-    removability: 'Removable for meals and oral hygiene',
-    comfort: 'Smooth edges; no metal wires or brackets',
-    bestFor: 'Mild to severe crowding, spacing, relapse, adult aesthetics',
-    adjustmentInterval: 'Tray changes at home every 7–10 days; clinical review every 8 weeks',
-  },
-  {
-    type: 'Translucent Ceramic Braces',
-    visibility: 'Discrete polycrystalline alumina matching tooth shade',
-    removability: 'Fixed to tooth enamel throughout treatment',
-    comfort: 'Low-profile rounded contours; gentle superelastic wires',
-    bestFor: 'Complex bite discrepancies, severe rotations, high compliance needs',
-    adjustmentInterval: 'Clinical activation visits every 6–8 weeks',
-  },
-  {
-    type: 'Low-Profile Metal Braces',
-    visibility: 'Traditional surgical-grade stainless steel',
-    removability: 'Fixed to tooth enamel throughout treatment',
-    comfort: 'Modern miniature bracket design reduces cheek irritation',
-    bestFor: 'Severe skeletal malocclusion and surgical orthodontic cases',
-    adjustmentInterval: 'Clinical activation visits every 4–6 weeks',
-  },
+  { type: 'Telhas cerâmicas', visibility: 'Avaliação visual de peças e encaixes', removability: 'Substituição conforme compatibilidade e estado da cobertura', comfort: 'Verificação de pontos de vedação e acabamento', bestFor: 'Telhas quebradas, deslocadas ou com desgaste visível', adjustmentInterval: 'Prazo definido após a inspeção' },
+  { type: 'Telhas metálicas', visibility: 'Inspeção de sobreposições e fixações', removability: 'Reparo localizado conforme as condições do material', comfort: 'Revisão de juntas, parafusos e acabamentos', bestFor: 'Pontos de entrada de água ou peças danificadas', adjustmentInterval: 'Prazo definido após a inspeção' },
+  { type: 'Cobertura plana', visibility: 'Avaliação de emendas, ralos e vedação', removability: 'Solução escolhida conforme a superfície', comfort: 'Inspeção de escoamento e pontos de acúmulo', bestFor: 'Sinais de umidade ou água acumulada', adjustmentInterval: 'Prazo definido após a inspeção' },
 ];
 
 export default function BracesPage() {
@@ -72,19 +51,19 @@ export default function BracesPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Dentofacial Orthopedics & Aligners
+                  Inspeção de telhados e coberturas
                 </span>
-                <WordRevealH1 text="Digitally planned orthodontic alignment and airway balance." />
+                <WordRevealH1 text="Inspeção preventiva para identificar desgaste e pontos vulneráveis." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book orthodontic consultation
+                    Solicitar avaliação do telhado
                   </Button>
                   <Button href="#comparison" variant="ghost" size="lg">
-                    Compare appliance types
+                    Conhecer tipos de cobertura
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -94,18 +73,18 @@ export default function BracesPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Specialist</span>
+                    <span>Equipe responsável</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Clinical Focus</span>
-                    <span className="font-medium text-forest">BAMDC Demonstrator</span>
+                    <span>Serviço em destaque</span>
+                    <span className="font-medium text-forest">Dados demonstrativos</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Technology</span>
-                    <span className="font-medium text-forest">3D Movement Simulation</span>
+                    <span>Método de avaliação</span>
+                    <span className="font-medium text-forest">Inspeção visual da cobertura</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -121,17 +100,17 @@ export default function BracesPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Biomechanical Principles
+                  Avaliação da cobertura
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What is orthodontic tooth movement?
+                  Como funciona a inspeção do telhado?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    By planning force vectors digitally, we ensure physiological velocities that prevent root tip resorption and maintain healthy bone density.
+                    A inspeção verifica telhas, emendas, rufos e pontos de vedação para orientar o reparo adequado.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -140,8 +119,8 @@ export default function BracesPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1594824813583-e18e3848b814?auto=format&fit=crop&q=80&w=1000"
-                    alt="Clear aligner orthodontic simulation"
+                    src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?auto=format&fit=crop&w=1600&q=85"
+                    alt="Telhado residencial para inspeção"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -159,10 +138,10 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Indications
+                Quando solicitar uma inspeção
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Who requires orthodontic correction?
+                Quais sinais indicam necessidade de reparo?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -199,11 +178,11 @@ export default function BracesPage() {
               <table className="w-full text-left font-body text-13 border-collapse min-w-[700px]">
                 <thead>
                   <tr className="bg-mist/40 border-b border-mist text-forest-ink">
-                    <th className="py-4 px-6 font-display text-17">Appliance Type</th>
-                    <th className="py-4 px-6 font-medium">Aesthetics & Visibility</th>
-                    <th className="py-4 px-6 font-medium">Removability</th>
-                    <th className="py-4 px-6 font-medium">Clinical Indications</th>
-                    <th className="py-4 px-6 font-medium">Adjustment Schedule</th>
+                    <th className="py-4 px-6 font-display text-17">Tipo de cobertura</th>
+                    <th className="py-4 px-6 font-medium">Acabamento e pontos visíveis</th>
+                    <th className="py-4 px-6 font-medium">Possibilidade de reparo</th>
+                    <th className="py-4 px-6 font-medium">Quando solicitar uma inspeção</th>
+                    <th className="py-4 px-6 font-medium">Prazo de revisão</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-mist">
@@ -228,8 +207,8 @@ export default function BracesPage() {
       {/* SECTION 5: Treatment Process */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="The Orthodontic Treatment Journey"
-        subtitle="Digital Step-by-Step Sequencing"
+        title="Etapas do reparo do telhado"
+        subtitle="Etapas do serviço"
       />
 
       {/* SECTION 6: Treatment Duration */}
@@ -238,13 +217,13 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Chronological Progress
+                Etapas do serviço
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Month-by-month treatment duration
+                Prazo estimado do reparo
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Active tooth movement occurs steadily under light continuous biological forces. Here is how your alignment advances through each phase.
+                O prazo depende do material, do acesso e da extensão do dano. A equipe explica as etapas após inspecionar a cobertura.
               </p>
             </div>
           </AnimateOnScroll>
@@ -252,37 +231,37 @@ export default function BracesPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Months 1 – 3</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Leveling & Alignment</h3>
+                <span className="font-display text-26 text-forest block mb-2">Inspeção</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Inspeção da cobertura</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  Rotations resolve and crowded incisors uncross into an even continuous archform.
+                  As telhas danificadas são identificadas e a equipe avalia quais peças precisam de ajuste ou substituição.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Months 4 – 9</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Bite Correction & Torque</h3>
+                <span className="font-display text-26 text-forest block mb-2">Reparo</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Reparo dos pontos afetados</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  Deep overbite and crossbites are corrected; tooth roots are uprighted parallel to bone axes.
+                  Pontos de vedação, sobreposições e acabamentos são revisados conforme o tipo de cobertura.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Months 10 – 14</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Micro-Finishing & Settling</h3>
+                <span className="font-display text-26 text-forest block mb-2">Revisão</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Revisão do acabamento</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  Molar intercuspation is dialed in with millimeter accuracy to guarantee solid chewing contact.
+                  A revisão final confirma o serviço realizado e as orientações de manutenção.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.4}>
               <div className="p-6 bg-mist/40 border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Month 15+</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Biological Retention</h3>
+                <span className="font-display text-26 text-forest block mb-2">Manutenção</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Manutenção preventiva</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  Custom night retainers safeguard tooth positions while alveolar bone remineralizes.
+                  A equipe orienta sobre a manutenção da cobertura após concluir o reparo.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -299,7 +278,7 @@ export default function BracesPage() {
                 Functional Value
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Comprehensive benefits of ideal alignment
+                Benefícios da manutenção preventiva
               </h2>
             </div>
           </AnimateOnScroll>
@@ -311,7 +290,7 @@ export default function BracesPage() {
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
                     {benefit}
                   </p>
-                  <span className="font-body text-13 text-forest font-medium">Orthodontic standard</span>
+                  <span className="font-body text-13 text-forest font-medium">roofing standard</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -326,13 +305,13 @@ export default function BracesPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Fee Schedule
+                  Orçamento do serviço
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Orthodontic investment
+                  roofing investment
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Full Treatment Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Full repair Range</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -347,7 +326,7 @@ export default function BracesPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Included in comprehensive fee:
+                    Itens considerados no orçamento:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -370,10 +349,10 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Clinical Case Record
+                técnica Case Record
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Severe crowding aligner transformation
+                Exemplo ilustrativo de reparo de telhado
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -395,17 +374,17 @@ export default function BracesPage() {
         </div>
       </section>
 
-      {/* SECTION 10: FAQs */}
+      {/* SECTION 10: Dúvidas frequentes */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Patient Questions
+                  homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Orthodontic FAQs
+                  roofing Dúvidas frequentes
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -427,13 +406,13 @@ export default function BracesPage() {
                 Start Alignment
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your 3D orthodontic scan
+                Solicitar inspeção da cobertura
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Book Consultation
+              Solicitar avaliação
             </Button>
           </AnimateOnScroll>
         </div>

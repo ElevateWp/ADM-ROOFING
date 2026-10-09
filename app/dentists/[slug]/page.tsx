@@ -42,13 +42,13 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
   const personSchema = {
     '@context': 'https://schema.org',
-    '@type': 'Person',
+    '@type': 'Organization',
     name: dentist.name,
     jobTitle: dentist.title,
     description: dentist.bio,
     image: dentist.image,
     worksFor: {
-      '@type': 'Dentist',
+      '@type': 'LocalBusiness',
       name: CLINIC_INFO.name,
     },
     alumniOf: dentist.education.map((e) => ({
@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Dentistas', path: '/dentists/' },
+              { name: 'Equipe Campina Resolve', path: '/dentists/' },
               { name: dentist.name, path: `/dentists/${dentist.slug}/` },
             ]}
           />
@@ -79,15 +79,15 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src={dentist.image}
-                    alt={`Retrato de ${dentist.name}`}
+                    alt={`Logo da ${dentist.name}`}
                     fill
                     priority
                     sizes="(max-width: 1024px) 100vw, 40vw"
-                    className="object-cover object-top"
+                    className="object-contain bg-paper p-5"
                   />
                 </div>
                 {dentist.experienceYears > 0 && <div className="mt-4 p-4 bg-mist/40 border border-mist flex justify-between text-13 font-body text-forest-ink/80">
-                  <span>Prática Clínica:</span>
+                  <span>Prática empresa:</span>
                   <span className="font-medium text-forest">{dentist.experienceYears}+ Anos de Experiência</span>
                 </div>}
               </AnimateOnScroll>
@@ -117,7 +117,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
 
                 <div className="flex flex-wrap items-center gap-4">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Agendar consulta com {dentist.name}
+                    Solicitar orçamento com {dentist.name}
                   </Button>
                   <Button href="/dentists/" variant="ghost" size="lg">
                     Voltar à equipe
@@ -178,7 +178,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   Áreas de Atuação
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Tratamentos realizados por {dentist.name}
+                  serviços realizados por {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>
@@ -215,16 +215,16 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Agendamento Direto
+                Orçamento Direto
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Deseja agendar sua consulta com {dentist.name}?
+                Deseja Solicitar orçamento com {dentist.name}?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Agendar Avaliação
+              Solicitar orçamento
             </Button>
           </AnimateOnScroll>
         </div>
