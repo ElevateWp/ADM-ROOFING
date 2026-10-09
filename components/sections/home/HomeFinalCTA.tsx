@@ -15,7 +15,7 @@ export default function HomeFinalCTA() {
 
         <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
           <p className="font-body text-17 md:text-21 text-paper/80 leading-relaxed max-w-xl mb-10 mx-auto">
-            Ligue ou envie uma mensagem para a equipe a qualquer hora.
+            Ligue ou envie uma mensagem durante o horário de funcionamento.
           </p>
         </AnimateOnScroll>
 
@@ -25,7 +25,7 @@ export default function HomeFinalCTA() {
               Solicitar orçamento
             </Button>
             <Button
-              href={`https://api.whatsapp.com/send?phone=5583989050948`}
+              href={`https://api.whatsapp.com/send?phone=558388357756`}
               variant="ghost"
               size="lg"
               className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"

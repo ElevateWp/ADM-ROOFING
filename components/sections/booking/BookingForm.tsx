@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#68777D] transition-all duration-200">
+          <span className="font-body text-13 text-[#667B96] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-          placeholder="(83) 98905-0948"
+          placeholder="(83) 8835-7756"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#68777D]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#667B96]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#68777D]">{errors.email}</span>
+            <span className="font-body text-13 text-[#667B96]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -253,7 +253,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#68777D]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#667B96]">{errors.preferredDate}</span>
           )}
         </div>
 

@@ -102,14 +102,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/campina-resolve-logo.png"
-                  alt="Campina Resolve — soluções residenciais e consertos em geral"
+                  src="/images/logo.png"
+                  alt="Marcos Construção e Reforma — soluções residenciais e consertos em geral"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-contain"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Campina Resolve
+                  Marcos Construção e Reforma
                 </div>
               </div>
             </AnimateOnScroll>

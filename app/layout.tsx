@@ -10,23 +10,23 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3456'),
   title: {
-    default: 'Campina Resolve',
+    default: 'Marcos Construção e Reforma',
     template: '%s',
   },
   description:
-    'Campina Resolve: serviços de reparo e manutenção de telhados. Atendimento 24 horas. Contato: +55 83 98905-0948.',
+    'Marcos Construção e Reforma: serviços de reparo e manutenção de telhados. Atendimento de segunda a sábado, das 6h às 20h. Contato: +55 83 8835-7756.',
   keywords: [
-    'Campina Resolve',
+    'Marcos Construção e Reforma',
     'reparo e manutenção de telhados',
     'telhadista',
   ],
-  authors: [{ name: 'Campina Resolve' }],
+  authors: [{ name: 'Marcos Construção e Reforma' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
+    shortcut: [{ url: '/favicon.png', type: 'image/png' }],
     apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F3F8F5] selection:text-[#18364A]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F2F7FC] selection:text-[#142B4D]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

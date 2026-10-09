@@ -14,16 +14,16 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Sobre a Campina Resolve',
+  title: 'Sobre a Marcos Construção e Reforma',
   description:
-    'Conheça a Campina Resolve e sua equipe de reparos de telhados.',
+    'Conheça a Marcos Construção e Reforma e sua equipe de reparos de telhados.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
     year: 'área de atendimento',
-    title: 'Campina Resolve',
+    title: 'Marcos Construção e Reforma',
     description: 'Atendimento demonstrativo em área de atendimento; confirme a área real de serviço.',
   },
 ];
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  Sobre a Campina Resolve
+                  Sobre a Marcos Construção e Reforma
                 </span>
                 <WordRevealH1 text="Reparos de telhados com cuidado, clareza e atenção à segurança." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Na Campina Resolve, nosso telhadista oferece atendimento de telhados." />
+                  <ScrubbedParagraph text="Na Marcos Construção e Reforma, nosso telhadista oferece atendimento de telhados." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>equipe de reparos de telhados</span>
-                    <span className="font-medium text-forest">Equipe Campina Resolve</span>
+                    <span className="font-medium text-forest">Equipe Marcos Construção e Reforma</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe Campina Resolve */}
+      {/* SECTION 4: Equipe Marcos Construção e Reforma */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Nossa equipe
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Conheça a equipe Campina Resolve
+                  Conheça a equipe Marcos Construção e Reforma
                 </h2>
               </div>
               <Link
@@ -204,7 +204,7 @@ export default function AboutPage() {
                   Inspeção e reparo com segurança
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  A Campina Resolve oferece, como conteúdo demonstrativo, serviços de inspeção, manutenção e reparo de telhados. Confirme os dados reais da empresa antes de publicar.
+                  A Marcos Construção e Reforma oferece, como conteúdo demonstrativo, serviços de inspeção, manutenção e reparo de telhados. Confirme os dados reais da empresa antes de publicar.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -225,7 +225,7 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="https://images.unsplash.com/photo-1773438406512-e1ee0f194af1?auto=format&fit=crop&w=1600&q=85"
-                      alt="Sala de atendimento de telhados da empresa Campina Resolve"
+                      alt="Sala de atendimento de telhados da empresa Marcos Construção e Reforma"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
@@ -288,7 +288,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=1600&q=85"
-                  alt="Entrada da empresa Campina Resolve"
+                  alt="Entrada da empresa Marcos Construção e Reforma"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"

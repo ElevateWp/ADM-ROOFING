@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe Campina Resolve',
+      name: author?.name || 'Equipe Marcos Construção e Reforma',
     },
     publisher: {
       '@type': 'Organization',

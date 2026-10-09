@@ -16,7 +16,7 @@ export function createMetadata({
 }): Metadata {
   const url = `${BASE_URL}${pathname}`;
   const fullTitle = `${title} | ${CLINIC_INFO.name}`;
-  const defaultImage = `${BASE_URL}/images/campina-resolve-logo.png`;
+  const defaultImage = `${BASE_URL}/images/logo.png`;
 
   return {
     title: fullTitle,
@@ -69,12 +69,6 @@ export function generateLocalBusinessSchema() {
     legalName: CLINIC_INFO.legalName,
     url: BASE_URL,
     telephone: CLINIC_INFO.contact.phone,
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '15',
-      bestRating: '5',
-    },
     ...(CLINIC_INFO.primaryLocation.city || CLINIC_INFO.primaryLocation.street ? { address: {
       '@type': 'PostalAddress',
       ...(CLINIC_INFO.primaryLocation.street ? { streetAddress: CLINIC_INFO.primaryLocation.street } : {}),
@@ -88,12 +82,22 @@ export function generateLocalBusinessSchema() {
       latitude: CLINIC_INFO.primaryLocation.coordinates.lat,
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
-    openingHoursSpecification: [{
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
-    }],
+    openingHoursSpecification: CLINIC_INFO.schedule
+      .filter((item) => item.hours !== 'Fechado')
+      .map((item) => ({
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: {
+          'Segunda-feira': 'Monday',
+          'Terça-feira': 'Tuesday',
+          'Quarta-feira': 'Wednesday',
+          'Quinta-feira': 'Thursday',
+          'Sexta-feira': 'Friday',
+          'Sábado': 'Saturday',
+          'Domingo': 'Sunday',
+        }[item.day],
+        opens: '06:00',
+        closes: '20:00',
+      })),
   };
 }
 

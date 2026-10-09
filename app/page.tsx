@@ -7,7 +7,6 @@ import HomeWhyUs from '@/components/sections/home/HomeWhyUs';
 import HomeDentists from '@/components/sections/home/HomeDentists';
 import HomeFeaturedTreatments from '@/components/sections/home/HomeFeaturedTreatments';
 import HomeBeforeAfter from '@/components/sections/home/HomeBeforeAfter';
-import HomeReviews from '@/components/sections/home/HomeReviews';
 import HomeGallery from '@/components/sections/home/HomeGallery';
 import HomeFaqs from '@/components/sections/home/HomeFaqs';
 import HomeLocation from '@/components/sections/home/HomeLocation';
@@ -19,7 +18,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Reparo e manutenção de telhados',
   description:
-    'Campina Resolve: reparo e manutenção de telhados. Atendimento 24 horas.',
+    'Marcos Construção e Reforma: reparo e manutenção de telhados. Atendimento de segunda a sábado, das 6h às 20h.',
   pathname: '/',
 });
 
@@ -63,9 +62,6 @@ export default function HomePage() {
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
-
-      {/* SECTION 8: homeowner Reviews (Full-Bleed Forest Pull-Quotes with Panel Wipe) */}
-      <HomeReviews />
 
       {/* SECTION 9: company Gallery (Irregular Parallax Grid) */}
       <HomeGallery />

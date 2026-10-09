@@ -5,17 +5,17 @@
 @layer base {
   :root {
     --paper: #FFFFFF; /* Main Background */
-    --paper-secondary: #F3F8F5; /* Secondary Background */
-    --forest: #10354D; /* Deep Sections */
-    --forest-ink: #18364A; /* Main Text */
-    --secondary-text: #68777D; /* Secondary Text */
-    --primary-brand: #238B68; /* Primary Brand / CTA */
-    --brand-hover: #32A77E; /* Hover / Highlight */
-    --red-accent: #238B68; /* Brand accent */
-    --navy-accent: #164A70; /* Navy Blue Accent */
-    --soft-blue: #D9EEE4; /* Soft Green */
-    --lime: #32A77E; /* Highlights */
-    --mist: #DCE7E2; /* Borders */
+    --paper-secondary: #F2F7FC; /* Secondary Background */
+    --forest: #081A40; /* Deep Sections */
+    --forest-ink: #142B4D; /* Main Text */
+    --secondary-text: #667B96; /* Secondary Text */
+    --primary-brand: #1769B5; /* Primary Brand / CTA */
+    --brand-hover: #35A9E0; /* Hover / Highlight */
+    --red-accent: #1769B5; /* Brand accent */
+    --navy-accent: #0B1D49; /* Navy Blue Accent */
+    --soft-blue: #D8EAF9; /* Soft Green */
+    --lime: #35A9E0; /* Highlights */
+    --mist: #D9E4F0; /* Borders */
     
     --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;

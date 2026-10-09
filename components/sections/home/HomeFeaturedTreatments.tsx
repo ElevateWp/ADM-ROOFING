@@ -8,10 +8,10 @@ export default function HomeFeaturedTreatments() {
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#18364A] block mb-2 font-medium uppercase tracking-wider">
+          <span className="font-body text-13 text-[#142B4D] block mb-2 font-medium uppercase tracking-wider">
             Serviços de reparo e manutenção de coberturas
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#18364A]">
+          <h2 className="font-display text-33 md:text-41 text-[#142B4D]">
             Reparos de telhados e manutenção preventiva
           </h2>
         </AnimateOnScroll>
@@ -20,18 +20,18 @@ export default function HomeFeaturedTreatments() {
           {/* Featured Case 1: Guided Dental Implantology & Immediate Load */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#18364A] uppercase tracking-wider block mb-2 font-medium">
+              <span className="font-body text-13 text-[#142B4D] uppercase tracking-wider block mb-2 font-medium">
                 Reparo de telhados e infiltrações
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#18364A] mb-4">
+              <h3 className="font-display text-26 md:text-33 text-[#142B4D] mb-4">
                 Reparo de telhado para conter infiltrações
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#18364A]/80 leading-relaxed mb-6">
+              <p className="font-body text-15 md:text-17 text-[#142B4D]/80 leading-relaxed mb-6">
                 Após a inspeção, a equipe identifica as telhas danificadas e apresenta o escopo e o prazo estimado para o reparo.
               </p>
-              <div className="p-4 bg-[#F3F8F5] border-l-4 border-[#18364A] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#18364A]/80">
-                  <strong className="text-[#18364A] font-semibold">Destaque:</strong> Inspeção do telhado e escopo de reparo combinados antes da execução.
+              <div className="p-4 bg-[#F2F7FC] border-l-4 border-[#142B4D] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#142B4D]/80">
+                  <strong className="text-[#142B4D] font-semibold">Destaque:</strong> Inspeção do telhado e escopo de reparo combinados antes da execução.
                 </span>
               </div>
               <Button href="/dental-implants/" variant="ghost" size="md">
@@ -67,18 +67,18 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#18364A] uppercase tracking-wider block mb-2 font-medium">
+              <span className="font-body text-13 text-[#142B4D] uppercase tracking-wider block mb-2 font-medium">
                 Inspeção e manutenção preventiva
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#18364A] mb-4">
+              <h3 className="font-display text-26 md:text-33 text-[#142B4D] mb-4">
                 Inspeção atenta dos pontos de desgaste da cobertura
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#18364A]/80 leading-relaxed mb-6">
+              <p className="font-body text-15 md:text-17 text-[#142B4D]/80 leading-relaxed mb-6">
                 A inspeção ajuda a localizar sinais de desgaste e infiltração para definir as próximas etapas de manutenção.
               </p>
-              <div className="p-4 bg-[#F3F8F5] border-l-4 border-[#18364A] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#18364A]/80">
-                  <strong className="text-[#18364A] font-semibold">Resultado:</strong> Mais clareza sobre os pontos que precisam de atenção na cobertura.
+              <div className="p-4 bg-[#F2F7FC] border-l-4 border-[#142B4D] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#142B4D]/80">
+                  <strong className="text-[#142B4D] font-semibold">Resultado:</strong> Mais clareza sobre os pontos que precisam de atenção na cobertura.
                 </span>
               </div>
               <Button href="/braces/" variant="ghost" size="md">
