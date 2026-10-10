@@ -27,7 +27,7 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/book-appointment/', label: 'Solicitar orçamento →' },
   },
   {
-    question: 'Onde fica localizada a Marcos Construção e Reforma?',
+    question: 'Onde fica localizada a MAILSON REPAROS & MANUTENÇÕES LTDA?',
     answer: CLINIC_INFO.primaryLocation.directions,
     relatedLink: { href: '/contact/', label: 'Consultar área de atendimento →' },
   },
@@ -47,7 +47,7 @@ export default function HomeFaqs() {
               Perguntas frequentes sobre nossos serviços
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Respostas claras sobre reparos, inspeção de telhados e atendimento da Marcos Construção e Reforma.
+              Respostas claras sobre reparos, inspeção de telhados e atendimento da MAILSON REPAROS & MANUTENÇÕES LTDA.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
               </p>
               <a
-                href={`https://api.whatsapp.com/send?phone=558388357756`}
+                href={`https://api.whatsapp.com/send?phone=5596991695118`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

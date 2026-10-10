@@ -50,41 +50,46 @@ export interface ClinicInformation {
     coordinates?: { lat: number; lng: number };
   };
   contact: { phone: string; emergencyPhone: string; email?: string; whatsapp: string };
+  identityHighlights: string[];
   schedule: { day: string; hours: string; isOpenToday?: boolean; isEmergencyOnly?: boolean }[];
   verifiedStats: { value: number; suffix: string; label: string; description: string }[];
   accreditations: string[];
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: "Marcos Construção e Reforma",
-  legalName: "Marcos Construção e Reforma",
-  tagline: "Construção e reforma.",
+  name: "MAILSON REPAROS & MANUTENÇÕES LTDA",
+  legalName: "MAILSON REPAROS & MANUTENÇÕES LTDA",
+  tagline: "Reparos e manutenção com confiança.",
   primaryLocation: {
-    street: "R. Paineira do Campo, 51",
+    street: "R. Jefferson Silva, 222 - Residencial",
     suite: "",
-    city: "João Pessoa",
-    state: "PB",
-    postalCode: "58059-372",
+    city: "Jundiaí",
+    state: "SP",
+    postalCode: "13212-514",
     country: "Brasil",
-    directions: "Mangabeira, João Pessoa - PB, 58059-372, Brasil",
-    landmarks: "R. Paineira do Campo, 51 - Mangabeira, João Pessoa - PB, 58059-372, Brasil",
+    directions: "R. Jefferson Silva, 222 - Residencial, Jundiaí - SP, 13212-514, Brasil",
+    landmarks: "R. Jefferson Silva, 222 - Residencial, Jundiaí - SP, 13212-514, Brasil",
   },
   contact: {
-    phone: "+55 83 8835-7756",
-    emergencyPhone: "+55 83 8835-7756",
-    whatsapp: "+55 83 8835-7756",
+    phone: "+55 96 99169-5118",
+    emergencyPhone: "+55 96 99169-5118",
+    whatsapp: "+55 96 99169-5118",
     email: "",
   },
+  identityHighlights: ["Ambiente acolhedor para o público LGBTQ+", "Empresa identificada como pertencente a mulheres"],
   schedule: [
-    { day: "Segunda-feira", hours: "6h–20h" },
-    { day: "Terça-feira", hours: "6h–20h" },
-    { day: "Quarta-feira", hours: "6h–20h" },
-    { day: "Quinta-feira", hours: "6h–20h" },
-    { day: "Sexta-feira", hours: "6h–20h" },
-    { day: "Sábado", hours: "6h–20h" },
-    { day: "Domingo", hours: "Fechado" },
+    { day: "Segunda-feira", hours: "8h–00h" },
+    { day: "Terça-feira", hours: "8h–00h" },
+    { day: "Quarta-feira", hours: "8h–00h" },
+    { day: "Quinta-feira", hours: "8h–00h" },
+    { day: "Sexta-feira", hours: "8h–00h" },
+    { day: "Sábado", hours: "Aberto 24 horas" },
+    { day: "Domingo", hours: "Aberto 24 horas" },
   ],
-  verifiedStats: [],
+  verifiedStats: [
+    { value: 5, suffix: ".0", label: "Nota no Google", description: "Média informada no perfil da empresa." },
+    { value: 68, suffix: "", label: "Avaliações", description: "Opiniões de clientes no perfil da empresa." },
+  ],
   accreditations: [],
 };
 
@@ -92,12 +97,12 @@ export const DENTISTS: DentistProfile[] = [
   {
     id: "roofing-team",
     slug: "our-doctor",
-    name: "Marcos Construção e Reforma",
+    name: "Equipe Mailson",
     title: "Equipe de serviços residenciais",
     qualifications: "Construção e reforma",
     specialization: "Soluções residenciais e consertos em geral",
     experienceYears: 0,
-    bio: "Marcos Construção e Reforma oferece serviços de construção e reforma. Entre em contato para confirmar o atendimento de que você precisa.",
+    bio: "A MAILSON REPAROS & MANUTENÇÕES LTDA atua com reparos e manutenção residencial em Jundiaí e região.",
     philosophy: "Explicar o problema com clareza, apresentar as opções de reparo e combinar cada etapa antes do início do serviço.",
     education: [],
     memberships: [],

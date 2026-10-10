@@ -42,6 +42,21 @@ export default function HomeLocation() {
                     {CLINIC_INFO.primaryLocation.landmarks}
                   </p>
                 )}
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mt-3 font-body text-13 text-[#E50914] font-medium hover:underline"
+                >
+                  Ver endereço no mapa →
+                </a>
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {CLINIC_INFO.identityHighlights.map((highlight) => (
+                    <span key={highlight} className="bg-[#F5F5F5] border border-[#DDDDDD] px-3 py-1.5 text-12 text-[#171717]">
+                      {highlight}
+                    </span>
+                  ))}
+                </div>
               </div>
             </AnimateOnScroll>
 
@@ -103,13 +118,13 @@ export default function HomeLocation() {
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/logo.png"
-                  alt="Marcos Construção e Reforma — soluções residenciais e consertos em geral"
+                  alt="MAILSON REPAROS & MANUTENÇÕES LTDA — soluções residenciais e consertos em geral"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-contain"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Marcos Construção e Reforma
+                  MAILSON REPAROS & MANUTENÇÕES LTDA
                 </div>
               </div>
             </AnimateOnScroll>

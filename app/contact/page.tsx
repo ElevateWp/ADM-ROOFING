@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contato & Localização',
   description:
-    'Entre em contato com a Marcos Construção e Reforma pelo telefone +55 83 8835-7756. Atendimento de segunda a sábado, das 6h às 20h.',
+    'Entre em contato com a MAILSON REPAROS & MANUTENÇÕES LTDA pelo telefone +55 96 99169-5118. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
   pathname: '/contact/',
 });
 
@@ -62,7 +62,7 @@ export default function ContactPage() {
                       <div>
                         <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=558388357756"
+                          href="https://api.whatsapp.com/send?phone=5596991695118"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
@@ -154,7 +154,7 @@ export default function ContactPage() {
                       Consultar a equipe
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=558388357756"
+                      href="https://api.whatsapp.com/send?phone=5596991695118"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"

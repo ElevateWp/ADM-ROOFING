@@ -18,7 +18,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Reparo e manutenção de telhados',
   description:
-    'Marcos Construção e Reforma: reparo e manutenção de telhados. Atendimento de segunda a sábado, das 6h às 20h.',
+    'MAILSON REPAROS & MANUTENÇÕES LTDA: reparo e manutenção de telhados. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
   pathname: '/',
 });
 

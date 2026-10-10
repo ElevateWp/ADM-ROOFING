@@ -84,7 +84,10 @@ export function generateLocalBusinessSchema() {
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
       .filter((item) => item.hours !== 'Fechado')
-      .map((item) => ({
+      .map((item) => {
+        const isAllDay = item.hours.includes('24 horas');
+        const range = item.hours.match(/(\d{1,2})h[–-](\d{1,2})/);
+        return ({
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: {
           'Segunda-feira': 'Monday',
@@ -95,9 +98,10 @@ export function generateLocalBusinessSchema() {
           'Sábado': 'Saturday',
           'Domingo': 'Sunday',
         }[item.day],
-        opens: '06:00',
-        closes: '20:00',
-      })),
+        opens: isAllDay ? '00:00' : `${(range?.[1] ?? '08').padStart(2, '0')}:00`,
+        closes: isAllDay ? '23:59' : `${(range?.[2] ?? '00').padStart(2, '0')}:00`,
+      });
+      }),
   };
 }
 

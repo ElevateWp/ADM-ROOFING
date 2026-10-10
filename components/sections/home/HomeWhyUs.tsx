@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Nossa forma de trabalhar
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Por que escolher a empresa Marcos Construção e Reforma
+                Por que escolher a empresa MAILSON REPAROS & MANUTENÇÕES LTDA
               </h2>
 
               <div className="divide-y divide-mist">
@@ -72,7 +72,7 @@ export default function HomeWhyUs() {
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#142B4D]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                  <div className="absolute bottom-3 left-3 bg-[#171717]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
                     Imagem ilustrativa · Atendimento de telhados
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function HomeWhyUs() {
                   />
                 </div>
                 {/* Doctor portrait */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F2F7FC] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F5F5] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="https://images.unsplash.com/photo-1760544137672-c22ce36ea818?auto=format&fit=crop&w=1600&q=85"
                     alt="Imagem de banco ilustrativa de atendimento a um Proprietário"
@@ -95,7 +95,7 @@ export default function HomeWhyUs() {
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#142B4D]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#171717]/80 text-paper font-body text-12 px-3 py-2 text-center">
                     Imagem ilustrativa · Atendimento
                   </div>
                 </div>

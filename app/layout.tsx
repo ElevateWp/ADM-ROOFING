@@ -10,17 +10,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3456'),
   title: {
-    default: 'Marcos Construção e Reforma',
+    default: 'MAILSON REPAROS & MANUTENÇÕES LTDA',
     template: '%s',
   },
   description:
-    'Marcos Construção e Reforma: serviços de reparo e manutenção de telhados. Atendimento de segunda a sábado, das 6h às 20h. Contato: +55 83 8835-7756.',
+    'MAILSON REPAROS & MANUTENÇÕES LTDA: reparos e manutenção residencial em Jundiaí, São Paulo. Contato: +55 96 99169-5118.',
   keywords: [
-    'Marcos Construção e Reforma',
+    'MAILSON REPAROS & MANUTENÇÕES LTDA',
     'reparo e manutenção de telhados',
     'telhadista',
   ],
-  authors: [{ name: 'Marcos Construção e Reforma' }],
+  authors: [{ name: 'MAILSON REPAROS & MANUTENÇÕES LTDA' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F2F7FC] selection:text-[#142B4D]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F5] selection:text-[#171717]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
