@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Proteção da cobertura',
-    description: 'Priorizamos avaliar o reparo localizado e a compatibilidade dos materiais com a cobertura existente.',
+    title: 'Roof Protection',
+    description: 'We assess the repair options and check that materials suit your existing roof.',
   },
   {
-    title: 'Inspeção detalhada da cobertura',
-    description: 'A equipe inspeciona os pontos visíveis de infiltração e combina o escopo antes de iniciar o reparo.',
+    title: 'Careful Roof Inspections',
+    description: 'We inspect visible signs of leaks and agree the work scope before repairs begin.',
   },
   {
-    title: 'Atendimento transparente e seguro',
-    description: 'O serviço é explicado com clareza e as medidas de acesso e segurança são combinadas previamente.',
+    title: 'Clear, Safe Service',
+    description: 'We explain the work clearly and agree access and safety arrangements in advance.',
   },
   {
-    title: 'Ferramentas adequadas ao serviço',
-    description: 'A equipe utiliza ferramentas adequadas ao tipo de cobertura e às condições de acesso do imóvel.',
+    title: 'The Right Tools for the Job',
+    description: 'Our team uses tools suited to the roof type and access conditions at your property.',
   },
 ];
 
@@ -31,10 +31,10 @@ export default function HomeWhyUs() {
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-right" duration={0.85}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Nossa forma de trabalhar
+                Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Por que escolher a empresa MAILSON REPAROS & MANUTENÇÕES LTDA
+                Why Choose CJ Roofing Services
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,7 +57,7 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Stock photos shown for illustration */}
+          {/* Roofing project photos */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="grid grid-cols-2 gap-3">
@@ -65,38 +65,38 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                      src="https://images.unsplash.com/photo-1634750009079-6bf7bede038b?auto=format&fit=crop&w=1600&q=85"
-                      alt="Imagem de banco ilustrativa de atendimento de telhados"
+                    src="/images/m8.jpg"
+                      alt="Roofline on a residential property"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#171717]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Imagem ilustrativa · Atendimento de telhados
+                  <div className="absolute bottom-3 left-3 bg-[#1C1A1B]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Residential Roofing
                   </div>
                 </div>
-                {/* Second interior image */}
+                {/* Second roofing project image */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1771479755055-6a305f50845e?auto=format&fit=crop&w=1600&q=85"
-                    alt="Imagem de banco ilustrativa de avaliação de telhados"
+                    src="/images/roofb3-1.jpg"
+                    alt="Tiled roof and gutter on a brick home"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
-                {/* Doctor portrait */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F5F5] overflow-hidden border border-mist shadow-sm">
+                {/* Roofing work in progress */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F7F7F7] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1760544137672-c22ce36ea818?auto=format&fit=crop&w=1600&q=85"
-                    alt="Imagem de banco ilustrativa de atendimento a um Proprietário"
+                    src="/images/m9.jpg"
+                    alt="Roof underlay and battens during installation"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#171717]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Imagem ilustrativa · Atendimento
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C1A1B]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Roof Replacement
                   </div>
                 </div>
               </div>

@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Contato & Localização',
+  title: 'Contact and Service Area',
   description:
-    'Entre em contato com a MAILSON REPAROS & MANUTENÇÕES LTDA pelo telefone +55 96 99169-5118. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
+    'Contact CJ Roofing Services Ltd on +353 1 556 3783. We provide roofing services across Dublin and are open 24 hours.',
   pathname: '/contact/',
 });
 
@@ -23,17 +23,17 @@ export default function ContactPage() {
         <TextureBackground variant="Contato" className="opacity-30" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Contato', path: '/contact/' }]} />
+          <Breadcrumbs items={[{ name: 'Contact', path: '/contact/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Atendimento & Orçamento
+                  Contact & Quotes
                 </span>
-                <WordRevealH1 text="Fale com nossa equipe de reparos de telhados." />
+                <WordRevealH1 text="Talk to our roofing team." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Entre em contato com a equipe pelo telefone ou WhatsApp.
+                  Call us to discuss your roof replacement, repair or inspection.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -50,33 +50,33 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Fale com a nossa equipe
+                    Get in Touch
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-6">
-                    Fale Conosco
+                    Contact Us
                   </h2>
 
                   <div className="divide-y divide-mist border-t border-b border-mist">
-                    {/* WhatsApp */}
+                    {/* Call */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-mist/30 px-4 -mx-4 rounded-sm">
                       <div>
-                        <span className="font-body text-13 text-forest font-semibold block">WhatsApp Direto</span>
+                        <span className="font-body text-13 text-forest font-semibold block">Call our team</span>
                         <a
-                          href="https://api.whatsapp.com/send?phone=5596991695118"
+                          href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="font-display text-21 text-forest font-bold hover:underline"
                         >
-                          {CLINIC_INFO.contact.whatsapp}
+                          {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Mensagens & Orçamento</span>
+                      <span className="font-body text-13 text-forest font-medium">Roofing enquiries</span>
                     </div>
 
                     {/* Phone */}
                     <div className="py-5 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                       <div>
-                        <span className="font-body text-13 text-forest-ink/60 block">Telefone Principal</span>
+                        <span className="font-body text-13 text-forest-ink/60 block">Phone</span>
                         <a
                           href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                           className="font-display text-21 text-forest hover:underline"
@@ -84,29 +84,27 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Horários de atendimento abaixo</span>
+                      <span className="font-body text-13 text-forest-ink/60">Open 24 hours</span>
                     </div>
 
                   </div>
                 </div>
               </AnimateOnScroll>
 
-              {/* Physical Área de atendimento & Directions */}
+              {/* Physical Service Area & Directions */}
               <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Área de atendimento
+                    Service Area
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-3">
                     {CLINIC_INFO.name}
                   </h3>
                   <address className="not-italic font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
-                    {CLINIC_INFO.primaryLocation.street}
-                    <br />
-                    {CLINIC_INFO.primaryLocation.city} - {CLINIC_INFO.primaryLocation.state}, {CLINIC_INFO.primaryLocation.postalCode}, {CLINIC_INFO.primaryLocation.country}
+                    Dublin, Ireland
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Área de atendimento:</strong> {CLINIC_INFO.primaryLocation.directions}
+                    <strong>Service area:</strong> {CLINIC_INFO.primaryLocation.directions}
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -117,7 +115,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Horário de Funcionamento
+                    Opening Hours
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
                     {CLINIC_INFO.schedule.map((item) => (
@@ -135,7 +133,7 @@ export default function ContactPage() {
                 <div className="p-8 bg-forest text-paper flex flex-col justify-between aspect-[16/10] shadow-sm">
                   <div>
                     <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
-                      Área de atendimento
+                      Service Area
                     </span>
                     <h3 className="font-display text-26 text-paper mb-2">
                       {CLINIC_INFO.name}
@@ -147,19 +145,19 @@ export default function ContactPage() {
 
                   <div className="pt-6 border-t border-mist/20 flex flex-wrap items-center justify-between gap-4">
                     <Button
-                      href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                      href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                       variant="lime"
                       size="sm"
                     >
-                      Consultar a equipe
+                      Call our team
                     </Button>
                     <a
-                      href="https://api.whatsapp.com/send?phone=5596991695118"
+                      href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="font-body text-13 text-lime hover:underline font-semibold"
                     >
-                      WhatsApp: {CLINIC_INFO.contact.whatsapp}
+                      Call: {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                 </div>
@@ -175,16 +173,16 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Orçamento de avaliação
+                Roof Assessment Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Pronto para Solicitar orçamento?
+                Ready to request a quote?
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar Orçamento Online
+              Request a Quote Online
             </Button>
           </AnimateOnScroll>
         </div>

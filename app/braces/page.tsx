@@ -18,16 +18,16 @@ const service = SERVICES.find((s) => s.slug === 'braces')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Inspeção e manutenção preventiva',
+  title: 'Roof Inspection and Preventive Maintenance',
   description:
-    'Inspeção de telhados convencionais, estéticos e alinhadores com planejamento cuidadoso e atendimento humanizado.',
+    'Roof inspections across Dublin to identify visible wear and areas that may need attention.',
   pathname: '/braces/',
 });
 
 const BRACES_COMPARISON = [
-  { type: 'Telhas cerâmicas', visibility: 'Avaliação visual de peças e encaixes', removability: 'Substituição conforme compatibilidade e estado da cobertura', comfort: 'Verificação de pontos de vedação e acabamento', bestFor: 'Telhas quebradas, deslocadas ou com desgaste visível', adjustmentInterval: 'Prazo definido após a inspeção' },
-  { type: 'Telhas metálicas', visibility: 'Inspeção de sobreposições e fixações', removability: 'Reparo localizado conforme as condições do material', comfort: 'Revisão de juntas, parafusos e acabamentos', bestFor: 'Pontos de entrada de água ou peças danificadas', adjustmentInterval: 'Prazo definido após a inspeção' },
-  { type: 'Cobertura plana', visibility: 'Avaliação de emendas, ralos e vedação', removability: 'Solução escolhida conforme a superfície', comfort: 'Inspeção de escoamento e pontos de acúmulo', bestFor: 'Sinais de umidade ou água acumulada', adjustmentInterval: 'Prazo definido após a inspeção' },
+  { type: 'Clay tiles', visibility: 'Visual check of tiles and joints', removability: 'Replacement based on fit and roof condition', comfort: 'Review of seals and finishing', bestFor: 'Broken, displaced or visibly worn tiles', adjustmentInterval: 'Timing agreed after inspection' },
+  { type: 'Metal roofing', visibility: 'Check overlaps and fixings', removability: 'Localised repair depending on material condition', comfort: 'Review of joints, screws and finishes', bestFor: 'Water entry points or damaged sections', adjustmentInterval: 'Timing agreed after inspection' },
+  { type: 'Flat roofing', visibility: 'Check seams, outlets and seals', removability: 'Solution selected for the surface', comfort: 'Review drainage and pooling areas', bestFor: 'Signs of damp or standing water', adjustmentInterval: 'Timing agreed after inspection' },
 ];
 
 export default function BracesPage() {
@@ -51,19 +51,19 @@ export default function BracesPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Inspeção de telhados e coberturas
+                  Roof Inspections
                 </span>
-                <WordRevealH1 text="Inspeção preventiva para identificar desgaste e pontos vulneráveis." />
+                <WordRevealH1 text="Preventive roof inspections to identify wear and vulnerable areas." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Solicitar avaliação do telhado
+                    Request a roof assessment
                   </Button>
                   <Button href="#comparison" variant="ghost" size="lg">
-                    Conhecer tipos de cobertura
+                    Explore roof types
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -73,18 +73,18 @@ export default function BracesPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Equipe responsável</span>
+                    <span>Our Team</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Serviço em destaque</span>
-                    <span className="font-medium text-forest">Dados demonstrativos</span>
+                    <span>Featured service</span>
+                    <span className="font-medium text-forest">Residential roofing</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Método de avaliação</span>
-                    <span className="font-medium text-forest">Inspeção visual da cobertura</span>
+                    <span>Inspection method</span>
+                    <span className="font-medium text-forest">Visual roof inspection</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -100,17 +100,17 @@ export default function BracesPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Avaliação da cobertura
+                  Roof Assessment
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Como funciona a inspeção do telhado?
+                  How Does a Roof Inspection Work?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    A inspeção verifica telhas, emendas, rufos e pontos de vedação para orientar o reparo adequado.
+                    We inspect tiles, joins, flashings and seals to recommend suitable roof repairs.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -119,8 +119,8 @@ export default function BracesPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1763665814538-8ba04597286c?auto=format&fit=crop&w=1600&q=85"
-                    alt="Telhado residencial para inspeção"
+                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    alt="Residential roof inspection"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -138,7 +138,7 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Quando solicitar uma inspeção
+                When to Arrange an Inspection
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
                 Quais sinais indicam necessidade de reparo?
@@ -178,11 +178,11 @@ export default function BracesPage() {
               <table className="w-full text-left font-body text-13 border-collapse min-w-[700px]">
                 <thead>
                   <tr className="bg-mist/40 border-b border-mist text-forest-ink">
-                    <th className="py-4 px-6 font-display text-17">Tipo de cobertura</th>
-                    <th className="py-4 px-6 font-medium">Acabamento e pontos visíveis</th>
+                    <th className="py-4 px-6 font-display text-17">Roof type</th>
+                    <th className="py-4 px-6 font-medium">Visible condition and details</th>
                     <th className="py-4 px-6 font-medium">Possibilidade de reparo</th>
-                    <th className="py-4 px-6 font-medium">Quando solicitar uma inspeção</th>
-                    <th className="py-4 px-6 font-medium">Prazo de revisão</th>
+                    <th className="py-4 px-6 font-medium">When to Arrange an Inspection</th>
+                    <th className="py-4 px-6 font-medium">Recommended review</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-mist">
@@ -207,8 +207,8 @@ export default function BracesPage() {
       {/* SECTION 5: Treatment Process */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="Etapas do reparo do telhado"
-        subtitle="Etapas do serviço"
+        title="Roof Repair Process"
+        subtitle="Project stages"
       />
 
       {/* SECTION 6: Treatment Duration */}
@@ -217,13 +217,13 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Etapas do serviço
+                Project stages
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
                 Prazo estimado do reparo
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                O prazo depende do material, do acesso e da extensão do dano. A equipe explica as etapas após inspecionar a cobertura.
+                Timing depends on the material, access and extent of the damage. Our team explains each stage after inspecting the roof.
               </p>
             </div>
           </AnimateOnScroll>
@@ -231,37 +231,37 @@ export default function BracesPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Inspeção</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Inspeção da cobertura</h3>
+                <span className="font-display text-26 text-forest block mb-2">Inspection</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Roof Inspection</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  As telhas danificadas são identificadas e a equipe avalia quais peças precisam de ajuste ou substituição.
+                  We identify damaged tiles and assess which sections need adjustment or replacement.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Reparo</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Reparo dos pontos afetados</h3>
+                <span className="font-display text-26 text-forest block mb-2">Repair</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Repair dos pontos afetados</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  Pontos de vedação, sobreposições e acabamentos são revisados conforme o tipo de cobertura.
+                  We review seals, overlaps and finishes based on the type of roof.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Revisão</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Revisão do acabamento</h3>
+                <span className="font-display text-26 text-forest block mb-2">Final review</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Review the finish</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  A revisão final confirma o serviço realizado e as orientações de manutenção.
+                  A final review confirms the completed work and any maintenance guidance.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.4}>
               <div className="p-6 bg-mist/40 border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Manutenção</span>
-                <h3 className="font-display text-17 text-forest-ink mb-2">Manutenção preventiva</h3>
+                <span className="font-display text-26 text-forest block mb-2">Maintenance</span>
+                <h3 className="font-display text-17 text-forest-ink mb-2">Preventive Maintenance</h3>
                 <p className="font-body text-13 text-forest-ink/70">
-                  A equipe orienta sobre a manutenção da cobertura após concluir o reparo.
+                  Our team shares roof maintenance guidance after the repair.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -278,7 +278,7 @@ export default function BracesPage() {
                 Functional Value
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Benefícios da manutenção preventiva
+                Benefits of Preventive Maintenance
               </h2>
             </div>
           </AnimateOnScroll>
@@ -305,7 +305,7 @@ export default function BracesPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Orçamento do serviço
+                  Roofing Quote
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
                   roofing investment
@@ -326,7 +326,7 @@ export default function BracesPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Itens considerados no orçamento:
+                    Items included in your quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -349,10 +349,10 @@ export default function BracesPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                técnica Case Record
+                Project example
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Exemplo ilustrativo de reparo de telhado
+                Illustrative roofing project example
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -367,24 +367,24 @@ export default function BracesPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Supervised by ${leadDentist.name}.`}
+                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Completed by the CJ Roofing team.`}
               />
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* SECTION 10: Dúvidas frequentes */}
+      {/* SECTION 10: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  homeowner Questions
+                  Homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  roofing Dúvidas frequentes
+                  roofing Frequently Asked Questions
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -406,13 +406,13 @@ export default function BracesPage() {
                 Start Alignment
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Solicitar inspeção da cobertura
+                Request a Roof Inspection
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar avaliação
+              Request an assessment
             </Button>
           </AnimateOnScroll>
         </div>

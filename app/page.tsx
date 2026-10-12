@@ -16,9 +16,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Reparo e manutenção de telhados',
+  title: 'Roofing Services in Dublin',
   description:
-    'MAILSON REPAROS & MANUTENÇÕES LTDA: reparo e manutenção de telhados. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
+    'CJ Roofing Services Ltd provides roof replacements, flat roof installation, repairs and gutter services across Dublin. Open 24 hours.',
   pathname: '/',
 });
 
@@ -40,10 +40,10 @@ export default function HomePage() {
       {/* SECTION 2: Trust / Highlights */}
       <HomeStats />
 
-      {/* SECTION 3: Dental Services (Pinned Horizontal Track - Orchestrated Moment 2) */}
+      {/* SECTION 3: Roofing Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Comprehensive técnica Scope"
+        title="Complete Roofing Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -51,28 +51,28 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Our company (Asymmetric & Deliberately Still) */}
+      {/* SECTION 4: Why Choose CJ Roofing */}
       <HomeWhyUs />
 
-      {/* SECTION 5: Meet Our Equipe (Staggered Baseline Grid) */}
+      {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Treatments (Curated Outcome Stories) */}
+      {/* SECTION 6: Featured Roofing Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: company Gallery (Irregular Parallax Grid) */}
+      {/* SECTION 9: Roofing Project Gallery */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}
       <HomeFaqs />
 
-      {/* SECTION 11: Área de atendimento & Opening Hours */}
+      {/* SECTION 11: Service Area and Opening Hours */}
       <HomeLocation />
 
-      {/* SECTION 12: Final quote request Section (The One Centered Moment) */}
+      {/* SECTION 12: Request a Quote */}
       <HomeFinalCTA />
     </div>
   );

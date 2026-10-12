@@ -9,32 +9,32 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Solicitar orçamento de telhados',
+  title: 'Request a Roofing Quote',
   description:
-    'Solicite um orçamento para reparo de infiltrações, substituição de telhas, limpeza de calhas ou manutenção. Atendimento de segunda a sexta, das 8h à meia-noite; sábado e domingo 24 horas.',
+    'Request a quote for roof repairs, replacement, gutters or maintenance. CJ Roofing Services Ltd is open 24 hours and serves Dublin.',
   pathname: '/book-appointment/',
 });
 
 const BOOKING_STEPS = [
   {
     step: 1,
-    title: 'Envie sua Solicitação',
-    description: 'Selecione o reparo de interesse, data e horário preferencial através do formulário.',
+    title: 'Send Your Request',
+    description: 'Tell us what roofing work you need and when you would like us to contact you.',
   },
   {
     step: 2,
-    title: 'Avaliação da Equipe',
-    description: 'A equipe confirma a disponibilidade e combina os próximos passos após receber a solicitação.',
+    title: 'Team Review',
+    description: 'Our team reviews your enquiry and discusses availability and next steps.',
   },
   {
     step: 3,
-    title: 'Confirmação via WhatsApp ou Telefone',
-    description: 'Entramos em contato rapidamente para confirmar seu horário e fornecer orientações.',
+    title: 'We Get in Touch',
+    description: 'We contact you to discuss your request and arrange an assessment.',
   },
   {
     step: 4,
-    title: 'Atendimento Atencioso',
-    description: 'Venha ao equipe ou receba o atendimento de serviços de telhados domiciliar no conforto da sua casa.',
+    title: 'Roofing Work',
+    description: 'Our team completes the agreed roofing work at your property.',
   },
 ];
 
@@ -44,17 +44,17 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Solicitar orçamento', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/book-appointment/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Atendimento Personalizado
+                  Personal Service
                 </span>
-                <WordRevealH1 text="Solicite uma avaliação do seu telhado." />
+                <WordRevealH1 text="Request a roof assessment." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Solicite uma avaliação para infiltrações, telhas danificadas, calhas, vedação ou manutenção preventiva. Consulte a equipe sobre a área de atendimento." />
+                  <ScrubbedParagraph text="Request an assessment for leaks, damaged tiles, gutters, roof sealing or maintenance. We serve Dublin and surrounding areas." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -62,17 +62,15 @@ export default function BookAppointmentPage() {
             <div className="lg:col-span-4 lg:pl-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Orçamento via WhatsApp:</span>
+                  <span className="font-medium text-forest block">Call our team:</span>
                   <p className="text-forest-ink/70">
-                    Prefere falar diretamente conosco agora? Clique abaixo para abrir o WhatsApp.
+                    Prefer to speak with us directly? Call us any time.
                   </p>
                   <a
-                    href="https://api.whatsapp.com/send?phone=5596991695118"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="tel:+35315563783"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
-                    WhatsApp: {CLINIC_INFO.contact.whatsapp}
+                    {CLINIC_INFO.contact.phone}
                   </a>
                 </div>
               </AnimateOnScroll>
@@ -90,13 +88,13 @@ export default function BookAppointmentPage() {
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Como Funciona
+                    How It Works
                   </span>
                   <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                    Como funciona a solicitação
+                    What Happens Next
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    Priorizamos a pontualidade e o tempo necessário para cada Proprietário, garantindo uma avaliação completa e esclarecedora.
+                    We take the time to understand your roof and explain the available options clearly.
                   </p>
                 </div>
               </AnimateOnScroll>
@@ -133,24 +131,24 @@ export default function BookAppointmentPage() {
         </div>
       </section>
 
-      {/* SECTION 4, 5, 6: Contact Options, Opening Hours, Área de atendimento */}
+      {/* SECTION 4, 5, 6: Contact Options, Opening Hours, Service Area */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Contact Options */}
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contato Direto</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Fale com a nossa equipe</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Contact</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Talk to Our Team</h3>
                 <div className="space-y-3 font-body text-13 text-forest-ink/80">
                   <div>
-                    <span className="text-forest-ink/60 block">WhatsApp:</span>
-                    <a href="https://api.whatsapp.com/send?phone=5596991695118" target="_blank" rel="noopener noreferrer" className="font-medium text-forest hover:underline">
-                      {CLINIC_INFO.contact.whatsapp}
+                    <span className="text-forest-ink/60 block">Phone:</span>
+                    <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
+                      {CLINIC_INFO.contact.phone}
                     </a>
                   </div>
                   <div>
-                    <span className="text-forest-ink/60 block">Telefone:</span>
+                    <span className="text-forest-ink/60 block">Phone:</span>
                     <a href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} className="font-medium text-forest hover:underline">
                       {CLINIC_INFO.contact.phone}
                     </a>
@@ -162,8 +160,8 @@ export default function BookAppointmentPage() {
             {/* Opening Hours */}
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Horário</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Horários de atendimento</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Hours</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Opening Hours</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
                   {CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
@@ -175,13 +173,13 @@ export default function BookAppointmentPage() {
               </div>
             </AnimateOnScroll>
 
-            {/* Physical Área de atendimento */}
+            {/* Service Area */}
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Localização</span>
-                <h3 className="font-display text-21 text-forest-ink mb-4">Área de atendimento</h3>
+                <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
+                <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  Consulte a equipe sobre a área de atendimento.
+                  We serve Dublin and surrounding areas. Contact us to confirm availability for your property.
                 </p>
               </div>
             </AnimateOnScroll>

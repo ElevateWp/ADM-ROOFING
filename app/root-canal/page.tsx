@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Reparo de infiltrações em telhados',
+  title: 'Roof Leak Repairs in Dublin',
   description:
-    'Avaliação demonstrativa de infiltrações e reparos de telhados em área de atendimento.',
+    'Roof leak inspections and repairs across Dublin.',
   pathname: '/root-canal/',
 });
 
@@ -44,9 +44,9 @@ export default function RootCanalPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  leak repair Microsurgery
+                  Roof Leak Repairs
                 </span>
-                <WordRevealH1 text="Reparo de infiltrações com avaliação da cobertura e das telhas." />
+                <WordRevealH1 text="Roof leak repairs with a careful assessment of your roof." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
@@ -56,7 +56,7 @@ export default function RootCanalPage() {
                     Request leak repair evaluation
                   </Button>
                   <Button href="/emergency-dentist/" variant="ghost" size="lg">
-                    Urgência pain triage
+                    Emergency Roof Repairs
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -66,18 +66,18 @@ export default function RootCanalPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Equipe responsável</span>
+                    <span>Our Team</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Magnification</span>
-                    <span className="font-medium text-forest">Up to 25x Optical</span>
+                    <span>Service Area</span>
+                    <span className="font-medium text-forest">Dublin and surrounding areas</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Visit Duration</span>
-                    <span className="font-medium text-forest">Single 75–90 min visit</span>
+                    <span>Opening Hours</span>
+                    <span className="font-medium text-forest">Open 24 hours</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -93,17 +93,17 @@ export default function RootCanalPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Biological Science
+                  Roofing Assessment
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  What is Reparo de Infiltrações?
+                  What Is a Roof Leak Repair?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Retaining your biological root preserves natural chewing proprioception and stops the surrounding jawbone from resorbing.
+                    Our team assesses the roof condition and explains the recommended repairs.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -112,8 +112,8 @@ export default function RootCanalPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1643509963821-563d2ddb0812?auto=format&fit=crop&w=1600&q=85"
-                    alt="Microscopic leak repair Infiltrações procedure"
+                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    alt="Roof leak repair in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -131,10 +131,10 @@ export default function RootCanalPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Symptom Identification
+                Signs to Look For
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Sinais de infiltração e desgaste na cobertura
+                Signs of Leaks and Roof Wear
               </h2>
             </div>
           </AnimateOnScroll>
@@ -158,10 +158,10 @@ export default function RootCanalPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Etiology & Pathology
+                Common Causes
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                O que pode causar infiltrações no telhado?
+                What Can Cause a Roof Leak?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -182,8 +182,8 @@ export default function RootCanalPage() {
       {/* SECTION 5: Root Canal Procedure (Pinned Walkthrough) */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="Etapas do reparo de infiltrações"
-        subtitle="Como funciona o serviço"
+        title="Roof Leak Repair Process"
+        subtitle="How the Service Works"
       />
 
       {/* SECTION 6: Does Root Canal Treatment Hurt? */}
@@ -192,16 +192,16 @@ export default function RootCanalPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl">
               <span className="font-body text-13 text-forest uppercase tracking-wider block mb-3 font-medium">
-                Avaliação dos danos
+                Damage assessment
               </span>
               <h2 className="font-display text-33 md:text-52 text-forest-ink leading-[1.08] mb-6">
-                Como é feita a avaliação do telhado?
+                How Do You Assess a Roof?
               </h2>
               <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-6">
-                A inspeção ajuda a localizar o ponto de entrada de água e definir o reparo apropriado. O escopo depende das condições encontradas no telhado.
+                An inspection helps locate where water is entering and identify suitable repairs. The scope depends on the roof condition.
               </p>
               <p className="font-body text-15 text-forest-ink/70 leading-relaxed">
-                A equipe explica os pontos avaliados e o serviço recomendado antes de iniciar qualquer reparo.
+                Our team explains the findings and recommended work before starting repairs.
               </p>
             </div>
           </AnimateOnScroll>
@@ -217,7 +217,7 @@ export default function RootCanalPage() {
                 Post-Treatment Expectations
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Prazos e orientações após o serviço
+                Timing and After-Care
               </h2>
             </div>
           </AnimateOnScroll>
@@ -251,10 +251,10 @@ export default function RootCanalPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Orçamento do serviço
+                  Roofing Quote
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Reparo de Infiltrações pricing
+                  Roof Leak Repair Pricing
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
                   <span className="font-body text-13 text-forest-ink/60 block mb-1">Base Specialist Range</span>
@@ -289,17 +289,17 @@ export default function RootCanalPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Dúvidas frequentes */}
+      {/* SECTION 9: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  homeowner Inquiries
+                  Homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  leak repair Dúvidas frequentes
+                  Frequently Asked Questions About Roof Leaks
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -330,7 +330,7 @@ export default function RootCanalPage() {
               </div>
               <div className="lg:col-span-9">
                 <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                  leak repair Director
+                  leak Roofing Team
                 </span>
                 <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
                   {leadDentist.name}
@@ -343,13 +343,13 @@ export default function RootCanalPage() {
                     href={`/dentists/${leadDentist.slug}/`}
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Conheça a equipe responsável →
+                    Meet the Team →
                   </Link>
                   <Link
                     href="/emergency-dentist/"
                     className="font-body text-15 text-forest font-medium underline underline-offset-4"
                   >
-                    Reparos urgentes de telhado →
+                    Emergency Roof Repairs →
                   </Link>
                 </div>
               </div>
@@ -364,17 +364,17 @@ export default function RootCanalPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Relieve Pain
+                Roofing Help
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Solicitar avaliação de infiltração
+                Request a Leak Assessment
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Solicitar orçamento
+                Request a Quote
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
                 Contato company

@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Blog sobre telhados e coberturas',
+  title: 'Roofing Advice',
   description:
-    'Dicas demonstrativas sobre infiltrações, telhas, calhas e manutenção de telhados.',
+    'Practical advice on roof leaks, tiles, gutters and roof maintenance from CJ Roofing Services Ltd.',
   pathname: '/blog/',
 });
 
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Blog técnico', path: '/blog/' }]} />
+          <Breadcrumbs items={[{ name: 'Roofing Advice', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Blog técnico & Orientações
+                  Roofing Advice
                 </span>
-                <WordRevealH1 text="Dicas sobre manutenção e reparo de telhados." />
+                <WordRevealH1 text="Guidance on roof repair and maintenance." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Informações demonstrativas sobre reparos de infiltrações, substituição de telhas e manutenção da cobertura.
+                  Learn what to look for when you notice a roof leak, damaged tiles or storm damage.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -69,7 +69,7 @@ export default function BlogIndexPage() {
                         </p>
                         {author && (
                           <span className="font-body text-13 text-forest-ink/60 block">
-                            Por {author.name} • {author.title}
+                            By {author.name} • {author.title}
                           </span>
                         )}
                       </div>
@@ -80,7 +80,7 @@ export default function BlogIndexPage() {
                           href={`/blog/${post.slug}/`}
                           className="font-body text-13 text-forest font-medium underline underline-offset-4 group-hover:text-forest-light"
                         >
-                          Read técnica paper →
+                          Read Article →
                         </Link>
                       </div>
                     </div>

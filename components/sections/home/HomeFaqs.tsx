@@ -7,29 +7,29 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'Como funciona o reparo de infiltrações no telhado?',
-    answer: 'O prazo do serviço depende do tipo de cobertura, do acesso e da extensão do dano. A equipe informa a previsão após a inspeção.',
-    relatedLink: { href: '/dental-implants/', label: 'Ver detalhes sobre reparos e Reparo localizado →' },
+    question: 'How do you assess a roof leak?',
+    answer: 'We inspect the roof to find visible signs of water entry, then explain the recommended work and timing.',
+    relatedLink: { href: '/dental-implants/', label: 'Explore roof repairs →' },
   },
   {
-    question: 'Como confirmar se a equipe atende minha região?',
-    answer: 'Entre em contato pelo telefone ou WhatsApp para confirmar se a equipe atende sua região.',
-    relatedLink: { href: '/contact/', label: 'Consultar área de atendimento →' },
+    question: 'Do you cover my area?',
+    answer: 'Contact our team to check availability for your property in Dublin or the surrounding area.',
+    relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Quais serviços de reparo de telhado estão disponíveis?',
-    answer: 'Entre em contato para confirmar a disponibilidade do serviço desejado.',
-    relatedLink: { href: '/braces/', label: 'Explorar Inspeção de telhados →' },
+    question: 'What roofing services do you provide?',
+    answer: 'We work on roof replacements, flat roofs, repairs, gutters, fascias and inspections.',
+    relatedLink: { href: '/braces/', label: 'Explore roof inspections →' },
   },
   {
-    question: 'Como solicitar uma avaliação?',
-    answer: `Você pode entrar em contato diretamente pelo WhatsApp (${CLINIC_INFO.contact.phone}) ou preencher o formulário de Orçamento online com antecedência.`,
-    relatedLink: { href: '/book-appointment/', label: 'Solicitar orçamento →' },
+    question: 'How do I request a quote?',
+    answer: `Call us on ${CLINIC_INFO.contact.phone} or send a message through our quote request form.`,
+    relatedLink: { href: '/book-appointment/', label: 'Request a quote →' },
   },
   {
-    question: 'Onde fica localizada a MAILSON REPAROS & MANUTENÇÕES LTDA?',
+    question: 'Where does CJ Roofing Services work?',
     answer: CLINIC_INFO.primaryLocation.directions,
-    relatedLink: { href: '/contact/', label: 'Consultar área de atendimento →' },
+    relatedLink: { href: '/contact/', label: 'Check our service area →' },
   },
 ];
 
@@ -41,28 +41,28 @@ export default function HomeFaqs() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <AnimateOnScroll animation="fade-right" duration={0.85} className="lg:col-span-5">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Dúvidas Frequentes
+              Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Perguntas frequentes sobre nossos serviços
+              Questions about our roofing services
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Respostas claras sobre reparos, inspeção de telhados e atendimento da MAILSON REPAROS & MANUTENÇÕES LTDA.
+              Clear answers about roof repairs, inspections and service availability.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
-                Tem alguma outra pergunta?
+                Have another question?
               </span>
               <p className="font-body text-13 text-forest-ink/70 mb-3">
-                Fale diretamente conosco pelo WhatsApp e tire todas as suas dúvidas.
+                Call or message our team and we will be happy to help.
               </p>
               <a
-                href={`https://api.whatsapp.com/send?phone=5596991695118`}
+                href="tel:+35315563783"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"
               >
-                Falar pelo WhatsApp
+                Call our team
               </a>
             </div>
           </AnimateOnScroll>

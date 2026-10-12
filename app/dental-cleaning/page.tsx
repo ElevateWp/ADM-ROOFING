@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-cleaning')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Limpeza de calhas e rufos',
+  title: 'Flat roof installation and repairs',
   description:
-    'Limpeza de calhas e rufos para ajudar a manter o escoamento da água da chuva.',
+    'Flat roof installation and repairs for durable, weather-resistant protection.',
   pathname: '/dental-cleaning/',
 });
 
@@ -44,19 +44,19 @@ export default function DentalCleaningPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  roofing Prevention & Airflow
+                  Flat Roofing
                 </span>
-                <WordRevealH1 text="Limpeza de calhas e revisão dos pontos de escoamento." />
+                <WordRevealH1 text="Flat roof installation and repairs for durable, weather-resistant protection." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Solicitar limpeza de calhas e rufos
+                    Request a flat roof assessment
                   </Button>
                   <Button href="#procedure" variant="ghost" size="lg">
-                    View hygiene sequence
+                    View the project stages
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -66,16 +66,16 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Método de avaliação</span>
-                    <span className="font-medium text-forest">Glycine Airflow / Piezo</span>
+                    <span>Roof inspection</span>
+                    <span className="font-medium text-forest">Roof assessment</span>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Sensitivity</span>
-                    <span className="font-medium text-forest">Warm Water Stream</span>
+                    <span>Service area</span>
+                    <span className="font-medium text-forest">Dublin and surrounding areas</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Standard Interval</span>
-                    <span className="font-medium text-forest">Inspeção periódica</span>
+                    <span>Availability</span>
+                    <span className="font-medium text-forest">Routine roof check</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -94,14 +94,14 @@ export default function DentalCleaningPage() {
                   Preventive Science
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Como funciona a limpeza de calhas?
+                  How does flat roof installation work?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike traditional metal hand scrapers, glycine powder airflow reaches subgingival pockets safely without scratching roof tiles prisms or sensitive root cementum.
+                    We assess the existing surface, drainage and signs of water ingress before recommending preparation and materials.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -110,8 +110,8 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1661930941624-f4b43e3079f1?auto=format&fit=crop&w=1600&q=85"
-                    alt="Guided airflow Calhas e Rufos repair"
+                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    alt="Flat roof installation in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -129,10 +129,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Systemic Health Protection
+                Roof Protection
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Por que manter as calhas limpas?
+                Flat Roofs and Water Drainage
               </h2>
             </div>
           </AnimateOnScroll>
@@ -144,7 +144,7 @@ export default function DentalCleaningPage() {
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
                     {benefit}
                   </p>
-                  <span className="font-body text-13 text-forest font-medium">Preventive standard</span>
+                  <span className="font-body text-13 text-forest font-medium">Project benefit</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -156,8 +156,8 @@ export default function DentalCleaningPage() {
       <div id="procedure">
         <ProcedurePin
           steps={service.procedureSteps}
-          title="Guided Hygiene & Debridement Sequence"
-          subtitle="Gentle 4-Stage roofing Protocol"
+          title="Flat Roof Project Stages"
+          subtitle="A Four-Step Roofing Process"
         />
       </div>
 
@@ -167,13 +167,13 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                roofing Pathology
+                Flat Roofing
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Understanding biofilm, calculus & bone loss
+                Flat Roof Inspection and Preparation
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                Folhas e resíduos podem bloquear o escoamento da água. A limpeza ajuda a reduzir transbordamentos e a identificar sinais visíveis de vazamento.
+                Correct drainage and sound seals help protect flat roofs from water ingress.
               </p>
             </div>
           </AnimateOnScroll>
@@ -181,25 +181,25 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 1: Plaque Biofilm</span>
+                <span className="font-display text-21 text-forest block mb-2">Stage 1: Assess the Surface</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Folhas e pequenos resíduos podem se acumular nas calhas e dificultar a drenagem da água da chuva.
+                  We inspect the existing roof surface and note any areas of wear.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 2: Calcified Tartar</span>
+                <span className="font-display text-21 text-forest block mb-2">Stage 2: Review Drainage</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Resíduos compactados podem exigir limpeza cuidadosa. O método é definido conforme o acesso e as condições do local.
+                  We check outlets and water flow to identify visible pooling or blockages.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-8 bg-mist/30 border border-mist h-full shadow-sm">
-                <span className="font-display text-21 text-forest block mb-2">Stage 3: Pocket Formation</span>
+                <span className="font-display text-21 text-forest block mb-2">Stage 3: Plan the Installation</span>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Deepening sulcus (4mm+) allowing anaerobic bacteria to enter bone architecture. Requires therapeutic deep debridement.
+                  The team explains suitable preparation, materials and next steps.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -213,10 +213,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Recall Frequency
+                Routine Roof Maintenance
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Recommended hygiene intervals
+                When to Arrange a Flat Roof Assessment
               </h2>
             </div>
           </AnimateOnScroll>
@@ -224,19 +224,19 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AnimateOnScroll animation="fade-right" duration={0.8}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Inspeção periódica</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">Revisão preventiva</h3>
+                <span className="font-display text-26 text-forest block mb-2">Routine roof check</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">Preventive check</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Para coberturas sem sinais aparentes de dano; a frequência adequada depende do material e das condições do imóvel.
+                  An assessment can help identify visible wear before it develops further.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
               <div className="p-8 bg-paper border border-mist h-full shadow-sm">
-                <span className="font-display text-26 text-forest block mb-2">Após chuva forte ou ventos intensos</span>
-                <h3 className="font-display text-21 text-forest-ink mb-2">roofing Maintenance</h3>
+                <span className="font-display text-26 text-forest block mb-2">After Heavy Rain or Strong Winds</span>
+                <h3 className="font-display text-21 text-forest-ink mb-2">Flat roof maintenance</h3>
                 <p className="font-body text-15 text-forest-ink/80 leading-relaxed">
-                  Para telhados com histórico de infiltrações ou desgaste, uma avaliação pode ajudar a identificar pontos que merecem atenção.
+                  Water ingress or visible wear may need a closer assessment of the roof surface and drainage.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -250,10 +250,10 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Cuidados após a limpeza
+                After-Installation Care
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Cuidados de manutenção da cobertura
+                Flat Roof Maintenance
               </h2>
             </div>
           </AnimateOnScroll>
@@ -261,25 +261,25 @@ export default function DentalCleaningPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" delay={0.1}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Remoção de detritos</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Keep Drainage Clear</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Mantenha calhas e saídas de água desobstruídas; solicite limpeza quando houver acúmulo de folhas ou resíduos.
+                  Keep outlets clear and look for signs of standing water after rain.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.2}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Inspeção de rufos e calhas</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Check Seals and Roof Edges</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Verifique sinais de obstrução e vazamento a partir do chão. Não suba na cobertura sem acesso e equipamento adequados.
+                  Check visible roof edges and seals from the ground. Avoid accessing the roof without suitable equipment.
                 </p>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="fade-up" delay={0.3}>
               <div className="p-6 bg-paper border border-mist h-full shadow-sm">
-                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Revisão das telhas</h3>
+                <h3 className="font-display text-17 md:text-21 text-forest-ink mb-2">Inspect the Roof Surface</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed">
-                  Peças quebradas ou deslocadas devem ser avaliadas por uma equipe com acesso seguro ao telhado.
+                  Ask a roofing professional to assess cracks, blisters or other visible surface damage.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -297,10 +297,10 @@ export default function DentalCleaningPage() {
                   Transparent Fees
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  de telhados hygiene pricing
+                  Flat Roof Installation Costs
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard Hygiene Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Quote information</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -315,7 +315,7 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Informações para preparar o orçamento:
+                    Helpful details for a quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -332,17 +332,17 @@ export default function DentalCleaningPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Dúvidas frequentes */}
+      {/* SECTION 9: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  homeowner Inquiries
+                  Homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Cleaning Dúvidas frequentes
+                  Flat Roof FAQs
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -361,16 +361,16 @@ export default function DentalCleaningPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Preventive Health
+                Roof Protection
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Solicitar limpeza de calhas
+                Request a flat roof assessment
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar orçamento
+              Request a Quote
             </Button>
           </AnimateOnScroll>
         </div>

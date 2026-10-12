@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'dental-implants')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'reparos de telhados & Reparo localizado',
+  title: 'Roof Repairs and Leak Detection',
   description:
-    'reparos de telhados de Reparo localizado para trazer seu proteção em 1 dia com fixação precisa em titânio e zircônia pela equipe de reparos de telhados.',
+    'Roof repairs and leak detection to help protect your home.',
   pathname: '/dental-implants/',
 });
 
@@ -45,19 +45,19 @@ export default function DentalImplantsPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Reparos de telhados e coberturas
+                  Roof Repairs and Replacements
                 </span>
-                <WordRevealH1 text="Reparos de telhado para conter infiltrações e proteger o imóvel." />
+                <WordRevealH1 text="Roof repairs to help protect your home." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Solicitar inspeção do telhado
+                    Request a Roof Inspection
                   </Button>
                   <Button href="#procedure" variant="ghost" size="lg">
-                    Ver etapas do serviço
+                    View Service Stages
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -67,18 +67,18 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>técnica Lead</span>
+                    <span>Roofing Team</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>5-Yr Integration Rate</span>
-                    <span className="font-medium text-forest">99.4% Verified</span>
+                    <span>Experience</span>
+                    <span className="font-medium text-forest">10+ Years</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>repair Protocol</span>
-                    <span className="font-medium text-forest">3D CBCT Guided</span>
+                    <span>Availability</span>
+                    <span className="font-medium text-forest">Open 24 Hours</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -87,24 +87,24 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* SECTION 2: What Are Dental Implants? */}
+      {/* SECTION 2: Roof Repairs */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Biomechanical Science
+                  Roof Assessment
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Como funciona o reparo do telhado?
+                  How Do Roof Repairs Work?
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    O reparo é planejado para a área afetada e considera as telhas e os materiais existentes na cobertura.
+                    We plan repairs around the affected area, existing roof tiles and materials.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -113,8 +113,8 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1635424710918-d5c138981922?auto=format&fit=crop&w=1600&q=85"
-                    alt="Inspeção de telhas e pontos de vedação"
+                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    alt="Roof tiles and sealing points"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -126,16 +126,16 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* SECTION 3: Who May Need Dental Implants? */}
+      {/* SECTION 3: Signs You May Need a Roof Repair */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                técnica Candidacy
+                Signs to Look For
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Quando solicitar um reparo de telhado?
+                When Should I Arrange a Roof Repair?
               </h2>
             </div>
           </AnimateOnScroll>
@@ -159,10 +159,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Biological Advantages
+                Roofing Benefits
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Verified técnica benefits
+                Roofing Benefits
               </h2>
             </div>
           </AnimateOnScroll>
@@ -174,7 +174,7 @@ export default function DentalImplantsPage() {
                   <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
                     {benefit}
                   </p>
-                  <span className="font-body text-13 text-forest font-medium">Documented standard</span>
+                  <span className="font-body text-13 text-forest font-medium">Agreed in advance</span>
                 </div>
               </AnimateOnScroll>
             ))}
@@ -182,12 +182,12 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Dental Implant Procedure (Pinned Walkthrough) */}
+      {/* SECTION 5: Roof Repair Process */}
       <div id="procedure">
         <ProcedurePin
           steps={service.procedureSteps}
-          title="Etapas do reparo do telhado"
-          subtitle="Etapas do serviço de reparo"
+          title="Roof Repair Process"
+          subtitle="Roof Repair Stages"
         />
       </div>
 
@@ -197,10 +197,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                repair Modalities
+                Repair Options
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Opções de reparos e Reparo localizado
+                Repair Options
               </h2>
             </div>
           </AnimateOnScroll>
@@ -221,7 +221,7 @@ export default function DentalImplantsPage() {
                     </p>
                   </div>
                   <div className="pt-4 border-t border-mist text-13 text-forest-ink/60">
-                    Custom milled titanium or zirconia abutment
+                    Repair options depend on the roof type and condition.
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -236,13 +236,13 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Cuidados após o reparo
+                After the Repair
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Prazo e orientações após o serviço
+                Timing and After-Care
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                O prazo varia conforme o dano, o material e o acesso ao telhado. A equipe informa as orientações após avaliar o local.
+                Timing depends on the damage, materials and roof access. Our team will explain the next steps after assessing the property.
               </p>
             </div>
           </AnimateOnScroll>
@@ -255,11 +255,11 @@ export default function DentalImplantsPage() {
                     <span className="font-display text-21 text-forest">{rec.period}</span>
                   </div>
                   <div className="lg:col-span-4">
-                    <span className="font-body text-13 text-forest-ink/60 block mb-1">Sensations:</span>
+                    <span className="font-body text-13 text-forest-ink/60 block mb-1">What to Expect:</span>
                     <p className="font-body text-15 text-forest-ink/80">{rec.expectedSensations}</p>
                   </div>
                   <div className="lg:col-span-5">
-                    <span className="font-body text-13 text-forest-ink/60 block mb-1">Orientações:</span>
+                    <span className="font-body text-13 text-forest-ink/60 block mb-1">Guidance:</span>
                     <p className="font-body text-15 text-forest-ink/80">{rec.careProtocol}</p>
                   </div>
                 </div>
@@ -276,13 +276,13 @@ export default function DentalImplantsPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Financial Transparency
+                  Clear Quotes
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Quanto custa o reparo do telhado?
+                  How Much Does a Roof Repair Cost?
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard técnica Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Typical Quote</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -297,7 +297,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Itens considerados no orçamento:
+                    Items included in your quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -313,7 +313,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.15}>
                 <div className="p-6 bg-paper border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Fatores que influenciam o orçamento:
+                    Factors that affect your quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.factors.map((fac, i) => (
@@ -336,10 +336,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                técnica Case Study
+                Roofing Project
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Reparo localizado em telhado residencial
+                Residential Roofing Project
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -354,14 +354,14 @@ export default function DentalImplantsPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Os materiais e o escopo dependem da avaliação do telhado.`}
+                clinicalNote={`Project photos. Materials and work scope depend on the roof assessment.`}
               />
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* SECTION 10: Telhadista / Expertise Link */}
+      {/* SECTION 10: Roofing Team */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -380,7 +380,7 @@ export default function DentalImplantsPage() {
               <div className="lg:col-span-9 flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Primary repair Director
+                    Roofing Team
                   </span>
                   <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
                     {leadDentist.name}
@@ -396,7 +396,7 @@ export default function DentalImplantsPage() {
                   href={`/dentists/${leadDentist.slug}/`}
                   className="font-body text-15 text-forest font-medium underline underline-offset-4"
                 >
-                  Conheça a equipe responsável →
+                  Meet the Team →
                 </Link>
               </div>
             </div>
@@ -404,20 +404,20 @@ export default function DentalImplantsPage() {
         </div>
       </section>
 
-      {/* SECTION 11: Dúvidas frequentes */}
+      {/* SECTION 11: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  homeowner Questions
+                  Homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  Dúvidas frequentes sobre reparos de telhados
+                  Frequently Asked Questions About Roof Repairs
                 </h2>
                 <p className="font-body text-15 text-forest-ink/80">
-                  Informações sobre avaliação, materiais, prazo e manutenção da cobertura.
+                  Learn about roof assessments, materials, timing and maintenance.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -439,20 +439,20 @@ export default function DentalImplantsPage() {
                 Next Steps
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your 3D implant consultation
+                Request a roof assessment
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Includes comprehensive CBCT radiographic analysis and written repair planning.
+                Our team will discuss the roof condition and the recommended work.
               </p>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
               <Button href="/book-appointment/" variant="lime" size="lg">
-                Solicitar orçamento
+                Request a Quote
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
-                Contato repair Desk
+                Contact Our Team
               </Button>
             </div>
           </AnimateOnScroll>

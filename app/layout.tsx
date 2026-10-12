@@ -10,23 +10,23 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3456'),
   title: {
-    default: 'MAILSON REPAROS & MANUTENÇÕES LTDA',
+    default: 'CJ Roofing Services Ltd',
     template: '%s',
   },
   description:
-    'MAILSON REPAROS & MANUTENÇÕES LTDA: reparos e manutenção residencial em Jundiaí, São Paulo. Contato: +55 96 99169-5118.',
+    'CJ Roofing Services Ltd provides roof replacements, flat roof installation, repairs and gutter services across Dublin. Call +353 1 556 3783.',
   keywords: [
-    'MAILSON REPAROS & MANUTENÇÕES LTDA',
-    'reparo e manutenção de telhados',
-    'telhadista',
+    'CJ Roofing Services Ltd',
+    'roof replacement Dublin',
+    'roof repairs Dublin',
   ],
-  authors: [{ name: 'MAILSON REPAROS & MANUTENÇÕES LTDA' }],
+  authors: [{ name: 'CJ Roofing Services Ltd' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon.png', sizes: '192x192', type: 'image/png' },
     ],
-    shortcut: [{ url: '/favicon.png', type: 'image/png' }],
+    shortcut: [{ url: '/favicon.ico', type: 'image/x-icon' }],
     apple: [{ url: '/icon.png', sizes: '180x180', type: 'image/png' }],
   },
 };
@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="en-IE" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,11 +46,11 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F5] selection:text-[#171717]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F7F7F7] selection:text-[#1C1A1B]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
-          Pular para o conteúdo principal
+          Skip to main content
         </a>
         <LenisProvider>
           <Navbar />

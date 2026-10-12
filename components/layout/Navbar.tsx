@@ -10,6 +10,7 @@ import Button from '@/components/ui/Button';
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const pathname = usePathname();
 
@@ -24,6 +25,7 @@ export default function Navbar() {
   // Close menus on page change
   useEffect(() => {
     setMobileMenuOpen(false);
+    setMobileServicesOpen(false);
     setServicesDropdownOpen(false);
   }, [pathname]);
 
@@ -40,11 +42,12 @@ export default function Navbar() {
   }, [mobileMenuOpen]);
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled || mobileMenuOpen
-          ? 'bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#DDDDDD]/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-          : 'bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#DDDDDD] shadow-sm'
+          ? 'bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#E2DFE0]/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
+          : 'bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#E2DFE0] shadow-sm'
       }`}
     >
       <div className="max-w-site mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
@@ -52,11 +55,11 @@ export default function Navbar() {
         <Link
           href="/"
           className="group flex items-center no-underline focus-visible:outline-offset-4 flex-shrink-0 min-w-0"
-          aria-label="MAILSON REPAROS & MANUTENÇÕES LTDA"
+          aria-label="CJ Roofing Services Ltd"
         >
           <Image
             src="/images/logo.png"
-            alt="MAILSON REPAROS & MANUTENÇÕES LTDA — soluções residenciais e consertos em geral"
+            alt="CJ Roofing Services Ltd logo"
             width={180}
             height={100}
             priority
@@ -80,14 +83,14 @@ export default function Navbar() {
                 pathname?.includes('teeth-whitening') ||
                 pathname?.includes('braces') ||
                 pathname?.includes('cosmetic-dentistry')
-                  ? 'text-[#171717] font-semibold'
-                  : 'text-[#171717]/80 hover:text-[#666666] font-medium'
+                  ? 'text-[#1C1A1B] font-semibold'
+                  : 'text-[#1C1A1B]/80 hover:text-[#6D696B] font-medium'
               }`}
               aria-expanded={servicesDropdownOpen}
             >
-              <span>Serviços</span>
+              <span>Services</span>
               <span
-                className={`w-1.5 h-1.5 border-r border-b border-[#171717]/60 transition-transform duration-200 ${
+                className={`w-1.5 h-1.5 border-r border-b border-[#1C1A1B]/60 transition-transform duration-200 ${
                   servicesDropdownOpen ? '-rotate-135 -translate-y-0.5' : 'rotate-45 translate-y-[-2px]'
                 }`}
                 aria-hidden="true"
@@ -97,7 +100,7 @@ export default function Navbar() {
             {/* Dropdown Panel with Pure White Background and Smooth Shadow */}
             {servicesDropdownOpen && (
               <div className="absolute top-full -left-4 pt-2 w-64 z-50 animate-fade-in">
-                <div className="p-2 bg-paper border border-[#DDDDDD] shadow-[0_12px_36px_rgba(17,17,17,0.08)] rounded-2xl">
+                <div className="p-2 bg-paper border border-[#E2DFE0] shadow-[0_12px_36px_rgba(17,17,17,0.08)] rounded-2xl">
                   <div className="space-y-0.5">
                     {SERVICES.map((s) => (
                       <Link
@@ -105,8 +108,8 @@ export default function Navbar() {
                         href={`/${s.slug}/`}
                         className={`block px-3.5 py-2 text-14 font-body transition-all duration-200 rounded-xl ${
                           pathname === `/${s.slug}/`
-                            ? 'bg-[#F5F5F5] text-[#171717] font-semibold shadow-xs'
-                            : 'text-[#171717]/85 hover:bg-[#F5F5F5]/50 hover:text-[#666666] hover:translate-x-1'
+                            ? 'bg-[#F7F7F7] text-[#1C1A1B] font-semibold shadow-xs'
+                            : 'text-[#1C1A1B]/85 hover:bg-[#F7F7F7]/50 hover:text-[#6D696B] hover:translate-x-1'
                         }`}
                       >
                         <span className="block font-medium">{s.navLabel}</span>
@@ -122,8 +125,8 @@ export default function Navbar() {
             href="/about/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname === '/about/'
-                ? 'text-[#171717] font-semibold'
-                : 'text-[#171717]/80 hover:text-[#666666] font-medium'
+                ? 'text-[#1C1A1B] font-semibold'
+                : 'text-[#1C1A1B]/80 hover:text-[#6D696B] font-medium'
             }`}
           >
             About Us
@@ -133,8 +136,8 @@ export default function Navbar() {
             href="/dentists/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname?.startsWith('/dentists')
-                ? 'text-[#171717] font-semibold'
-                : 'text-[#171717]/80 hover:text-[#666666] font-medium'
+                ? 'text-[#1C1A1B] font-semibold'
+                : 'text-[#1C1A1B]/80 hover:text-[#6D696B] font-medium'
             }`}
           >
             Our Team
@@ -144,8 +147,8 @@ export default function Navbar() {
             href="/blog/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname?.startsWith('/blog')
-                ? 'text-[#171717] font-semibold'
-                : 'text-[#171717]/80 hover:text-[#666666] font-medium'
+                ? 'text-[#1C1A1B] font-semibold'
+                : 'text-[#1C1A1B]/80 hover:text-[#6D696B] font-medium'
             }`}
           >
             Roofing Tips
@@ -155,8 +158,8 @@ export default function Navbar() {
             href="/contact/"
             className={`font-body text-15 py-2 transition-colors ${
               pathname === '/contact/'
-                ? 'text-[#171717] font-semibold'
-                : 'text-[#171717]/80 hover:text-[#666666] font-medium'
+                ? 'text-[#1C1A1B] font-semibold'
+                : 'text-[#1C1A1B]/80 hover:text-[#6D696B] font-medium'
             }`}
           >
             Contact
@@ -166,9 +169,9 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <Link
             href="/emergency-dentist/"
-            className="hidden xl:inline-flex h-9 w-[160px] items-center justify-center gap-2 rounded-full border border-[#E50914] bg-paper font-body text-12 sm:text-13 font-semibold text-[#171717] transition-colors hover:bg-[#E6E6E6] whitespace-nowrap"
+            className="hidden xl:inline-flex h-10 w-[176px] items-center justify-center rounded-md border border-[#E51B2B] bg-[#E51B2B] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#FF3545] hover:bg-[#FF3545] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E51B2B] whitespace-nowrap"
           >
-            <span>Emergency Repairs</span>
+            <span>Emergency Roof Repairs</span>
           </Link>
 
           <Button
@@ -184,24 +187,24 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 text-[#171717] focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer rounded-lg hover:bg-[#F5F5F5] transition-colors"
+            className="xl:hidden p-2 text-[#1C1A1B] focus-visible:outline-offset-2 flex items-center justify-center cursor-pointer rounded-lg hover:bg-[#F7F7F7] transition-colors"
             aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-controls="mobile-navigation"
             aria-expanded={mobileMenuOpen}
           >
             <div className="w-6 h-5 relative flex flex-col justify-between">
               <span
-                className={`w-full h-[2px] bg-[#171717] transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#1C1A1B] transition-transform duration-250 ${
                   mobileMenuOpen ? 'rotate-45 translate-y-2' : ''
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-[#171717] transition-opacity duration-200 ${
+                className={`w-full h-[2px] bg-[#1C1A1B] transition-opacity duration-200 ${
                   mobileMenuOpen ? 'opacity-0' : 'opacity-100'
                 }`}
               />
               <span
-                className={`w-full h-[2px] bg-[#171717] transition-transform duration-250 ${
+                className={`w-full h-[2px] bg-[#1C1A1B] transition-transform duration-250 ${
                   mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''
                 }`}
               />
@@ -209,43 +212,69 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+    </header>
 
       {/* Mobile / Tablet Drawer Menu */}
       <div
         id="mobile-navigation"
         aria-label="Mobile navigation"
         aria-hidden={!mobileMenuOpen}
-        className={`xl:hidden fixed inset-x-0 top-[94px] sm:top-[109px] md:top-[120px] bottom-0 bg-paper border-t border-[#DDDDDD] overflow-y-auto px-4 sm:px-6 py-5 sm:py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
+        className={`xl:hidden fixed inset-x-0 top-[95px] sm:top-[110px] md:top-[121px] bottom-0 bg-paper border-t border-[#E2DFE0] overflow-y-auto overscroll-contain px-4 sm:px-6 py-5 sm:py-6 flex flex-col justify-between z-[999] transition-all duration-300 ease-in-out shadow-2xl ${
           mobileMenuOpen
             ? 'opacity-100 pointer-events-auto translate-y-0'
             : 'opacity-0 pointer-events-none -translate-y-4'
         }`}
       >
         <div className="flex flex-col space-y-4">
-          <span className="font-body text-12 text-[#171717] font-bold uppercase tracking-wider">
-            Serviços
-          </span>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pl-2">
-            {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/${s.slug}/`}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`font-body text-15 min-h-10 flex items-center py-1.5 transition-colors ${
-                  pathname === `/${s.slug}/` ? 'text-[#171717] font-semibold' : 'text-[#171717] hover:text-[#666666]'
+          <div>
+            <button
+              type="button"
+              onClick={() => setMobileServicesOpen((open) => !open)}
+              aria-expanded={mobileServicesOpen}
+              aria-controls="mobile-services-list"
+              className="flex min-h-12 w-full items-center justify-between py-2 text-left font-body text-13 font-bold uppercase tracking-wider text-[#1C1A1B]"
+            >
+              <span>Services</span>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+                className={`mr-1 h-4 w-4 text-[#1C1A1B]/70 transition-transform duration-200 ${
+                  mobileServicesOpen ? 'rotate-180' : 'rotate-0'
                 }`}
               >
-                {s.navLabel}
-              </Link>
-            ))}
+                <path d="m6 9 6 6 6-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            {mobileServicesOpen && (
+              <div id="mobile-services-list" className="grid grid-cols-1 gap-1.5 pb-2 sm:grid-cols-2">
+                {SERVICES.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/${s.slug}/`}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setMobileServicesOpen(false);
+                    }}
+                    className={`flex min-h-11 items-center rounded-md px-3 font-body text-15 transition-colors ${
+                      pathname === `/${s.slug}/`
+                        ? 'bg-[#FCE5E7] font-semibold text-[#1C1A1B]'
+                        : 'text-[#1C1A1B] hover:bg-[#F7F7F7] hover:text-[#6D696B]'
+                    }`}
+                  >
+                    {s.navLabel}
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
 
-          <div className="pt-4 border-t border-[#DDDDDD] flex flex-col space-y-3">
+          <div className="pt-4 border-t border-[#E2DFE0] flex flex-col space-y-3">
             <Link
               href="/about/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname === '/about/' ? 'text-[#171717] font-semibold' : 'text-[#171717] hover:text-[#666666]'
+                pathname === '/about/' ? 'text-[#1C1A1B] font-semibold' : 'text-[#1C1A1B] hover:text-[#6D696B]'
               }`}
             >
               About Us
@@ -254,7 +283,7 @@ export default function Navbar() {
               href="/dentists/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname?.startsWith('/dentists') ? 'text-[#171717] font-semibold' : 'text-[#171717] hover:text-[#666666]'
+                pathname?.startsWith('/dentists') ? 'text-[#1C1A1B] font-semibold' : 'text-[#1C1A1B] hover:text-[#6D696B]'
               }`}
             >
               Our Team
@@ -262,7 +291,7 @@ export default function Navbar() {
             <Link
               href="/emergency-dentist/"
               onClick={() => setMobileMenuOpen(false)}
-              className={`font-body text-16 font-semibold text-[#171717] hover:underline`}
+              className={`font-body text-16 font-semibold text-[#1C1A1B] hover:underline`}
             >
               Emergency Repairs
             </Link>
@@ -270,7 +299,7 @@ export default function Navbar() {
               href="/blog/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname?.startsWith('/blog') ? 'text-[#171717] font-semibold' : 'text-[#171717] hover:text-[#666666]'
+                pathname?.startsWith('/blog') ? 'text-[#1C1A1B] font-semibold' : 'text-[#1C1A1B] hover:text-[#6D696B]'
               }`}
             >
               Roofing Tips (Blog)
@@ -279,7 +308,7 @@ export default function Navbar() {
               href="/contact/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname === '/contact/' ? 'text-[#171717] font-semibold' : 'text-[#171717] hover:text-[#666666]'
+                pathname === '/contact/' ? 'text-[#1C1A1B] font-semibold' : 'text-[#1C1A1B] hover:text-[#6D696B]'
               }`}
             >
               Contact
@@ -287,7 +316,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="pt-6 mt-6 border-t border-[#DDDDDD] flex flex-col gap-3 pb-8">
+        <div className="pt-6 mt-6 border-t border-[#E2DFE0] flex flex-col gap-3 pb-8">
           <Button
             href="/book-appointment/"
             variant="forest"
@@ -299,12 +328,12 @@ export default function Navbar() {
           </Button>
           <a
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-            className="text-center font-body text-15 text-[#171717] py-2 font-semibold hover:text-[#666666] transition-colors"
+            className="text-center font-body text-15 text-[#1C1A1B] py-2 font-semibold hover:text-[#6D696B] transition-colors"
           >
-            Ligar: {CLINIC_INFO.contact.phone}
+            Call: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
-    </header>
+    </>
   );
 }

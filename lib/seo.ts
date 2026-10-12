@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'pt_BR',
+      locale: 'en_IE',
       type: 'website',
       images: [
         {
@@ -83,20 +83,20 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
-      .filter((item) => item.hours !== 'Fechado')
+      .filter((item) => item.hours !== 'Closed')
       .map((item) => {
-        const isAllDay = item.hours.includes('24 horas');
+        const isAllDay = item.hours.includes('24 hours');
         const range = item.hours.match(/(\d{1,2})h[–-](\d{1,2})/);
         return ({
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: {
-          'Segunda-feira': 'Monday',
-          'Terça-feira': 'Tuesday',
-          'Quarta-feira': 'Wednesday',
-          'Quinta-feira': 'Thursday',
-          'Sexta-feira': 'Friday',
-          'Sábado': 'Saturday',
-          'Domingo': 'Sunday',
+          Monday: 'Monday',
+          Tuesday: 'Tuesday',
+          Wednesday: 'Wednesday',
+          Thursday: 'Thursday',
+          Friday: 'Friday',
+          Saturday: 'Saturday',
+          Sunday: 'Sunday',
         }[item.day],
         opens: isAllDay ? '00:00' : `${(range?.[1] ?? '08').padStart(2, '0')}:00`,
         closes: isAllDay ? '23:59' : `${(range?.[2] ?? '00').padStart(2, '0')}:00`,

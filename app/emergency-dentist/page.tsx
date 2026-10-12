@@ -10,24 +10,24 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata, generateFaqSchema } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Atendimento de telhados de Urgência',
+  title: 'Emergency Roof Repairs',
   description:
-    'Atendimento demonstrativo para infiltrações e danos na cobertura em área de atendimento. Contato: +55 96 99169-5118.',
+    'For roof leaks or storm damage in Dublin, keep clear of unsafe areas and contact CJ Roofing Services Ltd on +353 1 556 3783. Open 24 hours.',
   pathname: '/emergency-dentist/',
 });
 
 const EMERGENCY_FAQS = [
   {
-    question: 'Como funciona o atendimento de urgência para dor de telhado?',
-    answer: 'clientes com dor aguda, trauma ou inchaço são priorizados para atendimento rápido. Entre em contato pelo WhatsApp (+55 96 99169-5118) para orientação e Orçamento.',
+    question: 'What should I do if my roof is leaking?',
+    answer: 'Keep clear of unsafe areas and move belongings away from the water. Call our team on +353 1 556 3783 to discuss an assessment.',
   },
   {
-    question: 'A equipe oferece atendimento domiciliar de urgência?',
-    answer: 'Sim, o A equipe de reparos de telhados realiza serviços de telhados domiciliar para clientes acamados ou com limitações de locomoção.',
+    question: 'Can you assess storm damage?',
+    answer: 'Our team can assess visible roof damage, including loose tiles, leaks and damaged gutters, when the property can be accessed safely.',
   },
   {
-    question: 'O que fazer caso um telhado quebre ou caia por trauma?',
-    answer: 'Segure o telhado apenas pela coroa, nunca pela raiz. Guarde-o em leite ou saliva e venha imediatamente ao equipe ou entre em contato pelo nosso WhatsApp (+55 96 99169-5118).',
+    question: 'Can I climb onto the roof to check the damage?',
+    answer: 'No. Do not climb onto a wet or damaged roof. Photograph visible damage from the ground only if it is safe to do so.',
   },
 ];
 
@@ -38,22 +38,22 @@ export default function EmergencyDentistPage() {
 
 
 
-      {/* SECTION 1: Urgência Introduction & Immediate Action */}
+      {/* SECTION 1: Emergency Roofing Introduction */}
       <section className="py-12 md:py-16 bg-paper border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Reparo Emergencial', path: '/emergency-dentist/' }]} />
+          <Breadcrumbs items={[{ name: 'Emergency Roof Repairs', path: '/emergency-dentist/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mt-6 items-start">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-forest font-semibold block mb-2 uppercase tracking-wider">
-                Reparos urgentes de telhado
+                Emergency Roof Repairs
               </span>
               <h1 className="font-display text-33 sm:text-41 md:text-52 text-forest-ink leading-tight mb-4">
-                Reparo emergencial para goteiras e danos na cobertura.
+                Help for roof leaks and storm damage.
               </h1>
               <p className="font-body text-17 text-forest-ink/90 leading-relaxed mb-6 max-w-2xl">
-                Se houver goteira ativa ou dano após chuva e vento, mantenha distância de áreas inseguras e solicite uma avaliação da cobertura.
+                If your roof is leaking or damaged after a storm, keep clear of unsafe areas and call us to arrange an assessment.
               </p>
 
               {/* Direct Immediate Call Action */}
@@ -64,10 +64,10 @@ export default function EmergencyDentistPage() {
                   size="lg"
                   className="font-bold text-17"
                 >
-                  Telefone: {CLINIC_INFO.contact.emergencyPhone}
+                  Call: {CLINIC_INFO.contact.emergencyPhone}
                 </Button>
                 <Button href="/book-appointment/" variant="ghost" size="lg">
-                  Solicitar avaliação
+                  Request an Assessment
                 </Button>
               </div>
               </AnimateOnScroll>
@@ -76,17 +76,15 @@ export default function EmergencyDentistPage() {
             <div className="lg:col-span-4 p-6 bg-forest text-paper">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime font-medium uppercase tracking-wider block mb-2">
-                Walk-In técnica Área de atendimento
+                Dublin Service Area
               </span>
               <address className="not-italic font-body text-15 text-paper leading-relaxed mb-4">
                 {CLINIC_INFO.name}
                 <br />
-                {CLINIC_INFO.primaryLocation.street}
-                <br />
-                {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}
+                {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.country}
               </address>
               <div className="pt-3 border-t border-mist/20 text-13 text-paper/80 font-body">
-                Área de atendimento e endereço a confirmar
+                Serving Dublin and surrounding areas
               </div>
               </AnimateOnScroll>
             </div>
@@ -94,15 +92,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 2 & 4: Common Dental Emergencies & Immediate Pre-Visit Actions */}
+      {/* SECTION 2: Roof Damage and Immediate Safety Steps */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Sinais de danos e cuidados iniciais
+              Roof Damage and First Steps
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              O que fazer enquanto aguarda a avaliação do telhado
+              What to Do While You Wait for a Roof Assessment
             </h2>
           </AnimateOnScroll>
 
@@ -124,7 +122,7 @@ export default function EmergencyDentistPage() {
 
                   <div className="mb-4">
                     <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-1 font-medium">
-                      Sinais observados:
+                      Signs to Look For:
                     </span>
                     <ul className="space-y-1 font-body text-13 text-forest-ink/80">
                       {cond.symptoms.map((s, i) => (
@@ -138,7 +136,7 @@ export default function EmergencyDentistPage() {
 
                   <div className="p-4 bg-mist/30 border-l-2 border-forest mb-4">
                     <span className="font-body text-13 text-forest font-semibold block mb-1">
-                      Cuidados imediatos:
+                      Immediate Steps:
                     </span>
                     <ul className="space-y-1 font-body text-13 text-forest-ink/90">
                       {cond.immediateAction.map((act, i) => (
@@ -149,7 +147,7 @@ export default function EmergencyDentistPage() {
                 </div>
 
                 <div className="pt-4 border-t border-mist text-13 font-body text-forest-ink/70">
-                  <strong className="text-forest font-medium">Avaliação do serviço:</strong> {cond.clinicTreatment}
+                  <strong className="text-forest font-medium">Assessment:</strong> {cond.clinicTreatment}
                 </div>
               </div>
               </AnimateOnScroll>
@@ -158,110 +156,110 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 3: When You Should Seek Immediate Care */}
+      {/* SECTION 3: When to Seek Urgent Help */}
       <section className="py-16 md:py-24 border-b border-mist bg-paper">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="max-w-3xl mb-8">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Sinais que exigem atenção rápida
+              Signs That Need Prompt Attention
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-              Quando um dano no telhado exige atenção rápida
+              When Roof Damage Needs Prompt Attention
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-              Goteiras ativas, partes da cobertura expostas ou água perto da instalação elétrica exigem cuidado. Afaste-se de áreas inseguras e peça uma avaliação.
+              Active leaks, exposed roof areas or water near electrical fittings need care. Keep away from unsafe areas and arrange an assessment.
             </p>
           </AnimateOnScroll>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <AnimateOnScroll animation="zoom-in" duration={0.8}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Forro cedendo ou deformado</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Sagging or Damaged Ceiling</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Um forro cedendo pode indicar acúmulo de água ou dano. Afaste-se do local e não tente pressionar a estrutura.
+                A sagging ceiling may indicate water build-up or damage. Keep clear and do not push on the structure.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.1}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Goteira próxima à instalação elétrica</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Leak Near Electrical Fittings</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Não toque em luminárias, tomadas ou fiação atingidas pela umidade. Afaste-se e procure um profissional qualificado.
+                Do not touch lights, sockets or wiring affected by water. Keep clear and contact a qualified professional.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.2}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Telhas deslocadas após ventania</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Tiles Displaced by Wind</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Não suba no telhado para recolocar peças. Registre os danos do chão somente se for seguro.
+                Do not climb onto the roof to replace tiles. Photograph damage from the ground only if it is safe.
               </p>
             </div></AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" duration={0.8} delay={0.3}><div className="p-6 bg-mist/30 border border-mist">
-              <h3 className="font-display text-17 text-forest-ink mb-2">Goteira ativa durante a chuva</h3>
+              <h3 className="font-display text-17 text-forest-ink mb-2">Active Leak During Rain</h3>
               <p className="font-body text-13 text-forest-ink/70">
-                Afaste objetos da água e recolha a água apenas se não houver risco elétrico ou estrutural.
+                Move belongings away and collect dripping water only if there is no electrical or structural risk.
               </p>
             </div></AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* SECTION 5: Opções de reparo urgente */}
+      {/* SECTION 5: Emergency Repair Options */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12">
             <span className="font-body text-13 text-forest-ink/60 block mb-2">
-              Serviços para danos urgentes
+              Help After Roof Damage
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
-              Serviços que podem ser avaliados
+              Issues We Can Assess
             </h2>
           </AnimateOnScroll>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <AnimateOnScroll animation="fade-up" duration={0.8}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Reparo de infiltrações</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Roof Leak Repair</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Avaliação dos pontos de entrada de água e definição do reparo indicado.
+                We assess visible water entry points and explain suitable repairs.
               </p>
               <Link href="/root-canal/" className="font-body text-13 text-forest underline">
-                Saiba mais sobre infiltrações →
+                Learn About Leak Repairs →
               </Link>
             </div></AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.1}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Substituição de telhas</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Roof Tile Replacement</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Inspeção das peças deslocadas e avaliação de substituição, com acesso seguro à cobertura.
+                We inspect displaced tiles and assess replacement options when roof access is safe.
               </p>
               <Link href="/dental-implants/" className="font-body text-13 text-forest underline">
-                Saiba mais sobre reparo de telhados →
+                Learn About Roof Repairs →
               </Link>
             </div></AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.2}><div className="p-6 bg-paper border border-mist">
-              <h3 className="font-display text-21 text-forest-ink mb-2">Vedação e revisão de rufos</h3>
+              <h3 className="font-display text-21 text-forest-ink mb-2">Roof Flashings and Sealing</h3>
               <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-4">
-                Revisão dos encontros da cobertura e dos pontos de vedação que podem permitir a entrada de água.
+                We check roof joins and seals where water may be getting in.
               </p>
               <Link href="/contact/" className="font-body text-13 text-forest underline">
-                Fale com a equipe →
+                Talk to Our Team →
               </Link>
             </div></AnimateOnScroll>
           </div>
         </div>
       </section>
 
-      {/* SECTION 6 & 7: Same-Day Information & Direct Urgência Contact */}
+      {/* SECTION 6: Contact the Roofing Team */}
       <section className="py-16 md:py-24 border-b border-mist bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Solicite uma avaliação
+                Request an Assessment
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper mb-4">
-                Fale com a equipe sobre danos no telhado
+                Talk to Our Team About Roof Damage
               </h2>
               <p className="font-body text-17 text-paper/90 leading-relaxed mb-8 max-w-2xl">
-                Entre em contato para solicitar uma avaliação. A disponibilidade, o acesso e o escopo do reparo são confirmados com a equipe.
+                Call to request an assessment. Our team will confirm availability, access and the scope of work.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <Button
@@ -270,15 +268,15 @@ export default function EmergencyDentistPage() {
                   size="lg"
                   className="font-bold text-17"
                 >
-                  Telefone: {CLINIC_INFO.contact.emergencyPhone}
+                  Call: {CLINIC_INFO.contact.emergencyPhone}
                 </Button>
                 <Button
-                  href={`https://wa.me/${CLINIC_INFO.contact.whatsapp.replace(/[^0-9]/g, '')}`}
+                  href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                   variant="ghost"
                   size="lg"
                   className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10"
                 >
-                  WhatsApp
+                  Call Our Team
                 </Button>
               </div>
               </AnimateOnScroll>
@@ -287,10 +285,10 @@ export default function EmergencyDentistPage() {
             <div className="lg:col-span-4 p-6 bg-paper/10 border border-mist/20">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime block mb-2 font-medium">
-                Área de atendimento
+                Service Area
               </span>
               <p className="font-body text-13 text-paper/80 leading-relaxed">
-                Consulte a equipe sobre a área de atendimento.
+                We serve Dublin and surrounding areas. Call to check availability.
               </p>
               </AnimateOnScroll>
             </div>
@@ -298,22 +296,20 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 8: Área de atendimento & Opening Hours */}
+      {/* SECTION 8: Service Area & Opening Hours */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">Área de atendimento</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Service Area</span>
               <h2 className="font-display text-26 md:text-33 text-forest-ink mb-4">
-                Área de atendimento
+                Service Area
               </h2>
               <address className="not-italic font-body text-15 text-forest-ink/80 leading-relaxed mb-4">
                 {CLINIC_INFO.name}
                 <br />
-                {CLINIC_INFO.primaryLocation.street}
-                <br />
-                {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.state} {CLINIC_INFO.primaryLocation.postalCode}
+                {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.country}
               </address>
               <p className="font-body text-13 text-forest-ink/70">
                 {CLINIC_INFO.primaryLocation.directions}
@@ -323,7 +319,7 @@ export default function EmergencyDentistPage() {
 
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">Horários de atendimento</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Opening Hours</span>
               <div className="border border-mist divide-y divide-mist bg-paper font-body text-13">
                 {CLINIC_INFO.schedule.map((item) => (
                   <div key={item.day} className="p-3 flex justify-between">
@@ -338,15 +334,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Urgência Dúvidas frequentes */}
+      {/* SECTION 9: Frequently Asked Questions */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
-              <span className="font-body text-13 text-forest-ink/60 block mb-2">Dúvidas frequentes</span>
+              <span className="font-body text-13 text-forest-ink/60 block mb-2">Frequently Asked Questions</span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Urgência care Dúvidas frequentes
+                Emergency Roofing FAQs
               </h2>
               </AnimateOnScroll>
             </div>
@@ -359,15 +355,15 @@ export default function EmergencyDentistPage() {
         </div>
       </section>
 
-      {/* SECTION 10: Final Urgência Action CTA */}
+      {/* SECTION 10: Final Emergency Roofing CTA */}
       <section className="py-16 md:py-24 bg-forest text-paper">
         <div className="max-w-site mx-auto px-6 md:px-12 text-center flex flex-col items-center">
           <AnimateOnScroll animation="fade-up" duration={0.8} className="flex flex-col items-center">
           <h2 className="font-display text-33 md:text-41 text-paper mb-4">
-            Não suba no telhado em condições inseguras.
+            Never climb onto an unsafe roof.
           </h2>
           <p className="font-body text-15 md:text-17 text-paper/80 mb-8 max-w-xl">
-            A equipe pode avaliar os danos visíveis e explicar as opções de reparo para a cobertura.
+            Our team can assess visible damage and explain the repair options for your roof.
           </p>
           <Button
             href={`tel:${CLINIC_INFO.contact.emergencyPhone.replace(/[^0-9+]/g, '')}`}
@@ -375,7 +371,7 @@ export default function EmergencyDentistPage() {
             size="lg"
             className="font-bold text-17"
           >
-            Telefone: {CLINIC_INFO.contact.emergencyPhone}
+            Call: {CLINIC_INFO.contact.emergencyPhone}
           </Button>
           </AnimateOnScroll>
         </div>

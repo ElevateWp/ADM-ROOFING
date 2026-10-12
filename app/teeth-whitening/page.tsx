@@ -18,9 +18,9 @@ const service = SERVICES.find((s) => s.slug === 'teeth-whitening')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Substituição de telhas',
+  title: 'Roof Tile Replacement',
   description:
-    'Substituição de telhas em equipe e caseiro supervisionado com segurança e proteção ao telhas pela equipe de reparos de telhados.',
+    'Roof tile replacement and repairs for damaged or displaced tiles. Open 24 hours across Dublin.',
   pathname: '/teeth-whitening/',
 });
 
@@ -45,19 +45,19 @@ export default function TeethWhiteningPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Cosmetic roof tiles Care
+                  Roof Tile Replacement
                 </span>
-                <WordRevealH1 text="Substituição de telhas e vedação de pontos vulneráveis." />
+                <WordRevealH1 text="Roof tile replacement and careful sealing." />
                 <div className="mt-8">
                   <ScrubbedParagraph text={service.shortDescription} />
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4 mt-8">
                   <Button href="/book-appointment/" variant="forest" size="lg">
-                    Book roof restoration session
+                    Request a Roof Assessment
                   </Button>
                   <Button href="/cosmetic-dentistry/" variant="ghost" size="lg">
-                    Explore full cosmetic scope
+                    Explore Storm Repairs
                   </Button>
                 </div>
               </AnimateOnScroll>
@@ -67,18 +67,18 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>técnica Lead</span>
+                    <span>Roofing Team</span>
                     <Link href={`/dentists/${leadDentist.slug}/`} className="font-medium text-forest underline">
                       {leadDentist.name}
                     </Link>
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Shade Lift</span>
-                    <span className="font-medium text-forest">4–8 Vita Shades</span>
+                    <span>Roof Type</span>
+                    <span className="font-medium text-forest">Residential</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>roof tiles Safety</span>
-                    <span className="font-medium text-forest">Neutral pH / ACP</span>
+                    <span>Availability</span>
+                    <span className="font-medium text-forest">Open 24 Hours</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -87,24 +87,24 @@ export default function TeethWhiteningPage() {
         </div>
       </section>
 
-      {/* SECTION 2: What Is Professional Teeth Whitening? */}
+      {/* SECTION 2: Roof Tile Replacement */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Oxidation Chemistry
+                  Roof Assessment
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  How técnica roof restoration works
+                  How Roof Restoration Works
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-6">
                   {service.clinicalExplanation}
                 </p>
                 <div className="p-4 bg-mist/40 border-l-2 border-forest">
                   <span className="font-body text-13 text-forest-ink/80">
-                    Unlike abrasive charcoal or over-the-counter strips, roofing roof restoration dissolves chromogens without thinning roof tiles or creating micro-scratches.
+                    We assess the roof material and condition before recommending a repair or replacement.
                   </span>
                 </div>
               </AnimateOnScroll>
@@ -113,8 +113,8 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="https://images.unsplash.com/photo-1681049400158-0ff6249ac315?auto=format&fit=crop&w=1600&q=85"
-                    alt="Professional Reparo e Substituição de telhas repair"
+                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    alt="Roof tile replacement in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
@@ -153,7 +153,7 @@ export default function TeethWhiteningPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Causes of Tooth Discoloration */}
+      {/* SECTION 4: Roof Tile Replacement Benefits */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -183,7 +183,7 @@ export default function TeethWhiteningPage() {
       {/* SECTION 5: Whitening Procedure */}
       <ProcedurePin
         steps={service.procedureSteps}
-        title="técnica In-Chair roof restoration Sequence"
+        title="Roof Tile Replacement Process"
         subtitle="Monitored Step-by-Step Protocol"
       />
 
@@ -196,7 +196,7 @@ export default function TeethWhiteningPage() {
                 Standardized Results
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Comparação do telhado sem e com telhas
+                Roofing Project Examples
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -211,26 +211,26 @@ export default function TeethWhiteningPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote="Imagens ilustrativas: telhado sem telhas e cobertura com telhas."
+                clinicalNote="Roofing project photos from the CJ Roofing Services gallery."
               />
             </div>
           </AnimateOnScroll>
         </div>
       </section>
 
-      {/* SECTION 7: How Long Results Can Last */}
+      {/* SECTION 7: Roof Maintenance */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="max-w-3xl mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Shade Longevity
+                Roof Maintenance
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                How long will roof restoration results last?
+                Plan Your Roof Maintenance
               </h2>
               <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed">
-                técnica shade brightness remains stable between 12 and 24 months. By wearing custom laboratory maintenance trays once every 6 to 12 months, shade stability can be maintained indefinitely.
+                Roof maintenance depends on the materials, weather exposure and condition of your property. Ask our team for guidance after the work is complete.
               </p>
             </div>
           </AnimateOnScroll>
@@ -239,26 +239,26 @@ export default function TeethWhiteningPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8} delay={0.15}>
             <div className="p-8 bg-paper border border-mist space-y-6 shadow-sm">
               <div className="flex justify-between font-body text-13 text-forest-ink font-medium">
-                <span>Day 1 (Peak Shade)</span>
-                <span>Month 6 (Stable)</span>
-                <span>Month 12 (Touch-Up Window)</span>
-                <span>Month 24+ (Long-Term)</span>
+                <span>Before Work</span>
+                <span>During Work</span>
+                <span>At Completion</span>
+                <span>Ongoing Care</span>
               </div>
               <div className="w-full h-3 bg-mist relative overflow-hidden rounded-full">
                 <div className="absolute left-0 top-0 bottom-0 bg-forest w-3/4 rounded-full" />
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 border-t border-mist font-body text-13 text-forest-ink/70">
                 <div>
-                  <strong className="text-forest block font-medium">Post-Whitening Hydration:</strong>
-                  roof tiles rehydrates fully within 48 hours for true final shade luminance.
+                  <strong className="text-forest block font-medium">Inspect the Roof:</strong>
+                  Check for visible wear and damage from the ground.
                 </div>
                 <div>
-                  <strong className="text-forest block font-medium">Custom Tray Maintenance:</strong>
-                  Includes custom laboratory thermoformed upper & lower trays.
+                  <strong className="text-forest block font-medium">Keep Gutters Clear:</strong>
+                  Arrange maintenance when leaves or debris affect drainage.
                 </div>
                 <div>
-                  <strong className="text-forest block font-medium">Desensitizing Formula:</strong>
-                  Potassium nitrate varnish eliminates lingering thermal sensitivity.
+                  <strong className="text-forest block font-medium">Ask for Advice:</strong>
+                  Contact our team if you notice leaks or displaced tiles.
                 </div>
               </div>
             </div>
@@ -273,13 +273,13 @@ export default function TeethWhiteningPage() {
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Orçamento do serviço
+                  Roofing Quote
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Reparo e Substituição de telhas costs
+                  Roof Tile Replacement Costs
                 </h2>
                 <div className="p-6 bg-paper border border-mist mb-6 shadow-sm">
-                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Standard técnica Range</span>
+                  <span className="font-body text-13 text-forest-ink/60 block mb-1">Typical Quote</span>
                   <span className="font-display text-26 md:text-33 text-forest block mb-2">
                     {service.costTransparency.baseRange}
                   </span>
@@ -294,7 +294,7 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div className="p-6 bg-mist/30 border border-mist shadow-sm">
                   <h3 className="font-display text-17 md:text-21 text-forest-ink mb-3">
-                    Itens considerados no orçamento:
+                    Items included in your quote:
                   </h3>
                   <ul className="space-y-2 font-body text-13 text-forest-ink/80">
                     {service.costTransparency.whatIsIncluded.map((inc, i) => (
@@ -311,17 +311,17 @@ export default function TeethWhiteningPage() {
         </div>
       </section>
 
-      {/* SECTION 9: Dúvidas frequentes */}
+      {/* SECTION 9: Frequently Asked Questions */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  homeowner Questions
+                  Homeowner Questions
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                  roof restoration Dúvidas frequentes
+                  Frequently Asked Questions About Roof Tile Replacement
                 </h2>
               </AnimateOnScroll>
             </div>
@@ -340,16 +340,16 @@ export default function TeethWhiteningPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Brighten Your roof tiles
+                Roof Tile Replacement
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Schedule your prescription roof restoration visit
+                Request a roof assessment for damaged or displaced tiles
               </h2>
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <Button href="/book-appointment/" variant="lime" size="lg">
-              Solicitar orçamento
+              Request a Quote
             </Button>
           </AnimateOnScroll>
         </div>

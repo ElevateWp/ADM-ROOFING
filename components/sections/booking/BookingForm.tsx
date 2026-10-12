@@ -40,10 +40,10 @@ export default function BookingForm() {
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
     if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Informe seu nome completo.';
+      newErrors.fullName = 'Please enter your full name.';
     }
     if (!formData.phone.trim() || formData.phone.trim().length < 7) {
-      newErrors.phone = 'Please provide a valid Contato telephone number.';
+      newErrors.phone = 'Please provide a valid phone number.';
     }
     if (!formData.email.trim() || !formData.email.includes('@')) {
       newErrors.email = 'Please provide a valid email address.';
@@ -75,15 +75,15 @@ export default function BookingForm() {
           Request Received
         </span>
         <h3 className="font-display text-33 md:text-41 text-paper mb-4">
-          quote request requested
+          Quote request received
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
-          Obrigado, {formData.fullName}. A equipe analisará sua solicitação e entrará em contato pelo telefone <strong className="text-lime">{formData.phone}</strong> para combinar a avaliação.
+          Thank you, {formData.fullName}. Our team will review your request and contact you at <strong className="text-lime">{formData.phone}</strong> to discuss an assessment.
         </p>
 
         <div className="p-6 bg-paper/10 border border-mist/20 mb-8 space-y-2 font-body text-15">
           <div className="flex justify-between">
-            <span className="text-paper/60">Serviço solicitado:</span>
+            <span className="text-paper/60">Requested service:</span>
             <span className="text-paper font-medium">
               {SERVICES.find((s) => s.slug === formData.service)?.name || formData.service}
             </span>
@@ -122,7 +122,7 @@ export default function BookingForm() {
             href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
             className="font-body text-13 text-paper/80 hover:text-lime underline underline-offset-4"
           >
-            Precisa de ajuda? Ligue: {CLINIC_INFO.contact.phone}
+            Need help? Call: {CLINIC_INFO.contact.phone}
           </a>
         </div>
       </div>
@@ -137,10 +137,10 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request an quote request
+          Request a Roofing Quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Preencha o formulário para solicitar uma avaliação. A equipe confirmará a disponibilidade e os próximos passos.
+          Tell us what work you need. Our team will contact you to discuss availability and next steps.
         </p>
       </div>
 
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#666666] transition-all duration-200">
+          <span className="font-body text-13 text-[#6D696B] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-          placeholder="(96) 99169-5118"
+            placeholder="+353 1 556 3783"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#666666]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#6D696B]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#666666]">{errors.email}</span>
+            <span className="font-body text-13 text-[#6D696B]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Requested repair Discipline <span className="text-forest">*</span>
+          Roofing Service <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,8 +229,8 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Avaliação da cobertura</option>
-          <option value="Urgência">Urgência / Urgent Pain Relief</option>
+          <option value="general-consultation">Roof assessment</option>
+          <option value="Urgência">Urgent roof repair</option>
         </select>
       </div>
 
@@ -253,13 +253,13 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#666666]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#6D696B]">{errors.preferredDate}</span>
           )}
         </div>
 
         <div className="flex flex-col space-y-1.5">
           <label htmlFor="preferredTime" className="font-body text-13 text-forest-ink/70">
-            Período preferido
+            Preferred Time
           </label>
           <select
             id="preferredTime"
@@ -274,17 +274,17 @@ export default function BookingForm() {
         </div>
       </div>
 
-      {/* Additional Medical / Clinical Notes */}
+      {/* Additional project notes */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="notes" className="font-body text-13 text-forest-ink/70">
-          Specific Symptoms or técnica Questions (Optional)
+          Tell Us About the Work (Optional)
         </label>
         <textarea
           id="notes"
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Descreva o problema, quando começou e quais áreas da cobertura foram afetadas..."
+          placeholder="Describe the issue, when it started and which areas of the roof are affected..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>
@@ -298,10 +298,10 @@ export default function BookingForm() {
           disabled={isSubmitting}
           className="w-full sm:w-auto"
         >
-          {isSubmitting ? 'Submitting request...' : 'Request quote request'}
+          {isSubmitting ? 'Sending request...' : 'Request a Quote'}
         </Button>
         <span className="font-body text-13 text-forest-ink/60">
-          Confidential & HIPAA Protected
+          Your details will be used to respond to your enquiry.
         </span>
       </div>
     </form>
