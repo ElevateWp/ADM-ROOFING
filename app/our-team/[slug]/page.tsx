@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: DentistProfileProps): Promise
   return createMetadata({
     title: `${dentist.name} | ${dentist.title}`,
     description: dentist.bio,
-    pathname: `/dentists/${dentist.slug}/`,
+    pathname: `/our-team/${dentist.slug}/`,
     image: dentist.image,
   });
 }
@@ -67,8 +67,8 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'A-Z Home Improvements team', path: '/dentists/' },
-              { name: dentist.name, path: `/dentists/${dentist.slug}/` },
+              { name: 'A-Z Home Improvements team', path: '/our-team/' },
+              { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
 
@@ -116,10 +116,10 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-4">
-                  <Button href="/book-appointment/" variant="forest" size="lg">
+                  <Button href="/request-a-quote/" variant="forest" size="lg">
                     Request a quote from {dentist.name}
                   </Button>
-                  <Button href="/dentists/" variant="ghost" size="lg">
+                  <Button href="/our-team/" variant="ghost" size="lg">
                     Back to Our Team
                   </Button>
                 </div>
@@ -223,7 +223,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/book-appointment/" variant="lime" size="lg">
+            <Button href="/request-a-quote/" variant="lime" size="lg">
               Request a Quote
             </Button>
           </AnimateOnScroll>

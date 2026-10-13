@@ -34,7 +34,7 @@ export default function HomeFeaturedTreatments() {
                 <strong className="text-[#202A3C] font-semibold">Our approach:</strong> We discuss your plans and agree the work with you before starting.
                 </span>
               </div>
-              <Button href="/dental-implants/" variant="ghost" size="md">
+              <Button href="/home-extensions/" variant="ghost" size="md">
                 Explore Extensions
               </Button>
             </AnimateOnScroll>
@@ -81,7 +81,7 @@ export default function HomeFeaturedTreatments() {
                   <strong className="text-[#202A3C] font-semibold">A clear plan:</strong> Agree the scope, materials and timing before work begins.
                 </span>
               </div>
-              <Button href="/teeth-whitening/" variant="ghost" size="md">
+              <Button href="/kitchens-bathrooms/" variant="ghost" size="md">
                 Explore Kitchens and Bathrooms
               </Button>
             </AnimateOnScroll>

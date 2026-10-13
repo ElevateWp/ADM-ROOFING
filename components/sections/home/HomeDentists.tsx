@@ -19,7 +19,7 @@ export default function HomeDentists() {
               </h2>
             </div>
             <Link
-              href="/dentists/"
+              href="/our-team/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
               Meet the Team →

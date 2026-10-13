@@ -10,7 +10,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Our Team',
   description: 'Meet Nicholas and the A-Z Home Improvements team in South Croydon.',
-  pathname: '/dentists/',
+  pathname: '/our-team/',
 });
 
 export default function TeamPage() {
@@ -18,7 +18,7 @@ export default function TeamPage() {
     <div className="flex w-full flex-col bg-paper">
       <section className="border-b border-mist py-16 md:py-24">
         <div className="mx-auto max-w-site px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Our Team', path: '/dentists/' }]} />
+          <Breadcrumbs items={[{ name: 'Our Team', path: '/our-team/' }]} />
           <div className="mt-8 max-w-3xl">
             <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">A-Z Home Improvements</span>
             <WordRevealH1 text="Meet Nicholas and the team." />
@@ -60,7 +60,7 @@ export default function TeamPage() {
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
           <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">South Croydon · Established 2002</span><h2 className="font-display text-26 md:text-33">Tell us about your plans.</h2></div>
-          <Link href="/book-appointment/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Request a quote</Link>
+          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Request a quote</Link>
         </div>
       </section>
     </div>

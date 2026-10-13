@@ -9,7 +9,7 @@ const HOME_FAQS: AccordionItem[] = [
   {
     question: 'What home improvement projects do you take on?',
     answer: 'Customer projects include extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments.',
-    relatedLink: { href: '/dental-implants/', label: 'Explore our services →' },
+    relatedLink: { href: '/home-extensions/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
@@ -19,12 +19,12 @@ const HOME_FAQS: AccordionItem[] = [
   {
     question: 'Do you carry out kitchen and bathroom projects?',
     answer: 'Yes. Customer reviews describe kitchen redevelopments and full bathroom refits, including work as part of larger home projects.',
-    relatedLink: { href: '/teeth-whitening/', label: 'Explore kitchens and bathrooms →' },
+    relatedLink: { href: '/kitchens-bathrooms/', label: 'Explore kitchens and bathrooms →' },
   },
   {
     question: 'How do I request a quote?',
     answer: `Call us on ${CLINIC_INFO.contact.phone} or send a message through our quote request form.`,
-    relatedLink: { href: '/book-appointment/', label: 'Request a quote →' },
+    relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
   },
   {
     question: 'Where does A-Z Home Improvements work?',

@@ -116,7 +116,7 @@ export default function TestimonialsPage() {
             <h2 className="font-display text-26 md:text-33">Planning a home improvement project?</h2>
           </div>
           <Link
-            href="/book-appointment/"
+            href="/request-a-quote/"
             className="inline-flex min-h-12 items-center justify-center border border-paper bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-[#E5ECFF]"
           >
             Request a quote

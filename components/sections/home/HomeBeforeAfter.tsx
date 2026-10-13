@@ -19,7 +19,7 @@ export default function HomeBeforeAfter() {
               Explore residential reference imagery. Speak with us about the right plan for your home.
             </p>
             <Link
-              href="/dental-implants/"
+              href="/home-extensions/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
               Explore extensions →

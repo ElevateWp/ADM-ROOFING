@@ -196,7 +196,7 @@ export default function ContactPage() {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/book-appointment/" variant="lime" size="lg">
+            <Button href="/request-a-quote/" variant="lime" size="lg">
               Request a Quote Online
             </Button>
           </AnimateOnScroll>

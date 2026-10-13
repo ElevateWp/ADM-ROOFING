@@ -122,7 +122,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
                   </div>
                   <div>
                     <Link
-                      href={`/dentists/${author.slug}/`}
+                      href={`/our-team/${author.slug}/`}
                       className="font-display text-17 text-forest-ink hover:text-forest font-medium block"
                     >
                       {author.name}
@@ -231,7 +231,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
             </div>
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
-            <Button href="/book-appointment/" variant="lime" size="lg">
+            <Button href="/request-a-quote/" variant="lime" size="lg">
               Request a Quote
             </Button>
           </AnimateOnScroll>

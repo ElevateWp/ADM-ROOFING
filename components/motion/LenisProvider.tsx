@@ -16,11 +16,9 @@ export default function LenisProvider({ children }: { children: React.ReactNode 
   const pathname = usePathname();
 
   useEffect(() => {
-    // Critical Exception: Disable Lenis inertia on Emergency Dentist page or when user prefers reduced motion
-    const isEmergency = pathname?.includes('emergency-dentist');
     const reduced = isReducedMotion();
 
-    if (reduced || isEmergency) {
+    if (reduced) {
       if (lenisRef.current) {
         lenisRef.current.destroy();
         lenisRef.current = null;

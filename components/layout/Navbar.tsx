@@ -78,11 +78,7 @@ export default function Navbar() {
             <button
               type="button"
               className={`font-body text-15 py-2 transition-colors flex items-center gap-1.5 cursor-pointer ${
-                pathname?.includes('dental-') ||
-                pathname?.includes('root-canal') ||
-                pathname?.includes('teeth-whitening') ||
-                pathname?.includes('braces') ||
-                pathname?.includes('cosmetic-dentistry')
+                SERVICES.some((service) => pathname?.startsWith(`/${service.slug}/`))
                   ? 'text-[#202A3C] font-semibold'
                   : 'text-[#202A3C]/80 hover:text-[#6B7280] font-medium'
               }`}
@@ -144,9 +140,9 @@ export default function Navbar() {
           </Link>
 
           <Link
-            href="/dentists/"
+            href="/our-team/"
             className={`font-body text-15 py-2 transition-colors ${
-              pathname?.startsWith('/dentists')
+              pathname?.startsWith('/our-team')
                 ? 'text-[#202A3C] font-semibold'
                 : 'text-[#202A3C]/80 hover:text-[#6B7280] font-medium'
             }`}
@@ -179,14 +175,14 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <Link
-            href="/book-appointment/"
+            href="/request-a-quote/"
             className="hidden xl:inline-flex h-10 w-[176px] items-center justify-center rounded-md border border-[#1749C9] bg-[#1749C9] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#2865F0] hover:bg-[#2865F0] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1749C9] whitespace-nowrap"
           >
             <span>Discuss Your Project</span>
           </Link>
 
           <Button
-            href="/book-appointment/"
+            href="/request-a-quote/"
             variant="forest"
             size="sm"
             className="hidden xl:inline-flex h-9 w-[160px] items-center justify-center gap-2 px-2 text-12 sm:text-13 font-semibold whitespace-nowrap"
@@ -300,16 +296,16 @@ export default function Navbar() {
               Testimonials
             </Link>
             <Link
-              href="/dentists/"
+              href="/our-team/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 transition-colors ${
-                pathname?.startsWith('/dentists') ? 'text-[#202A3C] font-semibold' : 'text-[#202A3C] hover:text-[#6B7280]'
+                pathname?.startsWith('/our-team') ? 'text-[#202A3C] font-semibold' : 'text-[#202A3C] hover:text-[#6B7280]'
               }`}
             >
               Our Team
             </Link>
             <Link
-              href="/book-appointment/"
+              href="/request-a-quote/"
               onClick={() => setMobileMenuOpen(false)}
               className={`font-body text-16 font-semibold text-[#202A3C] hover:underline`}
             >
@@ -338,7 +334,7 @@ export default function Navbar() {
 
         <div className="pt-6 mt-6 border-t border-[#DCE3E8] flex flex-col gap-3 pb-8">
           <Button
-            href="/book-appointment/"
+            href="/request-a-quote/"
             variant="forest"
             size="lg"
             className="w-full"

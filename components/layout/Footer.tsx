@@ -55,7 +55,7 @@ export default function Footer() {
                   Call: {CLINIC_INFO.contact.phone}
                 </a>
                 <Link
-                  href="/book-appointment/"
+                  href="/request-a-quote/"
                   className="font-body text-13 text-paper/80 underline underline-offset-4 hover:text-paper"
                 >
                   Request a Quote
@@ -93,14 +93,14 @@ export default function Footer() {
             </span>
             <ul className="space-y-2.5 font-body text-15">
               <li>
-                <Link href="/dentists/" className="text-paper/80 hover:text-lime transition-colors">
+                <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
                   Meet the Home Improvements Team
                 </Link>
               </li>
               {DENTISTS.map((d) => (
                 <li key={d.slug}>
                   <Link
-                    href={`/dentists/${d.slug}/`}
+                    href={`/our-team/${d.slug}/`}
                     className="text-paper/80 hover:text-lime transition-colors"
                   >
                     {d.name}
@@ -132,7 +132,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/book-appointment/" className="text-paper/80 hover:text-lime transition-colors">
+                <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
                   Request a Quote
                 </Link>
               </li>
@@ -142,7 +142,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/book-appointment/" className="text-paper/80 hover:text-lime transition-colors">
+                <Link href="/request-a-quote/" className="text-paper/80 hover:text-lime transition-colors">
                   Discuss Your Project
                 </Link>
               </li>

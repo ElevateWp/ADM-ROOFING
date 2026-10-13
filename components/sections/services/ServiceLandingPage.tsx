@@ -37,7 +37,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
                   {service.shortDescription}
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Button href="/book-appointment/" variant="forest" size="lg">Request a Quote</Button>
+                  <Button href="/request-a-quote/" variant="forest" size="lg">Request a Quote</Button>
                   <Button href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`} variant="ghost" size="lg">
                     Call {CLINIC_INFO.contact.phone}
                   </Button>
@@ -116,7 +116,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
             <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">A-Z Home Improvements · Established 2002</span>
             <h2 className="font-display text-26 md:text-33">Tell us what you have in mind.</h2>
           </div>
-          <Link href="/book-appointment/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-softBlue">Request a quote</Link>
+          <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-softBlue">Request a quote</Link>
         </div>
       </section>
     </div>

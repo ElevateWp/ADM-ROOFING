@@ -175,7 +175,7 @@ export default function AboutPage() {
                 </h2>
               </div>
               <Link
-                href="/dentists/"
+                href="/our-team/"
                 className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
               >
                 View Team Details →
@@ -320,7 +320,7 @@ export default function AboutPage() {
           </AnimateOnScroll>
           <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
             <div className="flex flex-wrap items-center gap-4">
-              <Button href="/book-appointment/" variant="lime" size="lg">
+              <Button href="/request-a-quote/" variant="lime" size="lg">
                 Request a Quote
               </Button>
               <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">

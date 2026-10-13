@@ -12,7 +12,7 @@ export const metadata: Metadata = createMetadata({
   title: 'Request a Home Improvement Quote',
   description:
     'Request a quote for an extension, loft or garage conversion, kitchen, bathroom or home refurbishment from A-Z Home Improvements in South Croydon.',
-  pathname: '/book-appointment/',
+  pathname: '/request-a-quote/',
 });
 
 const BOOKING_STEPS = [
@@ -44,7 +44,7 @@ export default function BookAppointmentPage() {
       {/* SECTION 1: Appointment Introduction */}
       <section className="py-16 md:py-24 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/book-appointment/' }]} />
+          <Breadcrumbs items={[{ name: 'Request a Quote', path: '/request-a-quote/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
             <div className="lg:col-span-8">

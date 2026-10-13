@@ -53,7 +53,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
             {dentist.title}
           </span>
           <h3 className="font-display text-21 sm:text-24 md:text-26 text-forest-ink group-hover:text-forest transition-colors mb-2">
-            <Link href={`/dentists/${dentist.slug}/`} className="no-underline text-inherit">
+            <Link href={`/our-team/${dentist.slug}/`} className="no-underline text-inherit">
               {dentist.name}
             </Link>
           </h3>

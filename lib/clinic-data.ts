@@ -94,7 +94,7 @@ export const CLINIC_INFO: ClinicInformation = {
 export const DENTISTS: DentistProfile[] = [
   {
     id: 'home-improvements-team',
-    slug: 'our-doctor',
+    slug: 'nicholas-and-the-a-z-team',
     name: 'Nicholas and the A-Z team',
     title: 'Home improvement and building team',
     qualifications: 'Residential building and refurbishment',
@@ -166,7 +166,7 @@ const makeService = (
 
 export const SERVICES: ServiceDetail[] = [
   makeService(
-    'dental-implants', 'Extensions and Home Additions', 'Extensions',
+    'home-extensions', 'Extensions and Home Additions', 'Extensions',
     'Create more room at home with a carefully planned extension.',
     'A home extension can add useful living space and change how your home works for your family. We discuss your plans, the property and the work involved before agreeing a scope.',
     ['More living or dining space', 'A larger or reconfigured kitchen', 'A new porch or side extension'],
@@ -174,7 +174,7 @@ export const SERVICES: ServiceDetail[] = [
     [{ question: 'Can you help plan an extension to my home?', answer: 'We can discuss your ideas, assess the property and explain the building work and next steps for a suitable project.' }], 0,
   ),
   makeService(
-    'root-canal', 'Loft and Garage Conversions', 'Conversions',
+    'loft-garage-conversions', 'Loft and Garage Conversions', 'Conversions',
     'Make better use of your home with a loft or garage conversion.',
     'Converting a loft or garage can create a bedroom, living area, shower room or utility space. We discuss the intended use and the existing property so the work can be planned around your needs.',
     ['An unused loft or garage', 'A need for another bedroom or living area', 'A shower room or utility space at home'],
@@ -182,7 +182,7 @@ export const SERVICES: ServiceDetail[] = [
     [{ question: 'What can a garage conversion include?', answer: 'Past customer projects have included living space, a shower room and a utility room. The right layout depends on your property and plans.' }], 3,
   ),
   makeService(
-    'teeth-whitening', 'Kitchens and Bathrooms', 'Kitchens and Bathrooms',
+    'kitchens-bathrooms', 'Kitchens and Bathrooms', 'Kitchens and Bathrooms',
     'Update your kitchen or bathroom with considered planning and careful finishing.',
     'From a new kitchen layout to a complete bathroom refit, we coordinate the building and fitting work around the space and finishes you choose.',
     ['A new kitchen or changed layout', 'A complete bathroom refit', 'Updating rooms as part of a wider renovation'],
@@ -190,7 +190,7 @@ export const SERVICES: ServiceDetail[] = [
     [{ question: 'Do you carry out full bathroom refits?', answer: 'Yes. Customers describe full bathroom refits and new bathrooms as part of larger home projects. We discuss the details and scope with you.' }], 10,
   ),
   makeService(
-    'dental-cleaning', 'Home Refurbishments', 'Refurbishments',
+    'home-refurbishments', 'Home Refurbishments', 'Refurbishments',
     'Refresh your home with coordinated renovation and finishing work.',
     'A home refurbishment can bring several rooms or the whole property together. We discuss the work you want completed and coordinate the agreed improvements across your home.',
     ['A whole-home renovation', 'Updating multiple rooms', 'Combining structural changes with interior finishing'],
@@ -198,7 +198,7 @@ export const SERVICES: ServiceDetail[] = [
     [{ question: 'Can you take on several rooms in one project?', answer: 'Customer projects have included full home refurbishments alongside kitchens, bathrooms and extensions. We can discuss the scope of your project.' }], 12,
   ),
   makeService(
-    'braces', 'Interior Finishing and Decorating', 'Finishing and Decorating',
+    'interior-finishing', 'Interior Finishing and Decorating', 'Finishing and Decorating',
     'Bring rooms together with considered interior finishing and detail work.',
     'Customer projects have included new coving and skirting, internal doors and decorating as part of bedroom and whole-home improvements.',
     ['Updating bedroom details and finishes', 'Replacing internal doors', 'Decorating as part of a wider refurbishment'],
@@ -206,7 +206,7 @@ export const SERVICES: ServiceDetail[] = [
     [{ question: 'Can you include smaller finishing work in a larger project?', answer: 'Customer projects have included coving, skirting, internal doors and decorating alongside other home improvements.' }], 1,
   ),
   makeService(
-    'cosmetic-dentistry', 'Roofing and Lean-to Improvements', 'Roofing and Lean-tos',
+    'roofing-lean-to-improvements', 'Roofing and Lean-to Improvements', 'Roofing and Lean-tos',
     'Improve a lean-to or roof area as part of your home project.',
     'Customer projects have included replacing an old plastic lean-to roof with corrugated steel. The right materials and scope depend on the existing structure and your plans.',
     ['An ageing lean-to roof', 'A planned home extension or refurbishment', 'Roofing work that is part of a broader building project'],
@@ -247,7 +247,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: 'planning-a-home-extension', title: 'Planning a home extension around the way you live', category: 'Extensions', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'Start with the space you need, how it should connect to your home and the details to discuss before work begins.', leadImage: projectPhotos[2], relatedServiceSlug: 'dental-implants',
+    excerpt: 'Start with the space you need, how it should connect to your home and the details to discuss before work begins.', leadImage: projectPhotos[2], relatedServiceSlug: 'home-extensions',
     content: { intro: 'A useful extension begins with a clear idea of what is missing in your home. Think about how you use the existing rooms, where you want to spend time and how the new space should connect to the rest of the house.', sections: [
       { heading: 'Define the purpose of the new space', body: 'List what you want the extension to make possible, such as a larger kitchen, a dining area or more room for everyday living. This helps guide layout and finish choices.' },
       { heading: 'Discuss the property and scope', body: 'The existing house, access, materials and the work involved all affect the plan. Discuss the project and its practical details before agreeing a quotation and schedule.' },
@@ -255,7 +255,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'making-more-of-a-garage', title: 'Making more of your garage space', category: 'Conversions', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'A garage conversion can add living space, a shower room or a utility area. Begin by deciding how you want the room to work.', leadImage: projectPhotos[5], relatedServiceSlug: 'root-canal',
+    excerpt: 'A garage conversion can add living space, a shower room or a utility area. Begin by deciding how you want the room to work.', leadImage: projectPhotos[5], relatedServiceSlug: 'loft-garage-conversions',
     content: { intro: 'If your garage is used mainly for storage, a conversion may be one way to make more use of the space at home. The right layout depends on the room, the existing property and what you want to add.', sections: [
       { heading: 'Choose how you will use the room', body: 'Consider whether you need a living area, a shower room, a utility space or a combination. The intended use helps shape the layout and the work required.' },
       { heading: 'Plan the connection to the home', body: 'Think about access, light, privacy and how the converted room will fit with nearby spaces. Discuss the existing structure and your priorities with the building team.' },
@@ -263,7 +263,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'planning-a-bathroom-refit', title: 'What to think about before a bathroom refit', category: 'Bathrooms', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'A clear list of priorities can help you discuss layout, fittings and finishes for a new bathroom.', leadImage: projectPhotos[8], relatedServiceSlug: 'teeth-whitening',
+    excerpt: 'A clear list of priorities can help you discuss layout, fittings and finishes for a new bathroom.', leadImage: projectPhotos[8], relatedServiceSlug: 'kitchens-bathrooms',
     content: { intro: 'Before a bathroom refit, consider what works in the current room and what you would like to change. A short list of needs can help you compare layout and finish choices.', sections: [
       { heading: 'Set your priorities', body: 'Think about storage, access, lighting, fittings and the way the room is shared. Decide which details matter most to you before choosing finishes.' },
       { heading: 'Talk through the whole project', body: 'Discuss the room, the proposed changes and the work involved with your building team. Agree the project scope and timing before work begins.' },
@@ -271,7 +271,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: 'organising-a-home-refurbishment', title: 'Getting ready for a home refurbishment', category: 'Refurbishments', readTime: '5 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'Bring your priorities, rooms and finish choices together before agreeing the scope of a home refurbishment.', leadImage: projectPhotos[12], relatedServiceSlug: 'dental-cleaning',
+    excerpt: 'Bring your priorities, rooms and finish choices together before agreeing the scope of a home refurbishment.', leadImage: projectPhotos[12], relatedServiceSlug: 'home-refurbishments',
     content: { intro: 'A home refurbishment can cover several rooms or a full property. Start by listing what needs to change and how you want the home to feel and function when the work is finished.', sections: [
       { heading: 'List the work by room', body: 'Write down the changes you want in each space and note any work that connects rooms, such as a new kitchen layout or changes to circulation.' },
       { heading: 'Agree scope and sequence', body: 'Discuss the full list with the team so the work, materials and timing can be considered together. Confirm what is included before the project begins.' },

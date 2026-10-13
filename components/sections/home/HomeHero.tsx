@@ -169,7 +169,7 @@ export default function HomeHero() {
               ref={actionsRef}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
             >
-              <Button href="/book-appointment/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
+              <Button href="/request-a-quote/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
                 Request a Quote
               </Button>
               <Button

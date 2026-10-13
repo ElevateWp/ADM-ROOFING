@@ -21,7 +21,7 @@ export default function HomeFinalCTA() {
 
         <AnimateOnScroll animation="zoom-in" duration={0.85} delay={0.3}>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Button href="/book-appointment/" variant="lime" size="lg">
+            <Button href="/request-a-quote/" variant="lime" size="lg">
               Request a Quote
             </Button>
             <Button
