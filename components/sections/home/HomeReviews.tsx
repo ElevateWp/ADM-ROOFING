@@ -5,16 +5,16 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REVIEWS = [
   {
-    name: 'Fiona Stoker',
-    quote: 'Excellent service! Having been let down by other companies I contacted JS Roof Care who responded within the hour.',
+    name: 'Joseph Wilde',
+    quote: 'Nicholas was brilliantly communicative and proud of his work. From the quotation to the end of the project he was honest, explained his decisions and kept me updated.',
   },
   {
-    name: 'Luke Griffith',
-    quote: 'They diagnosed the issue quickly, explained the fix clearly, and got the job done for a very fair price.',
+    name: 'Jane Gunyon',
+    quote: 'I had a full bathroom refit by Nicholas and his team. They were reliable and trustworthy, and we are very pleased with the completed work.',
   },
   {
-    name: 'Google reviewer',
-    quote: 'The finished roof looks fantastic and the price was very competitive.',
+    name: 'Junesse Dizon',
+    quote: 'Excellent experience from the initial quote to project completion. Nicholas and the team were punctual, well-organised, and communicated clearly throughout.',
   },
 ];
 
@@ -24,7 +24,7 @@ export default function HomeReviews() {
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12 text-center">
           <span className="font-body text-13 text-forest-light block mb-2 font-medium uppercase tracking-wider">
-            Google Reviews · 4.9 out of 5
+            Customer feedback
           </span>
           <h2 className="font-display text-33 md:text-41 text-forest-ink">
             What customers say

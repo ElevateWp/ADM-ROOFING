@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Roofing Quote',
+  title: 'Request a Home Improvement Quote',
   description:
-    'Request a quote for roof repairs, replacement, gutters or maintenance. JS Roof Care Ltd serves Croydon.',
+    'Request a quote for an extension, loft or garage conversion, kitchen, bathroom or home refurbishment from A-Z Home Improvements in South Croydon.',
   pathname: '/book-appointment/',
 });
 
@@ -19,7 +19,7 @@ const BOOKING_STEPS = [
   {
     step: 1,
     title: 'Send Your Request',
-    description: 'Tell us what roofing work you need and when you would like us to contact you.',
+    description: 'Tell us about your home improvement project and how you would like us to contact you.',
   },
   {
     step: 2,
@@ -33,8 +33,8 @@ const BOOKING_STEPS = [
   },
   {
     step: 4,
-    title: 'Roofing Work',
-    description: 'Our team completes the agreed roofing work at your property.',
+    title: 'Home Improvement Work',
+    description: 'Nicholas and the team complete the agreed home improvement work at your property.',
   },
 ];
 
@@ -52,9 +52,9 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Personal Service
                 </span>
-                <WordRevealH1 text="Request a roof assessment." />
+                <WordRevealH1 text="Request a home improvement quote." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Request an assessment for leaks, damaged tiles, gutters, roof sealing or maintenance. We serve Croydon and surrounding areas." />
+                  <ScrubbedParagraph text="Tell us about your extension, conversion, kitchen, bathroom or refurbishment plans. We serve South Croydon and surrounding areas." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -64,10 +64,10 @@ export default function BookAppointmentPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <span className="font-medium text-forest block">Call our team:</span>
                   <p className="text-forest-ink/70">
-                    Prefer to speak with us directly? Call us any time.
+                    Prefer to speak with us directly? Call during opening hours.
                   </p>
                   <a
-                    href="tel:+447459521011"
+                    href="tel:+447809835355"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
                     {CLINIC_INFO.contact.phone}
@@ -94,7 +94,7 @@ export default function BookAppointmentPage() {
                     What Happens Next
                   </h2>
                   <p className="font-body text-15 text-forest-ink/80 leading-relaxed mb-6">
-                    We take the time to understand your roof and explain the available options clearly.
+                    We take time to understand your plans and explain the next steps clearly.
                   </p>
                 </div>
               </AnimateOnScroll>

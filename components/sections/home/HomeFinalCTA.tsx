@@ -9,13 +9,13 @@ export default function HomeFinalCTA() {
       <div className="max-w-site mx-auto px-6 md:px-12 text-center flex flex-col items-center justify-center">
         <AnimateOnScroll animation="fade-up" duration={0.85}>
           <h2 className="font-display text-41 sm:text-52 md:text-65 text-paper max-w-3xl leading-[1.05] tracking-[-0.03em] font-normal mb-8 mx-auto">
-            Give your roof the care it deserves.
+            Bring your home improvement plans to life.
           </h2>
         </AnimateOnScroll>
 
         <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
           <p className="font-body text-17 md:text-21 text-paper/80 leading-relaxed max-w-xl mb-10 mx-auto">
-            Call our team any time to discuss an inspection, repair or replacement.
+            Call during opening hours to discuss your extension, conversion, kitchen, bathroom or refurbishment plans.
           </p>
         </AnimateOnScroll>
 

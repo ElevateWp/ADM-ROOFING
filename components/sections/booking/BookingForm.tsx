@@ -74,7 +74,7 @@ export default function BookingForm() {
         <span className="font-body text-13 text-lime block mb-2 font-medium uppercase tracking-wider">
           Request Received
         </span>
-        <h3 className="font-display text-33 md:text-41 text-paper mb-4">
+      <h3 className="font-display text-33 md:text-41 text-paper mb-4">
           Quote request received
         </h3>
         <p className="font-body text-17 text-paper/90 leading-relaxed mb-6">
@@ -137,10 +137,10 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request a Roofing Quote
+          Request a Home Improvement Quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
-          Tell us what work you need. Our team will contact you to discuss availability and next steps.
+          Tell us what you would like to improve. Our team will contact you to discuss the project and next steps.
         </p>
       </div>
 
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#687581] transition-all duration-200">
+          <span className="font-body text-13 text-[#6B7280] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+44 7459 521011"
+            placeholder="+44 7809 835355"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#687581]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#6B7280]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#687581]">{errors.email}</span>
+            <span className="font-body text-13 text-[#6B7280]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -216,7 +216,7 @@ export default function BookingForm() {
       {/* Service Selection */}
       <div className="flex flex-col space-y-1.5">
         <label htmlFor="service" className="font-body text-13 text-forest-ink/70">
-          Roofing Service <span className="text-forest">*</span>
+          Project Type <span className="text-forest">*</span>
         </label>
         <select
           id="service"
@@ -229,8 +229,7 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Roof assessment</option>
-          <option value="Urgência">Urgent roof repair</option>
+          <option value="general-consultation">Other home improvement project</option>
         </select>
       </div>
 
@@ -253,7 +252,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#687581]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#6B7280]">{errors.preferredDate}</span>
           )}
         </div>
 
@@ -284,7 +283,7 @@ export default function BookingForm() {
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Describe the issue, when it started and which areas of the roof are affected..."
+          placeholder="Tell us what you would like to change, the rooms involved and any details about your project..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>

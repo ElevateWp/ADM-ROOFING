@@ -14,36 +14,36 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About JS Roof Care Ltd',
+  title: 'About A-Z Home Improvements',
   description:
-    'Meet JS Roof Care Ltd in Croydon, Greater London. Contact our team about roof repairs, inspections and replacements.',
+    'Meet A-Z Home Improvements in South Croydon. Established in 2002, the team works on extensions, conversions, kitchens, bathrooms and refurbishments.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Croydon, United Kingdom',
-    title: 'Roofing Experience You Can Rely On',
-    description: 'Our team handles residential roof repairs and replacements in Croydon.',
+    year: 'Established 2002',
+    title: 'Home improvements, built around your vision',
+    description: 'A-Z Home Improvements has been helping customers transform their homes for more than two decades. Nicholas and the team take on projects across South Croydon and South London.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
-    title: 'Careful Assessment and Planning',
-    description: 'We inspect the roof for visible wear and explain the available repair options.',
+    title: 'Listen and plan',
+    description: 'We discuss what you want to change, walk through the options and agree the project scope with you.',
   },
   {
     title: 'Clear Quotes',
     description: 'We explain the work scope, materials and timing before the job begins.',
   },
   {
-    title: 'Repairs to Suit Your Roof',
-    description: 'Our team considers the roof type and condition when planning suitable repair work.',
+    title: 'Careful workmanship',
+    description: 'We pay attention to the detail across the build and finishing work, with pride in the result.',
   },
   {
-    title: 'Service Across Croydon',
-    description: 'We work on residential properties across Croydon. Contact us to check availability in your area.',
+    title: 'Keep you informed',
+    description: 'From the quotation to completion, we explain decisions and keep you updated as the project progresses.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About JS Roof Care Ltd
+                  About A-Z Home Improvements
                 </span>
-                <WordRevealH1 text="Roofing delivered with care, clarity and a focus on safety." />
+                <WordRevealH1 text="Where vision meets reality." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Our Croydon team handles roof repairs, inspections and residential roof replacements." />
+                  <ScrubbedParagraph text="Established in 2002, A-Z Home Improvements brings together extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments. Nicholas and the team are known for clear communication, reliability and attention to detail." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Roofing Team</span>
-                    <span className="font-medium text-forest">JS Roof Care Ltd</span>
+                    <span>Established</span>
+                    <span className="font-medium text-forest">2002</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe JS Roof Care Ltd */}
+      {/* SECTION 4: Equipe A-Z Home Improvements */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the JS Roof Care Team
+                  Meet the A-Z Home Improvements Team
                 </h2>
               </div>
               <Link
@@ -191,29 +191,29 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Roofing Work */}
+      {/* SECTION 5: Home Improvement Work */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Roofing Work
+                  Our Home Improvement Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Inspections and Repairs, Planned with Care
+                  From Extensions to Complete Refurbishments
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  We take pride in our work and in caring for every property. Our team explains each step and aims to leave every new roof strong and reliable.
+                  Customer projects range from kitchen and bathroom updates to garage conversions, extensions and whole-home refurbishments. We take pride in the workmanship, explain our decisions and pay attention to the finish.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Access and safety arrangements are agreed before work begins</span>
+                    <span>The project scope and practical details are discussed before work begins</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-forest" />
-                    <span>Materials and methods suited to the roof</span>
+                    <span>Careful finishing and attention to detail</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -225,14 +225,14 @@ export default function AboutPage() {
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
                       src="/images/jsroof-stock-15.jpg"
-                      alt="Slate roof installation in progress"
+                      alt="Illustrative residential building image"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Roof Replacement
+                    Home improvements
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -241,16 +241,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 6: Roofing Projects */}
+      {/* SECTION 6: Illustrative Residential Images */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Roofing reference images
+                Project inspiration
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Roofing Gallery
+                Residential home inspiration
               </h2>
             </div>
           </AnimateOnScroll>
@@ -260,13 +260,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-16.jpg"
-                  alt="A cluster of traditional homes with red tiled roofs"
+                      alt="Illustrative residential homes"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Residential Roof Styles
+                  Residential homes
                 </div>
               </div>
             </AnimateOnScroll>
@@ -274,13 +274,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-17.jpg"
-                  alt="Weathered rooftops across a hillside neighbourhood"
+                      alt="Illustrative neighbourhood image"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Traditional Rooftops
+                  Neighbourhood homes
                 </div>
               </div>
             </AnimateOnScroll>
@@ -288,13 +288,13 @@ export default function AboutPage() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-03.jpg"
-                  alt="Traditional stone homes with slate roofs"
+                      alt="Illustrative traditional homes"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Slate Roofs
+                  Traditional homes
                 </div>
               </div>
             </AnimateOnScroll>
@@ -311,7 +311,7 @@ export default function AboutPage() {
                 Request a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Request a roof assessment from our team
+                Tell us about your home improvement plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
                 Call us to discuss the work you need and check availability across Croydon.

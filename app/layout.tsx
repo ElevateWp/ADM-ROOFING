@@ -8,19 +8,19 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://jsroofcareltd.com'),
+  metadataBase: new URL('https://www.azhomeimprovements.co.uk'),
   title: {
-    default: 'JS Roof Care Ltd',
+    default: 'A-Z Home Improvements',
     template: '%s',
   },
   description:
-    'JS Roof Care Ltd provides roof repairs, replacements, flat roofing and gutter services in Croydon, London. Call +44 7459 521011.',
+    'A-Z Home Improvements delivers extensions, loft and garage conversions, kitchens, bathrooms and home refurbishments in South Croydon. Call +44 7809 835355.',
   keywords: [
-    'JS Roof Care Ltd',
-    'roof replacement Croydon',
-    'roof repairs Croydon',
+    'A-Z Home Improvements',
+    'home extensions South Croydon',
+    'loft conversions Croydon',
   ],
-  authors: [{ name: 'JS Roof Care Ltd' }],
+  authors: [{ name: 'A-Z Home Improvements' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -46,7 +46,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F7F7F3] selection:text-[#1C2D3D]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F8F5] selection:text-[#202A3C]">
         <PagePreloader />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">

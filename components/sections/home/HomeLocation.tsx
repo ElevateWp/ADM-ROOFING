@@ -30,7 +30,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  226 High Street Croydon, Greater London CR9 1DF, United Kingdom
+                  {CLINIC_INFO.primaryLocation.directions}
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -41,13 +41,13 @@ export default function HomeLocation() {
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-3 font-body text-13 text-[#1D344A] font-medium hover:underline"
+                  className="inline-block mt-3 font-body text-13 text-[#1749C9] font-medium hover:underline"
                 >
-                  View Croydon on the map →
+                  View the address on the map →
                 </a>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F7F7F3] border border-[#DCE2E7] px-3 py-1.5 text-12 text-[#1C2D3D]">
+                    <span key={highlight} className="bg-[#F5F8F5] border border-[#DCE3E8] px-3 py-1.5 text-12 text-[#202A3C]">
                       {highlight}
                     </span>
                   ))}
@@ -87,19 +87,19 @@ export default function HomeLocation() {
             </AnimateOnScroll>
           </div>
 
-          {/* Columns 7–12: Roofing Project Photo and Contact Details */}
+          {/* Columns 7–12: Residential reference image and contact details */}
           <div className="lg:col-span-6 flex flex-col space-y-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-05.jpg"
-                    alt="A slate roof on a residential building"
+                  alt="Illustrative residential building"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-contain"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  JS Roof Care Ltd
+                  A-Z Home Improvements
                 </div>
               </div>
             </AnimateOnScroll>
@@ -108,13 +108,13 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Croydon Roofing Services
+                    Home Improvements in South Croydon
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    Roof Repairs and Replacements
+                    Extensions, conversions and refurbishments
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Roof repairs and replacements for homes in Croydon.
+                    Kitchens, bathrooms and full home projects, from the first conversation through to completion.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   if (!post) return {};
 
   return createMetadata({
-    title: `${post.title} | Roofing Advice`,
+    title: `${post.title} | Home Improvement Advice`,
     description: post.excerpt,
     pathname: `/blog/${post.slug}/`,
     image: post.leadImage,
@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe JS Roof Care Ltd',
+      name: author?.name || 'Equipe A-Z Home Improvements',
     },
     publisher: {
       '@type': 'Organization',
@@ -86,7 +86,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'Roofing Advice', path: '/blog/' },
+              { name: 'Home Improvement Advice', path: '/blog/' },
               { name: post.category, path: '/blog/' },
               { name: post.title, path: `/blog/${post.slug}/` },
             ]}
@@ -176,7 +176,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
               <AnimateOnScroll animation="fade-up" duration={0.8}>
                 <div className="p-8 bg-mist/40 border border-mist my-8 shadow-sm">
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Related Roofing Service
+                    Related Home Improvement Service
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
                     {relatedService.name}
@@ -213,7 +213,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
       {relatedTrackItems.length > 0 && (
         <PinnedHorizontalTrack
           items={relatedTrackItems}
-          title="Related Roofing Advice"
+          title="Related Home Improvement Advice"
         />
       )}
 
@@ -223,10 +223,10 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Roofing Advice
+                Home Improvement Advice
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Discuss Your Roofing Needs with Our Team
+                Discuss Your Home Improvement Plans with Our Team
               </h2>
             </div>
           </AnimateOnScroll>

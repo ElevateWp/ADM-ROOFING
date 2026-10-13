@@ -102,7 +102,7 @@ export default function HomeHero() {
     };
   }, []);
 
-  const headline = 'Roofing in Croydon, built on care and experience.';
+  const headline = 'Home improvements, built around your vision.';
   const headlineWords = headline.split(' ');
 
   return (
@@ -112,7 +112,7 @@ export default function HomeHero() {
     >
       <Image
         src="/images/jsroof-stock-01.jpg"
-        alt="Slate roof installation in progress"
+        alt="Illustrative construction work at a residential property"
         fill
         priority
         sizes="100vw"
@@ -129,15 +129,15 @@ export default function HomeHero() {
           <div className="lg:col-span-8 flex flex-col justify-center">
             {/* Semantic Single H1 */}
             <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#1D344A]" />
-              <span className="font-body text-[11px] text-[#687581] uppercase tracking-[0.14em]">
-                Roofing contractor in Croydon
+              <span aria-hidden="true" className="h-px w-8 bg-[#1749C9]" />
+              <span className="font-body text-[11px] text-[#6B7280] uppercase tracking-[0.14em]">
+                Construction company in South Croydon
               </span>
             </div>
             <h1
               ref={h1Ref}
               aria-label={headline}
-              className="font-display text-[#1C2D3D] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+              className="font-display text-[#202A3C] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
             >
               {headlineWords.map((word, idx) => (
                 <React.Fragment key={idx}>
@@ -146,7 +146,7 @@ export default function HomeHero() {
                       ref={(el) => {
                         if (el) wordsRef.current[idx] = el;
                       }}
-                      className={`inline-block will-change-transform ${['Roofing', 'care', 'experience.'].includes(word) ? 'text-[#1D344A]' : ''}`}
+                      className={`inline-block will-change-transform ${['improvements,', 'vision.'].includes(word) ? 'text-[#1749C9]' : ''}`}
                     >
                       {word}
                     </span>
@@ -162,7 +162,7 @@ export default function HomeHero() {
               ref={paraRef}
               className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
             >
-              JS Roof Care Ltd provides roof replacements, repairs and maintenance in Croydon.
+              Extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments, delivered with care by Nicholas and his team.
             </p>
 
             <div
@@ -173,7 +173,7 @@ export default function HomeHero() {
                 Request a Quote
               </Button>
               <Button
-                href={`tel:+447459521011`}
+                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                 variant="ghost"
                 size="lg"
                 className="w-full sm:w-auto font-medium"
@@ -184,11 +184,11 @@ export default function HomeHero() {
 
             <div
               ref={locationRef}
-              className="font-body text-13 text-[#1C2D3D]/70 flex flex-wrap items-center gap-2"
+              className="font-body text-13 text-[#202A3C]/70 flex flex-wrap items-center gap-2"
             >
-              <span className="font-medium text-[#1C2D3D]">4.9 ★ on Google</span>
+              <span className="font-medium text-[#202A3C]">Established 2002</span>
               <span className="hidden sm:inline">•</span>
-              <span>62 reviews</span>
+              <span>South Croydon, CR2 7RB</span>
               <span className="hidden sm:inline">•</span>
             </div>
           </div>
@@ -198,16 +198,16 @@ export default function HomeHero() {
             ref={infoRef}
             className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
           >
-            <div className="p-6 sm:p-8 bg-[#F7F7F3] border border-[#DCE2E7] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#1C2D3D] uppercase tracking-wider font-semibold">
-                Roof Replacements
+            <div className="p-6 sm:p-8 bg-[#F5F8F5] border border-[#DCE3E8] shadow-sm flex flex-col space-y-4">
+              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider font-semibold">
+                A-Z Home Improvements
               </span>
-              <p className="font-body text-13 sm:text-15 text-[#1C2D3D]/90 leading-relaxed">
-                <strong className="text-[#1C2D3D] font-semibold">JS Roof Care Ltd</strong> &mdash; trusted roof replacements across Croydon.
+              <p className="font-body text-13 sm:text-15 text-[#202A3C]/90 leading-relaxed">
+                <strong className="text-[#202A3C] font-semibold">Where vision meets reality.</strong> &mdash; home projects shaped around the way you want to live.
               </p>
-              <div className="pt-3 border-t border-[#DCE2E7] flex items-center justify-between text-13 font-body text-[#1C2D3D]/70">
-                <span>Croydon, Greater London</span>
-                <span className="text-[#1C2D3D] font-semibold">+44 7459 521011</span>
+              <div className="pt-3 border-t border-[#DCE3E8] flex items-center justify-between text-13 font-body text-[#202A3C]/70">
+                <span>176A Croham Valley Rd</span>
+                <span className="text-[#202A3C] font-semibold">+44 7809 835355</span>
               </div>
             </div>
           </div>

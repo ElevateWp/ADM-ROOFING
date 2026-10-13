@@ -15,7 +15,7 @@ export default function HomeDentists() {
                 Our Team
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Meet the Roofing Team
+                Meet Nicholas and the team
               </h2>
             </div>
             <Link

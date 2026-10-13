@@ -7,9 +7,9 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'How do you assess a roof leak?',
-    answer: 'We inspect the roof to find visible signs of water entry, then explain the recommended work and timing.',
-    relatedLink: { href: '/dental-implants/', label: 'Explore roof repairs →' },
+    question: 'What home improvement projects do you take on?',
+    answer: 'Customer projects include extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments.',
+    relatedLink: { href: '/dental-implants/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
@@ -17,9 +17,9 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'What roofing services do you provide?',
-    answer: 'We work on roof replacements, flat roofs, repairs, gutters, fascias and inspections.',
-    relatedLink: { href: '/braces/', label: 'Explore roof inspections →' },
+    question: 'Do you carry out kitchen and bathroom projects?',
+    answer: 'Yes. Customer reviews describe kitchen redevelopments and full bathroom refits, including work as part of larger home projects.',
+    relatedLink: { href: '/teeth-whitening/', label: 'Explore kitchens and bathrooms →' },
   },
   {
     question: 'How do I request a quote?',
@@ -27,7 +27,7 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/book-appointment/', label: 'Request a quote →' },
   },
   {
-    question: 'Where does JS Roof Care Ltd work?',
+    question: 'Where does A-Z Home Improvements work?',
     answer: CLINIC_INFO.primaryLocation.directions,
     relatedLink: { href: '/contact/', label: 'Check our service area →' },
   },
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about our roofing services
+              Questions about your home project
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Clear answers about roof repairs, inspections and service availability.
+              Clear answers about projects, quotes and the areas we serve.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Call or message our team and we will be happy to help.
               </p>
               <a
-                href="tel:+447459521011"
+                href="tel:+447809835355"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

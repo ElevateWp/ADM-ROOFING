@@ -7,14 +7,14 @@ export default function Footer() {
   return (
     <footer className="w-full bg-forest text-paper border-t border-mist/20 pt-16 md:pt-24 pb-12">
       <div className="max-w-site mx-auto px-6 md:px-12">
-        {/* Top section: company summary and urgent roofing contact */}
+        {/* Top section: company summary and project enquiry contact */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="JS Roof Care Ltd logo"
+                  alt="A-Z Home Improvements logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,32 +22,32 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  JS Roof Care Ltd
+                  A-Z Home Improvements
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Roof repairs and replacements
+                  Extensions, conversions & refurbishments
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Roof repairs, inspections and replacements in Croydon.
+              Extensions, conversions, kitchens, bathrooms and home refurbishments in South Croydon.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+44 7459 521011</span>
+              <span>+44 7809 835355</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Roofing help in Croydon
+                Home improvements in South Croydon
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need a roof inspection, repair or replacement? Contact our team.
+                Planning an extension, conversion, renovation, kitchen or bathroom project? Contact our team.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
-                  href="tel:+447459521011"
+                  href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-15 font-semibold text-lime hover:underline"
@@ -94,7 +94,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/dentists/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet the Roofing Team
+                  Meet the Home Improvements Team
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -128,7 +128,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Roofing Advice
+                  Home Improvement Advice
                 </Link>
               </li>
               <li>
@@ -142,8 +142,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/emergency-dentist/" className="text-paper/80 hover:text-lime transition-colors">
-                  Emergency Roof Repairs
+                <Link href="/book-appointment/" className="text-paper/80 hover:text-lime transition-colors">
+                  Discuss Your Project
                 </Link>
               </li>
             </ul>
@@ -158,7 +158,7 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Phone:</span>
                 <a
-                  href="tel:+447459521011"
+                  href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-lime transition-colors font-medium"
@@ -176,7 +176,7 @@ export default function Footer() {
                 <div>
                   <span className="text-paper/50 block text-13">Website:</span>
                   <a href={CLINIC_INFO.contact.website} className="hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
-                    jsroofcareltd.com
+                    azhomeimprovements.co.uk
                   </a>
                 </div>
               )}
@@ -191,7 +191,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <span>Croydon, Greater London</span>
-            <span>JS Roof Care Ltd</span>
+            <span>A-Z Home Improvements</span>
           </div>
         </div>
       </div>

@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Roof Protection',
-    description: 'We assess the repair options and check that materials suit your existing roof.',
+    title: 'Workmanship with care',
+    description: 'Customers highlight careful workmanship, pride in the finish and attention to detail.',
   },
   {
-    title: 'Careful Roof Inspections',
-    description: 'We inspect visible signs of leaks and agree the work scope before repairs begin.',
+    title: 'Clear communication',
+    description: 'Nicholas explains decisions, talks through choices and keeps customers updated from quote to completion.',
   },
   {
-    title: 'Clear, Safe Service',
-    description: 'We explain the work clearly and agree access and safety arrangements in advance.',
+    title: 'Reliable and considerate',
+    description: 'Reviews describe a punctual, organised team that is considerate of the home and leaves the site tidy.',
   },
   {
-    title: 'The Right Tools for the Job',
-    description: 'Our team uses tools suited to the roof type and access conditions at your property.',
+    title: 'Projects across the home',
+    description: 'From kitchens and bathrooms to extensions, conversions and full refurbishments, we discuss the work as one coordinated project.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Choose JS Roof Care
+                Why Choose A-Z Home Improvements
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,7 +57,7 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Roofing project photos */}
+          {/* Residential property imagery */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="grid grid-cols-2 gap-3">
@@ -66,37 +66,37 @@ export default function HomeWhyUs() {
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
                     src="/images/jsroof-stock-02.jpg"
-                      alt="Roofline on a residential property"
+                    alt="Residential property"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#1C2D3D]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Residential Roofing
+                  <div className="absolute bottom-3 left-3 bg-[#202A3C]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Home improvements
                   </div>
                 </div>
-                {/* Second roofing project image */}
+                {/* Additional residential imagery */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/jsroof-stock-03.jpg"
-                    alt="Tiled roof and gutter on a brick home"
+                    alt="Brick residential home"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
-                {/* Roofing work in progress */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F7F7F3] overflow-hidden border border-mist shadow-sm">
+                {/* Residential property detail */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F8F5] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/jsroof-stock-04.jpg"
-                    alt="Roof underlay and battens during installation"
+                    alt="Traditional pitched roof on a home"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C2D3D]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Pitched Roof Styles
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#202A3C]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    South Croydon homes
                   </div>
                 </div>
               </div>

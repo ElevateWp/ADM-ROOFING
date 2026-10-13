@@ -8,34 +8,34 @@ export default function HomeFeaturedTreatments() {
     <section className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#1C2D3D] block mb-2 font-medium uppercase tracking-wider">
-            Roof Replacement and Maintenance
+          <span className="font-body text-13 text-[#202A3C] block mb-2 font-medium uppercase tracking-wider">
+            Extensions, Conversions and Refurbishments
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#1C2D3D]">
-            Roofing Services for Every Home
+          <h2 className="font-display text-33 md:text-41 text-[#202A3C]">
+            Home projects shaped around you
           </h2>
         </AnimateOnScroll>
 
         <div className="flex flex-col space-y-24">
-          {/* Featured project 1: roof repair */}
+          {/* Featured work: residential improvements */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <AnimateOnScroll animation="fade-right" duration={0.9} className="lg:col-span-6 order-2 lg:order-1">
-              <span className="font-body text-13 text-[#1C2D3D] uppercase tracking-wider block mb-2 font-medium">
-                Roof Repairs and Leak Detection
+              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider block mb-2 font-medium">
+                Extensions and additions
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#1C2D3D] mb-4">
-                Find and Repair Roof Leaks
+              <h3 className="font-display text-26 md:text-33 text-[#202A3C] mb-4">
+                Make room for the way you live
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#1C2D3D]/80 leading-relaxed mb-6">
-                After inspecting the roof, our team explains the recommended repairs and estimated timing.
+              <p className="font-body text-15 md:text-17 text-[#202A3C]/80 leading-relaxed mb-6">
+                We discuss the way you want the space to work, explain the project scope and plan the details with you.
               </p>
-              <div className="p-4 bg-[#F7F7F3] border-l-4 border-[#1C2D3D] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#1C2D3D]/80">
-                  <strong className="text-[#1C2D3D] font-semibold">Our approach:</strong> We agree the repair scope with you before starting work.
+              <div className="p-4 bg-[#F5F8F5] border-l-4 border-[#202A3C] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#202A3C]/80">
+                <strong className="text-[#202A3C] font-semibold">Our approach:</strong> We discuss your plans and agree the work with you before starting.
                 </span>
               </div>
               <Button href="/dental-implants/" variant="ghost" size="md">
-                Explore Roof Repairs
+                Explore Extensions
               </Button>
             </AnimateOnScroll>
 
@@ -43,7 +43,7 @@ export default function HomeFeaturedTreatments() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-06.jpg"
-                  alt="Slate roof installation in progress"
+                  alt="Home improvement reference image"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover object-top"
@@ -58,7 +58,7 @@ export default function HomeFeaturedTreatments() {
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
                   src="/images/jsroof-stock-07.jpg"
-                  alt="Country cottage with a pitched roof"
+                  alt="Residential home reference image"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -67,22 +67,22 @@ export default function HomeFeaturedTreatments() {
             </AnimateOnScroll>
 
             <AnimateOnScroll animation="fade-left" duration={0.9} className="lg:col-span-6">
-              <span className="font-body text-13 text-[#1C2D3D] uppercase tracking-wider block mb-2 font-medium">
-                Roof Inspections and Maintenance
+              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider block mb-2 font-medium">
+                Kitchens and bathrooms
               </span>
-              <h3 className="font-display text-26 md:text-33 text-[#1C2D3D] mb-4">
-                Find Wear Before It Becomes a Bigger Problem
+              <h3 className="font-display text-26 md:text-33 text-[#202A3C] mb-4">
+                Refresh the rooms you use every day
               </h3>
-              <p className="font-body text-15 md:text-17 text-[#1C2D3D]/80 leading-relaxed mb-6">
-                An inspection can identify visible wear and leaks and help plan the next maintenance steps.
+              <p className="font-body text-15 md:text-17 text-[#202A3C]/80 leading-relaxed mb-6">
+                From a kitchen redevelopment to a complete bathroom refit, we plan the details and finishing with you.
               </p>
-              <div className="p-4 bg-[#F7F7F3] border-l-4 border-[#1C2D3D] mb-6 rounded-sm">
-                <span className="font-body text-13 text-[#1C2D3D]/80">
-                  <strong className="text-[#1C2D3D] font-semibold">A clear plan:</strong> Know which parts of the roof need attention.
+              <div className="p-4 bg-[#F5F8F5] border-l-4 border-[#202A3C] mb-6 rounded-sm">
+                <span className="font-body text-13 text-[#202A3C]/80">
+                  <strong className="text-[#202A3C] font-semibold">A clear plan:</strong> Agree the scope, materials and timing before work begins.
                 </span>
               </div>
-              <Button href="/braces/" variant="ghost" size="md">
-                Explore Roof Inspections
+              <Button href="/teeth-whitening/" variant="ghost" size="md">
+                Explore Kitchens and Bathrooms
               </Button>
             </AnimateOnScroll>
           </div>

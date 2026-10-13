@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/dental-cleaning',
     '/braces',
     '/cosmetic-dentistry',
-    '/emergency-dentist',
     '/book-appointment',
     '/contact',
     '/blog',

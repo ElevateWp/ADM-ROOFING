@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing Services in Croydon',
+  title: 'Home Improvements in South Croydon',
   description:
-    'JS Roof Care Ltd provides roof repairs, replacements, flat roofing and gutter services in Croydon. Call +44 7459 521011.',
+    'A-Z Home Improvements in South Croydon: extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments. Call +44 7809 835355.',
   pathname: '/',
 });
 
@@ -44,10 +44,10 @@ export default function HomePage() {
       {/* SECTION 2A: Positive Google Reviews */}
       <HomeReviews />
 
-      {/* SECTION 3: Roofing Services */}
+      {/* SECTION 3: Home Improvement Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Complete Roofing Services"
+        title="Home Improvement Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose JS Roof Care */}
+      {/* SECTION 4: Why Choose A-Z Home Improvements */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Roofing Work */}
+      {/* SECTION 6: Featured Home Improvement Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Roofing Gallery */}
+      {/* SECTION 9: Home Improvement Inspiration */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}
