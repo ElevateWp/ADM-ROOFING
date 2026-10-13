@@ -152,7 +152,7 @@ export default function CosmeticDentistryPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-14.jpg"
                     alt="Roof inspection"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -208,7 +208,7 @@ export default function CosmeticDentistryPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Roofing Project Photos
+                Roofing Reference Images
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
                 Roof repair examples
@@ -226,7 +226,7 @@ export default function CosmeticDentistryPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Project photos from the CJ Roofing gallery.`}
+                clinicalNote="Illustrative stock images. Actual work depends on a roof assessment."
               />
             </div>
           </AnimateOnScroll>

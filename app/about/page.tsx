@@ -14,17 +14,17 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About CJ Roofing Services Ltd',
+  title: 'About JS Roof Care Ltd',
   description:
-    'Meet the CJ Roofing Services Ltd team. Our Dublin roofers bring over 10 years of experience to roof replacements and repairs.',
+    'Meet JS Roof Care Ltd in Croydon, Greater London. Contact our team about roof repairs, inspections and replacements.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Dublin, Ireland',
+    year: 'Croydon, United Kingdom',
     title: 'Roofing Experience You Can Rely On',
-    description: 'Our team brings over 10 years of experience to residential roof replacements across Dublin.',
+    description: 'Our team handles residential roof repairs and replacements in Croydon.',
   },
 ];
 
@@ -42,8 +42,8 @@ const APPROACH_STEPS = [
     description: 'Our team considers the roof type and condition when planning suitable repair work.',
   },
   {
-    title: 'Service Across Dublin',
-    description: 'We work on residential properties across Dublin. Contact us to check availability in your area.',
+    title: 'Service Across Croydon',
+    description: 'We work on residential properties across Croydon. Contact us to check availability in your area.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About CJ Roofing Services Ltd
+                  About JS Roof Care Ltd
                 </span>
                 <WordRevealH1 text="Roofing delivered with care, clarity and a focus on safety." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Our Dublin roofing team brings over 10 years of experience to roof replacements and residential roofing work." />
+                  <ScrubbedParagraph text="Our Croydon team handles roof repairs, inspections and residential roof replacements." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Roofing Team</span>
-                    <span className="font-medium text-forest">CJ Roofing Services Ltd</span>
+                    <span className="font-medium text-forest">JS Roof Care Ltd</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe CJ Roofing Services Ltd */}
+      {/* SECTION 4: Equipe JS Roof Care Ltd */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the CJ Roofing Team
+                  Meet the JS Roof Care Team
                 </h2>
               </div>
               <Link
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="/images/roof-saffron-walden-1024x768-1.jpg"
+                      src="/images/jsroof-stock-15.jpg"
                       alt="Slate roof installation in progress"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
@@ -247,10 +247,10 @@ export default function AboutPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Project Gallery
+                Roofing reference images
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Recent Roofing Work
+                Roofing Gallery
               </h2>
             </div>
           </AnimateOnScroll>
@@ -259,42 +259,42 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.1}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/roofb3-1.jpg"
-                  alt="Tiled roof and gutter on a brick home"
+                  src="/images/jsroof-stock-16.jpg"
+                  alt="A cluster of traditional homes with red tiled roofs"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roof and Gutter Repair
+                  Residential Roof Styles
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.2}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/Michael.jpg"
-                  alt="Roof structure and underlay during replacement"
+                  src="/images/jsroof-stock-17.jpg"
+                  alt="Weathered rooftops across a hillside neighbourhood"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roof Replacement
+                  Traditional Rooftops
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.3}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/m9.jpg"
-                  alt="Roof underlay and battens during installation"
+                  src="/images/jsroof-stock-03.jpg"
+                  alt="Traditional stone homes with slate roofs"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roofing Work in Progress
+                  Slate Roofs
                 </div>
               </div>
             </AnimateOnScroll>
@@ -314,7 +314,7 @@ export default function AboutPage() {
                 Request a roof assessment from our team
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across Dublin.
+                Call us to discuss the work you need and check availability across Croydon.
               </p>
             </div>
           </AnimateOnScroll>

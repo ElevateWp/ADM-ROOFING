@@ -14,7 +14,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Our Roofing Team',
   description:
-    'Meet the CJ Roofing Services Ltd team. Our Dublin roofers bring over 10 years of experience to residential roofing work.',
+    'Meet the JS Roof Care Ltd team in Croydon, Greater London.',
   pathname: '/dentists/',
 });
 
@@ -30,11 +30,11 @@ export default function DentistsPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  CJ Roofing Services Ltd
+                  JS Roof Care Ltd
                 </span>
                 <WordRevealH1 text="Experienced roofers, ready to help." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Our Dublin team specialises in roof replacements, repairs and maintenance for homes." />
+                  <ScrubbedParagraph text="Our Croydon team specialises in roof replacements, repairs and maintenance for homes." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -42,7 +42,7 @@ export default function DentistsPage() {
             <div className="lg:col-span-4 lg:pl-6 flex flex-col justify-end">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-2 font-body text-13 text-forest-ink/80 shadow-sm">
-                  <span className="font-medium text-forest block">Open 24 hours</span>
+                  <span className="font-medium text-forest block">Call to confirm availability</span>
                   <p className="text-forest-ink/70">
                     Call us to discuss the roofing work you need.
                   </p>
@@ -117,7 +117,7 @@ export default function DentistsPage() {
                     Residential Roofing
                   </h3>
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed mb-4">
-                    Roofing services for homes across Dublin and surrounding areas.
+                    Roofing services for homes across Croydon and surrounding areas.
                   </p>
                 </div>
                 <Link href="/contact/" className="font-body text-13 text-forest font-medium hover:underline">
@@ -219,7 +219,7 @@ export default function DentistsPage() {
                   We take pride in our work and aim to make every new roof as strong and reliable as the original.
                 </span>
                 <span className="font-body text-13 text-forest block mt-2 font-medium">
-                  — The CJ Roofing Team
+                  — The JS Roof Care Team
                 </span>
               </div>
             </div>

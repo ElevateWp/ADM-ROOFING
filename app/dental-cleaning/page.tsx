@@ -71,7 +71,7 @@ export default function DentalCleaningPage() {
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Service area</span>
-                    <span className="font-medium text-forest">Dublin and surrounding areas</span>
+                    <span className="font-medium text-forest">Croydon and surrounding areas</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Availability</span>
@@ -110,7 +110,7 @@ export default function DentalCleaningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-13.jpg"
                     alt="Flat roof installation in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

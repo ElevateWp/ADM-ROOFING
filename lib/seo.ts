@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'http://localhost:3456';
+export const BASE_URL = 'https://jsroofcareltd.com';
 
 export function createMetadata({
   title,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_IE',
+      locale: 'en_GB',
       type: 'website',
       images: [
         {

@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Request a Roofing Quote',
   description:
-    'Request a quote for roof repairs, replacement, gutters or maintenance. CJ Roofing Services Ltd is open 24 hours and serves Dublin.',
+    'Request a quote for roof repairs, replacement, gutters or maintenance. JS Roof Care Ltd serves Croydon.',
   pathname: '/book-appointment/',
 });
 
@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
                 </span>
                 <WordRevealH1 text="Request a roof assessment." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Request an assessment for leaks, damaged tiles, gutters, roof sealing or maintenance. We serve Dublin and surrounding areas." />
+                  <ScrubbedParagraph text="Request an assessment for leaks, damaged tiles, gutters, roof sealing or maintenance. We serve Croydon and surrounding areas." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -67,7 +67,7 @@ export default function BookAppointmentPage() {
                     Prefer to speak with us directly? Call us any time.
                   </p>
                   <a
-                    href="tel:+35315563783"
+                    href="tel:+447459521011"
                     className="font-display text-17 text-forest font-semibold block hover:underline"
                   >
                     {CLINIC_INFO.contact.phone}
@@ -163,12 +163,12 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Hours</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Opening Hours</h3>
                 <div className="space-y-1.5 font-body text-13 text-forest-ink/80">
-                  {CLINIC_INFO.schedule.map((item) => (
+                  {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
                     <div key={item.day} className="flex justify-between">
                       <span>{item.day}</span>
                       <span className="tabular-nums">{item.hours}</span>
                     </div>
-                  ))}
+                  )) : <p>Please call to confirm current opening hours.</p>}
                 </div>
               </div>
             </AnimateOnScroll>
@@ -179,7 +179,7 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve Dublin and surrounding areas. Contact us to confirm availability for your property.
+                  We serve Croydon and surrounding areas. Contact us to confirm availability for your property.
                 </p>
               </div>
             </AnimateOnScroll>

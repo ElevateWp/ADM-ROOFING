@@ -5,18 +5,17 @@
 @layer base {
   :root {
     --paper: #FFFFFF; /* Main Background */
-    --paper-secondary: #F7F7F7; /* Secondary Background */
-    --forest: #171619; /* Deep Sections */
-    --forest-ink: #1C1A1B;
-    --black-accent: #191719; /* Black Accent */
-    --secondary-text: #6D696B; /* Secondary Text */
-    --primary-brand: #E51B2B; /* Primary Brand / CTA */
-    --brand-hover: #FF3545; /* Hover / Highlight */
-    --red-accent: #E51B2B; /* Brand accent */
-    --navy-accent: #171619; /* Navy Blue Accent */
-    --soft-blue: #FCE5E7; /* Soft Red */
-    --lime: #FF3545; /* Highlights */
-    --mist: #E2DFE0; /* Borders */
+    --paper-secondary: #F7F7F3; /* Secondary Background */
+    --forest: #102236; /* Deep Sections */
+    --forest-ink: #1C2D3D;
+    --black-accent: #132638; /* Navy Blue Accent */
+    --secondary-text: #687581; /* Secondary Text */
+    --primary-brand: #1D344A; /* Primary Brand / CTA */
+    --brand-hover: #2D4D69; /* Hover / Highlight */
+    --navy-accent: #132638; /* Navy Blue Accent */
+    --soft-blue: #E5ECF2; /* Soft Blue */
+    --lime: #E5ECF2; /* Soft Blue highlight */
+    --mist: #DCE2E7; /* Borders */
     
     --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -68,7 +67,7 @@
   textarea:focus-visible,
   summary:focus-visible,
   [tabindex]:focus-visible {
-    outline: 2px solid var(--forest);
+    outline: 2px solid var(--primary-brand);
     outline-offset: 3px;
   }
 

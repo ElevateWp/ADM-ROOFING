@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe CJ Roofing Services Ltd',
+      name: author?.name || 'Equipe JS Roof Care Ltd',
     },
     publisher: {
       '@type': 'Organization',

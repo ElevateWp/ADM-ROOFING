@@ -16,7 +16,7 @@ export default function HomeBeforeAfter() {
               Care for every roof
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Explore examples of roof replacement and repair work from our project gallery.
+              Explore roofing reference images for common repair and replacement work.
             </p>
             <Link
               href="/dental-implants/"
@@ -30,26 +30,26 @@ export default function HomeBeforeAfter() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/m7.jpg"
-                  alt="Roof structure before replacement work"
+                  src="/images/jsroof-stock-08.jpg"
+                  alt="Roof repair work on a residential home"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#171619]/85 text-white font-body text-12 px-3 py-1">
-                  Roof repair in progress
+                <span className="absolute bottom-3 left-3 bg-[#102236]/85 text-white font-body text-12 px-3 py-1">
+                  Roofing reference one
                 </span>
               </div>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/IMG-20181001-WA0014.jpg"
-                  alt="Completed slate roof installation"
+                  src="/images/jsroof-stock-09.jpg"
+                  alt="Residential roof with traditional tiles"
                   fill
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#171619]/85 text-white font-body text-12 px-3 py-1">
-                  Completed roofing work
+                <span className="absolute bottom-3 left-3 bg-[#102236]/85 text-white font-body text-12 px-3 py-1">
+                  Roofing reference two
                 </span>
               </div>
             </div>

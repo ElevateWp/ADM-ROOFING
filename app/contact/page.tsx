@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contact and Service Area',
   description:
-    'Contact CJ Roofing Services Ltd on +353 1 556 3783. We provide roofing services across Dublin and are open 24 hours.',
+    'Contact JS Roof Care Ltd on +44 7459 521011 for roofing services in Croydon, Greater London.',
   pathname: '/contact/',
 });
 
@@ -84,7 +84,14 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Open 24 hours</span>
+                      <span className="font-body text-13 text-forest-ink/60">Call to confirm opening hours</span>
+                    </div>
+
+                    <div className="py-5">
+                      <span className="font-body text-13 text-forest-ink/60 block">Website</span>
+                      <a href={CLINIC_INFO.contact.website} className="font-display text-21 text-forest hover:underline" target="_blank" rel="noopener noreferrer">
+                        jsroofcareltd.com
+                      </a>
                     </div>
 
                   </div>
@@ -101,7 +108,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.name}
                   </h3>
                   <address className="not-italic font-body text-15 text-forest-ink/90 leading-relaxed mb-4">
-                    Dublin, Ireland
+                    {CLINIC_INFO.primaryLocation.directions}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
                     <strong>Service area:</strong> {CLINIC_INFO.primaryLocation.directions}
@@ -118,12 +125,12 @@ export default function ContactPage() {
                     Opening Hours
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
-                    {CLINIC_INFO.schedule.map((item) => (
+                    {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
                       <div key={item.day} className="p-3.5 flex justify-between">
                         <span className="font-medium text-forest-ink">{item.day}</span>
                         <span className="tabular-nums text-forest-ink/80">{item.hours}</span>
                       </div>
-                    ))}
+                    )) : <p className="p-3.5 text-forest-ink/80">Please call to confirm current availability.</p>}
                   </div>
                 </div>
               </AnimateOnScroll>

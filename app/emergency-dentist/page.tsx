@@ -12,14 +12,14 @@ import { createMetadata, generateFaqSchema } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Emergency Roof Repairs',
   description:
-    'For roof leaks or storm damage in Dublin, keep clear of unsafe areas and contact CJ Roofing Services Ltd on +353 1 556 3783. Open 24 hours.',
+    'For roof leaks or storm damage in Croydon, keep clear of unsafe areas and contact JS Roof Care Ltd on +44 7459 521011.',
   pathname: '/emergency-dentist/',
 });
 
 const EMERGENCY_FAQS = [
   {
     question: 'What should I do if my roof is leaking?',
-    answer: 'Keep clear of unsafe areas and move belongings away from the water. Call our team on +353 1 556 3783 to discuss an assessment.',
+    answer: 'Keep clear of unsafe areas and move belongings away from the water. Call our team on +44 7459 521011 to discuss an assessment.',
   },
   {
     question: 'Can you assess storm damage?',
@@ -76,7 +76,7 @@ export default function EmergencyDentistPage() {
             <div className="lg:col-span-4 p-6 bg-forest text-paper">
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-lime font-medium uppercase tracking-wider block mb-2">
-                Dublin Service Area
+                Croydon Service Area
               </span>
               <address className="not-italic font-body text-15 text-paper leading-relaxed mb-4">
                 {CLINIC_INFO.name}
@@ -84,7 +84,7 @@ export default function EmergencyDentistPage() {
                 {CLINIC_INFO.primaryLocation.city}, {CLINIC_INFO.primaryLocation.country}
               </address>
               <div className="pt-3 border-t border-mist/20 text-13 text-paper/80 font-body">
-                Serving Dublin and surrounding areas
+                Serving Croydon and surrounding areas
               </div>
               </AnimateOnScroll>
             </div>
@@ -288,7 +288,7 @@ export default function EmergencyDentistPage() {
                 Service Area
               </span>
               <p className="font-body text-13 text-paper/80 leading-relaxed">
-                We serve Dublin and surrounding areas. Call to check availability.
+                We serve Croydon and surrounding areas. Call to check availability.
               </p>
               </AnimateOnScroll>
             </div>
@@ -321,12 +321,12 @@ export default function EmergencyDentistPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
               <span className="font-body text-13 text-forest-ink/60 block mb-2">Opening Hours</span>
               <div className="border border-mist divide-y divide-mist bg-paper font-body text-13">
-                {CLINIC_INFO.schedule.map((item) => (
+                {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
                   <div key={item.day} className="p-3 flex justify-between">
                     <span>{item.day}</span>
                     <span className="tabular-nums">{item.hours}</span>
                   </div>
-                ))}
+                )) : <p className="p-3">Please call to confirm current opening hours.</p>}
               </div>
               </AnimateOnScroll>
             </div>

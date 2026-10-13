@@ -78,7 +78,7 @@ export default function DentalImplantsPage() {
                   </div>
                   <div className="flex justify-between">
                     <span>Availability</span>
-                    <span className="font-medium text-forest">Open 24 Hours</span>
+                    <span className="font-medium text-forest">Call to confirm availability</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -113,7 +113,7 @@ export default function DentalImplantsPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-10.jpg"
                     alt="Roof tiles and sealing points"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -336,10 +336,10 @@ export default function DentalImplantsPage() {
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <div className="mb-12">
               <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                Roofing Project
+                Roofing Reference Images
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Residential Roofing Project
+                Residential Roof Styles
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -354,7 +354,7 @@ export default function DentalImplantsPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Project photos. Materials and work scope depend on the roof assessment.`}
+                clinicalNote="Illustrative stock images. Actual work depends on a roof assessment."
               />
             </div>
           </AnimateOnScroll>

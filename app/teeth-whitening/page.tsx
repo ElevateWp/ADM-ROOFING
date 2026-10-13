@@ -20,7 +20,7 @@ const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || 
 export const metadata: Metadata = createMetadata({
   title: 'Roof Tile Replacement',
   description:
-    'Roof tile replacement and repairs for damaged or displaced tiles. Open 24 hours across Dublin.',
+    'Roof tile replacement and repairs for damaged or displaced tiles in Croydon. Contact our team to discuss availability.',
   pathname: '/teeth-whitening/',
 });
 
@@ -78,7 +78,7 @@ export default function TeethWhiteningPage() {
                   </div>
                   <div className="flex justify-between">
                     <span>Availability</span>
-                    <span className="font-medium text-forest">Open 24 Hours</span>
+                    <span className="font-medium text-forest">Call to confirm availability</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -113,7 +113,7 @@ export default function TeethWhiteningPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-12.jpg"
                     alt="Roof tile replacement in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -196,7 +196,7 @@ export default function TeethWhiteningPage() {
                 Standardized Results
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink mb-4">
-                Roofing Project Examples
+                Roofing Reference Images
               </h2>
               <p className="font-body text-15 text-forest-ink/80 max-w-2xl">
                 {service.beforeAfterCase.clinicalContext}
@@ -211,7 +211,7 @@ export default function TeethWhiteningPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote="Roofing project photos from the CJ Roofing Services gallery."
+                clinicalNote="Illustrative stock images. Actual work depends on a roof assessment."
               />
             </div>
           </AnimateOnScroll>

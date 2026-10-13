@@ -17,9 +17,9 @@ const service = SERVICES.find((s) => s.slug === 'root-canal')!;
 const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || DENTISTS[0];
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roof Leak Repairs in Dublin',
+  title: 'Roof Leak Repairs in Croydon',
   description:
-    'Roof leak inspections and repairs across Dublin.',
+    'Roof leak inspections and repairs across Croydon.',
   pathname: '/root-canal/',
 });
 
@@ -73,11 +73,11 @@ export default function RootCanalPage() {
                   </div>
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Service Area</span>
-                    <span className="font-medium text-forest">Dublin and surrounding areas</span>
+                    <span className="font-medium text-forest">Croydon and surrounding areas</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Opening Hours</span>
-                    <span className="font-medium text-forest">Open 24 hours</span>
+                    <span className="font-medium text-forest">Call to confirm availability</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -112,7 +112,7 @@ export default function RootCanalPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-11.jpg"
                     alt="Roof leak repair in progress"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"

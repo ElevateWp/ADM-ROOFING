@@ -13,7 +13,7 @@ const HOME_FAQS: AccordionItem[] = [
   },
   {
     question: 'Do you cover my area?',
-    answer: 'Contact our team to check availability for your property in Dublin or the surrounding area.',
+    answer: 'Contact our team to check availability for your property in Croydon or the surrounding area.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
@@ -27,7 +27,7 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/book-appointment/', label: 'Request a quote →' },
   },
   {
-    question: 'Where does CJ Roofing Services work?',
+    question: 'Where does JS Roof Care Ltd work?',
     answer: CLINIC_INFO.primaryLocation.directions,
     relatedLink: { href: '/contact/', label: 'Check our service area →' },
   },
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Call or message our team and we will be happy to help.
               </p>
               <a
-                href="tel:+35315563783"
+                href="tel:+447459521011"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

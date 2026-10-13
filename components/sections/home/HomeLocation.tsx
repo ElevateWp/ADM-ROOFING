@@ -1,24 +1,19 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { CLINIC_INFO } from '@/lib/clinic-data';
 import Button from '@/components/ui/Button';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 export default function HomeLocation() {
-  const todayDayName = useMemo(() => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    return days[new Date().getDay()];
-  }, []);
-
   return (
     <section className="w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8}>
           <div className="mb-16">
             <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-              Contact & Opening Hours
+              Contact & Location
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink">
               Get in Touch
@@ -35,7 +30,7 @@ export default function HomeLocation() {
                   {CLINIC_INFO.name}
                 </h3>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  Our team serves Dublin and surrounding areas.
+                  226 High Street Croydon, Greater London CR9 1DF, United Kingdom
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -46,13 +41,13 @@ export default function HomeLocation() {
                   href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(CLINIC_INFO.primaryLocation.directions)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-3 font-body text-13 text-[#E51B2B] font-medium hover:underline"
+                  className="inline-block mt-3 font-body text-13 text-[#1D344A] font-medium hover:underline"
                 >
-                  View Dublin on the map →
+                  View Croydon on the map →
                 </a>
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F7F7F7] border border-[#E2DFE0] px-3 py-1.5 text-12 text-[#1C1A1B]">
+                    <span key={highlight} className="bg-[#F7F7F3] border border-[#DCE2E7] px-3 py-1.5 text-12 text-[#1C2D3D]">
                       {highlight}
                     </span>
                   ))}
@@ -66,34 +61,14 @@ export default function HomeLocation() {
                 <span className="font-body text-13 text-forest-ink/60 uppercase tracking-wider block mb-3 font-semibold">
                   Opening Hours
                 </span>
-                <div className="border border-mist overflow-hidden bg-paper shadow-sm">
-                  <table className="w-full text-left font-body text-13">
-                    <tbody className="divide-y divide-mist">
-                      {CLINIC_INFO.schedule.map((item) => {
-                        const isToday = item.day === todayDayName;
-                        return (
-                          <tr
-                            key={item.day}
-                            className={`transition-colors ${
-                              isToday ? 'bg-lime text-forest-ink font-semibold' : 'text-forest-ink/80'
-                            }`}
-                          >
-                            <td className="py-2.5 px-4">
-                              <span>{item.day}</span>
-                              {isToday && (
-                                <span className="ml-2 text-13 uppercase text-forest-ink/80 font-normal">
-                                  (Today)
-                                </span>
-                              )}
-                            </td>
-                            <td className="py-2.5 px-4 text-right tabular-nums">
-                              {item.hours}
-                            </td>
-                          </tr>
-                        );
-                      })}
-                    </tbody>
-                  </table>
+                <div className="border border-mist overflow-hidden bg-paper shadow-sm p-4 font-body text-13 text-forest-ink/80">
+                  {CLINIC_INFO.schedule.length > 0
+                    ? CLINIC_INFO.schedule.map((item) => (
+                        <div key={item.day} className="flex justify-between border-b border-mist py-2 last:border-0">
+                          <span>{item.day}</span><span>{item.hours}</span>
+                        </div>
+                      ))
+                    : 'Please call to confirm current availability.'}
                 </div>
               </div>
 
@@ -117,14 +92,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/IMG-20181001-WA0042.jpg"
-                  alt="Roof replacement project with skylights"
+                  src="/images/jsroof-stock-05.jpg"
+                    alt="A slate roof on a residential building"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-contain"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  CJ Roofing Services Ltd
+                  JS Roof Care Ltd
                 </div>
               </div>
             </AnimateOnScroll>
@@ -133,16 +108,13 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Dublin Roofing Services
+                    Croydon Roofing Services
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
                     Roof Repairs and Replacements
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Over 10 years of experience caring for homes across Dublin.
-                  </p>
-                  <p className="font-body text-13 text-forest-ink/70 mb-3 leading-relaxed">
-
+                    Roof repairs and replacements for homes in Croydon.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

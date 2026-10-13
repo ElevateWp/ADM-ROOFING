@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Roofing Advice',
   description:
-    'Practical advice on roof leaks, tiles, gutters and roof maintenance from CJ Roofing Services Ltd.',
+    'Practical advice on roof leaks, tiles, gutters and roof maintenance from JS Roof Care Ltd.',
   pathname: '/blog/',
 });
 

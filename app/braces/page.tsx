@@ -20,7 +20,7 @@ const leadDentist = DENTISTS.find((d) => d.id === service.assignedDentistId) || 
 export const metadata: Metadata = createMetadata({
   title: 'Roof Inspection and Preventive Maintenance',
   description:
-    'Roof inspections across Dublin to identify visible wear and areas that may need attention.',
+    'Roof inspections across Croydon to identify visible wear and areas that may need attention.',
   pathname: '/braces/',
 });
 
@@ -119,7 +119,7 @@ export default function BracesPage() {
               <AnimateOnScroll animation="zoom-in" duration={0.8}>
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roof-saffron-walden-1024x768-1.jpg"
+                    src="/images/jsroof-stock-15.jpg"
                     alt="Residential roof inspection"
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
@@ -367,7 +367,7 @@ export default function BracesPage() {
                 afterImage={service.beforeAfterCase.afterImage}
                 beforeLabel={service.beforeAfterCase.beforeLabel}
                 afterLabel={service.beforeAfterCase.afterLabel}
-                clinicalNote={`Timeframe: ${service.beforeAfterCase.timeframe}. Completed by the CJ Roofing team.`}
+                clinicalNote="Illustrative stock images. Actual work depends on a roof assessment."
               />
             </div>
           </AnimateOnScroll>

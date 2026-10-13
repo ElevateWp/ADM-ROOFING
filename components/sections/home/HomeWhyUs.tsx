@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Choose CJ Roofing Services
+                Why Choose JS Roof Care
               </h2>
 
               <div className="divide-y divide-mist">
@@ -65,21 +65,21 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                    src="/images/m8.jpg"
+                    src="/images/jsroof-stock-02.jpg"
                       alt="Roofline on a residential property"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#1C1A1B]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                  <div className="absolute bottom-3 left-3 bg-[#1C2D3D]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
                     Residential Roofing
                   </div>
                 </div>
                 {/* Second roofing project image */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/roofb3-1.jpg"
+                    src="/images/jsroof-stock-03.jpg"
                     alt="Tiled roof and gutter on a brick home"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
@@ -87,16 +87,16 @@ export default function HomeWhyUs() {
                   />
                 </div>
                 {/* Roofing work in progress */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F7F7F7] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F7F7F3] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/m9.jpg"
+                    src="/images/jsroof-stock-04.jpg"
                     alt="Roof underlay and battens during installation"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C1A1B]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Roof Replacement
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#1C2D3D]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Pitched Roof Styles
                   </div>
                 </div>
               </div>

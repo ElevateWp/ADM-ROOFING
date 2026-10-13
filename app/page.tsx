@@ -2,6 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import HomeHero from '@/components/sections/home/HomeHero';
 import HomeStats from '@/components/sections/home/HomeStats';
+import HomeReviews from '@/components/sections/home/HomeReviews';
 import PinnedHorizontalTrack, { HorizontalTrackItem } from '@/components/motion/PinnedHorizontalTrack';
 import HomeWhyUs from '@/components/sections/home/HomeWhyUs';
 import HomeDentists from '@/components/sections/home/HomeDentists';
@@ -16,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing Services in Dublin',
+  title: 'Roofing Services in Croydon',
   description:
-    'CJ Roofing Services Ltd provides roof replacements, flat roof installation, repairs and gutter services across Dublin. Open 24 hours.',
+    'JS Roof Care Ltd provides roof repairs, replacements, flat roofing and gutter services in Croydon. Call +44 7459 521011.',
   pathname: '/',
 });
 
@@ -40,6 +41,9 @@ export default function HomePage() {
       {/* SECTION 2: Trust / Highlights */}
       <HomeStats />
 
+      {/* SECTION 2A: Positive Google Reviews */}
+      <HomeReviews />
+
       {/* SECTION 3: Roofing Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
@@ -51,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose CJ Roofing */}
+      {/* SECTION 4: Why Choose JS Roof Care */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
@@ -63,7 +67,7 @@ export default function HomePage() {
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Roofing Project Gallery */}
+      {/* SECTION 9: Roofing Gallery */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}

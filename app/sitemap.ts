@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const coreRoutes = [
     '',
     '/about',
+    '/testimonials',
     '/dentists',
     '/dental-implants',
     '/root-canal',

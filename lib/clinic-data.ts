@@ -49,7 +49,7 @@ export interface ClinicInformation {
     landmarks: string;
     coordinates?: { lat: number; lng: number };
   };
-  contact: { phone: string; emergencyPhone: string; email?: string; whatsapp: string };
+  contact: { phone: string; emergencyPhone: string; email?: string; whatsapp: string; website?: string };
   identityHighlights: string[];
   schedule: { day: string; hours: string; isOpenToday?: boolean; isEmergencyOnly?: boolean }[];
   verifiedStats: { value: number; suffix: string; label: string; description: string }[];
@@ -57,38 +57,31 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'CJ Roofing Services Ltd',
-  legalName: 'CJ Roofing Services Ltd',
+  name: 'JS Roof Care Ltd',
+  legalName: 'JS Roof Care Ltd',
   tagline: 'Reliable roofing work, delivered with care.',
   primaryLocation: {
-    street: '',
+    street: '226 High Street',
     suite: '',
-    city: 'Dublin',
-    state: '',
-    postalCode: '',
-    country: 'Ireland',
-    directions: 'Dublin, Ireland',
-    landmarks: 'Serving Dublin and surrounding areas',
+    city: 'Croydon',
+    state: 'Greater London',
+    postalCode: 'CR9 1DF',
+    country: 'United Kingdom',
+    directions: '226 High Street Croydon, Greater London CR9 1DF, United Kingdom',
+    landmarks: '9W92+J3 Croydon, United Kingdom',
   },
   contact: {
-    phone: '+353 1 556 3783',
-    emergencyPhone: '+353 1 556 3783',
-    whatsapp: '+353 1 556 3783',
+    phone: '+44 7459 521011',
+    emergencyPhone: '+44 7459 521011',
+    whatsapp: '+44 7459 521011',
+    website: 'https://jsroofcareltd.com',
     email: '',
   },
-  identityHighlights: ['Over 10 years of roofing experience', 'Residential roofing across Dublin'],
-  schedule: [
-    { day: 'Monday', hours: 'Open 24 hours' },
-    { day: 'Tuesday', hours: 'Open 24 hours' },
-    { day: 'Wednesday', hours: 'Open 24 hours' },
-    { day: 'Thursday', hours: 'Open 24 hours' },
-    { day: 'Friday', hours: 'Open 24 hours' },
-    { day: 'Saturday', hours: 'Open 24 hours' },
-    { day: 'Sunday', hours: 'Open 24 hours' },
-  ],
+  identityHighlights: ['4.9 Google rating', 'Croydon, Greater London'],
+  schedule: [],
   verifiedStats: [
-    { value: 4, suffix: '.7', label: 'Google rating', description: 'Based on 83 Google reviews.' },
-    { value: 83, suffix: '', label: 'Google reviews', description: 'Customer reviews shown on Google.' },
+    { value: 4, suffix: '.9', label: 'Google rating', description: 'Based on 62 Google reviews.' },
+    { value: 62, suffix: '', label: 'Google reviews', description: 'Customer reviews shown on Google.' },
   ],
   accreditations: [],
 };
@@ -97,39 +90,23 @@ export const DENTISTS: DentistProfile[] = [
   {
     id: 'roofing-team',
     slug: 'our-doctor',
-    name: 'Chris and the CJ Roofing team',
-    title: 'Dublin roofing specialists',
+    name: 'JS Roof Care Ltd team',
+    title: 'Croydon roofing specialists',
     qualifications: 'Residential roofing',
     specialization: 'Roof replacements, repairs and maintenance',
-    experienceYears: 10,
-    bio: 'Our Dublin roofing team brings over 10 years of experience to roof replacements and residential roofing work.',
+    experienceYears: 0,
+    bio: 'Our Croydon roofing team provides roof repairs, inspections and replacements for residential properties.',
     philosophy: 'We take care of each property, explain the work clearly and aim to leave every roof strong and reliable.',
     education: [],
     memberships: [],
     specialties: ['Roof replacement', 'Flat roofs', 'Roof repairs', 'Gutters and fascias'],
-    image: '/images/Michael.jpg',
-    warmImage: '/images/roof-saffron-walden-1024x768-1.jpg',
+    image: '/images/jsroof-stock-01.jpg',
+    warmImage: '/images/jsroof-stock-02.jpg',
   },
 ];
 
 const projectPhotos = [
-  '/images/roof-saffron-walden-1024x768-1.jpg',
-  '/images/roofb3-1.jpg',
-  '/images/Michael.jpg',
-  '/images/m9.jpg',
-  '/images/m8.jpg',
-  '/images/m7.jpg',
-  '/images/m6.jpg',
-  '/images/m5.jpg',
-  '/images/m4.jpg',
-  '/images/m3.jpg',
-  '/images/m2.jpg',
-  '/images/IMG-20181001-WA0056.jpg',
-  '/images/IMG-20181001-WA0042.jpg',
-  '/images/IMG-20181001-WA0032.jpg',
-  '/images/IMG-20181001-WA0014.jpg',
-  '/images/caslast.jpg',
-  '/images/cas4.jpg',
+  ...Array.from({ length: 17 }, (_, index) => `/images/jsroof-stock-${String(index + 1).padStart(2, '0')}.jpg`),
 ];
 
 const makeService = (
@@ -171,12 +148,12 @@ const makeService = (
   },
   beforeAfterCase: {
     category: name,
-    clinicalContext: 'Examples of roofing work from the CJ Roofing photo gallery.',
-    beforeLabel: 'Roofing project',
-    afterLabel: 'Roofing project',
+    clinicalContext: 'Illustrative stock photos show common residential roof styles. Actual work depends on a roof assessment.',
+    beforeLabel: 'Reference image one',
+    afterLabel: 'Reference image two',
     beforeImage: projectPhotos[photoIndex % projectPhotos.length],
     afterImage: projectPhotos[(photoIndex + 1) % projectPhotos.length],
-    timeframe: 'Project photos',
+    timeframe: 'Illustrative stock images',
   },
   assignedDentistId: 'roofing-team',
   faqs,
