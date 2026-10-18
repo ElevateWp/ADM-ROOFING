@@ -95,7 +95,7 @@ export default function ContactPage() {
 
                     <div className="py-5">
                       <span className="font-body text-13 text-forest-ink/60 block">Website</span>
-                      <a href={CLINIC_INFO.contact.website} className="font-display text-21 text-forest hover:underline" target="_blank" rel="noopener noreferrer">
+                      <a href={CLINIC_INFO.contact.website} className="font-display text-21 text-forest break-all hover:underline" target="_blank" rel="noopener noreferrer">
                         djroofrestorationandrepairs.com.au
                       </a>
                     </div>

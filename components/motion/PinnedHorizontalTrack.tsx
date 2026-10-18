@@ -40,7 +40,8 @@ export default function PinnedHorizontalTrack({
 
   useEffect(() => {
     const checkWidth = () => {
-      setIsDesktop(window.innerWidth >= 1024);
+      // Keep touch-first horizontal scrolling on tablets, including landscape iPads.
+      setIsDesktop(window.innerWidth >= 1280);
     };
     checkWidth();
     window.addEventListener('resize', checkWidth);
@@ -99,7 +100,7 @@ export default function PinnedHorizontalTrack({
   return (
     <section
       ref={containerRef}
-      className={`relative w-full bg-paper py-12 md:py-16 lg:py-20 z-10 ${className}`}
+      className={`relative w-full overflow-x-clip bg-paper py-12 md:py-16 lg:py-20 z-10 ${className}`}
     >
       {/* Header bar with counter & progress rule */}
       <div className="max-w-site mx-auto px-6 md:px-12 mb-8 md:mb-12 flex flex-wrap items-end justify-between gap-4">
@@ -147,7 +148,7 @@ export default function PinnedHorizontalTrack({
           });
           setCurrentIndex((current) => current === closestIndex + 1 ? current : closestIndex + 1);
         }}
-        className="w-full overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0 scrollbar-none"
+        className="w-full overflow-x-auto xl:overflow-x-visible pb-2 xl:pb-0 scrollbar-none"
         style={{ WebkitOverflowScrolling: 'touch' }}
       >
         <div

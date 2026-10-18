@@ -278,7 +278,7 @@ export default function HomeHero() {
         })}
       </div>
 
-      <div className="pointer-events-none absolute bottom-7 left-6 right-6 z-20 flex items-center justify-between font-body text-[10px] uppercase tracking-[0.16em] text-white/70 sm:left-10 sm:right-10 lg:left-[9vw] lg:right-[9vw]">
+      <div className="pointer-events-none absolute bottom-7 left-6 right-6 z-20 flex flex-col items-start gap-2 font-body text-[10px] uppercase tracking-[0.16em] text-white/70 sm:flex-row sm:items-center sm:justify-between sm:left-10 sm:right-10 lg:left-[9vw] lg:right-[9vw]">
         <span>DJ Maintenance &amp; Construction · Mount Gambier</span>
         <span>Scroll to explore</span>
       </div>

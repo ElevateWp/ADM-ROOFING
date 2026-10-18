@@ -175,7 +175,7 @@ export default function Footer() {
               {CLINIC_INFO.contact.website && (
                 <div>
                   <span className="text-paper/50 block text-13">Website:</span>
-                  <a href={CLINIC_INFO.contact.website} className="hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
+                  <a href={CLINIC_INFO.contact.website} className="block max-w-full break-all hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
                     djroofrestorationandrepairs.com.au
                   </a>
                 </div>
