@@ -15,13 +15,13 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <AnimateOnScroll animation="fade-up" duration={0.8} className="w-full">
+    <AnimateOnScroll animation="fade-up" duration={0.8} className="mx-auto w-full max-w-sm">
       <div
         className={`flex flex-col group ${offsetY ? 'lg:translate-y-8' : ''} transition-transform duration-500`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* A-Z Home Improvements logo */}
+        {/* DJ Maintenance & Construction logo */}
         <div className="relative w-full aspect-[4/5] bg-paper overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
           {/* Full logo stays visible inside the profile frame */}
           <Image

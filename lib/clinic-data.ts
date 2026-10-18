@@ -57,224 +57,86 @@ export interface ClinicInformation {
 }
 
 export const CLINIC_INFO: ClinicInformation = {
-  name: 'A-Z Home Improvements',
-  legalName: 'A-Z Home Improvements',
-  tagline: 'Where vision meets reality.',
+  name: 'DJ Maintenance & Construction',
+  legalName: 'DJ Maintenance & Construction',
+  tagline: 'Roof restoration and repairs in Mount Gambier.',
   primaryLocation: {
-    street: '176A Croham Valley Rd',
-    suite: '',
-    city: 'Croydon',
-    state: 'Greater London',
-    postalCode: 'CR2 7RB',
-    country: 'United Kingdom',
-    directions: '176A Croham Valley Rd, South Croydon CR2 7RB, United Kingdom',
-    landmarks: '9W2P+FM South Croydon, United Kingdom',
+    street: '77 Brownes Rd', suite: '', city: 'Mount Gambier', state: 'South Australia', postalCode: '5290', country: 'Australia',
+    directions: '77 Brownes Rd, Mount Gambier SA 5290, Australia',
+    landmarks: '5QG6+FG Mount Gambier, South Australia, Australia',
   },
-  contact: {
-    phone: '+44 7809 835355',
-    emergencyPhone: '+44 7809 835355',
-    whatsapp: '+44 7809 835355',
-    website: 'https://www.azhomeimprovements.co.uk/',
-    email: '',
-  },
-  identityHighlights: ['Established 2002', 'South Croydon, Greater London'],
+  contact: { phone: '+61 448 752 232', emergencyPhone: '+61 448 752 232', whatsapp: '+61 448 752 232', website: 'https://djroofrestorationandrepairs.com.au/', email: 'djbbuilding@gmail.com' },
+  identityHighlights: ['Roofing contractor', 'Mount Gambier, South Australia'],
   schedule: [
-    { day: 'Monday', hours: '7:30 AM–5:30 PM' },
-    { day: 'Tuesday', hours: '7:30 AM–5:30 PM' },
-    { day: 'Wednesday', hours: '7:30 AM–5:30 PM' },
-    { day: 'Thursday', hours: '7:30 AM–5:30 PM' },
-    { day: 'Friday', hours: '7:30 AM–5:30 PM' },
-    { day: 'Saturday', hours: '7:30 AM–12:30 PM' },
-    { day: 'Sunday', hours: 'Closed' },
+    { day: 'Monday', hours: '8:30 AM–3:30 PM' }, { day: 'Tuesday', hours: '8:30 AM–3:30 PM' },
+    { day: 'Wednesday', hours: '8:30 AM–3:30 PM' }, { day: 'Thursday', hours: '8:30 AM–3:30 PM' },
+    { day: 'Friday', hours: 'Closed' }, { day: 'Saturday', hours: 'Closed' }, { day: 'Sunday', hours: 'Closed' },
   ],
-  verifiedStats: [],
-  accreditations: [],
+  verifiedStats: [], accreditations: [],
 };
 
-export const DENTISTS: DentistProfile[] = [
-  {
-    id: 'home-improvements-team',
-    slug: 'nicholas-and-the-a-z-team',
-    name: 'Nicholas and the A-Z team',
-    title: 'Home improvement and building team',
-    qualifications: 'Residential building and refurbishment',
-    specialization: 'Extensions, conversions, renovations, kitchens and bathrooms',
-    experienceYears: 24,
-    bio: 'Nicholas and his team take on home improvement projects including extensions, loft and garage conversions, full refurbishments, kitchens and bathrooms in South Croydon and across South London.',
-    philosophy: 'Clear communication, careful workmanship and attention to detail from the quotation through to completion.',
-    education: [],
-    memberships: [],
-    specialties: ['Home extensions', 'Loft and garage conversions', 'Kitchens and bathrooms', 'Full home refurbishments'],
-    image: '/images/jsroof-stock-01.jpg',
-    warmImage: '/images/jsroof-stock-02.jpg',
-  },
-];
+const teamId = 'dino-and-team';
+export const DENTISTS: DentistProfile[] = [{
+  id: teamId, slug: 'dino-and-the-team', name: 'Dino and the team', title: 'Roof restoration and maintenance team',
+  qualifications: '', specialization: 'Roof restoration, repairs and construction', experienceYears: 0,
+  bio: 'DJ Maintenance & Construction helps homeowners in Mount Gambier with roof restoration, repairs, replacement and related roofing work. Customers have praised the team’s communication, quality of work and the fresh look of their roofs, gutters and roller doors.',
+  philosophy: 'Listen to what the property needs, explain the work clearly and take care with the finished result.',
+  education: [], memberships: [], specialties: ['Roof restoration', 'Roof repairs', 'Roof replacement', 'Guttering', 'Shed installation and repairs'],
+  image: '/images/jsroof-stock-01.jpg', warmImage: '/images/jsroof-stock-02.jpg',
+}];
 
-const projectPhotos = [
-  ...Array.from({ length: 17 }, (_, index) => `/images/jsroof-stock-${String(index + 1).padStart(2, '0')}.jpg`),
-];
+const photos = Array.from({ length: 17 }, (_, i) => `/images/jsroof-stock-${String(i + 1).padStart(2, '0')}.jpg`);
 
-const makeService = (
-  slug: string,
-  name: string,
-  navLabel: string,
-  tagline: string,
-  description: string,
-  problems: string[],
-  benefits: string[],
-  faqs: { question: string; answer: string }[],
-  photoIndex: number,
-): ServiceDetail => ({
-  slug,
-  name,
-  navLabel,
-  tagline,
-  shortDescription: description,
-  clinicalExplanation: description,
-  whoNeeds: problems,
-  benefits,
-  indications: problems.map((condition) => ({ condition, explanation: `We discuss the scope, practical considerations and suitable options for ${condition.toLowerCase()}.` })),
+const makeService = (slug: string, name: string, tagline: string, description: string, needs: string[], benefits: string[], photo: number): ServiceDetail => ({
+  slug, name, navLabel: name, tagline, shortDescription: description, clinicalExplanation: description,
+  whoNeeds: needs, benefits,
+  indications: needs.map((condition) => ({ condition, explanation: `We can discuss the roof, the issue you have noticed and the suitable options for ${condition.toLowerCase()}.` })),
   procedureSteps: [
-    { stepNumber: 1, title: 'Discuss your project', duration: 'By appointment', description: 'We learn what you want to change and assess the property and scope.', clinicalDetails: 'The initial conversation helps define a practical plan for your home.' },
-    { stepNumber: 2, title: 'Quotation and plan', duration: 'After assessment', description: 'We explain the proposed work, choices and timing before starting.', clinicalDetails: 'Costs and schedule are discussed with you before work begins.' },
-    { stepNumber: 3, title: 'Building work', duration: 'As agreed', description: 'Nicholas and the team carry out the agreed improvements with care for your home.', clinicalDetails: 'The work follows the agreed scope and practical arrangements.' },
-    { stepNumber: 4, title: 'Completion review', duration: 'At completion', description: 'We review the completed work with you and answer any questions.', clinicalDetails: 'The finished work is checked against the agreed project.' },
+    { stepNumber: 1, title: 'Tell us about the roof', duration: 'Initial conversation', description: 'Share what you have noticed and what you would like to have done.', clinicalDetails: 'We discuss the property, the roof and the work you have in mind.' },
+    { stepNumber: 2, title: 'Assess and quote', duration: 'By arrangement', description: 'The team reviews the job and explains the proposed scope and price.', clinicalDetails: 'The work is agreed with you before it begins.' },
+    { stepNumber: 3, title: 'Carry out the work', duration: 'As agreed', description: 'The team completes the agreed roofing or maintenance work.', clinicalDetails: 'Timing depends on the roof, access, materials and weather.' },
+    { stepNumber: 4, title: 'Review the finish', duration: 'On completion', description: 'Review the completed work with the team.', clinicalDetails: 'Any questions about the completed work can be discussed with the team.' },
   ],
   recoveryTimeline: [
-    { period: 'Before work begins', expectedSensations: 'We agree the project scope, choices and schedule with you.', careProtocol: 'Share your priorities and any details about the property that may affect the work.' },
-    { period: 'During the work', expectedSensations: 'Timing depends on the project, materials and property.', careProtocol: 'We discuss access and practical arrangements before work starts.' },
-    { period: 'After completion', expectedSensations: 'We walk through the completed work with you.', careProtocol: 'The team can answer questions about the work carried out.' },
+    { period: 'Before work', expectedSensations: 'The scope, timing and access arrangements are discussed.', careProtocol: 'Share details about the roof and any access considerations.' },
+    { period: 'During work', expectedSensations: 'Work duration varies with the roof and agreed scope.', careProtocol: 'Keep clear of the work area and follow the team’s site guidance.' },
+    { period: 'After work', expectedSensations: 'The completed work is ready for a review.', careProtocol: 'Contact the team with any questions about the work completed.' },
   ],
-  costTransparency: {
-    baseRange: 'Request a quote after an assessment.',
-    factors: ['Property and project scope', 'Materials and finishes selected', 'Access and work involved'],
-    whatIsIncluded: ['Agreed scope of work', 'Discussion of planned materials and finishes', 'Review of completed work'],
-    note: 'Pricing, timings and availability are confirmed with the team after discussing your project.',
-  },
-  beforeAfterCase: {
-    category: name,
-    clinicalContext: 'Illustrative images show residential properties. Project scope and finishes depend on the individual home and agreed work.',
-    beforeLabel: 'Reference image one',
-    afterLabel: 'Reference image two',
-    beforeImage: projectPhotos[photoIndex % projectPhotos.length],
-    afterImage: projectPhotos[(photoIndex + 1) % projectPhotos.length],
-    timeframe: 'Illustrative stock images',
-  },
-  assignedDentistId: 'home-improvements-team',
-  faqs,
+  costTransparency: { baseRange: 'Request a quote for your property.', factors: ['Roof condition and size', 'Materials and agreed scope', 'Access and site conditions'], whatIsIncluded: ['Discussion of the work required', 'Agreed roofing scope', 'Review of the finished work'], note: 'Price and timing are confirmed with the team after discussing the property and work.' },
+  beforeAfterCase: { category: name, clinicalContext: 'Roofing imagery is illustrative. The work required depends on the roof and agreed project scope.', beforeLabel: 'Roofing reference', afterLabel: 'Roofing reference', beforeImage: photos[photo % photos.length], afterImage: photos[(photo + 1) % photos.length], timeframe: 'Illustrative roofing images' },
+  assignedDentistId: teamId,
+  faqs: [
+    { question: `What does ${name.toLowerCase()} involve?`, answer: `${description} The exact work is discussed and agreed with you after reviewing your property and requirements.` },
+    { question: 'What can affect the quote?', answer: 'The size and condition of the property, the materials selected, site access and the agreed scope can all affect the price. The team will discuss these factors with you before work begins.' },
+    { question: 'How long will the work take?', answer: 'Timing depends on the work required, materials, access, site conditions and weather. The team will discuss a suitable schedule with you as part of the quote.' },
+    { question: 'How can I prepare for a discussion or site visit?', answer: 'Share what you have noticed, your property details and any access considerations. Photos taken safely from the ground can also help explain the issue. Please do not climb onto the roof.' },
+    { question: 'How do I arrange a quote?', answer: 'Call DJ Maintenance & Construction on +61 448 752 232 or use the request-a-quote form to discuss the property and next steps.' },
+  ],
 });
 
 export const SERVICES: ServiceDetail[] = [
-  makeService(
-    'home-extensions', 'Extensions and Home Additions', 'Extensions',
-    'Create more room at home with a carefully planned extension.',
-    'A home extension can add useful living space and change how your home works for your family. We discuss your plans, the property and the work involved before agreeing a scope.',
-    ['More living or dining space', 'A larger or reconfigured kitchen', 'A new porch or side extension'],
-    ['Discuss how you want to use the space', 'Plan the work around the existing home', 'Review the agreed finish with you'],
-    [{ question: 'Can you help plan an extension to my home?', answer: 'We can discuss your ideas, assess the property and explain the building work and next steps for a suitable project.' }], 0,
-  ),
-  makeService(
-    'loft-garage-conversions', 'Loft and Garage Conversions', 'Conversions',
-    'Make better use of your home with a loft or garage conversion.',
-    'Converting a loft or garage can create a bedroom, living area, shower room or utility space. We discuss the intended use and the existing property so the work can be planned around your needs.',
-    ['An unused loft or garage', 'A need for another bedroom or living area', 'A shower room or utility space at home'],
-    ['Plan the layout around your needs', 'Coordinate the building and interior work', 'Complete the agreed details throughout'],
-    [{ question: 'What can a garage conversion include?', answer: 'Past customer projects have included living space, a shower room and a utility room. The right layout depends on your property and plans.' }], 3,
-  ),
-  makeService(
-    'kitchens-bathrooms', 'Kitchens and Bathrooms', 'Kitchens and Bathrooms',
-    'Update your kitchen or bathroom with considered planning and careful finishing.',
-    'From a new kitchen layout to a complete bathroom refit, we coordinate the building and fitting work around the space and finishes you choose.',
-    ['A new kitchen or changed layout', 'A complete bathroom refit', 'Updating rooms as part of a wider renovation'],
-    ['Discuss your preferred layout and finishes', 'Coordinate the room refurbishment', 'Pay attention to the detail in the final fit'],
-    [{ question: 'Do you carry out full bathroom refits?', answer: 'Yes. Customers describe full bathroom refits and new bathrooms as part of larger home projects. We discuss the details and scope with you.' }], 10,
-  ),
-  makeService(
-    'home-refurbishments', 'Home Refurbishments', 'Refurbishments',
-    'Refresh your home with coordinated renovation and finishing work.',
-    'A home refurbishment can bring several rooms or the whole property together. We discuss the work you want completed and coordinate the agreed improvements across your home.',
-    ['A whole-home renovation', 'Updating multiple rooms', 'Combining structural changes with interior finishing'],
-    ['Agree the work across each room', 'Coordinate improvements and finishing', 'Keep attention on the details throughout'],
-    [{ question: 'Can you take on several rooms in one project?', answer: 'Customer projects have included full home refurbishments alongside kitchens, bathrooms and extensions. We can discuss the scope of your project.' }], 12,
-  ),
-  makeService(
-    'interior-finishing', 'Interior Finishing and Decorating', 'Finishing and Decorating',
-    'Bring rooms together with considered interior finishing and detail work.',
-    'Customer projects have included new coving and skirting, internal doors and decorating as part of bedroom and whole-home improvements.',
-    ['Updating bedroom details and finishes', 'Replacing internal doors', 'Decorating as part of a wider refurbishment'],
-    ['Discuss the details and finish you want', 'Coordinate finishing with the wider project', 'Take care over the completed details'],
-    [{ question: 'Can you include smaller finishing work in a larger project?', answer: 'Customer projects have included coving, skirting, internal doors and decorating alongside other home improvements.' }], 1,
-  ),
-  makeService(
-    'roofing-lean-to-improvements', 'Roofing and Lean-to Improvements', 'Roofing and Lean-tos',
-    'Improve a lean-to or roof area as part of your home project.',
-    'Customer projects have included replacing an old plastic lean-to roof with corrugated steel. The right materials and scope depend on the existing structure and your plans.',
-    ['An ageing lean-to roof', 'A planned home extension or refurbishment', 'Roofing work that is part of a broader building project'],
-    ['Discuss the existing structure and desired finish', 'Agree materials and work scope', 'Coordinate the roof work with the rest of the project'],
-    [{ question: 'Can you replace a lean-to roof?', answer: 'A customer project included replacing an old plastic lean-to roof with corrugated steel. We can discuss your structure and the work required.' }], 5,
-  ),
+  makeService('roof-installation', 'Roof Installation', 'Roofing planned around your property and project.', 'Roof installation for roofing projects, with materials and scope discussed for the property before work begins.', ['A new roof for a residential or commercial property', 'A roofing project as part of new construction'], ['Discuss suitable materials and project scope', 'Agree the work and timing before starting'], 0),
+  makeService('roof-repairs', 'Roof Repairs', 'Address roof damage and leaks with practical repair work.', 'Roof repairs for issues such as leaks and damaged roofing. The team can discuss what you have noticed and the work needed.', ['A roof leak or water entry', 'Damaged or displaced roofing materials', 'Roof maintenance and repair needs'], ['Discuss the visible issue and roof condition', 'Arrange repair work to suit the agreed scope'], 2),
+  makeService('roof-replacement', 'Roof Replacement', 'Renew an ageing or significantly damaged roof.', 'Roof replacement for properties where the roof has reached the end of its service life or has significant damage.', ['An ageing roof', 'Significant roof damage', 'A planned roof renewal'], ['Plan replacement work for your property', 'Discuss materials, scope and timing'], 4),
+  makeService('shed-installation', 'Shed Installation', 'Add a practical shed or workspace to your property.', 'Shed design and construction for additional storage, a workshop or a useful work space.', ['Additional storage space', 'A workshop or functional work area', 'A new shed for a home or commercial property'], ['Discuss the intended use and layout', 'Plan a shed to suit the property'], 6),
+  makeService('shed-repairs-restoration', 'Shed Repairs & Restoration', 'Restore a shed’s appearance and function.', 'Shed repairs and restoration to help bring an existing structure back into good working order.', ['A damaged or ageing shed', 'Roof or exterior repairs', 'A shed needing restoration work'], ['Discuss the condition and work required', 'Restore the shed for continued use'], 8),
+  makeService('roof-inspections', 'Roof Inspections', 'Understand the condition of your roof and maintenance needs.', 'Roof inspections to identify visible issues and discuss maintenance or repairs for your property.', ['A roof condition check', 'Concerns after severe weather', 'Planning maintenance or repairs'], ['Identify areas that may need attention', 'Discuss practical next steps'], 10),
+  makeService('gutter-installation-maintenance', 'Gutter Installation & Maintenance', 'Keep rainwater moving away from your property.', 'Gutter installation and maintenance to support proper drainage and help protect your property from water damage.', ['New guttering', 'Gutters needing maintenance', 'Drainage concerns around the property'], ['Discuss guttering options for your roof', 'Help maintain effective rainwater drainage'], 12),
+  makeService('custom-roofing-projects', 'Custom Roofing Projects', 'Roofing and shed solutions for individual project needs.', 'Tailored solutions for unique roofing, shed and construction projects, discussed with you to establish the right scope.', ['A project that needs a tailored roofing solution', 'A non-standard shed or roof requirement'], ['Plan around the needs of your property', 'Discuss the project directly with the team'], 14),
+  makeService('emergency-roof-repairs', 'Emergency Roof Repairs', 'Discuss urgent roof damage and the safest next steps.', 'Urgent roofing repairs for issues such as storm damage and severe leaks. Contact the team to discuss your situation and access.', ['Storm damage', 'A severe roof leak', 'Urgent damage needing attention'], ['Talk through the issue and safe next steps', 'Arrange an assessment when access is safe'], 16),
 ];
 
-export interface EmergencyCondition {
-  id: string;
-  title: string;
-  urgency: 'Immediate (0–2 hours)' | 'Same-Day (2–6 hours)' | 'Urgent (Within 24 hours)';
-  symptoms: string[];
-  immediateAction: string[];
-  clinicTreatment: string;
-}
-
+export interface EmergencyCondition { id: string; title: string; urgency: 'Immediate (0–2 hours)' | 'Same-Day (2–6 hours)' | 'Urgent (Within 24 hours)'; symptoms: string[]; immediateAction: string[]; clinicTreatment: string; }
 export const EMERGENCY_CONDITIONS: EmergencyCondition[] = [
-  { id: 'active-leak', title: 'Active roof leak', urgency: 'Same-Day (2–6 hours)', symptoms: ['Water dripping through the ceiling', 'A damp patch growing during rain'], immediateAction: ['Move people and belongings away from the wet area.', 'If safe, collect dripping water. Keep away from electrical fittings affected by water.', 'Do not climb onto the roof during rain.'], clinicTreatment: 'Assessment of the leak and the repair options once the property can be accessed safely.' },
-  { id: 'storm-damage', title: 'Roof tiles displaced by wind', urgency: 'Urgent (Within 24 hours)', symptoms: ['Tiles on the ground or out of place', 'Areas of the roof exposed'], immediateAction: ['Keep clear of loose materials.', 'Photograph visible damage from the ground if safe.', 'Do not climb onto the roof or try to replace tiles yourself.'], clinicTreatment: 'Inspection of the affected roof areas when access is safe.' },
-  { id: 'ceiling-water', title: 'Water near electrical fittings', urgency: 'Immediate (0–2 hours)', symptoms: ['Dampness near lights or sockets', 'Ceiling sagging or changing shape'], immediateAction: ['Leave the affected area and do not touch wet electrical equipment.', 'If there may be electrical danger, contact a qualified professional to isolate the power.', 'Seek emergency assistance if anyone or the property is in immediate danger.'], clinicTreatment: 'Make the property safe first; the roof can be assessed once the area is secure.' },
+  { id: 'active-leak', title: 'Active roof leak', urgency: 'Same-Day (2–6 hours)', symptoms: ['Water entering through the roof', 'A growing damp patch during rain'], immediateAction: ['Move people and belongings away from the wet area.', 'Keep clear of electrical fittings affected by water.', 'Do not climb onto the roof during rain.'], clinicTreatment: 'Contact the team to discuss the leak and arrange next steps when the property can be accessed safely.' },
+  { id: 'storm-damage', title: 'Storm damage', urgency: 'Urgent (Within 24 hours)', symptoms: ['Roofing materials displaced by wind', 'An exposed area of roof'], immediateAction: ['Keep clear of loose materials.', 'Photograph visible damage from the ground if safe.', 'Do not climb onto the roof or attempt repairs yourself.'], clinicTreatment: 'The team can discuss an inspection when access is safe.' },
+  { id: 'ceiling-water', title: 'Water near electrical fittings', urgency: 'Immediate (0–2 hours)', symptoms: ['Dampness near lights or sockets', 'A sagging or changing ceiling'], immediateAction: ['Leave the affected area and do not touch wet electrical equipment.', 'Contact a qualified professional if electrical power needs to be isolated.', 'Seek emergency assistance if anyone or the property is in immediate danger.'], clinicTreatment: 'Make the property safe first; roof work can be discussed when the area is secure.' },
 ];
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  category: string;
-  readTime: string;
-  publishDate: string;
-  lastUpdated: string;
-  authorId: string;
-  excerpt: string;
-  leadImage: string;
-  relatedServiceSlug: string;
-  content: { intro: string; sections: { heading: string; body: string }[]; faqs?: { question: string; answer: string }[] };
-}
-
+export interface BlogPost { slug: string; title: string; category: string; readTime: string; publishDate: string; lastUpdated: string; authorId: string; excerpt: string; leadImage: string; relatedServiceSlug: string; content: { intro: string; sections: { heading: string; body: string }[]; faqs?: { question: string; answer: string }[] }; }
 export const BLOG_POSTS: BlogPost[] = [
-  {
-    slug: 'planning-a-home-extension', title: 'Planning a home extension around the way you live', category: 'Extensions', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'Start with the space you need, how it should connect to your home and the details to discuss before work begins.', leadImage: projectPhotos[2], relatedServiceSlug: 'home-extensions',
-    content: { intro: 'A useful extension begins with a clear idea of what is missing in your home. Think about how you use the existing rooms, where you want to spend time and how the new space should connect to the rest of the house.', sections: [
-      { heading: 'Define the purpose of the new space', body: 'List what you want the extension to make possible, such as a larger kitchen, a dining area or more room for everyday living. This helps guide layout and finish choices.' },
-      { heading: 'Discuss the property and scope', body: 'The existing house, access, materials and the work involved all affect the plan. Discuss the project and its practical details before agreeing a quotation and schedule.' },
-    ], faqs: [{ question: 'What should I discuss first?', answer: 'Start with how you want to use the new space, then discuss the property, your priorities, possible finishes and the work involved.' }] },
-  },
-  {
-    slug: 'making-more-of-a-garage', title: 'Making more of your garage space', category: 'Conversions', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'A garage conversion can add living space, a shower room or a utility area. Begin by deciding how you want the room to work.', leadImage: projectPhotos[5], relatedServiceSlug: 'loft-garage-conversions',
-    content: { intro: 'If your garage is used mainly for storage, a conversion may be one way to make more use of the space at home. The right layout depends on the room, the existing property and what you want to add.', sections: [
-      { heading: 'Choose how you will use the room', body: 'Consider whether you need a living area, a shower room, a utility space or a combination. The intended use helps shape the layout and the work required.' },
-      { heading: 'Plan the connection to the home', body: 'Think about access, light, privacy and how the converted room will fit with nearby spaces. Discuss the existing structure and your priorities with the building team.' },
-    ] },
-  },
-  {
-    slug: 'planning-a-bathroom-refit', title: 'What to think about before a bathroom refit', category: 'Bathrooms', readTime: '4 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'A clear list of priorities can help you discuss layout, fittings and finishes for a new bathroom.', leadImage: projectPhotos[8], relatedServiceSlug: 'kitchens-bathrooms',
-    content: { intro: 'Before a bathroom refit, consider what works in the current room and what you would like to change. A short list of needs can help you compare layout and finish choices.', sections: [
-      { heading: 'Set your priorities', body: 'Think about storage, access, lighting, fittings and the way the room is shared. Decide which details matter most to you before choosing finishes.' },
-      { heading: 'Talk through the whole project', body: 'Discuss the room, the proposed changes and the work involved with your building team. Agree the project scope and timing before work begins.' },
-    ], faqs: [{ question: 'Can a bathroom be part of a larger project?', answer: 'Yes. Customer projects have included new bathrooms alongside kitchen work, conversions and whole-home refurbishments.' }] },
-  },
-  {
-    slug: 'organising-a-home-refurbishment', title: 'Getting ready for a home refurbishment', category: 'Refurbishments', readTime: '5 min read', publishDate: '2026-10-13', lastUpdated: '2026-10-13', authorId: 'home-improvements-team',
-    excerpt: 'Bring your priorities, rooms and finish choices together before agreeing the scope of a home refurbishment.', leadImage: projectPhotos[12], relatedServiceSlug: 'home-refurbishments',
-    content: { intro: 'A home refurbishment can cover several rooms or a full property. Start by listing what needs to change and how you want the home to feel and function when the work is finished.', sections: [
-      { heading: 'List the work by room', body: 'Write down the changes you want in each space and note any work that connects rooms, such as a new kitchen layout or changes to circulation.' },
-      { heading: 'Agree scope and sequence', body: 'Discuss the full list with the team so the work, materials and timing can be considered together. Confirm what is included before the project begins.' },
-    ] },
-  },
+  { slug: 'signs-your-roof-needs-repair', title: 'Signs your roof may need repair', category: 'Roof Repairs', readTime: '3 min read', publishDate: '2026-10-18', lastUpdated: '2026-10-18', authorId: teamId, excerpt: 'Leaks, damaged roofing materials and damp patches can all be reasons to arrange a roof assessment.', leadImage: photos[2], relatedServiceSlug: 'roof-repairs', content: { intro: 'Roof issues are not always obvious from inside the home. A leak or visible damage is a useful reason to ask a roofing contractor to assess the roof and discuss next steps.', sections: [{ heading: 'Look for signs from the ground', body: 'After bad weather, look for displaced materials or damage from a safe position on the ground. Do not climb onto a roof to inspect or repair it yourself.' }, { heading: 'Notice changes inside', body: 'Water marks or damp patches may point to a roof leak. Keep people and belongings away from affected areas and be cautious around electrical fittings.' }] } },
+  { slug: 'planning-a-roof-replacement', title: 'Planning a roof replacement', category: 'Roof Replacement', readTime: '4 min read', publishDate: '2026-10-18', lastUpdated: '2026-10-18', authorId: teamId, excerpt: 'Discuss the roof condition, materials, access and project timing before replacement work begins.', leadImage: photos[4], relatedServiceSlug: 'roof-replacement', content: { intro: 'A roof replacement starts with understanding the property, the roof condition and the work involved. Discuss materials and project scope with your roofing contractor before agreeing on a plan.', sections: [{ heading: 'Talk through the roof and materials', body: 'The existing roof and the needs of the property help guide material options and the scope of work.' }, { heading: 'Agree timing and access', body: 'Access, site conditions and weather can affect scheduling. Confirm the arrangements and quote before work starts.' }] } },
+  { slug: 'roof-maintenance-and-gutters', title: 'Roof maintenance and guttering', category: 'Guttering', readTime: '3 min read', publishDate: '2026-10-18', lastUpdated: '2026-10-18', authorId: teamId, excerpt: 'Good drainage helps direct rainwater away from your roof and property.', leadImage: photos[12], relatedServiceSlug: 'gutter-installation-maintenance', content: { intro: 'Gutters form part of the roof drainage system. If they are damaged or not draining as expected, discuss the condition with a roofing contractor.', sections: [{ heading: 'Pay attention to drainage', body: 'Overflowing or damaged guttering may need maintenance or replacement. Describe what you have noticed when arranging an assessment.' }, { heading: 'Keep access safe', body: 'Avoid climbing ladders or working at height without the right training and equipment. Contact a qualified contractor to discuss the work.' }] } },
+  { slug: 'what-to-do-after-storm-roof-damage', title: 'What to do after storm damage to a roof', category: 'Emergency Repairs', readTime: '3 min read', publishDate: '2026-10-18', lastUpdated: '2026-10-18', authorId: teamId, excerpt: 'Keep clear of loose roofing materials and contact a contractor to discuss safe next steps.', leadImage: photos[16], relatedServiceSlug: 'emergency-roof-repairs', content: { intro: 'Storms can dislodge or damage roofing materials. Keep people away from affected areas and do not climb onto the roof to inspect it.', sections: [{ heading: 'Make the area safe', body: 'Keep clear of loose materials and move people and belongings away from any water entering the property. Be cautious around wet electrical fittings.' }, { heading: 'Get advice', body: 'Photograph visible damage from the ground if safe, then contact a roofing contractor to discuss inspection and repairs.' }] } },
 ];

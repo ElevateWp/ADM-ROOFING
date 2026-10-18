@@ -27,7 +27,7 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'home-extensions',
+    service: 'roof-repairs',
     preferredDate: '',
     preferredTime: 'Morning (09:00 – 12:00)',
     notes: '',
@@ -108,7 +108,7 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'home-extensions',
+                service: 'roof-repairs',
                 preferredDate: '',
                 preferredTime: 'Morning (09:00 – 12:00)',
                 notes: '',
@@ -137,7 +137,7 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request a Home Improvement Quote
+          Request a Roofing Quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
           Tell us what you would like to improve. Our team will contact you to discuss the project and next steps.
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#6B7280] transition-all duration-200">
+          <span className="font-body text-13 text-[#737779] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+44 7809 835355"
+            placeholder="+61 448 752 232"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#737779]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.email}</span>
+            <span className="font-body text-13 text-[#737779]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -229,7 +229,7 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Other home improvement project</option>
+          <option value="general-consultation">Other roofing work project</option>
         </select>
       </div>
 
@@ -252,7 +252,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#6B7280]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#737779]">{errors.preferredDate}</span>
           )}
         </div>
 

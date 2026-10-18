@@ -1,217 +1,286 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import Image from 'next/image';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { CLINIC_INFO } from '@/lib/clinic-data';
-import { MOTION, isReducedMotion } from '@/lib/motion';
-import Button from '@/components/ui/Button';
+import { isReducedMotion } from '@/lib/motion';
+
+if (typeof window !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+const FRAME_COUNT = 300;
+const FRAME_URL = (index: number) =>
+  `/images/home-roof-sequence/frame-${String(index + 1).padStart(3, '0')}.jpg`;
+
+const STORY = [
+  {
+    eyebrow: 'ROOF REPAIRS · MOUNT GAMBIER',
+    title: 'Noticed a leak or damaged roof?',
+    text: 'Small roofing problems can grow over time. Tell Dino and the team what you have noticed and discuss a practical next step.',
+  },
+  {
+    eyebrow: 'ROOF RESTORATION',
+    title: 'Ready to refresh an ageing roof?',
+    text: 'Restore the look of your home with roof work planned around your property, from the first inspection through to the finished result.',
+  },
+  {
+    eyebrow: 'GUTTERING',
+    title: 'Is water not draining where it should?',
+    text: 'Gutter installation, replacement and maintenance help direct rainwater away from your roof and home.',
+  },
+  {
+    eyebrow: 'ROOF REPLACEMENT',
+    title: 'Considering a new roof?',
+    text: 'Talk through the condition of your roof, suitable options and the work involved before deciding what comes next.',
+  },
+  {
+    eyebrow: 'SHEDS · ROOFING · REPAIRS',
+    title: 'Need help with a shed project?',
+    text: 'Discuss shed installation and repairs, along with roofing work for homes and properties around Mount Gambier.',
+  },
+  {
+    eyebrow: 'DJ MAINTENANCE & CONSTRUCTION',
+    title: 'Let’s talk about your roof.',
+    text: 'Call Dino and the team to discuss roof restoration, repairs, replacement, guttering or shed work in Mount Gambier.',
+  },
+];
 
 export default function HomeHero() {
-  const heroRef = useRef<HTMLElement>(null);
-  const h1Ref = useRef<HTMLHeadingElement>(null);
-  const wordsRef = useRef<HTMLSpanElement[]>([]);
-  const paraRef = useRef<HTMLParagraphElement>(null);
-  const actionsRef = useRef<HTMLDivElement>(null);
-  const infoRef = useRef<HTMLDivElement>(null);
-  const locationRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const panelsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const frameRef = useRef(0);
 
   useEffect(() => {
-    if (isReducedMotion() || !heroRef.current) return;
+    const section = sectionRef.current;
+    const canvas = canvasRef.current;
+    const context = canvas?.getContext('2d', { alpha: false });
+    if (!section || !canvas || !context) return;
 
-    const words = wordsRef.current.filter(Boolean);
+    let disposed = false;
+    let desiredFrame = 0;
+    const loaded = new Map<number, HTMLImageElement>();
+    const pending = new Map<number, HTMLImageElement>();
 
-    const tl = gsap.timeline({
-      delay: 0.5,
-    });
+    const drawFrame = (index: number) => {
+      const image = loaded.get(index);
+      if (!image || disposed) return;
+      const bounds = canvas.getBoundingClientRect();
+      if (!bounds.width || !bounds.height) return;
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const width = Math.round(bounds.width * dpr);
+      const height = Math.round(bounds.height * dpr);
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+      const scale = Math.max(width / image.naturalWidth, height / image.naturalHeight);
+      const drawWidth = image.naturalWidth * scale;
+      const drawHeight = image.naturalHeight * scale;
+      context.clearRect(0, 0, width, height);
+      context.drawImage(image, (width - drawWidth) / 2, (height - drawHeight) / 2, drawWidth, drawHeight);
+    };
 
-    // 0.50s H1 word reveal
-    if (words.length > 0) {
-      tl.fromTo(
-        words,
-        { y: '115%', opacity: 0 },
-        {
-          y: '0%',
-          opacity: 1,
-          duration: 0.85,
-          stagger: 0.04,
-          ease: 'power3.out',
+    const loadFrame = (index: number) => {
+      if (index < 0 || index >= FRAME_COUNT || loaded.has(index) || pending.has(index)) return;
+      const image = new Image();
+      image.decoding = 'async';
+      pending.set(index, image);
+      image.onload = () => {
+        pending.delete(index);
+        if (disposed) return;
+        loaded.set(index, image);
+        if (loaded.size > 20) {
+          let oldest: number | undefined;
+          loaded.forEach((_, key) => {
+            if (oldest === undefined && Math.abs(key - desiredFrame) > 10 && key !== index) oldest = key;
+          });
+          if (oldest !== undefined) loaded.delete(oldest);
         }
-      );
-    }
+        if (index === desiredFrame) drawFrame(index);
+      };
+      image.onerror = () => pending.delete(index);
+      image.src = FRAME_URL(index);
+    };
 
-    // Supporting paragraph fades up
-    if (paraRef.current) {
-      tl.fromTo(
-        paraRef.current,
-        { y: 18, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.7,
+    const showFrame = (index: number) => {
+      desiredFrame = Math.max(0, Math.min(FRAME_COUNT - 1, Math.round(index)));
+      frameRef.current = desiredFrame;
+      loadFrame(desiredFrame);
+      if (loaded.has(desiredFrame)) drawFrame(desiredFrame);
+      // Keep a short buffer ahead of the playhead so the sequence stays fluid.
+      for (let offset = 1; offset <= 6; offset += 1) loadFrame(desiredFrame + offset);
+    };
+
+    const resizeObserver = new ResizeObserver(() => showFrame(frameRef.current));
+    resizeObserver.observe(canvas);
+    showFrame(0);
+
+    const reducedMotion = isReducedMotion();
+    const panels = panelsRef.current.filter((panel): panel is HTMLDivElement => panel !== null);
+    const siteHeader = document.querySelector<HTMLElement>('[data-site-header]');
+    const ctx = gsap.context(() => {
+      if (reducedMotion) {
+        gsap.set(panels, { autoAlpha: 0, x: 0 });
+        gsap.set(panels[0], { autoAlpha: 1 });
+        return;
+      }
+
+      gsap.set(panels, { autoAlpha: 0, x: 0 });
+      gsap.set(panels[0], { autoAlpha: 1 });
+
+      const hideHeader = () => {
+        if (!siteHeader) return;
+        gsap.to(siteHeader, {
+          autoAlpha: 0,
+          y: -14,
+          duration: 0.55,
           ease: 'power2.out',
-        },
-        '-=0.5'
-      );
-    }
-
-    // Actions arrive with scale
-    if (actionsRef.current) {
-      tl.fromTo(
-        actionsRef.current.children,
-        { scale: 0.95, opacity: 0, y: 10 },
-        {
-          scale: 1,
-          opacity: 1,
+          overwrite: 'auto',
+        });
+      };
+      const showHeader = () => {
+        if (!siteHeader) return;
+        gsap.to(siteHeader, {
+          autoAlpha: 1,
           y: 0,
-          duration: 0.6,
-          stagger: 0.1,
-          ease: 'power3.out',
-        },
-        '-=0.4'
-      );
-    }
+          duration: 0.55,
+          ease: 'power2.out',
+          overwrite: 'auto',
+        });
+      };
 
-    // Business information slides in from right
-    if (infoRef.current) {
-      tl.fromTo(
-        infoRef.current,
-        { x: 30, opacity: 0 },
-        {
-          x: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power3.out',
+      const story = gsap.timeline({
+        defaults: { ease: 'power2.out' },
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: () => `+=${window.innerHeight * STORY.length}`,
+          pin: true,
+          // The homepage is a flex column, where ScrollTrigger otherwise disables pin spacing by default.
+          pinSpacing: true,
+          scrub: 1.6,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+          onEnter: hideHeader,
+          onEnterBack: hideHeader,
+          onLeave: showHeader,
+          onLeaveBack: showHeader,
         },
-        '-=0.5'
-      );
-    }
+      });
 
-    // Service area line
-    if (locationRef.current) {
-      tl.fromTo(
-        locationRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5 },
-        '-=0.3'
-      );
-    }
+      const playhead = { frame: 0 };
+      story.to(playhead, {
+        frame: FRAME_COUNT - 1,
+        duration: STORY.length,
+        ease: 'none',
+        onUpdate: () => showFrame(playhead.frame),
+      }, 0);
+
+      STORY.forEach((_, index) => {
+        if (index === 0) return;
+        const previous = panels[index - 1];
+        const current = panels[index];
+        const enterFrom = index % 2 === 1 ? -52 : 52;
+        const leaveTo = index % 2 === 1 ? 34 : -34;
+        story.to(previous, {
+          autoAlpha: 0,
+          x: leaveTo,
+          y: -10,
+          scale: 0.99,
+          duration: 0.58,
+          ease: 'power2.inOut',
+        }, index - 0.18);
+        story.fromTo(current,
+          { autoAlpha: 0, x: enterFrom, y: 14, scale: 0.985 },
+          {
+            autoAlpha: 1,
+            x: 0,
+            y: 0,
+            scale: 1,
+            duration: 0.72,
+            ease: 'power3.out',
+          },
+          index - 0.08
+        );
+      });
+    }, section);
 
     return () => {
-      tl.kill();
+      disposed = true;
+      resizeObserver.disconnect();
+      ctx.revert();
+      loaded.clear();
+      pending.clear();
     };
   }, []);
 
-  const headline = 'Home improvements, built around your vision.';
-  const headlineWords = headline.split(' ');
+  const phone = CLINIC_INFO.contact.phone;
+  const phoneLink = `tel:${phone.replace(/[^0-9+]/g, '')}`;
 
   return (
     <section
-      ref={heroRef}
-      className="relative min-h-[85vh] lg:min-h-[90vh] flex items-center bg-paper overflow-hidden py-12 sm:py-16 md:py-24"
+      ref={sectionRef}
+      aria-label="Roofing services in Mount Gambier"
+      className="relative z-30 isolate h-[100svh] min-h-[620px] w-full shrink-0 overflow-hidden bg-[#171A1C] text-white"
     >
-      <Image
-        src="/images/jsroof-stock-01.jpg"
-        alt="Illustrative construction work at a residential property"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-[58%_center] grayscale sepia-[0.2]"
+      <canvas
+        ref={canvasRef}
+        aria-label="A sequence showing roof construction work"
+        className="absolute inset-0 h-full w-full object-cover"
       />
+      <div aria-hidden="true" className="absolute inset-0 bg-[#171A1C]/45" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-[#FFFFFF]/95 via-[#FFFFFF]/90 to-[#FFFFFF]/80 md:from-[#FFFFFF]/95 md:via-[#FFFFFF]/90 md:to-[#FFFFFF]/78"
+        className="absolute inset-0 bg-gradient-to-r from-[#171A1C]/80 via-[#171A1C]/25 to-[#171A1C]/55"
       />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#171A1C]/55 via-transparent to-[#171A1C]/15" aria-hidden="true" />
 
-      <div className="relative z-10 max-w-site mx-auto px-4 sm:px-6 md:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-          {/* Columns 1–8: Left-aligned H1, Paragraph, Actions */}
-          <div className="lg:col-span-8 flex flex-col justify-center">
-            {/* Semantic Single H1 */}
-            <div className="flex items-center gap-3 mb-4 md:mb-5">
-              <span aria-hidden="true" className="h-px w-8 bg-[#1749C9]" />
-              <span className="font-body text-[11px] text-[#6B7280] uppercase tracking-[0.14em]">
-                Construction company in South Croydon
-              </span>
-            </div>
-            <h1
-              ref={h1Ref}
-              aria-label={headline}
-              className="font-display text-[#202A3C] text-33 sm:text-41 md:text-52 lg:text-65 xl:text-81 leading-[1.05] tracking-[-0.03em] font-normal mb-6 md:mb-8 max-w-4xl"
+      <div className="relative z-10 h-full w-full">
+        {STORY.map((item, index) => {
+          const isRight = index % 2 === 1;
+          const Heading = index === 0 ? 'h1' : 'h2';
+          return (
+            <div
+              key={item.eyebrow}
+              ref={(element) => { panelsRef.current[index] = element; }}
+              className={`absolute inset-0 flex items-center px-6 sm:px-10 lg:px-[9vw] ${isRight ? 'justify-end' : 'justify-start'}`}
             >
-              {headlineWords.map((word, idx) => (
-                <React.Fragment key={idx}>
-                  <span className="inline-block overflow-hidden align-top pb-[0.08em] mr-[0.24em] last:mr-0">
-                    <span
-                      ref={(el) => {
-                        if (el) wordsRef.current[idx] = el;
-                      }}
-                      className={`inline-block will-change-transform ${['improvements,', 'vision.'].includes(word) ? 'text-[#1749C9]' : ''}`}
+              <div className={`w-full max-w-[620px] ${isRight ? 'text-right' : 'text-left'}`}>
+                <p className="mb-5 font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-white/75 sm:text-xs">
+                  {item.eyebrow}
+                </p>
+                <Heading className="mb-5 font-display text-4xl font-normal leading-[1.04] tracking-[-0.035em] text-white sm:text-5xl md:text-6xl lg:text-[clamp(3.5rem,6.4vw,6rem)]">
+                  {item.title}
+                </Heading>
+                <p className={`max-w-[540px] text-base leading-relaxed text-white/80 sm:text-lg ${isRight ? 'ml-auto' : ''}`}>
+                  {item.text}
+                </p>
+                {index === STORY.length - 1 && (
+                  <div className={`mt-8 flex flex-wrap gap-3 ${isRight ? 'justify-end' : 'justify-start'}`}>
+                    <a
+                      href={phoneLink}
+                      className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 text-sm font-semibold text-[#242729] transition-colors hover:bg-[#E6E7E5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                     >
-                      {word}
-                    </span>
-                  </span>
-                  {(idx === 1 || idx === 4) && (
-                    <br className="hidden sm:block" />
-                  )}
-                </React.Fragment>
-              ))}
-            </h1>
-
-            <p
-              ref={paraRef}
-              className="font-body text-15 sm:text-17 md:text-21 text-forest-ink/90 leading-relaxed mb-8 md:mb-10 max-w-2xl"
-            >
-              Extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments, delivered with care by Nicholas and his team.
-            </p>
-
-            <div
-              ref={actionsRef}
-              className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-8"
-            >
-              <Button href="/request-a-quote/" variant="forest" size="lg" className="w-full sm:w-auto font-medium">
-                Request a Quote
-              </Button>
-              <Button
-                href={`tel:${CLINIC_INFO.contact.phone.replace(/[^0-9+]/g, '')}`}
-                variant="ghost"
-                size="lg"
-                className="w-full sm:w-auto font-medium"
-              >
-                Call {CLINIC_INFO.contact.phone}
-              </Button>
-            </div>
-
-            <div
-              ref={locationRef}
-              className="font-body text-13 text-[#202A3C]/70 flex flex-wrap items-center gap-2"
-            >
-              <span className="font-medium text-[#202A3C]">Established 2002</span>
-              <span className="hidden sm:inline">•</span>
-              <span>South Croydon, CR2 7RB</span>
-              <span className="hidden sm:inline">•</span>
-            </div>
-          </div>
-
-          {/* Columns 9–12: Quiet Clinical Credential Brief */}
-          <div
-            ref={infoRef}
-            className="lg:col-span-4 lg:pl-4 flex flex-col justify-center"
-          >
-            <div className="p-6 sm:p-8 bg-[#F5F8F5] border border-[#DCE3E8] shadow-sm flex flex-col space-y-4">
-              <span className="font-body text-13 text-[#202A3C] uppercase tracking-wider font-semibold">
-                A-Z Home Improvements
-              </span>
-              <p className="font-body text-13 sm:text-15 text-[#202A3C]/90 leading-relaxed">
-                <strong className="text-[#202A3C] font-semibold">Where vision meets reality.</strong> &mdash; home projects shaped around the way you want to live.
-              </p>
-              <div className="pt-3 border-t border-[#DCE3E8] flex items-center justify-between text-13 font-body text-[#202A3C]/70">
-                <span>176A Croham Valley Rd</span>
-                <span className="text-[#202A3C] font-semibold">+44 7809 835355</span>
+                      Call {phone}
+                    </a>
+                    <a
+                      href="/request-a-quote/"
+                      className="inline-flex min-h-12 items-center justify-center rounded-full border border-white/65 px-7 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                    >
+                      Request a quote
+                    </a>
+                  </div>
+                )}
               </div>
             </div>
-          </div>
-        </div>
+          );
+        })}
+      </div>
+
+      <div className="pointer-events-none absolute bottom-7 left-6 right-6 z-20 flex items-center justify-between font-body text-[10px] uppercase tracking-[0.16em] text-white/70 sm:left-10 sm:right-10 lg:left-[9vw] lg:right-[9vw]">
+        <span>DJ Maintenance &amp; Construction · Mount Gambier</span>
+        <span>Scroll to explore</span>
       </div>
     </section>
   );

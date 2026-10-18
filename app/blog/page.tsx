@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Home Improvement Advice',
+  title: 'Roofing Advice',
   description:
-    'Practical planning ideas for home extensions, conversions, bathrooms and refurbishments from A-Z Home Improvements.',
+    'Practical planning ideas for home roof restoration, roof repairs, guttering and roof replacement from DJ Maintenance & Construction.',
   pathname: '/blog/',
 });
 
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Home Improvement Advice', path: '/blog/' }]} />
+          <Breadcrumbs items={[{ name: 'Roofing Advice', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Home Improvement Advice
+                  Roofing Advice
                 </span>
-                <WordRevealH1 text="Ideas for planning your next home project." />
+                <WordRevealH1 text="Ideas for planning your next roofing project." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Read practical ways to organise an extension, conversion, bathroom refit or whole-home refurbishment.
+                  Read practical guides to roof repairs, replacement, maintenance and what to do after storm damage.
                 </p>
               </AnimateOnScroll>
             </div>

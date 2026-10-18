@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://www.azhomeimprovements.co.uk';
+export const BASE_URL = 'https://djroofrestorationandrepairs.com.au';
 
 export function createMetadata({
   title,
@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_GB',
+      locale: 'en_AU',
       type: 'website',
       images: [
         {
@@ -115,7 +115,7 @@ export function generateMedicalProcedureSchema(serviceName: string, description:
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Home improvement and building work',
+    serviceType: 'Roofing, roof restoration, roof repairs and maintenance',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

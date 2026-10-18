@@ -7,19 +7,19 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What home improvement projects do you take on?',
-    answer: 'Customer projects include extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments.',
-    relatedLink: { href: '/home-extensions/', label: 'Explore our services →' },
+    question: 'What roofing services do you provide?',
+    answer: 'Roof installation, repairs, replacement, restoration, inspections, guttering, shed work and custom roofing projects.',
+    relatedLink: { href: '/services/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
-    answer: 'Contact our team to check availability for your property in Croydon or the surrounding area.',
+    answer: 'DJ Maintenance & Construction is based in Mount Gambier, South Australia. Contact the team to discuss your property.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Do you carry out kitchen and bathroom projects?',
-    answer: 'Yes. Customer reviews describe kitchen redevelopments and full bathroom refits, including work as part of larger home projects.',
-    relatedLink: { href: '/kitchens-bathrooms/', label: 'Explore kitchens and bathrooms →' },
+    question: 'Can you help with guttering and sheds?',
+    answer: 'Yes. The service range includes gutter installation and maintenance, shed installation, and shed repair and restoration.',
+    relatedLink: { href: '/gutter-installation-maintenance/', label: 'Explore guttering →' },
   },
   {
     question: 'How do I request a quote?',
@@ -27,7 +27,7 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
   },
   {
-    question: 'Where does A-Z Home Improvements work?',
+    question: 'Where is DJ Maintenance & Construction based?',
     answer: CLINIC_INFO.primaryLocation.directions,
     relatedLink: { href: '/contact/', label: 'Check our service area →' },
   },
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about your home project
+              Questions about your roofing project
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-              Clear answers about projects, quotes and the areas we serve.
+                Clear answers about roof work, quotes and our Mount Gambier location.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">
@@ -57,7 +57,7 @@ export default function HomeFaqs() {
                 Call or message our team and we will be happy to help.
               </p>
               <a
-                href="tel:+447809835355"
+                href="tel:+61448752232"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-13 text-forest font-medium underline underline-offset-4"

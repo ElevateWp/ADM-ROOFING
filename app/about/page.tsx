@@ -14,24 +14,24 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About A-Z Home Improvements',
+  title: 'About DJ Maintenance & Construction',
   description:
-    'Meet A-Z Home Improvements in South Croydon. Established in 2002, the team works on extensions, conversions, kitchens, bathrooms and refurbishments.',
+    'Meet DJ Maintenance & Construction in Mount Gambier. Based in Mount Gambier, the team works on roof restoration, roof repairs, sheds, guttering and roof replacement.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Established 2002',
-    title: 'Home improvements, built around your vision',
-    description: 'A-Z Home Improvements has been helping customers transform their homes for more than two decades. Nicholas and the team take on projects across South Croydon and South London.',
+    year: 'Mount Gambier',
+    title: 'Roof restoration and repairs',
+    description: 'DJ Maintenance & Construction provides roof restoration, repairs, replacement and related construction services in Mount Gambier, South Australia.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
     title: 'Listen and plan',
-    description: 'We discuss what you want to change, walk through the options and agree the project scope with you.',
+    description: 'We discuss the roof, the issue you have noticed and the work you would like done.',
   },
   {
     title: 'Clear Quotes',
@@ -39,11 +39,11 @@ const APPROACH_STEPS = [
   },
   {
     title: 'Careful workmanship',
-    description: 'We pay attention to the detail across the build and finishing work, with pride in the result.',
+    description: 'We take care with the roofing and maintenance work agreed for your property.',
   },
   {
     title: 'Keep you informed',
-    description: 'From the quotation to completion, we explain decisions and keep you updated as the project progresses.',
+    description: 'We discuss the work with you from the quote through to completion.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About A-Z Home Improvements
+                  About DJ Maintenance & Construction
                 </span>
-                <WordRevealH1 text="Where vision meets reality." />
+                <WordRevealH1 text="Roof care in Mount Gambier." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Established in 2002, A-Z Home Improvements brings together extensions, loft and garage conversions, kitchens, bathrooms and full home refurbishments. Nicholas and the team are known for clear communication, reliability and attention to detail." />
+                  <ScrubbedParagraph text="Based in Mount Gambier, DJ Maintenance & Construction provides roof restoration, repairs, replacement, inspections, guttering, shed installation and custom roofing projects." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -72,8 +72,8 @@ export default function AboutPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8} delay={0.2}>
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
-                    <span>Established</span>
-                    <span className="font-medium text-forest">2002</span>
+                    <span>Based in</span>
+                    <span className="font-medium text-forest">Mount Gambier, SA</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe A-Z Home Improvements */}
+      {/* SECTION 4: Equipe DJ Maintenance & Construction */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the A-Z Home Improvements Team
+                  Meet the DJ Maintenance & Construction Team
                 </h2>
               </div>
               <Link
@@ -183,7 +183,7 @@ export default function AboutPage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 max-w-sm mx-auto">
             {DENTISTS.map((dentist, idx) => (
               <DentistCard key={dentist.id} dentist={dentist} offsetY={idx === 1} />
             ))}
@@ -191,20 +191,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Home Improvement Work */}
+      {/* SECTION 5: Roofing Work */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Home Improvement Work
+                  Our Roofing Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  From Extensions to Complete Refurbishments
+                  Roofing and restoration for your property
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Customer projects range from kitchen and bathroom updates to garage conversions, extensions and whole-home refurbishments. We take pride in the workmanship, explain our decisions and pay attention to the finish.
+                  The team works on roof restoration, repairs and replacement, guttering, sheds, inspections and custom roofing projects. Customers have praised the quality of work, communication and updated look of their roofs.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function AboutPage() {
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Home improvements
+                    Roof restoration
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 Project inspiration
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Residential home inspiration
+                Roofing inspiration
               </h2>
             </div>
           </AnimateOnScroll>
@@ -266,7 +266,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Residential homes
+                  Roofing reference
                 </div>
               </div>
             </AnimateOnScroll>
@@ -311,10 +311,10 @@ export default function AboutPage() {
                 Request a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Tell us about your home improvement plans
+                Tell us about your roofing work plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across Croydon.
+                Call us to discuss the work you need and check availability across Mount Gambier.
               </p>
             </div>
           </AnimateOnScroll>
@@ -323,7 +323,7 @@ export default function AboutPage() {
               <Button href="/request-a-quote/" variant="lime" size="lg">
                 Request a Quote
               </Button>
-              <Button href="/contact/" variant="ghost" size="lg" className="text-paper border-paper/30 hover:border-paper hover:bg-paper/10">
+              <Button href="/contact/" variant="ghost-light" size="lg">
                 Contact Us
               </Button>
             </div>

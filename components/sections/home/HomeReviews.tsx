@@ -5,16 +5,16 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REVIEWS = [
   {
-    name: 'Joseph Wilde',
-    quote: 'Nicholas was brilliantly communicative and proud of his work. From the quotation to the end of the project he was honest, explained his decisions and kept me updated.',
+    name: 'Wendy Webster',
+    quote: 'Thank you to Dino and the team at DJ Maintenance. Our new roof looks amazing!',
   },
   {
-    name: 'Jane Gunyon',
-    quote: 'I had a full bathroom refit by Nicholas and his team. They were reliable and trustworthy, and we are very pleased with the completed work.',
+    name: 'Oopy',
+    quote: 'Awesome work.',
   },
   {
-    name: 'Junesse Dizon',
-    quote: 'Excellent experience from the initial quote to project completion. Nicholas and the team were punctual, well-organised, and communicated clearly throughout.',
+    name: 'nathan h',
+    quote: 'Dino and his crew were great to deal with from start to finish. Quality work, communication was great, and we were very happy with pricing. Dino helped us transform our aged 80s roof, gutters and roller door with a fresh, modern look. I would highly recommend.',
   },
 ];
 

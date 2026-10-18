@@ -11,34 +11,22 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Customer Testimonials',
   description:
-    'Read customer feedback about home extensions, conversions, bathrooms and renovation work by A-Z Home Improvements in South Croydon.',
+    'Read positive customer feedback about roof restoration and roofing work by DJ Maintenance & Construction in Mount Gambier.',
   pathname: '/testimonials/',
 });
 
 const TESTIMONIALS = [
   {
-    name: 'Jean McFarlane',
-    quote: 'Nicholas renovated my house 12 years ago, and based on that experience I had no hesitation hiring him again for my bathroom renovation.',
+    name: 'Wendy Webster',
+    quote: 'Thank you to Dino and the team at DJ Maintenance. Our new roof looks amazing!',
   },
   {
-    name: 'Joseph Wilde',
-    quote: 'Nicholas was brilliantly communicative and proud of his work. He was honest in his appraisals, explained his decisions and kept me updated.',
+    name: 'Oopy',
+    quote: 'Awesome work.',
   },
   {
-    name: 'Michele Marrafino',
-    quote: 'We had a garage converted into living space, a shower and utility room, as well as a new upstairs bathroom. Nic was exceptional.',
-  },
-  {
-    name: 'Jane Gunyon',
-    quote: 'I had a full bathroom refit by Nicholas and his team. They were reliable and trustworthy, and we are very pleased with the completed work.',
-  },
-  {
-    name: 'Marianna Ritchie',
-    quote: 'Couldn’t be happier. Beautiful work. Lovely people. Thank you.',
-  },
-  {
-    name: 'Junesse Dizon',
-    quote: 'Excellent experience from the initial quote to project completion. The team was punctual, well-organised, communicated clearly, and kept the site clean.',
+    name: 'nathan h',
+    quote: 'Dino and his crew were great to deal with from start to finish. Quality work, communication was great, and we were very happy with pricing. Dino helped us transform our aged 80s roof, gutters and roller door with a fresh, modern look. I would highly recommend.',
   },
 ];
 
@@ -66,7 +54,7 @@ export default function TestimonialsPage() {
               </span>
               <WordRevealH1 text="What our customers say." />
               <p className="mt-6 max-w-2xl font-body text-17 leading-relaxed text-forest-ink/90 md:text-21">
-                A selection of feedback shared by customers of A-Z Home Improvements.
+                A selection of positive feedback shared by DJ Maintenance & Construction customers.
               </p>
             </AnimateOnScroll>
           </div>
@@ -83,8 +71,8 @@ export default function TestimonialsPage() {
               <h2 className="font-display text-26 text-forest-ink md:text-33">Reviews from our customers</h2>
             </div>
             <div className="border-l-2 border-greenAccent pl-4">
-              <span className="block font-body text-13 font-medium uppercase tracking-wider text-forest-light">A-Z Home Improvements</span>
-              <span className="mt-1 block font-body text-12 text-forest-light">South Croydon · Established 2002</span>
+              <span className="block font-body text-13 font-medium uppercase tracking-wider text-forest-light">DJ Maintenance & Construction</span>
+              <span className="mt-1 block font-body text-12 text-forest-light">Mount Gambier, South Australia</span>
             </div>
           </div>
 
@@ -111,13 +99,13 @@ export default function TestimonialsPage() {
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
           <div>
             <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">
-              A-Z Home Improvements · South Croydon
+              DJ Maintenance & Construction · Mount Gambier
             </span>
-            <h2 className="font-display text-26 md:text-33">Planning a home improvement project?</h2>
+            <h2 className="font-display text-26 md:text-33">Need roofing work in Mount Gambier?</h2>
           </div>
           <Link
             href="/request-a-quote/"
-            className="inline-flex min-h-12 items-center justify-center border border-paper bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-[#E5ECFF]"
+            className="inline-flex min-h-12 items-center justify-center border border-paper bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-[#E6E7E5]"
           >
             Request a quote
           </Link>

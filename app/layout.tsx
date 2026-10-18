@@ -4,23 +4,24 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import LenisProvider from '@/components/motion/LenisProvider';
 import PagePreloader from '@/components/motion/PagePreloader';
+import SiteTextReveal from '@/components/motion/SiteTextReveal';
 import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.azhomeimprovements.co.uk'),
+  metadataBase: new URL('https://djroofrestorationandrepairs.com.au'),
   title: {
-    default: 'A-Z Home Improvements',
+    default: 'DJ Maintenance & Construction',
     template: '%s',
   },
   description:
-    'A-Z Home Improvements delivers extensions, loft and garage conversions, kitchens, bathrooms and home refurbishments in South Croydon. Call +44 7809 835355.',
+    'DJ Maintenance & Construction provides roof restoration, repairs, replacement, guttering and shed services in Mount Gambier, South Australia. Call +61 448 752 232.',
   keywords: [
-    'A-Z Home Improvements',
-    'home extensions South Croydon',
-    'loft conversions Croydon',
+    'DJ Maintenance & Construction',
+    'roof restoration Mount Gambier',
+    'roof repairs South Australia',
   ],
-  authors: [{ name: 'A-Z Home Improvements' }],
+  authors: [{ name: 'DJ Maintenance & Construction' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -37,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
+    <html lang="en-AU" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -46,8 +47,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F8F5] selection:text-[#202A3C]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F3] selection:text-[#242729]">
         <PagePreloader />
+        <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />
         <a href="#main-content" className="skip-link">
           Skip to main content
