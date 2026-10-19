@@ -12,8 +12,8 @@ export default function HomeHero() {
       className="relative z-30 isolate -mt-[88px] flex h-[100svh] min-h-[600px] w-full shrink-0 items-end overflow-hidden bg-neutral-900 text-white sm:-mt-[100px] md:-mt-[112px]"
     >
       <Image
-        src="/images/home-roof-sequence/frame-300.jpg"
-        alt="A newly roofed home in Sussex"
+        src="/images/hero-roofsmart-sussex.png"
+        alt="Slate roof with a roof window and chimney repairs underway"
         fill
         priority
         sizes="100vw"
