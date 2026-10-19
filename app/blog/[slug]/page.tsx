@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe East Coast Roofing',
+      name: author?.name || 'Equipe Roofsmart Sussex Limited',
     },
     publisher: {
       '@type': 'Organization',

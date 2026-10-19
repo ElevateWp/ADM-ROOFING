@@ -7,19 +7,19 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What roofing services do you provide?',
-    answer: 'Roof replacement, roof repairs, gutters and fascias, and roof maintenance.',
+    question: 'What work does Roofsmart Sussex Limited carry out?',
+    answer: 'Roofsmart Sussex Limited is a roofing contractor. Customer reviews mention roof repairs and extensive chimney repairs.',
     relatedLink: { href: '/services/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
-    answer: 'East Coast Roofing is based in North Queensland, Queensland. Contact the team to discuss your property.',
+    answer: 'Roofsmart Sussex Limited is based in Sussex, East Sussex. Contact the team to discuss your property.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Can you help with gutters and fascias?',
-    answer: 'East Coast Roofing installs and repairs gutters and fascias to help manage rainwater and protect your roofline.',
-    relatedLink: { href: '/gutters-and-fascias/', label: 'Explore gutters and fascias →' },
+    question: 'Do you carry out chimney repairs?',
+    answer: 'Yes. Roofsmart Sussex Limited carries out chimney repairs. Call to discuss your property and the work required.',
+    relatedLink: { href: '/chimney-repairs/', label: 'Explore chimney repairs →' },
   },
   {
     question: 'How do I request a quote?',
@@ -27,7 +27,7 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
   },
   {
-    question: 'Where is East Coast Roofing based?',
+    question: 'Where is Roofsmart Sussex Limited based?',
     answer: CLINIC_INFO.primaryLocation.directions,
     relatedLink: { href: '/contact/', label: 'Check our service area →' },
   },
@@ -47,7 +47,7 @@ export default function HomeFaqs() {
               Questions about your roofing project
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                Clear answers about roof work, quotes and our North Queensland location.
+                Find out about roofing work, quotes and the Bexhill-on-Sea location.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">

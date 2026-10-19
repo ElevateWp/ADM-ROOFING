@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing Services in North Queensland',
+  title: 'Roofing Services in Sussex',
   description:
-    'East Coast Roofing provides roof replacements, roof repairs, gutters and fascias, and roof maintenance across North Queensland. Call +61 430 964 182.',
+    'Roofsmart Sussex Limited is a Bexhill-on-Sea roofing contractor. Customers recommend its roofing and chimney repair work. Call +44 7576 557747.',
   pathname: '/',
 });
 
@@ -55,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose East Coast Roofing */}
+      {/* SECTION 4: Why Choose Roofsmart Sussex Limited */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}

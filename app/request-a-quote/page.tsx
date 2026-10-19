@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Request a Roofing Quote',
   description:
-    'Request a quote for roof replacement, repairs, gutters and fascias, or roof maintenance from East Coast Roofing in North Queensland.',
+    'Request a quote for roofing work, roof repairs or chimney repairs from Roofsmart Sussex Limited in Sussex.',
   pathname: '/request-a-quote/',
 });
 
@@ -34,7 +34,7 @@ const BOOKING_STEPS = [
   {
     step: 4,
     title: 'Roofing Work',
-    description: 'Felix and the team complete the agreed roofing work at your property.',
+    description: 'Pete and the team complete the agreed roofing work at your property.',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function BookAppointmentPage() {
                 </span>
                 <WordRevealH1 text="Request a roofing quote." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about your roof replacement, repairs, gutters and fascias, or roof maintenance project in North Queensland." />
+                  <ScrubbedParagraph text="Tell us about your roofing work, roof repairs or chimney repairs project in Sussex." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -179,7 +179,7 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve North Queensland and surrounding areas. Contact us to confirm availability for your property.
+                  We serve Sussex and surrounding areas. Contact us to confirm availability for your property.
                 </p>
               </div>
             </AnimateOnScroll>

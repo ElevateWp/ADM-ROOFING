@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="East Coast Roofing logo"
+                  alt="Roofsmart Sussex Limited logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,28 +22,28 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  East Coast Roofing
+                  Roofsmart Sussex Limited
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Roof replacement, repairs & gutters
+                  Roof repairs & chimney repairs
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Roof replacement, repairs, gutters and fascias, and roof maintenance across North Queensland.
+              Roofing work, roof repairs and chimney repairs in Bexhill-on-Sea and Sussex.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+61 430 964 182</span>
+              <span>+44 7576 557747</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Roofing in North Queensland
+                Roofing in Sussex
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need a roof repair, replacement, gutter or maintenance? Contact our team.
+                Need roofing or chimney repair work? Contact our team.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -172,14 +172,6 @@ export default function Footer() {
                   {CLINIC_INFO.primaryLocation.directions}
                 </address>
               </div>
-              {CLINIC_INFO.contact.website && (
-                <div>
-                  <span className="text-paper/50 block text-13">Website:</span>
-                  <a href={CLINIC_INFO.contact.website} className="block max-w-full break-all hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
-                    roofingeastcoast.com.au
-                  </a>
-                </div>
-              )}
             </div>
           </div>
         </div>
@@ -190,8 +182,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>North Queensland, Queensland</span>
-            <span>East Coast Roofing</span>
+            <span>Sussex, East Sussex</span>
+            <span>Roofsmart Sussex Limited</span>
           </div>
         </div>
       </div>

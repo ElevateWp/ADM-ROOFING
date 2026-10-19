@@ -11,22 +11,22 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Customer Testimonials',
   description:
-    'Read five-star customer feedback about roof replacements, roof repairs and service by East Coast Roofing in Trinity Beach.',
+    'Read customer feedback about Roofsmart Sussex Limited, including roof repairs and chimney repairs in Bexhill-on-Sea.',
   pathname: '/testimonials/',
 });
 
 const TESTIMONIALS = [
   {
-    name: 'Sheryl Webby',
-    quote: 'Great service and roofing repair work done by East Coast Roofing.',
+    name: 'Allana McNamara',
+    quote: 'I can honestly say after having a horrendous experience with another roofer last year that Pete and his team are absolutely fantastic. The final touches to the roofing work were done yesterday.',
   },
   {
-    name: 'Deb Lane',
-    quote: 'Fast and efficient, without a huge waiting period. Communication and photos of repairs needed, and completed. Would not hesitate to recommend!!',
+    name: 'Christiane Hammond',
+    quote: 'We have just used Roofsmart Sussex Limited to do work on our roof and found them professional, polite, punctual, considerate, very good workmen, reasonably priced, and no loud music! Thoroughly recommended.',
   },
   {
-    name: 'Ellie Winter',
-    quote: 'We just had a complete Colorbond reroof done with Felix & the team on our 40yr old house. We got 3 quotes & decided to go with East Coast Roofing. From initial contact to completion, Felix always answered my inexperienced questions.',
+    name: 'Anthony Richard',
+    quote: 'Peter and his guys are real professionals. Our extensive chimney repairs were carried out with attentive care and the quality of work shone through. I would very highly recommend them.',
   },
 ];
 
@@ -54,7 +54,7 @@ export default function TestimonialsPage() {
               </span>
               <WordRevealH1 text="What our customers say." />
               <p className="mt-6 max-w-2xl font-body text-17 leading-relaxed text-forest-ink/90 md:text-21">
-                5.0 out of 5 from 3 Google reviews.
+                5.0 out of 5 from 23 Google reviews.
               </p>
             </AnimateOnScroll>
           </div>
@@ -71,8 +71,8 @@ export default function TestimonialsPage() {
               <h2 className="font-display text-26 text-forest-ink md:text-33">Reviews from our customers</h2>
             </div>
             <div className="border-l-2 border-greenAccent pl-4">
-              <span className="block font-body text-13 font-medium uppercase tracking-wider text-forest-light">East Coast Roofing</span>
-              <span className="mt-1 block font-body text-12 text-forest-light">Trinity Beach, Queensland</span>
+              <span className="block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Roofsmart Sussex Limited</span>
+              <span className="mt-1 block font-body text-12 text-forest-light">28 Wilton Rd, Bexhill-on-Sea</span>
             </div>
           </div>
 
@@ -99,13 +99,13 @@ export default function TestimonialsPage() {
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
           <div>
             <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">
-              East Coast Roofing · Trinity Beach
+              Roofsmart Sussex Limited · Bexhill-on-Sea
             </span>
-            <h2 className="font-display text-26 md:text-33">Need roofing work in North Queensland?</h2>
+            <h2 className="font-display text-26 md:text-33">Need roofing work in Sussex?</h2>
           </div>
           <Link
             href="/request-a-quote/"
-            className="inline-flex min-h-12 items-center justify-center border border-paper bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-[#DCEBFA]"
+            className="inline-flex min-h-12 items-center justify-center border border-paper bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-[#FBE3E0]"
           >
             Request a quote
           </Link>

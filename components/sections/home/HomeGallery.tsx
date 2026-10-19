@@ -4,7 +4,7 @@ import MediaParallax from '@/components/motion/MediaParallax';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const GALLERY_IMAGES = [
-  ...Array.from({ length: 14 }, (_, index) => ({ src: `/images/jsroof-stock-${String(index + 1).padStart(2, '0')}.jpg`, alt: 'Illustrative roof replacement, repairs and guttering work' })),
+  ...Array.from({ length: 14 }, (_, index) => ({ src: `/images/jsroof-stock-${String(index + 1).padStart(2, '0')}.jpg`, alt: 'Illustrative roofing and chimney repair work' })),
 ];
 
 export default function HomeGallery() {
@@ -12,10 +12,10 @@ export default function HomeGallery() {
     <section id="roofing-gallery" className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#2455A4] block mb-2 font-medium uppercase tracking-wider">
-            East Coast Roofing
+          <span className="font-body text-13 text-[#D9271C] block mb-2 font-medium uppercase tracking-wider">
+            Roofsmart Sussex Limited
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#183454]">Roofing Work &amp; Inspiration</h2>
+          <h2 className="font-display text-33 md:text-41 text-[#20232A]">Roofing Work &amp; Inspiration</h2>
           <p className="mt-3 max-w-2xl font-body text-15 leading-relaxed text-forest-light">Explore roofing and restoration imagery. Images are illustrative; contact us to discuss your roof.</p>
         </AnimateOnScroll>
 
@@ -25,7 +25,7 @@ export default function HomeGallery() {
               key={item.src}
               animation={index === 0 ? 'fade-right' : 'fade-down'}
               duration={0.85}
-              className={`${index === 0 ? 'md:col-span-5' : 'md:col-span-7'} min-h-[300px] md:min-h-[420px] relative bg-[#F2F6FC] overflow-hidden border border-[#D8E3EF] shadow-sm`}
+              className={`${index === 0 ? 'md:col-span-5' : 'md:col-span-7'} min-h-[300px] md:min-h-[420px] relative bg-[#F4F6FC] overflow-hidden border border-[#DCE1EA] shadow-sm`}
             >
               <MediaParallax speed={index === 0 ? 0.06 : 0.08} className="w-full h-full">
                 <Image
@@ -47,7 +47,7 @@ export default function HomeGallery() {
               animation="zoom-in"
               duration={0.8}
               delay={(index % 3) * 0.1}
-              className="aspect-[4/3] relative bg-[#F2F6FC] overflow-hidden border border-[#D8E3EF] shadow-sm"
+              className="aspect-[4/3] relative bg-[#F4F6FC] overflow-hidden border border-[#DCE1EA] shadow-sm"
             >
               <MediaParallax speed={0.05 + (index % 3) * 0.01} className="w-full h-full">
                 <Image

@@ -14,17 +14,17 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About East Coast Roofing',
+  title: 'About Roofsmart Sussex Limited',
   description:
-    'Meet East Coast Roofing, based in Trinity Beach, Queensland. Felix and the team work on roof replacement, repairs, gutters and fascias, and maintenance.',
+    'Meet Roofsmart Sussex Limited, based in Bexhill-on-Sea, East Sussex. Pete and the team work on roofing work, roof repairs and chimney repairs.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'North Queensland',
-    title: 'Roofing services in North Queensland',
-    description: 'East Coast Roofing provides roof replacement, repairs, gutters and fascias, and roof maintenance in North Queensland.',
+    year: 'Sussex',
+    title: 'Roofing services in Sussex',
+    description: 'Roofsmart Sussex Limited carries out roofing work and chimney repairs in Bexhill-on-Sea and Sussex.',
   },
 ];
 
@@ -39,7 +39,7 @@ const APPROACH_STEPS = [
   },
   {
     title: 'Careful workmanship',
-    description: 'We take care with the roofing and maintenance work agreed for your property.',
+    description: 'We take care with the roofing work agreed for your property.',
   },
   {
     title: 'Keep you informed',
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About East Coast Roofing
+                  About Roofsmart Sussex Limited
                 </span>
-                <WordRevealH1 text="Roof care in North Queensland." />
+                <WordRevealH1 text="Roof care in Sussex." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Based in Trinity Beach, East Coast Roofing provides roof replacement, repairs, gutters and fascias, and roof maintenance across North Queensland." />
+                  <ScrubbedParagraph text="Based in Bexhill-on-Sea, Roofsmart Sussex Limited carries out roofing work and chimney repairs across Sussex." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Based in</span>
-                    <span className="font-medium text-forest">Trinity Beach, QLD</span>
+                    <span className="font-medium text-forest">Bexhill-on-Sea, UK</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe East Coast Roofing */}
+      {/* SECTION 4: Equipe Roofsmart Sussex Limited */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the East Coast Roofing Team
+                  Meet the Roofsmart Sussex Limited Team
                 </h2>
               </div>
               <Link
@@ -204,7 +204,7 @@ export default function AboutPage() {
                   Roofing for your property
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  Felix and the team handle roof replacement, roof repairs, gutters and fascias, and roof maintenance. Customers praise the team’s communication, photos and efficient service.
+                  Pete and the team carry out roofing work and chimney repairs. Customers praise their professionalism, attentive care and quality workmanship.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function AboutPage() {
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Roof replacement
+                    Roofing work
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -314,7 +314,7 @@ export default function AboutPage() {
                 Tell us about your roofing work plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across North Queensland.
+                Call us to discuss the work you need and check availability across Sussex.
               </p>
             </div>
           </AnimateOnScroll>

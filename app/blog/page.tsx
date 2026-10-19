@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Roofing Advice',
   description:
-    'Practical planning ideas for roof replacement, repairs, gutters and fascias, and maintenance from East Coast Roofing.',
+    'Practical planning ideas for roofing work, roof repairs and chimney repairs from Roofsmart Sussex Limited.',
   pathname: '/blog/',
 });
 
@@ -33,7 +33,7 @@ export default function BlogIndexPage() {
                 </span>
                 <WordRevealH1 text="Ideas for planning your next roofing project." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Read practical guides to roof repairs, replacement, maintenance and what to do after storm damage.
+                  Read practical guides to roof repairs, chimney repairs and arranging roofing work.
                 </p>
               </AnimateOnScroll>
             </div>

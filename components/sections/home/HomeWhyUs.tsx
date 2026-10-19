@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'A fresh look for your roof',
-    description: 'A recent customer praised the fresh, modern look of their restored roof, gutters and roller door.',
+    title: 'Professional and considerate',
+    description: 'Customers describe Pete and his team as professional, polite, punctual and considerate.',
   },
   {
-    title: 'Clear communication',
-    description: 'Customers have praised Felix and the team for clear communication from start to finish.',
+    title: 'Responsive service',
+    description: 'Customers say the team responded quickly and carried out repair work shortly after quoting.',
   },
   {
     title: 'Quality work',
     description: 'Customers describe the finished roofing work as high quality and recommend the team.',
   },
   {
-    title: 'Roofing and related work',
-    description: 'From roof repairs and replacement to gutters and maintenance, we discuss the work and agree the scope before starting.',
+    title: 'Roof and chimney repairs',
+    description: 'Reviews mention roof repairs and extensive chimney repairs carried out with attentive care.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Customers Choose East Coast Roofing
+                Why Customers Choose Roofsmart Sussex Limited
               </h2>
 
               <div className="divide-y divide-mist">
@@ -72,8 +72,8 @@ export default function HomeWhyUs() {
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#183454]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Roof replacement
+                  <div className="absolute bottom-3 left-3 bg-[#20232A]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Roofing and chimney repairs
                   </div>
                 </div>
                 {/* Additional residential imagery */}
@@ -87,7 +87,7 @@ export default function HomeWhyUs() {
                   />
                 </div>
                 {/* Residential property detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F2F6FC] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F4F6FC] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/jsroof-stock-04.jpg"
                     alt="Traditional pitched roof on a home"
@@ -95,8 +95,8 @@ export default function HomeWhyUs() {
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#183454]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    North Queensland homes
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#20232A]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                    Sussex homes
                   </div>
                 </div>
               </div>

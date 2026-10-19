@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://roofingeastcoast.com.au';
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export function createMetadata({
   title,
@@ -115,7 +115,7 @@ export function generateServiceSchema(serviceName: string, description: string, 
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Roof replacement, roof repairs, gutters and fascias, roof maintenance',
+    serviceType: 'Roofing work, roof repairs and chimney repairs',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

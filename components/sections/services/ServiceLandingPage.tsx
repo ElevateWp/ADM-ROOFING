@@ -10,10 +10,10 @@ import { CLINIC_INFO, SERVICES } from '@/lib/clinic-data';
 import { createMetadata, generateServiceSchema } from '@/lib/seo';
 
 const RELATED_SERVICE_SLUGS: Record<string, string[]> = {
-  'roof-replacement': ['roof-repairs', 'gutters-and-fascias', 'roof-maintenance'],
-  'roof-repairs': ['roof-maintenance', 'roof-replacement', 'gutters-and-fascias'],
-  'gutters-and-fascias': ['roof-maintenance', 'roof-replacement', 'roof-repairs'],
-  'roof-maintenance': ['roof-repairs', 'gutters-and-fascias', 'roof-replacement'],
+  'roofing-work': ['roof-repairs', 'roofing-and-chimney-work', 'chimney-repairs'],
+  'roof-repairs': ['chimney-repairs', 'roofing-work', 'roofing-and-chimney-work'],
+  'roofing-and-chimney-work': ['chimney-repairs', 'roofing-work', 'roof-repairs'],
+  'chimney-repairs': ['roof-repairs', 'roofing-and-chimney-work', 'roofing-work'],
 };
 
 export default function ServiceLandingPage({ slug }: { slug: string }) {
@@ -34,7 +34,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
             <div className="lg:col-span-7">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">
-                  East Coast Roofing · North Queensland
+                  Roofsmart Sussex Limited · Sussex
                 </span>
                 <WordRevealH1 text={service.name} />
                 <p className="mt-6 max-w-2xl font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">
@@ -225,7 +225,7 @@ export default function ServiceLandingPage({ slug }: { slug: string }) {
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
           <div>
-            <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">East Coast Roofing · North Queensland roofing contractor</span>
+            <span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">Roofsmart Sussex Limited · Sussex roofing contractor</span>
             <h2 className="font-display text-26 md:text-33">Tell us what you have in mind.</h2>
           </div>
           <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest transition-colors hover:bg-softBlue">Request a quote</Link>
