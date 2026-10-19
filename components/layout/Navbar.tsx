@@ -13,6 +13,8 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === '/';
+  const isFloatingHomeHeader = isHome && !isScrolled && !mobileMenuOpen;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,13 +47,15 @@ export default function Navbar() {
     <>
     <header
       data-site-header
-      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,padding,box-shadow] duration-300 ${
-        isScrolled || mobileMenuOpen
-          ? 'bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#D8E3EF]/80 shadow-[0_4px_24px_rgba(0,0,0,0.06)]'
-          : 'bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#D8E3EF] shadow-sm'
+      className={`fixed z-50 transition-[background-color,border-color,padding,box-shadow] duration-300 ${
+        isFloatingHomeHeader
+          ? 'top-2.5 left-3 right-3 mx-auto max-w-[1040px] rounded-full border border-white/65 bg-[#F2F6FC]/85 py-0.5 shadow-[0_6px_18px_rgba(16,43,90,0.12)] backdrop-blur-xl'
+          : isScrolled || mobileMenuOpen
+          ? 'top-0 left-0 right-0 bg-paper/95 backdrop-blur-md py-2 sm:py-2.5 border-b border-[#D8E3EF]/80 shadow-[0_4px_24px_rgba(16,43,90,0.08)]'
+          : 'top-0 left-0 right-0 bg-paper/95 md:bg-paper/90 backdrop-blur-md py-2.5 sm:py-3 border-b border-[#D8E3EF] shadow-sm'
       }`}
     >
-      <div className="max-w-site mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
+      <div className={`mx-auto flex max-w-site items-center justify-between ${isFloatingHomeHeader ? 'px-3 sm:px-5 md:px-7' : 'px-4 sm:px-6 md:px-12'}`}>
         {/* Brand Logo - compact on mobile */}
         <Link
           href="/"
@@ -64,12 +68,12 @@ export default function Navbar() {
             width={180}
             height={100}
             priority
-            className="w-[140px] h-[78px] sm:w-[160px] sm:h-[89px] md:w-[180px] md:h-[100px] flex-shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.03]"
+            className={`${isFloatingHomeHeader ? 'h-[44px] w-[74px] sm:h-[50px] sm:w-[84px] md:h-[54px] md:w-[90px]' : 'h-[78px] w-[140px] sm:h-[89px] sm:w-[160px] md:h-[100px] md:w-[180px]'} flex-shrink-0 object-contain transition-transform duration-300 group-hover:scale-[1.03]`}
           />
         </Link>
 
         {/* Desktop Primary Navigation (Active on xl screens >= 1200px) */}
-        <nav className="hidden xl:flex items-center gap-7 2xl:gap-8" aria-label="Main navigation">
+        <nav className={`hidden xl:flex items-center ${isFloatingHomeHeader ? 'gap-3 2xl:gap-4' : 'gap-7 2xl:gap-8'}`} aria-label="Main navigation">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -78,7 +82,7 @@ export default function Navbar() {
           >
             <button
               type="button"
-              className={`font-body text-15 py-2 transition-colors flex items-center gap-1.5 cursor-pointer ${
+              className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors flex items-center gap-1.5 cursor-pointer ${
                 SERVICES.some((service) => pathname?.startsWith(`/${service.slug}/`))
                   ? 'text-[#183454] font-semibold'
                   : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -120,7 +124,7 @@ export default function Navbar() {
 
           <Link
             href="/about/"
-            className={`font-body text-15 py-2 transition-colors ${
+            className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors ${
               pathname === '/about/'
                 ? 'text-[#183454] font-semibold'
                 : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -131,7 +135,7 @@ export default function Navbar() {
 
           <Link
             href="/testimonials/"
-            className={`font-body text-15 py-2 transition-colors ${
+            className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors ${
               pathname?.startsWith('/testimonials')
                 ? 'text-[#183454] font-semibold'
                 : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -142,7 +146,7 @@ export default function Navbar() {
 
           <Link
             href="/our-team/"
-            className={`font-body text-15 py-2 transition-colors ${
+            className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors ${
               pathname?.startsWith('/our-team')
                 ? 'text-[#183454] font-semibold'
                 : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -153,7 +157,7 @@ export default function Navbar() {
 
           <Link
             href="/blog/"
-            className={`font-body text-15 py-2 transition-colors ${
+            className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors ${
               pathname?.startsWith('/blog')
                 ? 'text-[#183454] font-semibold'
                 : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -164,7 +168,7 @@ export default function Navbar() {
 
           <Link
             href="/contact/"
-            className={`font-body text-15 py-2 transition-colors ${
+            className={`font-body ${isFloatingHomeHeader ? 'text-13' : 'text-15'} py-2 transition-colors ${
               pathname === '/contact/'
                 ? 'text-[#183454] font-semibold'
                 : 'text-[#183454]/80 hover:text-[#687B91] font-medium'
@@ -177,7 +181,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
           <Link
             href="/request-a-quote/"
-            className="hidden xl:inline-flex h-10 w-[176px] items-center justify-center rounded-md border border-[#2455A4] bg-[#2455A4] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#3472C9] hover:bg-[#3472C9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2455A4] whitespace-nowrap"
+            className={`${isFloatingHomeHeader ? 'hidden' : 'hidden xl:inline-flex'} h-10 w-[176px] items-center justify-center rounded-md border border-[#2455A4] bg-[#2455A4] px-3 font-body text-13 font-semibold text-white transition-colors hover:border-[#3472C9] hover:bg-[#3472C9] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2455A4] whitespace-nowrap`}
           >
             <span>Discuss Your Project</span>
           </Link>
@@ -186,7 +190,7 @@ export default function Navbar() {
             href="/request-a-quote/"
             variant="forest"
             size="sm"
-            className="hidden xl:inline-flex h-9 w-[160px] items-center justify-center gap-2 px-2 text-12 sm:text-13 font-semibold whitespace-nowrap"
+            className={`${isFloatingHomeHeader ? 'h-8 w-[130px]' : 'h-9 w-[160px]'} hidden xl:inline-flex items-center justify-center gap-2 px-2 text-12 sm:text-13 font-semibold whitespace-nowrap`}
           >
             <span>Get a Quote</span>
           </Button>
