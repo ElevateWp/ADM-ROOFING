@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roof Restoration & Repairs in Mount Gambier',
+  title: 'Roofing Services in North Queensland',
   description:
-    'DJ Maintenance & Construction provides roof restoration, roofing repairs, roof replacement, guttering and shed services in Mount Gambier. Call +61 448 752 232.',
+    'East Coast Roofing provides roof replacements, roof repairs, gutters and fascias, and roof maintenance across North Queensland. Call +61 430 964 182.',
   pathname: '/',
 });
 
@@ -55,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose DJ Maintenance & Construction */}
+      {/* SECTION 4: Why Choose East Coast Roofing */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}

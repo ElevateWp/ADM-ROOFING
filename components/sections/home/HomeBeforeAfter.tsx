@@ -19,10 +19,10 @@ export default function HomeBeforeAfter() {
               Explore illustrative roofing imagery and talk with us about a plan for your roof.
             </p>
             <Link
-              href="/roof-repairs/"
+              href="/roof-replacement/"
               className="font-body text-15 text-forest font-medium hover:underline underline-offset-4"
             >
-              Explore roof restoration →
+              Explore roof replacement →
             </Link>
           </AnimateOnScroll>
 
@@ -36,7 +36,7 @@ export default function HomeBeforeAfter() {
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#171A1C]/85 text-white font-body text-12 px-3 py-1">
+                <span className="absolute bottom-3 left-3 bg-[#102B5A]/85 text-white font-body text-12 px-3 py-1">
                   Illustrative reference image
                 </span>
               </div>
@@ -48,7 +48,7 @@ export default function HomeBeforeAfter() {
                   sizes="(max-width: 640px) 100vw, 50vw"
                   className="object-cover"
                 />
-                <span className="absolute bottom-3 left-3 bg-[#171A1C]/85 text-white font-body text-12 px-3 py-1">
+                <span className="absolute bottom-3 left-3 bg-[#102B5A]/85 text-white font-body text-12 px-3 py-1">
                   Illustrative reference image
                 </span>
               </div>

@@ -5,16 +5,16 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REVIEWS = [
   {
-    name: 'Wendy Webster',
-    quote: 'Thank you to Dino and the team at DJ Maintenance. Our new roof looks amazing!',
+    name: 'Sheryl Webby',
+    quote: 'Great service and roofing repair work done by East Coast Roofing.',
   },
   {
-    name: 'Oopy',
-    quote: 'Awesome work.',
+    name: 'Deb Lane',
+    quote: 'Fast and efficient, without a huge waiting period. Communication and photos of repairs needed, and completed. Would not hesitate to recommend!!',
   },
   {
-    name: 'nathan h',
-    quote: 'Dino and his crew were great to deal with from start to finish. Quality work, communication was great, and we were very happy with pricing. Dino helped us transform our aged 80s roof, gutters and roller door with a fresh, modern look. I would highly recommend.',
+    name: 'Ellie Winter',
+    quote: 'We just had a complete Colorbond reroof done with Felix & the team on our 40yr old house. We got 3 quotes & decided to go with East Coast Roofing. From initial contact to completion, Felix always answered my inexperienced questions.',
   },
 ];
 

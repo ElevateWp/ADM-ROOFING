@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="DJ Maintenance & Construction logo"
+                  alt="East Coast Roofing logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,28 +22,28 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  DJ Maintenance & Construction
+                  East Coast Roofing
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Roof restoration, repairs & guttering
+                  Roof replacement, repairs & gutters
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Roof restoration, repairs, replacement, sheds and guttering in Mount Gambier.
+              Roof replacement, repairs, gutters and fascias, and roof maintenance across North Queensland.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+61 448 752 232</span>
+              <span>+61 430 964 182</span>
             </div>
           </div>
 
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Roofing in Mount Gambier
+                Roofing in North Queensland
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need a roof repair, restoration, replacement or guttering work? Contact our team.
+                Need a roof repair, replacement, gutter or maintenance? Contact our team.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -176,7 +176,7 @@ export default function Footer() {
                 <div>
                   <span className="text-paper/50 block text-13">Website:</span>
                   <a href={CLINIC_INFO.contact.website} className="block max-w-full break-all hover:text-lime transition-colors" target="_blank" rel="noopener noreferrer">
-                    djroofrestorationandrepairs.com.au
+                    roofingeastcoast.com.au
                   </a>
                 </div>
               )}
@@ -190,8 +190,8 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>Mount Gambier, South Australia</span>
-            <span>DJ Maintenance & Construction</span>
+            <span>North Queensland, Queensland</span>
+            <span>East Coast Roofing</span>
           </div>
         </div>
       </div>

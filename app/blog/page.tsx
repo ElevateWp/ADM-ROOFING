@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Roofing Advice',
   description:
-    'Practical planning ideas for home roof restoration, roof repairs, guttering and roof replacement from DJ Maintenance & Construction.',
+    'Practical planning ideas for roof replacement, repairs, gutters and fascias, and maintenance from East Coast Roofing.',
   pathname: '/blog/',
 });
 

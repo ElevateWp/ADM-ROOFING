@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { CLINIC_INFO } from './clinic-data';
 
-export const BASE_URL = 'https://djroofrestorationandrepairs.com.au';
+export const BASE_URL = 'https://roofingeastcoast.com.au';
 
 export function createMetadata({
   title,
@@ -109,13 +109,13 @@ export function generateLocalBusinessSchema() {
   };
 }
 
-export function generateMedicalProcedureSchema(serviceName: string, description: string, url: string) {
+export function generateServiceSchema(serviceName: string, description: string, url: string) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Roofing, roof restoration, roof repairs and maintenance',
+    serviceType: 'Roof replacement, roof repairs, gutters and fascias, roof maintenance',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

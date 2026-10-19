@@ -14,17 +14,17 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About DJ Maintenance & Construction',
+  title: 'About East Coast Roofing',
   description:
-    'Meet DJ Maintenance & Construction in Mount Gambier. Based in Mount Gambier, the team works on roof restoration, roof repairs, sheds, guttering and roof replacement.',
+    'Meet East Coast Roofing, based in Trinity Beach, Queensland. Felix and the team work on roof replacement, repairs, gutters and fascias, and maintenance.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'Mount Gambier',
-    title: 'Roof restoration and repairs',
-    description: 'DJ Maintenance & Construction provides roof restoration, repairs, replacement and related construction services in Mount Gambier, South Australia.',
+    year: 'North Queensland',
+    title: 'Roofing services in North Queensland',
+    description: 'East Coast Roofing provides roof replacement, repairs, gutters and fascias, and roof maintenance in North Queensland.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About DJ Maintenance & Construction
+                  About East Coast Roofing
                 </span>
-                <WordRevealH1 text="Roof care in Mount Gambier." />
+                <WordRevealH1 text="Roof care in North Queensland." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Based in Mount Gambier, DJ Maintenance & Construction provides roof restoration, repairs, replacement, inspections, guttering, shed installation and custom roofing projects." />
+                  <ScrubbedParagraph text="Based in Trinity Beach, East Coast Roofing provides roof replacement, repairs, gutters and fascias, and roof maintenance across North Queensland." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Based in</span>
-                    <span className="font-medium text-forest">Mount Gambier, SA</span>
+                    <span className="font-medium text-forest">Trinity Beach, QLD</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe DJ Maintenance & Construction */}
+      {/* SECTION 4: Equipe East Coast Roofing */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the DJ Maintenance & Construction Team
+                  Meet the East Coast Roofing Team
                 </h2>
               </div>
               <Link
@@ -198,13 +198,13 @@ export default function AboutPage() {
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Roofing Work
+                  Our Roofing Services
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Roofing and restoration for your property
+                  Roofing for your property
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  The team works on roof restoration, repairs and replacement, guttering, sheds, inspections and custom roofing projects. Customers have praised the quality of work, communication and updated look of their roofs.
+                  Felix and the team handle roof replacement, roof repairs, gutters and fascias, and roof maintenance. Customers praise the team’s communication, photos and efficient service.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -232,7 +232,7 @@ export default function AboutPage() {
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Roof restoration
+                    Roof replacement
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -314,7 +314,7 @@ export default function AboutPage() {
                 Tell us about your roofing work plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
-                Call us to discuss the work you need and check availability across Mount Gambier.
+                Call us to discuss the work you need and check availability across North Queensland.
               </p>
             </div>
           </AnimateOnScroll>

@@ -9,19 +9,19 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://djroofrestorationandrepairs.com.au'),
+  metadataBase: new URL('https://roofingeastcoast.com.au'),
   title: {
-    default: 'DJ Maintenance & Construction',
+    default: 'East Coast Roofing',
     template: '%s',
   },
   description:
-    'DJ Maintenance & Construction provides roof restoration, repairs, replacement, guttering and shed services in Mount Gambier, South Australia. Call +61 448 752 232.',
+    'East Coast Roofing provides roof replacements, roof repairs, gutters and fascias, and roof maintenance across North Queensland. Call +61 430 964 182.',
   keywords: [
-    'DJ Maintenance & Construction',
-    'roof restoration Mount Gambier',
-    'roof repairs South Australia',
+    'East Coast Roofing',
+    'roof replacement North Queensland',
+    'roof repairs Cairns',
   ],
-  authors: [{ name: 'DJ Maintenance & Construction' }],
+  authors: [{ name: 'East Coast Roofing' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -47,7 +47,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F5F5F3] selection:text-[#242729]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F2F6FC] selection:text-[#183454]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />

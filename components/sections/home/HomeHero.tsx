@@ -14,17 +14,17 @@ const FRAME_URL = (index: number) =>
 
 const STORY = [
   {
-    eyebrow: 'ROOF REPAIRS · MOUNT GAMBIER',
+    eyebrow: 'ROOF REPAIRS · NORTH QUEENSLAND',
     title: 'Noticed a leak or damaged roof?',
-    text: 'Small roofing problems can grow over time. Tell Dino and the team what you have noticed and discuss a practical next step.',
+    text: 'Small roofing problems can grow over time. Tell Felix and the team what you have noticed and discuss a practical next step.',
   },
   {
-    eyebrow: 'ROOF RESTORATION',
-    title: 'Ready to refresh an ageing roof?',
-    text: 'Restore the look of your home with roof work planned around your property, from the first inspection through to the finished result.',
+    eyebrow: 'ROOF MAINTENANCE',
+    title: 'Ready to care for an ageing roof?',
+    text: 'Talk through the condition of your roof and practical maintenance options for your property.',
   },
   {
-    eyebrow: 'GUTTERING',
+    eyebrow: 'GUTTERS & FASCIAS',
     title: 'Is water not draining where it should?',
     text: 'Gutter installation, replacement and maintenance help direct rainwater away from your roof and home.',
   },
@@ -34,14 +34,14 @@ const STORY = [
     text: 'Talk through the condition of your roof, suitable options and the work involved before deciding what comes next.',
   },
   {
-    eyebrow: 'SHEDS · ROOFING · REPAIRS',
-    title: 'Need help with a shed project?',
-    text: 'Discuss shed installation and repairs, along with roofing work for homes and properties around Mount Gambier.',
+    eyebrow: 'COLORBOND ROOFING',
+    title: 'Planning a new Colorbond roof?',
+    text: 'Discuss roof replacement options, materials and the work involved with Felix and the team.',
   },
   {
-    eyebrow: 'DJ MAINTENANCE & CONSTRUCTION',
+    eyebrow: 'EAST COAST ROOFING',
     title: 'Let’s talk about your roof.',
-    text: 'Call Dino and the team to discuss roof restoration, repairs, replacement, guttering or shed work in Mount Gambier.',
+    text: 'Call Felix and the team to discuss roof replacements, repairs, gutters and fascias, or roof maintenance across North Queensland.',
   },
 ];
 
@@ -221,20 +221,20 @@ export default function HomeHero() {
   return (
     <section
       ref={sectionRef}
-      aria-label="Roofing services in Mount Gambier"
-      className="relative z-30 isolate h-[100svh] min-h-[620px] w-full shrink-0 overflow-hidden bg-[#171A1C] text-white"
+      aria-label="Roofing services in North Queensland"
+      className="relative z-30 isolate h-[100svh] min-h-[620px] w-full shrink-0 overflow-hidden bg-[#102B5A] text-white"
     >
       <canvas
         ref={canvasRef}
         aria-label="A sequence showing roof construction work"
         className="absolute inset-0 h-full w-full object-cover"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-[#171A1C]/45" />
+      <div aria-hidden="true" className="absolute inset-0 bg-[#102B5A]/45" />
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-gradient-to-r from-[#171A1C]/80 via-[#171A1C]/25 to-[#171A1C]/55"
+        className="absolute inset-0 bg-gradient-to-r from-[#102B5A]/80 via-[#102B5A]/25 to-[#102B5A]/55"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#171A1C]/55 via-transparent to-[#171A1C]/15" aria-hidden="true" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#102B5A]/55 via-transparent to-[#102B5A]/15" aria-hidden="true" />
 
       <div className="relative z-10 h-full w-full">
         {STORY.map((item, index) => {
@@ -260,7 +260,7 @@ export default function HomeHero() {
                   <div className={`mt-8 flex flex-wrap gap-3 ${isRight ? 'justify-end' : 'justify-start'}`}>
                     <a
                       href={phoneLink}
-                      className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 text-sm font-semibold text-[#242729] transition-colors hover:bg-[#E6E7E5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                      className="inline-flex min-h-12 items-center justify-center rounded-full bg-white px-7 text-sm font-semibold text-[#183454] transition-colors hover:bg-[#DCEBFA] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                     >
                       Call {phone}
                     </a>
@@ -279,7 +279,7 @@ export default function HomeHero() {
       </div>
 
       <div className="pointer-events-none absolute bottom-7 left-6 right-6 z-20 flex flex-col items-start gap-2 font-body text-[10px] uppercase tracking-[0.16em] text-white/70 sm:flex-row sm:items-center sm:justify-between sm:left-10 sm:right-10 lg:left-[9vw] lg:right-[9vw]">
-        <span>DJ Maintenance &amp; Construction · Mount Gambier</span>
+        <span>East Coast Roofing · North Queensland</span>
         <span>Scroll to explore</span>
       </div>
     </section>
