@@ -11,17 +11,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'Sullivans CP Plumbing | Mornington Plumbing & Gas Services',
+    default: 'All in 1 Roofing and Building | Roofing & Building in East Sussex',
     template: '%s',
   },
   description:
-    'Contact Sullivans CP Plumbing in Mornington, VIC for plumbing, roofing and gas appliance services. Call 0412 725 332.',
+    'Contact All in 1 Roofing and Building in Bexhill-on-Sea, East Sussex for roofing and building services. Call +44 1424 232873.',
   keywords: [
-    'Sullivans CP Plumbing',
-    'plumbing services',
-    'plumbing repairs',
+    'All in 1 Roofing and Building',
+    'roofing and building services',
+    'roof repairs',
   ],
-  authors: [{ name: 'Sullivans CP Plumbing' }],
+  authors: [{ name: 'All in 1 Roofing and Building' }],
   icons: {
     icon: [
       { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-AU" className="scroll-smooth">
+    <html lang="en-GB" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -47,7 +47,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#FCE3E7] selection:text-[#202124]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#DCEEFF] selection:text-[#172B40]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />

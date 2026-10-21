@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Plumbing Quote',
+  title: 'Request a Roofing Quote',
   description:
-    'Request a quote for plumbing services or repairs from Sullivans CP Plumbing. Call 0412 725 332.',
+    'Request a quote for roofing and building services or repairs from All in 1 Roofing and Building. Call +44 1424 232873.',
   pathname: '/request-a-quote/',
 });
 
@@ -19,7 +19,7 @@ const BOOKING_STEPS = [
   {
     step: 1,
     title: 'Send Your Request',
-    description: 'Tell us about your plumbing project and how you would like us to contact you.',
+    description: 'Tell us about your roofing project and how you would like us to contact you.',
   },
   {
     step: 2,
@@ -33,8 +33,8 @@ const BOOKING_STEPS = [
   },
   {
     step: 4,
-    title: 'Plumbing Work',
-    description: 'The Sullivans CP Plumbing team completes the agreed work at your property.',
+    title: 'Roofing Work',
+    description: 'The All in 1 Roofing and Building team completes the agreed work at your property.',
   },
 ];
 
@@ -52,9 +52,9 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Personal Service
                 </span>
-                <WordRevealH1 text="Request a plumbing quote." />
+                <WordRevealH1 text="Request a roofing quote." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about the plumbing work you need and the team will discuss availability and next steps." />
+                  <ScrubbedParagraph text="Tell us about the roofing work you need and the team will discuss availability and next steps." />
                 </div>
               </AnimateOnScroll>
             </div>

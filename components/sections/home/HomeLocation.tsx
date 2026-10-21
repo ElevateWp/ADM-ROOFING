@@ -29,8 +29,11 @@ export default function HomeLocation() {
                 <h3 className="font-display text-21 text-forest-ink mb-3">
                   {CLINIC_INFO.name}
                 </h3>
+                <p className="font-body text-15 text-forest-ink/90 leading-relaxed mb-2">
+                  {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.city} {CLINIC_INFO.primaryLocation.postalCode}
+                </p>
                 <p className="font-body text-15 md:text-17 text-forest-ink/90 leading-relaxed mb-4">
-                  Call to discuss your plumbing needs and confirm service availability.
+                  Call to discuss roofing and building work and confirm service availability.
                 </p>
                 {CLINIC_INFO.primaryLocation.landmarks && (
                   <p className="font-body text-13 text-forest-ink/70 leading-relaxed">
@@ -39,7 +42,7 @@ export default function HomeLocation() {
                 )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F5F5F5] border border-[#E0E2E5] px-3 py-1.5 text-12 text-[#202124]">
+                    <span key={highlight} className="bg-[#F2F7FC] border border-[#D8E4EF] px-3 py-1.5 text-12 text-[#172B40]">
                       {highlight}
                     </span>
                   ))}
@@ -84,14 +87,14 @@ export default function HomeLocation() {
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/plumbing-technician.jpg"
-                  alt="Plumbing technician with a pipe wrench"
+                  src="/images/roofing-hero.png"
+                  alt="Roofing work in progress"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                     className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  Sullivans CP Plumbing
+                  All in 1 Roofing and Building
                 </div>
               </div>
             </AnimateOnScroll>
@@ -100,13 +103,13 @@ export default function HomeLocation() {
               <div className="bg-paper border border-mist p-6 shadow-sm flex flex-col justify-between">
                 <div>
                   <span className="font-body text-13 text-forest block mb-1 font-medium uppercase tracking-wider">
-                    Plumbing services
+                    Roofing & Building Services
                   </span>
                   <h3 className="font-display text-21 text-forest-ink mb-2">
-                    General plumbing, repairs, hot water and drains
+                    Roof repairs, flat roofing, guttering and building work
                   </h3>
                   <p className="font-body text-13 text-forest-ink/80 mb-3 leading-relaxed">
-                    Call the team to discuss your property, the plumbing issue and suitable next steps.
+                    Call the team to discuss your property and the roofing or building work you need.
                   </p>
                   <div className="flex items-center gap-2 text-13 font-body text-forest">
                     <span className="w-2 h-2 rounded-full bg-forest animate-pulse" />

@@ -9,7 +9,7 @@ import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
   title: 'Our Team',
-  description: 'Meet the Sullivans CP Plumbing team. Call 0412 725 332 to discuss your plumbing needs.',
+  description: 'Meet the All in 1 Roofing and Building team. Call +44 1424 232873 to discuss your roofing needs.',
   pathname: '/our-team/',
 });
 
@@ -20,9 +20,9 @@ export default function TeamPage() {
         <div className="mx-auto max-w-site px-6 md:px-12">
           <Breadcrumbs items={[{ name: 'Our Team', path: '/our-team/' }]} />
           <div className="mt-8 max-w-3xl">
-            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">Sullivans CP Plumbing</span>
-            <WordRevealH1 text="Meet the Sullivans CP Plumbing team." />
-            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">Sullivans CP Plumbing provides plumbing services and repairs. Call to discuss the work you need.</p>
+            <span className="mb-3 block font-body text-13 font-medium uppercase tracking-wider text-brand">All in 1 Roofing and Building</span>
+            <WordRevealH1 text="Meet the All in 1 Roofing and Building team." />
+            <p className="mt-6 font-body text-17 leading-relaxed text-forest-ink/85 md:text-21">All in 1 Roofing and Building provides roofing and building services and repairs. Call to discuss the work you need.</p>
           </div>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function TeamPage() {
         <div className="mx-auto flex max-w-site flex-col items-center gap-12 px-6 md:px-12">
           <div className="w-full max-w-3xl">
             <h2 className="font-display text-33 text-forest-ink md:text-41">Your project, clearly explained.</h2>
-            <p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/80">The Sullivans CP Plumbing team provides clear communication about the work planned and completed.</p>
+            <p className="mt-4 font-body text-15 leading-relaxed text-forest-ink/80">The All in 1 Roofing and Building team provides clear communication about the work planned and completed.</p>
           </div>
           <div className="w-full max-w-sm">
             <div className="grid grid-cols-1">
@@ -45,7 +45,7 @@ export default function TeamPage() {
         <div className="mx-auto max-w-site px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
             <span className="mb-2 block font-body text-13 font-medium uppercase tracking-wider text-forest-light">Areas of work</span>
-            <h2 className="font-display text-33 text-forest-ink md:text-41">Explore our plumbing services</h2>
+            <h2 className="font-display text-33 text-forest-ink md:text-41">Explore our roofing and building services</h2>
           </AnimateOnScroll>
           <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => <Link key={service.slug} href={`/${service.slug}/`} className="border border-mist bg-paper p-6 transition-colors hover:border-brand">
@@ -59,7 +59,7 @@ export default function TeamPage() {
 
       <section className="bg-forest py-14 text-paper md:py-20">
         <div className="mx-auto flex max-w-site flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-12">
-          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65"> ·  plumber</span><h2 className="font-display text-26 md:text-33">Tell us about your plans.</h2></div>
+          <div><span className="mb-2 block font-body text-13 font-semibold uppercase tracking-wider text-paper/65">All in 1 Roofing and Building</span><h2 className="font-display text-26 md:text-33">Tell us about your project.</h2></div>
           <Link href="/request-a-quote/" className="inline-flex min-h-12 items-center justify-center bg-paper px-6 font-body text-15 font-semibold text-forest">Request a quote</Link>
         </div>
       </section>

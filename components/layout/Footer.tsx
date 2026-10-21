@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="Sullivans CP Plumbing logo"
+                  alt="All in 1 Roofing and Building logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,18 +22,18 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  Sullivans CP Plumbing
+                  All in 1 Roofing and Building
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Plumbing · Roofing · Gas
+                  Roofing · Building · Roofline
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Plumbing, roofing and gas appliance services across Mornington, VIC.
+              Roofing and building services across Bexhill-on-Sea, East Sussex.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>0412 725 332</span>
+              <span>+44 1424 232873</span>
               {CLINIC_INFO.contact.email && <a href={`mailto:${CLINIC_INFO.contact.email}`} className="hover:text-paper">{CLINIC_INFO.contact.email}</a>}
             </div>
           </div>
@@ -41,10 +41,10 @@ export default function Footer() {
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Plumbing services
+                Roofing & Building Services
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need plumbing, roofing or gas appliance work? Contact our team.
+                Need roofing or building work? Contact our team.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet the Plumbing Team
+                  Meet the Roofing and Building Team
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -124,12 +124,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/" className="text-paper/80 hover:text-lime transition-colors">
-                  Plumbing Services
+                  Roofing & Building Services
                 </Link>
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Plumbing Advice
+                  Roofing Advice
                 </Link>
               </li>
               <li>
@@ -170,7 +170,7 @@ export default function Footer() {
               <div>
                 <span className="text-paper/50 block text-13">Service area:</span>
                 <address className="not-italic leading-relaxed text-13 text-paper/70">
-                  {CLINIC_INFO.primaryLocation.directions}
+                  {CLINIC_INFO.primaryLocation.street}, {CLINIC_INFO.primaryLocation.city} {CLINIC_INFO.primaryLocation.postalCode}
                 </address>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <span>, </span>
-            <span>Sullivans CP Plumbing</span>
+            <span>All in 1 Roofing and Building</span>
           </div>
         </div>
       </div>

@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Plumbing Services',
+  title: 'Roofing & Building Services',
   description:
-    'Sullivans CP Plumbing provides plumbing, roofing and gas appliance services in Mornington, VIC. Call 0412 725 332.',
+    'All in 1 Roofing and Building provides roofing and building services in Bexhill-on-Sea, East Sussex. Call +44 1424 232873.',
   pathname: '/',
 });
 
@@ -41,13 +41,13 @@ export default function HomePage() {
       {/* SECTION 2: Trust / Highlights */}
       <HomeStats />
 
-      {/* SECTION 2A: Plumbing service highlights */}
+      {/* SECTION 2A: Customer reviews */}
       <HomeReviews />
 
-      {/* SECTION 3: Plumbing Services */}
+      {/* SECTION 3: Roofing & Building Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Plumbing & Construction Services"
+        title="Roofing & Building Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Sullivans CP Plumbing */}
+      {/* SECTION 4: Why Choose All in 1 Roofing and Building */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Plumbing Work */}
+      {/* SECTION 6: Featured Roofing Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Plumbing Inspiration */}
+      {/* SECTION 9: Roofing & Building Projects */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}

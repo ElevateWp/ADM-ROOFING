@@ -29,7 +29,7 @@ export function createMetadata({
       description,
       url,
       siteName: CLINIC_INFO.name,
-      locale: 'en_AU',
+      locale: 'en_GB',
       type: 'website',
       images: [
         {
@@ -63,7 +63,7 @@ export function createMetadata({
 export function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
+    '@type': 'RoofingContractor',
     '@id': `${BASE_URL}/#business`,
     name: CLINIC_INFO.name,
     legalName: CLINIC_INFO.legalName,
@@ -84,21 +84,19 @@ export function generateLocalBusinessSchema() {
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
       .flatMap((item) => {
-        const range = item.hours.match(/(\d{1,2}):(\d{2})\s*(AM|PM)[–-](\d{1,2}):(\d{2})\s*(AM|PM)/i);
-        if (!range) return [];
+        const range = item.hours.match(/(\d{1,2})(?::(\d{2}))?\s*(AM|PM)[–-](\d{1,2})(?::(\d{2}))?\s*(AM|PM)/i);
+        if (!range || item.hours.toLowerCase() === 'closed') return [];
         const to24Hour = (hourText: string, minuteText: string, meridiem: string) => {
           let hour = Number(hourText) % 12;
           if (meridiem.toUpperCase() === 'PM') hour += 12;
           return `${String(hour).padStart(2, '0')}:${minuteText}`;
         };
-        const dayOfWeek = item.day === 'Monday - Friday'
-          ? ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-          : [item.day];
+        const dayOfWeek = [item.day];
         return [{
         '@type': 'OpeningHoursSpecification',
         dayOfWeek,
-        opens: to24Hour(range[1], range[2], range[3]),
-        closes: to24Hour(range[4], range[5], range[6]),
+        opens: to24Hour(range[1], range[2] || '00', range[3]),
+        closes: to24Hour(range[4], range[5] || '00', range[6]),
       }];
       }),
   };
@@ -110,7 +108,7 @@ export function generateServiceSchema(serviceName: string, description: string, 
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Plumbing services',
+    serviceType: 'Roofing & Building Services',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',
