@@ -3,7 +3,7 @@ import { SERVICES, DENTISTS, BLOG_POSTS } from '@/lib/clinic-data';
 import { BASE_URL } from '@/lib/seo';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/about', '/testimonials', '/our-team', '/services', '/request-a-quote', '/contact', '/blog'];
+  const routes = ['', '/about', '/services', '/testimonials', '/our-team', '/request-a-quote', '/contact', '/blog'];
   const coreRoutes = routes.map((route) => ({
     url: `${BASE_URL}${route}/`, lastModified: new Date(), changeFrequency: 'weekly' as const,
     priority: route === '' ? 1.0 : route === '/request-a-quote' ? 0.9 : 0.8,

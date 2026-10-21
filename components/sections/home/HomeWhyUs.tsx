@@ -17,8 +17,8 @@ const REASONS = [
     description: 'Talk through the work, quote and next steps before you decide how to proceed.',
   },
   {
-    title: 'A range of plumbing needs',
-    description: 'The team can discuss plumbing repairs, hot water systems and blocked drains.',
+    title: 'A range of property services',
+    description: 'The team can discuss plumbing, hot water, metal roofing, gutters and gas appliance installations.',
   },
 ];
 
@@ -72,7 +72,7 @@ export default function HomeWhyUs() {
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#202420]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                  <div className="absolute bottom-3 left-3 bg-[#202124]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
                     Plumbing and plumbing repairs
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function HomeWhyUs() {
                   />
                 </div>
                 {/* Plumbing repair detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F8F2] overflow-hidden border border-mist shadow-sm">
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F5F5F5] overflow-hidden border border-mist shadow-sm">
                   <Image
                     src="/images/plumbing-repair.jpg"
                     alt="Plumber repairing pipework"
@@ -95,7 +95,7 @@ export default function HomeWhyUs() {
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#202420]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#202124]/80 text-paper font-body text-12 px-3 py-2 text-center">
                      Plumbing repairs
                   </div>
                 </div>

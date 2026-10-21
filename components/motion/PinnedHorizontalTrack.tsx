@@ -233,7 +233,7 @@ export default function PinnedHorizontalTrack({
               setCurrentIndex(idx + 1);
             }}
             className={`h-3 rounded-full transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-forest ${
-              idx === currentIndex - 1 ? 'bg-[#202420] w-4' : 'bg-[#DCE7D9] w-3'
+              idx === currentIndex - 1 ? 'bg-[#202124] w-4' : 'bg-[#E0E2E5] w-3'
             }`}
           />
         ))}

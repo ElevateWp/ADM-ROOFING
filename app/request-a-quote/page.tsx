@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Request a Plumbing Quote',
   description:
-    'Request a quote for plumbing services or repairs from G Sullivan Plumbing Pty Ltd. Call 0422 475 273.',
+    'Request a quote for plumbing services or repairs from Sullivans CP Plumbing. Call 0412 725 332.',
   pathname: '/request-a-quote/',
 });
 
@@ -34,7 +34,7 @@ const BOOKING_STEPS = [
   {
     step: 4,
     title: 'Plumbing Work',
-    description: 'the G Sullivan Plumbing team complete the agreed plumbing work at your property.',
+    description: 'The Sullivans CP Plumbing team completes the agreed work at your property.',
   },
 ];
 

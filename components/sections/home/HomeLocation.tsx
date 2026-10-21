@@ -39,7 +39,7 @@ export default function HomeLocation() {
                 )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {CLINIC_INFO.identityHighlights.map((highlight) => (
-                    <span key={highlight} className="bg-[#F3F8F2] border border-[#DCE7D9] px-3 py-1.5 text-12 text-[#202420]">
+                    <span key={highlight} className="bg-[#F5F5F5] border border-[#E0E2E5] px-3 py-1.5 text-12 text-[#202124]">
                       {highlight}
                     </span>
                   ))}
@@ -91,7 +91,7 @@ export default function HomeLocation() {
                     className="object-cover"
                 />
                 <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                  G Sullivan Plumbing Pty Ltd
+                  Sullivans CP Plumbing
                 </div>
               </div>
             </AnimateOnScroll>

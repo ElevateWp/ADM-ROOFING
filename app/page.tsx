@@ -19,7 +19,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Plumbing Services',
   description:
-    'G Sullivan Plumbing Pty Ltd provides plumbing services and repairs. Call 0422 475 273 to discuss your needs.',
+    'Sullivans CP Plumbing provides plumbing, roofing and gas appliance services in Mornington, VIC. Call 0412 725 332.',
   pathname: '/',
 });
 
@@ -55,7 +55,7 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose G Sullivan Plumbing Pty Ltd */}
+      {/* SECTION 4: Why Choose Sullivans CP Plumbing */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}

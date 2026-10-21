@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Plumbing Advice',
   description:
-    'Practical planning ideas for plumbing work, plumbing repairs and plumbing repairs from G Sullivan Plumbing Pty Ltd.',
+    'Practical information about plumbing maintenance, toilet installations, hot water services and gutters from Sullivans CP Plumbing.',
   pathname: '/blog/',
 });
 

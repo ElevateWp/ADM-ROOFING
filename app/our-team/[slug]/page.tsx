@@ -67,7 +67,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'G Sullivan Plumbing Pty Ltd team', path: '/our-team/' },
+              { name: 'Sullivans CP Plumbing team', path: '/our-team/' },
               { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
@@ -168,7 +168,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         </div>
       </section>}
 
-      {/* Assigned Clinical Disciplines */}
+      {/* Related Services */}
       {relatedServices.length > 0 && (
         <section className="py-20 md:py-32 border-b border-mist">
           <div className="max-w-site mx-auto px-6 md:px-12">
@@ -178,7 +178,7 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
                   Areas of Work
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Home improvement services from {dentist.name}
+                  Services from {dentist.name}
                 </h2>
               </div>
             </AnimateOnScroll>

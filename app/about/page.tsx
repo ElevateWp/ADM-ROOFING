@@ -14,9 +14,9 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About G Sullivan Plumbing Pty Ltd',
+  title: 'About Sullivans CP Plumbing',
   description:
-    'Learn about G Sullivan Plumbing Pty Ltd and its plumbing services. Call 0422 475 273 to discuss your project.',
+    'Learn about Sullivans CP Plumbing and its plumbing services. Call 0412 725 332 to discuss your project.',
   pathname: '/about/',
 });
 
@@ -24,7 +24,7 @@ const TIMELINE = [
   {
     year: 'Plumbing',
     title: 'Services for your property',
-    description: 'G Sullivan Plumbing Pty Ltd provides plumbing services and repairs. Contact the team to discuss the work you need.',
+    description: 'Sullivans CP Plumbing provides plumbing services and repairs. Contact the team to discuss the work you need.',
   },
 ];
 
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About G Sullivan Plumbing Pty Ltd
+                  About Sullivans CP Plumbing
                 </span>
                 <WordRevealH1 text="Plumbing services for your property." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="G Sullivan Plumbing Pty Ltd provides plumbing services and repairs. Contact the team to discuss your property and the work you need." />
+                  <ScrubbedParagraph text="Sullivans CP Plumbing provides plumbing services and repairs. Contact the team to discuss your property and the work you need." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Call</span>
-                    <span className="font-medium text-forest">0422 475 273</span>
+                    <span className="font-medium text-forest">0412 725 332</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe G Sullivan Plumbing Pty Ltd */}
+      {/* SECTION 4: Equipe Sullivans CP Plumbing */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the G Sullivan Plumbing Team
+                  Meet the Sullivans CP Plumbing Team
                 </h2>
               </div>
               <Link

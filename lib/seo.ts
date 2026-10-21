@@ -83,28 +83,23 @@ export function generateLocalBusinessSchema() {
       longitude: CLINIC_INFO.primaryLocation.coordinates.lng,
     } } : {}),
     openingHoursSpecification: CLINIC_INFO.schedule
-      .filter((item) => item.hours !== 'Closed')
-      .map((item) => {
+      .flatMap((item) => {
         const range = item.hours.match(/(\d{1,2}):(\d{2})\s*(AM|PM)[–-](\d{1,2}):(\d{2})\s*(AM|PM)/i);
+        if (!range) return [];
         const to24Hour = (hourText: string, minuteText: string, meridiem: string) => {
           let hour = Number(hourText) % 12;
           if (meridiem.toUpperCase() === 'PM') hour += 12;
           return `${String(hour).padStart(2, '0')}:${minuteText}`;
         };
-        return ({
+        const dayOfWeek = item.day === 'Monday - Friday'
+          ? ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
+          : [item.day];
+        return [{
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: {
-          Monday: 'Monday',
-          Tuesday: 'Tuesday',
-          Wednesday: 'Wednesday',
-          Thursday: 'Thursday',
-          Friday: 'Friday',
-          Saturday: 'Saturday',
-          Sunday: 'Sunday',
-        }[item.day],
-        opens: range ? to24Hour(range[1], range[2], range[3]) : '00:00',
-        closes: range ? to24Hour(range[4], range[5], range[6]) : '00:00',
-      });
+        dayOfWeek,
+        opens: to24Hour(range[1], range[2], range[3]),
+        closes: to24Hour(range[4], range[5], range[6]),
+      }];
       }),
   };
 }

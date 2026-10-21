@@ -62,7 +62,7 @@ export default function SingleBlogPage({ params }: BlogPostProps) {
     dateModified: post.lastUpdated,
     author: {
       '@type': 'Person',
-      name: author?.name || 'Equipe G Sullivan Plumbing Pty Ltd',
+      name: author?.name || 'Equipe Sullivans CP Plumbing',
     },
     publisher: {
       '@type': 'Organization',

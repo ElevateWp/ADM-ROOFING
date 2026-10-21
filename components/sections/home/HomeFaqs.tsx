@@ -8,7 +8,7 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 const HOME_FAQS: AccordionItem[] = [
   {
     question: 'What plumbing services can I ask about?',
-    answer: 'Discuss general plumbing, plumbing repairs, hot water systems or blocked drains with the team.',
+    answer: 'Discuss plumbing maintenance and repairs, toilet installations, hot water services, roofing, gutters or gas appliance installations with the team.',
     relatedLink: { href: '/services/', label: 'Explore our services →' },
   },
   {
@@ -18,8 +18,8 @@ const HOME_FAQS: AccordionItem[] = [
   },
   {
     question: 'Do you carry out plumbing repairs?',
-    answer: 'Yes. G Sullivan Plumbing Pty Ltd carries out plumbing repairs. Call to discuss your property and the work required.',
-    relatedLink: { href: '/plumbing-repairs/', label: 'Explore plumbing repairs →' },
+    answer: 'Yes. Sullivans CP Plumbing carries out plumbing repairs. Call to discuss your property and the work required.',
+    relatedLink: { href: '/plumbing-maintenance-repairs/', label: 'Explore plumbing repairs →' },
   },
   {
     question: 'How do I request a quote?',

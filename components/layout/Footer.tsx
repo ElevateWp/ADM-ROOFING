@@ -14,7 +14,7 @@ export default function Footer() {
               <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="G Sullivan Plumbing Pty Ltd logo"
+                  alt="Sullivans CP Plumbing logo"
                   width={60}
                   height={60}
                   className="object-contain w-full h-full"
@@ -22,18 +22,19 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  G Sullivan Plumbing Pty Ltd
+                  Sullivans CP Plumbing
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Plumbing services & repairs
+                  Plumbing · Roofing · Gas
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Plumbing services and repairs for your property.
+              Plumbing, roofing and gas appliance services across Mornington, VIC.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>0422 475 273</span>
+              <span>0412 725 332</span>
+              {CLINIC_INFO.contact.email && <a href={`mailto:${CLINIC_INFO.contact.email}`} className="hover:text-paper">{CLINIC_INFO.contact.email}</a>}
             </div>
           </div>
 
@@ -43,7 +44,7 @@ export default function Footer() {
                 Plumbing services
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need plumbing work or a repair? Contact our team.
+                Need plumbing, roofing or gas appliance work? Contact our team.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -122,7 +123,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/testimonials/" className="text-paper/80 hover:text-lime transition-colors">
+                <Link href="/services/" className="text-paper/80 hover:text-lime transition-colors">
                   Plumbing Services
                 </Link>
               </li>
@@ -183,7 +184,7 @@ export default function Footer() {
           </div>
           <div className="flex items-center gap-6">
             <span>, </span>
-            <span>G Sullivan Plumbing Pty Ltd</span>
+            <span>Sullivans CP Plumbing</span>
           </div>
         </div>
       </div>

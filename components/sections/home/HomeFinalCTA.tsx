@@ -15,7 +15,7 @@ export default function HomeFinalCTA() {
 
         <AnimateOnScroll animation="fade-up" duration={0.85} delay={0.15}>
           <p className="font-body text-17 md:text-21 text-paper/80 leading-relaxed max-w-xl mb-10 mx-auto">
-            Call G Sullivan Plumbing Pty Ltd to discuss your plumbing needs and availability.
+            Call Sullivans CP Plumbing to discuss your plumbing needs and availability.
           </p>
         </AnimateOnScroll>
 

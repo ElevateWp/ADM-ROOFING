@@ -3,9 +3,9 @@ import Link from 'next/link';
 import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const SERVICE_HIGHLIGHTS = [
-  { title: 'General plumbing', description: 'Discuss planned plumbing work or an issue that needs attention.' },
-  { title: 'Plumbing repairs', description: 'Get in touch to explain what is happening and ask about repair options.' },
-  { title: 'Hot water and drains', description: 'Ask the team about hot water system plumbing or a blocked drain.' },
+  { title: 'Plumbing maintenance & repairs', description: 'Discuss planned plumbing work or an issue that needs attention.' },
+  { title: 'Hot water services', description: 'Ask the team about hot water service maintenance or installation.' },
+  { title: 'Roofing, gutters & gas', description: 'Get in touch about metal roofing, gutters and downpipes or gas appliance installations.' },
 ];
 
 export default function HomeReviews() {
