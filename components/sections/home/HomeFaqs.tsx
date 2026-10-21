@@ -7,19 +7,19 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What work does Roofsmart Sussex Limited carry out?',
-    answer: 'Roofsmart Sussex Limited is a roofing contractor. Customer reviews mention roof repairs and extensive chimney repairs.',
+    question: 'What plumbing services can I ask about?',
+    answer: 'Discuss general plumbing, plumbing repairs, hot water systems or blocked drains with the team.',
     relatedLink: { href: '/services/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
-    answer: 'Roofsmart Sussex Limited is based in Sussex, East Sussex. Contact the team to discuss your property.',
+    answer: 'Call the team to confirm service availability for your property.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Do you carry out chimney repairs?',
-    answer: 'Yes. Roofsmart Sussex Limited carries out chimney repairs. Call to discuss your property and the work required.',
-    relatedLink: { href: '/chimney-repairs/', label: 'Explore chimney repairs →' },
+    question: 'Do you carry out plumbing repairs?',
+    answer: 'Yes. G Sullivan Plumbing Pty Ltd carries out plumbing repairs. Call to discuss your property and the work required.',
+    relatedLink: { href: '/plumbing-repairs/', label: 'Explore plumbing repairs →' },
   },
   {
     question: 'How do I request a quote?',
@@ -27,9 +27,9 @@ const HOME_FAQS: AccordionItem[] = [
     relatedLink: { href: '/request-a-quote/', label: 'Request a quote →' },
   },
   {
-    question: 'Where is Roofsmart Sussex Limited based?',
-    answer: CLINIC_INFO.primaryLocation.directions,
-    relatedLink: { href: '/contact/', label: 'Check our service area →' },
+    question: 'How can I confirm service availability?',
+    answer: `Call ${CLINIC_INFO.contact.phone} to discuss your property and confirm service availability.`,
+    relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
 ];
 
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about your roofing project
+              Questions about your plumbing project
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                Find out about roofing work, quotes and the Bexhill-on-Sea location.
+                Find out about plumbing work, quotes and service availability.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">

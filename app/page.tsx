@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing Services in Sussex',
+  title: 'Plumbing Services',
   description:
-    'Roofsmart Sussex Limited is a Bexhill-on-Sea roofing contractor. Customers recommend its roofing and chimney repair work. Call +44 7576 557747.',
+    'G Sullivan Plumbing Pty Ltd provides plumbing services and repairs. Call 0422 475 273 to discuss your needs.',
   pathname: '/',
 });
 
@@ -41,13 +41,13 @@ export default function HomePage() {
       {/* SECTION 2: Trust / Highlights */}
       <HomeStats />
 
-      {/* SECTION 2A: Positive Google Reviews */}
+      {/* SECTION 2A: Plumbing service highlights */}
       <HomeReviews />
 
-      {/* SECTION 3: Roofing Services */}
+      {/* SECTION 3: Plumbing Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Roofing & Construction Services"
+        title="Plumbing & Construction Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose Roofsmart Sussex Limited */}
+      {/* SECTION 4: Why Choose G Sullivan Plumbing Pty Ltd */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Roofing Work */}
+      {/* SECTION 6: Featured Plumbing Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Roofing Inspiration */}
+      {/* SECTION 9: Plumbing Inspiration */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}

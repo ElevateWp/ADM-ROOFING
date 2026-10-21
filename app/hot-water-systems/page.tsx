@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import ServiceLandingPage, { getServiceMetadata } from '@/components/sections/services/ServiceLandingPage';
 
-export const metadata: Metadata = getServiceMetadata('roofing-and-chimney-work');
+export const metadata: Metadata = getServiceMetadata('hot-water-systems');
 
 export default function KitchensBathroomsPage() {
-  return <ServiceLandingPage slug="roofing-and-chimney-work" />;
+  return <ServiceLandingPage slug="hot-water-systems" />;
 }

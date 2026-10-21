@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contact and Service Area',
   description:
-    'Contact Roofsmart Sussex Limited on +44 7576 557747 about roofing work, roof repairs and chimney repairs in Sussex.',
+    'Contact G Sullivan Plumbing Pty Ltd on 0422 475 273 to discuss plumbing services and repairs.',
   pathname: '/contact/',
 });
 
@@ -31,9 +31,9 @@ export default function ContactPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Contact & Quotes
                 </span>
-                <WordRevealH1 text="Talk to Pete and the team." />
+                <WordRevealH1 text="Talk to the G Sullivan Plumbing team." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Call us to discuss roofing work, roof repairs or chimney repairs.
+                  Call us to discuss plumbing work, plumbing repairs or plumbing repairs.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Roofing enquiries</span>
+                      <span className="font-body text-13 text-forest font-medium">Plumbing enquiries</span>
                     </div>
 
                     {/* Phone */}
@@ -90,7 +90,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest-ink/60">Listed as open 24 hours</span>
+                      <span className="font-body text-13 text-forest-ink/60">Call to discuss availability</span>
                     </div>
 
                   </div>
@@ -110,7 +110,7 @@ export default function ContactPage() {
                     {CLINIC_INFO.primaryLocation.directions}
                   </address>
                   <div className="p-4 bg-mist/40 border-l-2 border-forest font-body text-13 text-forest-ink/80 leading-relaxed">
-                    <strong>Address:</strong> {CLINIC_INFO.primaryLocation.directions}
+                    Call to confirm the service area and availability.
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -121,7 +121,7 @@ export default function ContactPage() {
               <AnimateOnScroll animation="fade-left" duration={0.8}>
                 <div>
                   <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                    Opening Hours
+                    Availability
                   </span>
                   <div className="border border-mist divide-y divide-mist bg-paper font-body text-13 shadow-sm">
                     {CLINIC_INFO.schedule.length > 0 ? CLINIC_INFO.schedule.map((item) => (
@@ -145,7 +145,7 @@ export default function ContactPage() {
                       {CLINIC_INFO.name}
                     </h3>
                     <p className="font-body text-13 text-paper/80 leading-relaxed">
-                      {CLINIC_INFO.primaryLocation.directions}
+                    Call to confirm service availability for your property.
                     </p>
                   </div>
 
@@ -179,7 +179,7 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Roofing Quote
+                Plumbing Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
                 Ready to request a quote?

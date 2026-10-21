@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { Star } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, ArrowUpRight, Droplets, Hammer, Phone, Waves, Wrench } from 'lucide-react';
 import { CLINIC_INFO } from '@/lib/clinic-data';
 
 export default function HomeHero() {
@@ -8,92 +9,81 @@ export default function HomeHero() {
 
   return (
     <section
-      aria-label="Roofsmart Sussex Limited in Sussex"
-      className="relative z-30 isolate -mt-[88px] flex h-[100svh] min-h-[600px] w-full shrink-0 items-end overflow-hidden bg-neutral-900 text-white sm:-mt-[100px] md:-mt-[112px]"
+      aria-label="G Sullivan Plumbing Pty Ltd"
+      className="relative isolate mb-6 mt-2 flex min-h-[640px] w-full max-w-none shrink-0 items-center overflow-hidden rounded-3xl bg-[#101B10] text-white sm:mt-3 md:min-h-[700px]"
     >
       <Image
-        src="/images/hero-roofsmart-sussex.png"
-        alt="Slate roof with a roof window and chimney repairs underway"
+        src="/images/g-sullivan-hero.png"
+        alt="G Sullivan work vehicles parked at a service site"
         fill
         priority
-        sizes="100vw"
-        className="object-cover object-center"
+        sizes="(max-width: 768px) 100vw, 1480px"
+        className="hero-image-motion object-cover object-[center_36%]"
       />
-      <div aria-hidden="true" className="absolute inset-0 bg-black/10" />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-black/10" />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#101B10]/95 via-[#101B10]/78 to-[#101B10]/38 md:via-[#101B10]/62 md:to-[#101B10]/10" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#101B10]/55 via-[#101B10]/10 to-[#101B10]/20" />
 
-      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-[12vh] z-[1] hidden overflow-hidden text-center md:block">
-        <span className="block whitespace-nowrap font-display text-[clamp(2.5rem,9.2vw,9rem)] font-semibold leading-none tracking-[-0.08em] text-white/[0.34]">
-          ROOFSMART SUSSEX
-        </span>
-      </div>
-
-      <div className="relative z-10 grid w-full grid-cols-1 items-end gap-8 px-5 pb-[8vh] sm:px-8 md:grid-cols-12 md:px-12 lg:px-[5.2vw]">
-        <div className="w-full max-w-[700px] md:col-span-7 lg:col-span-7">
-          <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/35 bg-black/25 px-3 py-2 sm:px-4">
-            <span className="flex items-center gap-1 text-[#D9271C]" aria-label="5 out of 5 stars">
-              {Array.from({ length: 5 }, (_, index) => <Star key={index} size={13} fill="currentColor" strokeWidth={1.5} />)}
-            </span>
-            <span className="font-body text-[11px] font-medium leading-tight text-white sm:text-xs">5.0 · 23 Google reviews</span>
-          </div>
-
-          <p className="mb-3 font-body text-[10px] font-bold uppercase tracking-[0.2em] text-white/75 sm:text-xs">
-            BEXHILL-ON-SEA ROOFING CONTRACTOR
+      <div className="relative z-10 w-full px-6 pb-12 pt-28 sm:px-10 sm:pb-14 md:px-14 md:pb-16 md:pt-32 lg:px-[6.5%]">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
+        <div className="hero-fade-up max-w-[790px] lg:col-span-8">
+          <p className="mb-5 flex items-center gap-3 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#55F044] sm:text-sm sm:tracking-[0.18em]">
+            <span aria-hidden="true" className="h-[3px] w-12 shrink-0 bg-[#35D426] sm:w-16" />
+            Plumbing services &amp; repairs
           </p>
-          <h1 className="mb-4 max-w-[760px] font-display text-[clamp(2.25rem,4.5vw,4.5rem)] font-semibold leading-[0.99] tracking-[-0.045em] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.16)] sm:mb-5">
-            Roofing and chimney repairs, done with care.
+          <h1 className="mb-5 max-w-[850px] font-display text-[clamp(2.9rem,6.6vw,6.6rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-white">
+            <span className="block">Plumbing help,</span>
+            <span className="block text-[#35D426]">when you need it.</span>
           </h1>
-          <p className="max-w-[540px] font-body text-sm leading-relaxed text-white/85 sm:text-base md:text-lg">
-            Pete and his team provide professional roofing work and chimney repairs in Bexhill-on-Sea and across Sussex.
+          <p className="max-w-[650px] font-body text-base leading-relaxed text-white/75 sm:text-lg md:text-xl">
+            From everyday plumbing and repairs to hot water and drainage, call to talk through the work you need.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3 sm:mt-7">
-            <a
-              href="/request-a-quote/"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#D9271C] px-6 text-sm font-semibold text-white shadow-[0_8px_28px_rgba(16,43,90,0.35)] transition-colors hover:bg-[#F04435] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7"
-            >
-              Request a roofing quote <span aria-hidden="true">↗</span>
-            </a>
+
+          <div className="hero-cta-enter mt-7 flex flex-wrap gap-3 sm:mt-9 sm:gap-4">
             <a
               href={phoneLink}
-              className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/55 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:px-7"
+              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#35D426] px-6 font-body text-sm font-semibold text-[#101B10] shadow-[0_8px_28px_rgba(0,0,0,0.22)] transition-colors hover:bg-[#55F044] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-16 sm:px-9 sm:text-base"
             >
-              Call {phone}
+              <Phone aria-hidden="true" size={17} strokeWidth={2.4} />
+              Call us: {phone}
             </a>
+            <Link
+              href="/request-a-quote/"
+              className="inline-flex min-h-14 items-center justify-center gap-4 rounded-full border border-white/45 bg-[#101B10]/25 px-6 font-body text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-[#55F044] hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-16 sm:px-9 sm:text-base"
+            >
+              Request a quote
+              <ArrowRight aria-hidden="true" size={19} />
+            </Link>
           </div>
         </div>
 
-        <div className="hidden w-full md:col-span-5 md:block lg:col-span-4 lg:col-start-9">
-          <div className="mb-4 grid grid-cols-2 gap-3">
-            <article className="rounded-xl border border-white/30 bg-black/25 p-4 lg:p-5">
-              <span className="block font-display text-3xl font-semibold leading-none text-[#294A9B] lg:text-4xl">5.0</span>
-              <span className="mt-2 block font-body text-xs leading-snug text-white/80">Google rating<br />23 customer reviews</span>
-            </article>
-            <article className="rounded-xl border border-white/30 bg-black/25 p-4 lg:p-5">
-              <span className="block font-display text-3xl font-semibold leading-none text-[#294A9B] lg:text-4xl">24 hours</span>
-              <span className="mt-2 block font-body text-xs leading-snug text-white/80">Open every day<br />Call to discuss your project</span>
-            </article>
-          </div>
-          <div className="grid grid-cols-3 gap-2 rounded-xl border border-white/25 bg-black/25 p-3 text-center lg:p-4">
-            <div>
-              <span className="block font-display text-sm font-semibold text-[#294A9B] lg:text-base">5.0 / 5</span>
-              <span className="mt-1 block font-body text-[10px] leading-tight text-white/75">Google rating</span>
-            </div>
-            <div className="border-x border-white/20 px-1">
-              <span className="block font-display text-sm font-semibold text-[#294A9B] lg:text-base">23</span>
-              <span className="mt-1 block font-body text-[10px] leading-tight text-white/75">Customer reviews</span>
-            </div>
-            <div>
-              <span className="block font-display text-base font-semibold text-[#294A9B] lg:text-lg">24 / 7</span>
-              <span className="mt-1 block font-body text-[10px] leading-tight text-white/75">Open every day</span>
-            </div>
+        <div className="hero-slide-in w-full max-w-[500px] rounded-[1.6rem] border border-white/20 bg-[#101B10]/80 p-5 shadow-[0_22px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-7 lg:col-span-4 lg:col-start-9">
+          <h2 className="mb-2 flex items-center gap-3 font-display text-xl font-semibold text-white sm:text-2xl">
+            <Wrench aria-hidden="true" className="text-[#35D426]" size={26} strokeWidth={1.8} />
+            Plumbing services
+          </h2>
+          <p className="mb-5 font-body text-sm leading-relaxed text-white/65 sm:text-base">Choose a service to find out more.</p>
+          <div className="divide-y divide-white/15 border-t border-white/15">
+            {[
+              { label: 'General plumbing', href: '/general-plumbing/', Icon: Wrench },
+              { label: 'Plumbing repairs', href: '/plumbing-repairs/', Icon: Hammer },
+              { label: 'Hot water systems', href: '/hot-water-systems/', Icon: Droplets },
+              { label: 'Blocked drains', href: '/blocked-drains/', Icon: Waves },
+            ].map((service) => (
+              <Link
+                key={service.href}
+                href={service.href}
+                className="group flex items-center justify-between gap-4 py-4 font-body text-sm font-medium text-white/90 transition-colors hover:text-[#55F044] sm:text-base"
+              >
+                <span className="flex items-center gap-4">
+                  <service.Icon aria-hidden="true" size={23} strokeWidth={1.8} className="shrink-0 text-[#55F044]" />
+                  {service.label}
+                </span>
+                <ArrowUpRight aria-hidden="true" size={19} className="text-white/55 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#55F044]" />
+              </Link>
+            ))}
           </div>
         </div>
-      </div>
-
-      <div className="pointer-events-none absolute bottom-3 left-5 right-5 z-20 flex items-center justify-between font-body text-[9px] uppercase tracking-[0.14em] text-white/60 sm:bottom-4 sm:left-8 sm:right-8 md:left-12 md:right-12 lg:left-[5.2vw] lg:right-[5.2vw]">
-        <span>Roofsmart Sussex Limited · Bexhill-on-Sea</span>
-        <span>Scroll to explore ↓</span>
+        </div>
       </div>
     </section>
   );

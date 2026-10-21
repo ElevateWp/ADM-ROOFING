@@ -115,7 +115,7 @@ export function generateServiceSchema(serviceName: string, description: string, 
     '@type': 'Service',
     name: serviceName,
     description: description,
-    serviceType: 'Roofing work, roof repairs and chimney repairs',
+    serviceType: 'Plumbing services',
     url: `${BASE_URL}${url}`,
     provider: {
       '@type': 'LocalBusiness',

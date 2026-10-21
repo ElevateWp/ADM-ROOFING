@@ -11,17 +11,17 @@ import { generateLocalBusinessSchema } from '@/lib/seo';
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: {
-    default: 'Roofsmart Sussex Limited',
+    default: 'G Sullivan Plumbing Pty Ltd | Plumbing Services',
     template: '%s',
   },
   description:
-    'Roofsmart Sussex Limited is a Bexhill-on-Sea roofing contractor. Customers recommend its roofing and chimney repair work. Call +44 7576 557747.',
+    'Contact G Sullivan Plumbing Pty Ltd to discuss plumbing services and repairs. Call 0422 475 273.',
   keywords: [
-    'Roofsmart Sussex Limited',
-    'chimney repairs Bexhill-on-Sea',
-    'roof repairs Cairns',
+    'G Sullivan Plumbing Pty Ltd',
+    'plumbing services',
+    'plumbing repairs',
   ],
-  authors: [{ name: 'Roofsmart Sussex Limited' }],
+  authors: [{ name: 'G Sullivan Plumbing Pty Ltd' }],
   icons: {
     icon: [
       { url: '/icon.png', sizes: '32x32', type: 'image/png' },
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
+    <html lang="en-AU" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -47,7 +47,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F4F6FC] selection:text-[#20232A]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#F3F8F2] selection:text-[#202420]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />

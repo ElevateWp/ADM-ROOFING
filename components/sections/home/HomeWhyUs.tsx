@@ -5,20 +5,20 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 
 const REASONS = [
   {
-    title: 'Professional and considerate',
-    description: 'Customers describe Pete and his team as professional, polite, punctual and considerate.',
+    title: 'Clear conversation',
+    description: 'Discuss your plumbing issue and the work you need directly with the team.',
   },
   {
-    title: 'Responsive service',
-    description: 'Customers say the team responded quickly and carried out repair work shortly after quoting.',
+    title: 'Discuss the scope',
+    description: 'Ask about the timing and scope for the plumbing work at your property.',
   },
   {
-    title: 'Quality work',
-    description: 'Customers describe the finished roofing work as high quality and recommend the team.',
+    title: 'Plan the next step',
+    description: 'Talk through the work, quote and next steps before you decide how to proceed.',
   },
   {
-    title: 'Roof and chimney repairs',
-    description: 'Reviews mention roof repairs and extensive chimney repairs carried out with attentive care.',
+    title: 'A range of plumbing needs',
+    description: 'The team can discuss plumbing repairs, hot water systems and blocked drains.',
   },
 ];
 
@@ -34,7 +34,7 @@ export default function HomeWhyUs() {
                 Our Approach
               </span>
               <h2 className="font-display text-26 sm:text-33 md:text-41 text-forest-ink mb-8 md:mb-10 leading-tight">
-                Why Customers Choose Roofsmart Sussex Limited
+                Plumbing services for your property
               </h2>
 
               <div className="divide-y divide-mist">
@@ -57,7 +57,7 @@ export default function HomeWhyUs() {
             </AnimateOnScroll>
           </div>
 
-          {/* Residential property imagery */}
+          {/* Plumbing stock imagery */}
           <div className="lg:col-span-6">
             <AnimateOnScroll animation="fade-left" duration={0.85}>
               <div className="grid grid-cols-2 gap-3">
@@ -65,38 +65,38 @@ export default function HomeWhyUs() {
                 <div className="col-span-2 relative aspect-[16/10] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.06} className="w-full h-full">
                     <Image
-                    src="/images/jsroof-stock-02.jpg"
-                    alt="Residential property"
+                    src="/images/plumbing-radiator.jpg"
+                    alt="Plumber working on a radiator pipe"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
-                  <div className="absolute bottom-3 left-3 bg-[#20232A]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
-                    Roofing and chimney repairs
+                  <div className="absolute bottom-3 left-3 bg-[#202420]/90 backdrop-blur-sm text-paper font-body text-12 px-3 py-1 font-medium">
+                    Plumbing and plumbing repairs
                   </div>
                 </div>
-                {/* Additional residential imagery */}
+                {/* Additional plumbing imagery */}
                 <div className="col-span-2 sm:col-span-1 relative aspect-square bg-mist overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/jsroof-stock-03.jpg"
-                    alt="Brick residential home"
+                    src="/images/plumbing-pipes.jpg"
+                    alt="Plumbing pipes being repaired"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
                   />
                 </div>
-                {/* Residential property detail */}
-                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F4F6FC] overflow-hidden border border-mist shadow-sm">
+                {/* Plumbing repair detail */}
+                <div className="col-span-2 sm:col-span-1 relative aspect-square bg-[#F3F8F2] overflow-hidden border border-mist shadow-sm">
                   <Image
-                    src="/images/jsroof-stock-04.jpg"
-                    alt="Traditional pitched roof on a home"
+                    src="/images/plumbing-repair.jpg"
+                    alt="Plumber repairing pipework"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover object-top"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-[#20232A]/80 text-paper font-body text-12 px-3 py-2 text-center">
-                    Sussex homes
+                  <div className="absolute bottom-0 left-0 right-0 bg-[#202420]/80 text-paper font-body text-12 px-3 py-2 text-center">
+                     Plumbing repairs
                   </div>
                 </div>
               </div>

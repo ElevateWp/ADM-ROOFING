@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Request a Roofing Quote',
+  title: 'Request a Plumbing Quote',
   description:
-    'Request a quote for roofing work, roof repairs or chimney repairs from Roofsmart Sussex Limited in Sussex.',
+    'Request a quote for plumbing services or repairs from G Sullivan Plumbing Pty Ltd. Call 0422 475 273.',
   pathname: '/request-a-quote/',
 });
 
@@ -19,7 +19,7 @@ const BOOKING_STEPS = [
   {
     step: 1,
     title: 'Send Your Request',
-    description: 'Tell us about your roofing project and how you would like us to contact you.',
+    description: 'Tell us about your plumbing project and how you would like us to contact you.',
   },
   {
     step: 2,
@@ -33,8 +33,8 @@ const BOOKING_STEPS = [
   },
   {
     step: 4,
-    title: 'Roofing Work',
-    description: 'Pete and the team complete the agreed roofing work at your property.',
+    title: 'Plumbing Work',
+    description: 'the G Sullivan Plumbing team complete the agreed plumbing work at your property.',
   },
 ];
 
@@ -52,9 +52,9 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Personal Service
                 </span>
-                <WordRevealH1 text="Request a roofing quote." />
+                <WordRevealH1 text="Request a plumbing quote." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="Tell us about your roofing work, roof repairs or chimney repairs project in Sussex." />
+                  <ScrubbedParagraph text="Tell us about the plumbing work you need and the team will discuss availability and next steps." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -179,7 +179,7 @@ export default function BookAppointmentPage() {
                 <span className="font-body text-13 text-forest block mb-2 font-medium uppercase tracking-wider">Location</span>
                 <h3 className="font-display text-21 text-forest-ink mb-4">Service Area</h3>
                 <p className="font-body text-13 text-forest-ink/80 leading-relaxed mb-3">
-                  We serve Sussex and surrounding areas. Contact us to confirm availability for your property.
+                  We serve  and surrounding areas. Contact us to confirm availability for your property.
                 </p>
               </div>
             </AnimateOnScroll>

@@ -5,18 +5,18 @@
 @layer base {
   :root {
     --paper: #FFFFFF; /* Main Background */
-    --paper-secondary: #F4F6FC; /* Secondary Background */
-    --forest: #14264B; /* Deep Sections */
-    --forest-ink: #20232A;
-    --black-accent: #14264B;
-    --secondary-text: #687181;
-    --primary-brand: #D9271C; /* Primary Brand / CTA */
-    --brand-hover: #F04435; /* Hover / Highlight */
-    --navy-accent: #183675;
-    --soft-blue: #FBE3E0;
-    --lime: #294A9B; /* Ocean blue accent */
-    --orange: #D9271C; /* Orange accent */
-    --mist: #DCE1EA; /* Borders */
+    --paper-secondary: #F3F8F2; /* Secondary Background */
+    --forest: #101B10; /* Deep Sections */
+    --forest-ink: #202420;
+    --black-accent: #101B10;
+    --secondary-text: #687268;
+    --primary-brand: #35D426; /* Primary Brand / CTA */
+    --brand-hover: #55F044; /* Hover / Highlight */
+    --navy-accent: #168B18;
+    --soft-blue: #DDF5D8;
+    --lime: #168B18;
+    --orange: #35D426;
+    --mist: #DCE7D9; /* Borders */
     
     --font-display: "Instrument Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -150,6 +150,37 @@
 }
 .snap-center {
   scroll-snap-align: center;
+}
+
+@keyframes hero-image-arrive {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translate3d(0, 22px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes hero-slide-in {
+  from { opacity: 0; transform: translate3d(32px, 0, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.hero-image-motion {
+  animation: hero-image-arrive 1.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-fade-up {
+  animation: hero-fade-up 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-cta-enter {
+  animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.42s both;
+}
+
+.hero-slide-in {
+  animation: hero-slide-in 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
 }
 
 /* Reduced Motion Override */

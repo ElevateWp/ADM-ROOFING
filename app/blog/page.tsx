@@ -9,9 +9,9 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing Advice',
+  title: 'Plumbing Advice',
   description:
-    'Practical planning ideas for roofing work, roof repairs and chimney repairs from Roofsmart Sussex Limited.',
+    'Practical planning ideas for plumbing work, plumbing repairs and plumbing repairs from G Sullivan Plumbing Pty Ltd.',
   pathname: '/blog/',
 });
 
@@ -23,17 +23,17 @@ export default function BlogIndexPage() {
         <TextureBackground variant="blog" className="opacity-20" />
 
         <div className="relative z-10 max-w-site mx-auto px-6 md:px-12">
-          <Breadcrumbs items={[{ name: 'Roofing Advice', path: '/blog/' }]} />
+          <Breadcrumbs items={[{ name: 'Plumbing Advice', path: '/blog/' }]} />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
-                  Roofing Advice
+                  Plumbing Advice
                 </span>
-                <WordRevealH1 text="Ideas for planning your next roofing project." />
+                <WordRevealH1 text="Ideas for planning your next plumbing project." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Read practical guides to roof repairs, chimney repairs and arranging roofing work.
+                  Read practical guides to plumbing repairs, plumbing repairs and arranging plumbing work.
                 </p>
               </AnimateOnScroll>
             </div>
