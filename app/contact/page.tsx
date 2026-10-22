@@ -11,7 +11,7 @@ import { createMetadata } from '@/lib/seo';
 export const metadata: Metadata = createMetadata({
   title: 'Contact and Service Area',
   description:
-    'Contact All in 1 Roofing and Building on +44 1424 232873 to discuss roofing and building services and repairs.',
+    'Contact ADM Plumbing Services on +65 8133 9461 to discuss plumbing services and repairs.',
   pathname: '/contact/',
 });
 
@@ -31,9 +31,9 @@ export default function ContactPage() {
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 uppercase tracking-wider font-medium">
                   Contact & Quotes
                 </span>
-                <WordRevealH1 text="Talk to the All in 1 Roofing and Building team." />
+                <WordRevealH1 text="Talk to the ADM Plumbing Services team." />
                 <p className="font-body text-17 md:text-21 text-forest-ink/90 leading-relaxed mt-6 max-w-2xl">
-                  Call us to discuss roofing work, roof repairs or roof repairs.
+                  Call us to discuss plumbing work, plumbing repairs or plumbing repairs.
                 </p>
               </AnimateOnScroll>
             </div>
@@ -76,7 +76,7 @@ export default function ContactPage() {
                           {CLINIC_INFO.contact.phone}
                         </a>
                       </div>
-                      <span className="font-body text-13 text-forest font-medium">Roofing enquiries</span>
+                      <span className="font-body text-13 text-forest font-medium">Plumbing enquiries</span>
                     </div>
 
                     {/* Phone */}
@@ -179,7 +179,7 @@ export default function ContactPage() {
           <AnimateOnScroll animation="fade-right" duration={0.8}>
             <div>
               <span className="font-body text-13 text-lime uppercase tracking-wider block mb-2 font-medium">
-                Roofing Quote
+                Plumbing Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
                 Ready to request a quote?

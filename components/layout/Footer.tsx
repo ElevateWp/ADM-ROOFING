@@ -11,29 +11,29 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-mist/20">
           <div className="lg:col-span-6">
             <div className="flex items-center gap-4 mb-5">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
+              <div className="w-40 h-14 sm:w-48 sm:h-[70px] bg-paper rounded-xl p-2 flex items-center justify-center flex-shrink-0 shadow-md">
                 <Image
                   src="/images/logo.png"
-                  alt="All in 1 Roofing and Building logo"
-                  width={60}
-                  height={60}
+                  alt="ADM Plumbing Services logo"
+                  width={220}
+                  height={80}
                   className="object-contain w-full h-full"
                 />
               </div>
               <div className="flex flex-col">
                 <span className="font-display text-24 md:text-30 font-medium leading-tight">
-                  All in 1 Roofing and Building
+                  ADM Plumbing Services
                 </span>
                 <span className="font-body text-13 text-paper/70 font-medium">
-                  Roofing · Building · Roofline
+                  Toilet · Bidet · Pipe Repairs
                 </span>
               </div>
             </div>
             <p className="font-body text-16 text-paper/80 leading-relaxed max-w-xl">
-              Roofing and building services across Bexhill-on-Sea, East Sussex.
+              Plumbing and building services across Singapore.
             </p>
             <div className="mt-6 flex flex-wrap gap-4 text-13 text-paper/60">
-              <span>+44 1424 232873</span>
+              <span>+65 8133 9461</span>
               {CLINIC_INFO.contact.email && <a href={`mailto:${CLINIC_INFO.contact.email}`} className="hover:text-paper">{CLINIC_INFO.contact.email}</a>}
             </div>
           </div>
@@ -41,10 +41,10 @@ export default function Footer() {
           <div className="lg:col-span-6 lg:pl-12 flex flex-col justify-between">
             <div className="p-6 bg-paper/5 border border-mist/20 rounded-none shadow-sm">
               <span className="font-body text-13 text-lime block mb-2 font-semibold uppercase tracking-wider">
-                Roofing & Building Services
+                Plumbing Services
               </span>
               <p className="font-body text-15 text-paper/90 mb-4">
-                Need roofing or building work? Contact our team.
+                Need a plumber? Call or WhatsApp ADM Plumbing Services.
               </p>
               <div className="flex flex-wrap items-center gap-4">
                 <a
@@ -95,7 +95,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-body text-15">
               <li>
                 <Link href="/our-team/" className="text-paper/80 hover:text-lime transition-colors">
-                  Meet the Roofing and Building Team
+                  Meet the Plumbing Services Team
                 </Link>
               </li>
               {DENTISTS.map((d) => (
@@ -124,12 +124,12 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services/" className="text-paper/80 hover:text-lime transition-colors">
-                  Roofing & Building Services
+                  Plumbing Services
                 </Link>
               </li>
               <li>
                 <Link href="/blog/" className="text-paper/80 hover:text-lime transition-colors">
-                  Roofing Advice
+                  Plumbing Advice
                 </Link>
               </li>
               <li>
@@ -183,8 +183,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {CLINIC_INFO.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-6">
-            <span>, </span>
-            <span>All in 1 Roofing and Building</span>
+            <a href="https://singaporeplumbingadm.com/" className="hover:text-paper">singaporeplumbingadm.com</a>
           </div>
         </div>
       </div>

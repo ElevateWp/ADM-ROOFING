@@ -21,12 +21,12 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* All in 1 Roofing and Building logo */}
+        {/* ADM Plumbing Services logo */}
         <div className="relative w-full aspect-[4/5] bg-paper overflow-hidden border border-mist mb-5 rounded-none shadow-sm">
           {/* Full logo stays visible inside the profile frame */}
           <Image
             src={dentist.image}
-            alt="Illustrative roofing team stock photo"
+            alt="Illustrative plumbing team stock photo"
             fill
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"
             className={`object-contain p-5 transition-all duration-500 ease-nova-ease ${
@@ -63,7 +63,7 @@ export default function DentistCard({ dentist, offsetY = false }: DentistCardPro
 
           {/* Specialization Tags */}
           <div className="flex flex-wrap gap-1.5 pt-2 border-t border-mist/60">
-            {dentist.specialties.map((spec) => (
+            {dentist.specialties.map((spec: string) => (
               <span
                 key={spec}
                 className="font-body text-13 text-forest-ink/80 bg-mist/60 px-2 py-0.5"

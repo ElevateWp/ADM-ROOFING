@@ -7,19 +7,19 @@ import { CLINIC_INFO } from '@/lib/clinic-data';
 
 const HOME_FAQS: AccordionItem[] = [
   {
-    question: 'What roofing and building services can I ask about?',
-    answer: 'Ask about roof repairs, flat, slate and tile roofing, chimneys, guttering, roofline work and building projects.',
+    question: 'What plumbing services can I ask about?',
+    answer: 'Ask about plumbing toilet flushing system repairs, plumbing leaks, general plumbing repairs and other plumbing work.',
     relatedLink: { href: '/services/', label: 'Explore our services →' },
   },
   {
     question: 'Do you cover my area?',
-    answer: 'The team serves Bexhill-on-Sea, Hastings and surrounding areas across East Sussex. Call to confirm availability for your address.',
+    answer: 'The team is based near Singapore. Call to confirm availability for your address.',
     relatedLink: { href: '/contact/', label: 'Contact our team →' },
   },
   {
-    question: 'Do you carry out roof repairs?',
-    answer: 'Yes. All in 1 Roofing and Building carries out roof repairs. Call to discuss your property and the work required.',
-    relatedLink: { href: '/roof-repair/', label: 'Explore roof repairs →' },
+    question: 'Do you carry out plumbing repairs?',
+    answer: 'Yes. ADM Plumbing Services carries out plumbing repairs. Call to discuss your property and the work required.',
+    relatedLink: { href: '/plumbing-repairs/', label: 'Explore plumbing repairs →' },
   },
   {
     question: 'How do I request a quote?',
@@ -44,10 +44,10 @@ export default function HomeFaqs() {
               Frequently Asked Questions
             </span>
             <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-              Questions about your roofing project
+              Questions about your plumbing project
             </h2>
             <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                Find out about roofing work, quotes and service availability.
+                Find out about plumbing work, quotes and service availability.
             </p>
             <div className="p-6 bg-mist/40 border border-mist">
               <span className="font-body text-13 text-forest font-medium block mb-1">

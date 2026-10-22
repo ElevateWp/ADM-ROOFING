@@ -1,85 +1,340 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, ArrowUpRight, Phone, Wrench } from 'lucide-react';
-import { CLINIC_INFO, SERVICES } from '@/lib/clinic-data';
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowDown, ArrowRight, Phone } from "lucide-react";
+import GlyphPortal from "@/components/ui/glyph-portal";
+import { CLINIC_INFO } from "@/lib/clinic-data";
+
+const family = '"Glyph Portal Jakarta", Arial, sans-serif';
+let fontLoad: Promise<void> | undefined;
 
 export default function HomeHero() {
+  const [face, setFace] = useState<string | null>(null);
+
   const phone = CLINIC_INFO.contact.phone;
-  const phoneLink = `tel:${phone.replace(/[^0-9+]/g, '')}`;
+
+  useEffect(() => {
+    let settled = false;
+    const finish = (value: string) => {
+      if (!settled) {
+        settled = true;
+        setFace(value);
+      }
+    };
+
+    fontLoad ??= new FontFace(
+      "Glyph Portal Jakarta",
+      'url("https://cdn.21st.dev/assets/mirror/15/153fc85b70298beeb1d61a5f723331649e7f23bb77302a66e61cb3e2fbdb5e79.woff2")',
+      { weight: "100 900" }
+    )
+      .load()
+      .then((font) => {
+        document.fonts.add(font);
+      });
+
+    const timeout = window.setTimeout(() => finish("Arial, sans-serif"), 1600);
+    void fontLoad.then(
+      () => finish(family),
+      () => finish("Arial, sans-serif")
+    );
+
+    return () => {
+      settled = true;
+      clearTimeout(timeout);
+    };
+  }, []);
 
   return (
-    <section
-      aria-label="All in 1 Roofing and Building"
-      className="relative isolate mb-6 mt-2 flex min-h-[640px] w-full max-w-none shrink-0 items-center overflow-hidden rounded-3xl bg-[#08294A] text-white sm:mt-3 md:min-h-[700px]"
+    <div
+      data-slipstream-demo
+      className="-mt-[88px] sm:-mt-[100px] md:-mt-[112px] relative w-full bg-white border-b border-[#EADCE1] overflow-clip"
+      style={{
+        width: "100%",
+        containerType: "inline-size",
+        fontFamily: face ?? "Arial, sans-serif",
+      }}
     >
-      <Image
-        src="/images/roofing-hero.png"
-        alt="Roofing work in progress in East Sussex"
-        fill
-        priority
-        sizes="(max-width: 768px) 100vw, 1480px"
-        className="hero-image-motion object-cover object-[center_36%] opacity-[0.55]"
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#08294A]/82 via-[#08294A]/56 to-[#08294A]/15 md:via-[#08294A]/46 md:to-[#08294A]/6" />
-      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-[#08294A]/30 via-[#08294A]/5 to-[#08294A]/10" />
+      <style>{`
+        @keyframes heroImgZoom{
+          from{transform:scale(1.0);}
+          to{transform:scale(1.14);}
+        }
+        [data-hero-bg-img]{
+          animation:heroImgZoom 12s ease-in-out infinite alternate;
+          transform-origin:center center;
+        }
+        [data-slipstream-demo] [data-gp-caption]{
+          inset:calc(var(--gp-word-bottom,50%) + 102px) 24px auto;
+          justify-content:center;
+        }
+        [data-slipstream-demo] [data-gp-hint]{display:none;}
+        [data-slipstream-demo] [data-gp-enter]{
+          min-height:48px;
+          padding:0 28px;
+          gap:20px;
+          background:#F0144A;
+          border:1px solid #D90B3E;
+          border-radius:9999px;
+          color:#ffffff;
+          font-size:14px;
+          font-weight:600;
+          letter-spacing:0.01em;
+          box-shadow:0 6px 20px rgba(240,20,74,0.32);
+          transition:all .2s ease;
+        }
+        [data-slipstream-demo] [data-gp-enter]:hover{
+          background:#FF3868;
+          box-shadow:0 8px 26px rgba(240,20,74,0.45);
+          transform:translateY(-1px);
+        }
+        [data-slipstream-demo] [data-gp-enter]:focus-visible{
+          outline:2px solid #24121B;
+          outline-offset:4px;
+        }
+        [data-slipstream-demo] [data-gp-touch-picker]{top:auto;bottom:18px;left:50%;}
+        [data-slipstream-demo] [data-gp-select]{
+          border:1px solid #EADCE1;
+          border-radius:8px;
+          font-size:12px;
+          color:#29212A;
+          background:#ffffff;
+        }
+        [data-ch-hero-header]{position:absolute;inset:clamp(24px,4.5cqw,48px) clamp(24px,5cqw,64px) auto;display:flex;align-items:center;justify-content:space-between;gap:20px;color:#29212A;}
+        [data-ch-hero-brand]{font-size:19px;font-weight:700;letter-spacing:-.045em;}
+        [data-ch-hero-category]{font-size:12px;line-height:1.5;color:#756B75;text-align:right;}
+        [data-ch-hero-intro]{position:absolute;inset:auto 24px calc(100% - var(--gp-word-top,35%) + 32px);margin:0;max-width:none;text-align:center;color:#756B75;font-size:13px;font-weight:500;line-height:1.5;letter-spacing:.01em;}
+        [data-ch-hero-support]{position:absolute;inset:calc(var(--gp-word-bottom,50%) + 32px) 24px auto;margin:0 auto;max-width:42ch;text-align:center;color:#756B75;font-size:16px;font-weight:400;line-height:1.5;text-wrap:balance;}
+        [data-sublime-scroll]{position:absolute;inset:auto 24px 7%;text-align:center;color:#756B75;font-size:11px;letter-spacing:.01em;}
+        @media(any-pointer:coarse){[data-sublime-scroll]{bottom:12%;}}
+        @media(any-pointer:coarse){[data-sublime-scroll]{bottom:13%;}}
+        @container(max-width:450px){
+          [data-ch-hero-category]{max-width:12ch;}
+          [data-ch-hero-intro]{font-size:12px;}
+          [data-ch-hero-support]{font-size:14px;}
+          [data-slipstream-demo] [data-gp-caption]{top:calc(var(--gp-word-bottom,50%) + 96px);}
+        }
+        @container(max-height:479px){
+          [data-ch-hero-header]{top:18px;}
+          [data-ch-hero-support]{top:calc(var(--gp-word-bottom,50%) + 16px);}
+          [data-slipstream-demo] [data-gp-caption]{top:calc(var(--gp-word-bottom,50%) + 78px);}
+          [data-sublime-scroll]{display:none;}
+        }
+        [data-slipstream-demo] [data-gp-content]{
+          padding:6rem clamp(1.25rem,5cqw,5rem) 6.5rem;
+          font-family:inherit;
+          background:#24121B;
+          color:#ffffff;
+        }
+        [data-slipstream-demo] section,[data-slipstream-demo] [data-gp-caption]{font-family:inherit;}
+        [data-slipstream-copy]{
+          display:flex;
+          width:min(100%,80rem);
+          margin:auto;
+          flex-direction:column;
+          align-items:flex-start;
+          gap:clamp(2rem,5svh,3.5rem);
+        }
+        [data-slipstream-copy] h2{
+          max-width:48rem;
+          margin:0;
+          color:#ffffff;
+          font-size:clamp(1.75rem,1.1rem + 2.1cqw,2.4rem);
+          font-weight:700;
+          line-height:1.2;
+          letter-spacing:-0.02em;
+          text-wrap:balance;
+        }
+        [data-slipstream-features]{
+          display:grid;
+          width:100%;
+          grid-template-columns:1fr;
+          gap:1.75rem;
+        }
+        [data-slipstream-feature]{
+          border-top:1px solid rgba(220,228,237,0.22);
+          padding-top:1.1rem;
+        }
+        [data-slipstream-feature] h3{
+          margin:0;
+          color:#ffffff;
+          font-size:1.125rem;
+          font-weight:600;
+          line-height:1.2;
+          letter-spacing:0;
+        }
+        [data-slipstream-feature] p{
+          margin:.55rem 0 0;
+          color:#EADCE1;
+          font-size:.9375rem;
+          line-height:1.55;
+        }
+        [data-slipstream-no]{
+          display:inline-block;
+          margin-right:.7rem;
+          color:#F0144A;
+          font:700 .8125rem ui-monospace,monospace;
+          letter-spacing:.08em;
+          transform:translateY(-.1em);
+        }
+        @container(min-width:768px){
+          [data-slipstream-features]{
+            grid-template-columns:repeat(3,minmax(0,1fr));
+            gap:3.5rem;
+          }
+        }
+      `}</style>
 
-      <div className="relative z-10 w-full px-6 pb-12 pt-28 sm:px-10 sm:pb-14 md:px-14 md:pb-16 md:pt-32 lg:px-[6.5%]">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-center lg:gap-8">
-        <div className="hero-fade-up max-w-[790px] lg:col-span-8">
-          <p className="mb-5 flex items-center gap-3 font-body text-[11px] font-semibold uppercase tracking-[0.16em] text-[#1689D5] sm:text-sm sm:tracking-[0.18em]">
-            <span aria-hidden="true" className="h-[3px] w-12 shrink-0 bg-[#0067B1] sm:w-16" />
-            Local roofing &amp; building specialists
-          </p>
-          <h1 className="mb-5 max-w-[850px] font-display text-[clamp(2.9rem,6.6vw,6.6rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-white">
-            <span className="block">Roofing &amp; building,</span>
-            <span className="block text-[#1689D5]">all in one place.</span>
-          </h1>
-          <p className="max-w-[650px] font-body text-base leading-relaxed text-white/75 sm:text-lg md:text-xl">
-            Roof repairs, flat and tiled roofing, guttering, chimney work and building services across Bexhill-on-Sea and East Sussex.
-          </p>
-
-          <div className="hero-cta-enter mt-7 flex flex-wrap gap-3 sm:mt-9 sm:gap-4">
-            <a
-              href={phoneLink}
-              className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#0067B1] px-6 font-body text-sm font-semibold text-white shadow-[0_8px_28px_rgba(0,0,0,0.22)] transition-colors hover:bg-[#1689D5] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-16 sm:px-9 sm:text-base"
+      {face ? (
+        <GlyphPortal
+          word="ADM PLUMBING"
+          fontFamily={face}
+          fontWeight={700}
+          style={{
+            fontFamily: face,
+            "--gp-paper": "#FFFFFF",
+            "--gp-ink": "#29212A",
+            "--gp-field": "#24121B",
+            "--gp-foreground": "#FFFFFF",
+          }}
+          scrollLength={2.2}
+          interactive={true}
+          annotations={false}
+          enterLabel="Step inside"
+          underlay={
+            <div
+              className="absolute inset-0 overflow-hidden pointer-events-none"
+              aria-hidden="true"
             >
-              <Phone aria-hidden="true" size={17} strokeWidth={2.4} />
-              Call us: {phone}
-            </a>
-            <Link
-              href="/request-a-quote/"
-              className="inline-flex min-h-14 items-center justify-center gap-4 rounded-full border border-white/45 bg-[#08294A]/25 px-6 font-body text-sm font-semibold text-white backdrop-blur-sm transition-colors hover:border-[#1689D5] hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white sm:min-h-16 sm:px-9 sm:text-base"
+              <Image
+                src="/images/logo.png"
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-contain"
+                style={{ opacity: 0.1, transform: "scale(1.35)", objectPosition: "center 46%" }}
+              />
+            </div>
+          }
+          background={
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                transform: "scale(var(--gp-field-scale,1))",
+              }}
             >
-              Request a quote
-              <ArrowRight aria-hidden="true" size={19} />
-            </Link>
-          </div>
-        </div>
+              {/* Plumbing photo at low opacity inside the glyph zoom destination */}
+              <Image
+                src="/images/plumbing-technician.jpg"
+                alt=""
+                fill
+                className="object-cover object-center"
+                style={{ opacity: 0.92 }}
+              />
+              {/* Dark gradient overlay for readability */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(circle at 18% 12%, rgba(240,20,74,0.28), transparent 38%), radial-gradient(circle at 82% 22%, rgba(217,11,62,0.35), transparent 32%), linear-gradient(135deg, rgba(36,18,27,0.94) 0%, rgba(36,18,27,0.9) 50%, rgba(36,18,27,0.96) 100%)",
+                }}
+              />
+            </div>
+          }
+          front={
+            <>
+              <div data-ch-hero-header>
+                <span data-ch-hero-brand>ADM Plumbing Services</span>
+                <span data-ch-hero-category>Plumbing Services, Singapore<br />Singapore</span>
+              </div>
+              <p data-ch-hero-intro>Plumbing support, available 24 hours.</p>
+              <p data-ch-hero-support>
+                Toilet bowl, flushing system, bidet, kitchen sink and pipe repairs from ADM Plumbing Services.
+              </p>
+              <span data-sublime-scroll>Scroll for a closer look ↓</span>
+            </>
+          }
+        >
+          <div data-slipstream-copy>
+            <h2>
+              Reliable plumbing help for Singapore homes, day and night.
+            </h2>
 
-        <div className="hero-slide-in w-full max-w-[500px] rounded-[1.6rem] border border-white/20 bg-[#08294A]/80 p-5 shadow-[0_22px_80px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:p-7 lg:col-span-4 lg:col-start-9">
-          <h2 className="mb-2 flex items-center gap-3 font-display text-xl font-semibold text-white sm:text-2xl">
-            <Wrench aria-hidden="true" className="text-[#0067B1]" size={26} strokeWidth={1.8} />
-            Roofing & Building Services
-          </h2>
-          <p className="mb-5 font-body text-sm leading-relaxed text-white/65 sm:text-base">Choose a service to find out more.</p>
-          <div className="divide-y divide-white/15 border-t border-white/15">
-            {SERVICES.slice(0, 6).map((service) => (
+            <div data-slipstream-features>
+              <div data-slipstream-feature>
+                <h3>
+                  <span data-slipstream-no>01</span>
+                  Toilet Bowl & Pipe Repairs
+                </h3>
+                <p>
+                  Toilet bowl, flushing system, bidet and pipe repairs across Singapore.
+                </p>
+              </div>
+
+              <div data-slipstream-feature>
+                <h3>
+                  <span data-slipstream-no>02</span>
+                  Toilet Flushing Repairs
+                </h3>
+                <p>
+                  Support for toilet flushing, bidet, kitchen sink and hot water pipe repairs.
+                </p>
+              </div>
+
+              <div data-slipstream-feature>
+                <h3>
+                  <span data-slipstream-no>03</span>
+                  Fair &amp; Clear Quotes
+                </h3>
+                <p>
+                  Transparent quotations, fair pricing and WhatsApp photo or video assessment.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-4 pt-4">
               <Link
-                key={service.slug}
-                href={`/${service.slug}/`}
-                className="group flex items-center justify-between gap-4 py-4 font-body text-sm font-medium text-white/90 transition-colors hover:text-[#1689D5] sm:text-base"
+                href="https://wa.me/6581339461"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#F0144A] px-7 font-body text-sm font-semibold text-white shadow-[0_6px_20px_rgba(240,20,74,0.35)] transition-all hover:bg-[#FF3868] hover:shadow-[0_8px_26px_rgba(240,20,74,0.45)]"
               >
-                <span className="flex items-center gap-4">
-                  <Wrench aria-hidden="true" size={23} strokeWidth={1.8} className="shrink-0 text-[#1689D5]" />
-                  {service.navLabel}
-                </span>
-                <ArrowUpRight aria-hidden="true" size={19} className="text-white/55 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-[#1689D5]" />
+                WhatsApp Us
+                <ArrowRight size={16} />
               </Link>
-            ))}
+              <a
+                href="https://wa.me/6581339461"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 font-body text-sm font-semibold text-white transition-all hover:bg-white/20"
+              >
+                <Phone size={15} className="text-[#FF3868]" />
+                WhatsApp ADM
+              </a>
+              <a
+                href="#home-stats"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 font-body text-sm font-medium text-white/90 hover:bg-white/15 hover:text-white transition-all"
+              >
+                <span>Explore all reviews &amp; services</span>
+                <ArrowDown size={15} />
+              </a>
+            </div>
           </div>
+        </GlyphPortal>
+      ) : (
+        <div
+          role="status"
+          style={{
+            height: "80vh",
+            display: "grid",
+            placeItems: "center",
+            color: "#29212A",
+            fontSize: 14,
+            fontWeight: 500,
+          }}
+        >
+          Loading type…
         </div>
-        </div>
-      </div>
-    </section>
+      )}
+    </div>
   );
 }

@@ -6,23 +6,23 @@ import AnimateOnScroll from '@/components/motion/AnimateOnScroll';
 const GALLERY_IMAGES = [
   ...Array.from({ length: 14 }, (_, index) => {
     const images = [
-      '/images/roofing-hero.png', '/images/roofb3-1.jpg', '/images/roof-with-tiles.png',
-      '/images/roof-without-tiles.png', '/images/roof-saffron-walden-1024x768-1.jpg',
+      '/images/plumbing-technician.jpg', '/images/plumbing-repair.jpg', '/images/plumbing-pipes.jpg',
+      '/images/plumbing-hot-water.jpg', '/images/plumbing-pipes.jpg',
     ];
-    return { src: images[index % images.length], alt: 'Illustrative roofing stock photo' };
+    return { src: images[index % images.length], alt: 'Illustrative plumbing stock photo' };
   }),
 ];
 
 export default function HomeGallery() {
   return (
-    <section id="roofing-gallery" className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
+    <section id="plumbing-gallery" className="relative z-20 w-full bg-paper py-20 md:py-32 border-t border-mist overflow-hidden">
       <div className="max-w-site mx-auto px-6 md:px-12">
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-16">
-          <span className="font-body text-13 text-[#0067B1] block mb-2 font-medium uppercase tracking-wider">
-            All in 1 Roofing and Building
+          <span className="font-body text-13 text-[#F0144A] block mb-2 font-medium uppercase tracking-wider">
+            ADM Plumbing Services
           </span>
-          <h2 className="font-display text-33 md:text-41 text-[#172B40]">Roofing &amp; Building Projects</h2>
-          <p className="mt-3 max-w-2xl font-body text-15 leading-relaxed text-forest-light">Explore roofing and restoration imagery. Images are illustrative; contact us to discuss your roofing.</p>
+          <h2 className="font-display text-33 md:text-41 text-[#29212A]">Plumbing Services</h2>
+          <p className="mt-3 max-w-2xl font-body text-15 leading-relaxed text-forest-light">Explore plumbing and restoration imagery. Images are illustrative; contact us to discuss your plumbing.</p>
         </AnimateOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch mb-6">
@@ -31,7 +31,7 @@ export default function HomeGallery() {
               key={`${item.src}-${index}`}
               animation={index === 0 ? 'fade-right' : 'fade-down'}
               duration={0.85}
-              className={`${index === 0 ? 'md:col-span-5' : 'md:col-span-7'} min-h-[300px] md:min-h-[420px] relative bg-[#F2F7FC] overflow-hidden border border-[#D8E4EF] shadow-sm`}
+              className={`${index === 0 ? 'md:col-span-5' : 'md:col-span-7'} min-h-[300px] md:min-h-[420px] relative bg-[#FFF4F6] overflow-hidden border border-[#EADCE1] shadow-sm`}
             >
               <MediaParallax speed={index === 0 ? 0.06 : 0.08} className="w-full h-full">
                 <Image
@@ -53,7 +53,7 @@ export default function HomeGallery() {
               animation="zoom-in"
               duration={0.8}
               delay={(index % 3) * 0.1}
-              className="aspect-[4/3] relative bg-[#F2F7FC] overflow-hidden border border-[#D8E4EF] shadow-sm"
+              className="aspect-[4/3] relative bg-[#FFF4F6] overflow-hidden border border-[#EADCE1] shadow-sm"
             >
               <MediaParallax speed={0.05 + (index % 3) * 0.01} className="w-full h-full">
                 <Image

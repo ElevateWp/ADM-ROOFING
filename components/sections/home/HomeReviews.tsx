@@ -10,13 +10,13 @@ export default function HomeReviews() {
         <AnimateOnScroll animation="fade-up" duration={0.8} className="mb-12 text-center">
           <span className="font-body text-13 text-forest-light block mb-2 font-medium uppercase tracking-wider">Customer reviews</span>
           <h2 className="font-display text-33 md:text-41 text-forest-ink">Rated {CLINIC_INFO.verifiedStats[0].value} out of 5</h2>
-          <p className="mx-auto mt-3 font-body text-15 text-forest-ink/75">Based on 50 Google reviews</p>
+          <p className="mx-auto mt-3 font-body text-15 text-forest-ink/75">Based on 309 Google reviews</p>
         </AnimateOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {CUSTOMER_REVIEWS.map((review, index) => (
             <AnimateOnScroll key={review.name} animation="fade-up" delay={index * 0.1} duration={0.8}>
               <article className="h-full bg-paper border border-mist p-6 md:p-7 shadow-sm">
-                <div className="mb-4 flex items-center gap-1 text-[#0067B1]" aria-label="5 out of 5 stars">★★★★★</div>
+                <div className="mb-4 flex items-center gap-1 text-[#F0144A]" aria-label="5 out of 5 stars">★★★★★</div>
                 <p className="font-body text-15 text-forest-ink/85 leading-relaxed">“{review.text}”</p>
                 <div className="mt-6 border-t border-mist pt-4">
                   <h3 className="font-display text-17 text-forest-ink">{review.name}</h3>

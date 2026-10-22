@@ -17,9 +17,9 @@ import { SERVICES } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'Roofing & Building Services',
+  title: 'Plumbing Services',
   description:
-    'All in 1 Roofing and Building provides roofing and building services in Bexhill-on-Sea, East Sussex. Call +44 1424 232873.',
+    'ADM Plumbing Services provides plumbing services in Singapore. Call +65 8133 9461.',
   pathname: '/',
 });
 
@@ -44,10 +44,10 @@ export default function HomePage() {
       {/* SECTION 2A: Customer reviews */}
       <HomeReviews />
 
-      {/* SECTION 3: Roofing & Building Services */}
+      {/* SECTION 3: Plumbing Services */}
       <PinnedHorizontalTrack
         items={serviceTrackItems}
-        title="Roofing & Building Services"
+        title="Plumbing Services"
       />
 
       {/* Signature Brand Device 2 of 4: Full-Bleed Section Divider */}
@@ -55,19 +55,19 @@ export default function HomePage() {
         <TextureBackground variant="divider" className="opacity-30" />
       </div>
 
-      {/* SECTION 4: Why Choose All in 1 Roofing and Building */}
+      {/* SECTION 4: Why Choose ADM Plumbing Services */}
       <HomeWhyUs />
 
       {/* SECTION 5: Meet Our Team */}
       <HomeDentists />
 
-      {/* SECTION 6: Featured Roofing Work */}
+      {/* SECTION 6: Featured Plumbing Work */}
       <HomeFeaturedTreatments />
 
       {/* SECTION 7: Before & After (Draggable Slider - Orchestrated Moment 3) */}
       <HomeBeforeAfter />
 
-      {/* SECTION 9: Roofing & Building Projects */}
+      {/* SECTION 9: Plumbing Services Projects */}
       <HomeGallery />
 
       {/* SECTION 10: Frequently Asked Questions */}

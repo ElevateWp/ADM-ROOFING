@@ -9,26 +9,27 @@ import JsonLd from '@/components/ui/JsonLd';
 import { generateLocalBusinessSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://singaporeplumbingadm.com'),
   title: {
-    default: 'All in 1 Roofing and Building | Roofing & Building in East Sussex',
+    default: 'ADM Plumbing Services | Plumber Singapore',
     template: '%s',
   },
   description:
-    'Contact All in 1 Roofing and Building in Bexhill-on-Sea, East Sussex for roofing and building services. Call +44 1424 232873.',
+    'Contact ADM Plumbing Services in Singapore for toilet bowl, bidet, sink and pipe repairs. Call or WhatsApp +65 8133 9461.',
   keywords: [
-    'All in 1 Roofing and Building',
-    'roofing and building services',
-    'roof repairs',
+    'ADM Plumbing Services',
+    'plumbing services Singapore',
+    'plumbing repairs',
   ],
-  authors: [{ name: 'All in 1 Roofing and Building' }],
+  authors: [{ name: 'ADM Plumbing Services' }],
   icons: {
     icon: [
-      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
     ],
-    shortcut: [{ url: '/favicon.png', type: 'image/png' }],
-    apple: [{ url: '/favicon.png', sizes: '180x180', type: 'image/png' }],
+    shortcut: [{ url: '/favicon-32.png', type: 'image/png' }],
+    apple: [{ url: '/favicon-180.png', sizes: '180x180', type: 'image/png' }],
   },
 };
 
@@ -38,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-GB" className="scroll-smooth">
+    <html lang="en-SG" className="scroll-smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -47,7 +48,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#DCEEFF] selection:text-[#172B40]">
+      <body className="bg-paper text-forest-ink min-h-screen flex flex-col selection:bg-[#FCE0E8] selection:text-[#29212A]">
         <PagePreloader />
         <SiteTextReveal />
         <JsonLd data={generateLocalBusinessSchema()} />

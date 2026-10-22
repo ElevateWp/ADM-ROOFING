@@ -67,13 +67,13 @@ export default function SingleDentistPage({ params }: DentistProfileProps) {
         <div className="max-w-site mx-auto px-6 md:px-12">
           <Breadcrumbs
             items={[
-              { name: 'All in 1 Roofing and Building team', path: '/our-team/' },
+              { name: 'ADM Plumbing Services team', path: '/our-team/' },
               { name: dentist.name, path: `/our-team/${dentist.slug}/` },
             ]}
           />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8 items-start">
-            {/* Illustrative roofing team image */}
+            {/* Illustrative plumbing team image */}
             <div className="lg:col-span-5">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <div className="relative aspect-[4/5] bg-mist overflow-hidden border border-mist shadow-sm">

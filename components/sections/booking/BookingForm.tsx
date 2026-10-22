@@ -27,9 +27,9 @@ export default function BookingForm() {
     fullName: '',
     phone: '',
     email: '',
-    service: 'roof-repair',
+    service: 'plumbing-repairs',
     preferredDate: '',
-    preferredTime: 'Morning (09:00 – 12:00)',
+    preferredTime: 'Morning (07:00 – 12:00)',
     notes: '',
   });
 
@@ -108,9 +108,9 @@ export default function BookingForm() {
                 fullName: '',
                 phone: '',
                 email: '',
-                service: 'roof-repair',
+                service: 'plumbing-repairs',
                 preferredDate: '',
-                preferredTime: 'Morning (09:00 – 12:00)',
+                preferredTime: 'Morning (07:00 – 12:00)',
                 notes: '',
               });
             }}
@@ -137,7 +137,7 @@ export default function BookingForm() {
     >
       <div>
         <h3 className="font-display text-26 md:text-33 text-forest-ink mb-2">
-          Request a Roofing Quote
+          Request a Plumbing Quote
         </h3>
         <p className="font-body text-15 text-forest-ink/70">
           Tell us what you would like to improve. Our team will contact you to discuss the project and next steps.
@@ -162,7 +162,7 @@ export default function BookingForm() {
           required
         />
         {errors.fullName && (
-          <span className="font-body text-13 text-[#65788B] transition-all duration-200">
+          <span className="font-body text-13 text-[#756B75] transition-all duration-200">
             {errors.fullName}
           </span>
         )}
@@ -182,12 +182,12 @@ export default function BookingForm() {
               setFormData({ ...formData, phone: e.target.value });
               if (errors.phone) setErrors({ ...errors, phone: undefined });
             }}
-            placeholder="+44 1424 232873"
+            placeholder="+65 8133 9461"
             className="w-full px-4 py-3 text-15 focus:border-forest transition-colors"
             required
           />
           {errors.phone && (
-            <span className="font-body text-13 text-[#65788B]">{errors.phone}</span>
+            <span className="font-body text-13 text-[#756B75]">{errors.phone}</span>
           )}
         </div>
 
@@ -208,7 +208,7 @@ export default function BookingForm() {
             required
           />
           {errors.email && (
-            <span className="font-body text-13 text-[#65788B]">{errors.email}</span>
+            <span className="font-body text-13 text-[#756B75]">{errors.email}</span>
           )}
         </div>
       </div>
@@ -229,7 +229,7 @@ export default function BookingForm() {
               {s.name}
             </option>
           ))}
-          <option value="general-consultation">Other roofing work project</option>
+          <option value="general-consultation">Other plumbing work project</option>
         </select>
       </div>
 
@@ -252,7 +252,7 @@ export default function BookingForm() {
             required
           />
           {errors.preferredDate && (
-            <span className="font-body text-13 text-[#65788B]">{errors.preferredDate}</span>
+            <span className="font-body text-13 text-[#756B75]">{errors.preferredDate}</span>
           )}
         </div>
 
@@ -283,7 +283,7 @@ export default function BookingForm() {
           rows={3}
           value={formData.notes}
           onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-          placeholder="Describe the roofing issue or work you would like to discuss..."
+          placeholder="Describe the plumbing issue or work you would like to discuss..."
           className="w-full px-4 py-3 text-15 focus:border-forest transition-colors resize-none"
         />
       </div>

@@ -14,24 +14,24 @@ import { CLINIC_INFO, DENTISTS } from '@/lib/clinic-data';
 import { createMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createMetadata({
-  title: 'About All in 1 Roofing and Building',
+  title: 'About ADM Plumbing Services',
   description:
-    'Learn about All in 1 Roofing and Building and its roofing and building services. Call +44 1424 232873 to discuss your project.',
+    'Learn about ADM Plumbing Services and its plumbing services. Call +65 8133 9461 to discuss your project.',
   pathname: '/about/',
 });
 
 const TIMELINE = [
   {
-    year: 'East Sussex',
+    year: 'Singapore',
     title: 'Services for your property',
-    description: 'All in 1 Roofing and Building provides roofing and building services and repairs. Contact the team to discuss the work you need.',
+    description: 'ADM Plumbing Services provides plumbing services and repairs. Contact the team to discuss the work you need.',
   },
 ];
 
 const APPROACH_STEPS = [
   {
     title: 'Listen and plan',
-    description: 'We discuss the roofing, the issue you have noticed and the work you would like done.',
+    description: 'We discuss the plumbing, the issue you have noticed and the work you would like done.',
   },
   {
     title: 'Clear Quotes',
@@ -39,7 +39,7 @@ const APPROACH_STEPS = [
   },
   {
     title: 'Careful workmanship',
-    description: 'We take care with the roofing work agreed for your property.',
+    description: 'We take care with the plumbing work agreed for your property.',
   },
   {
     title: 'Keep you informed',
@@ -59,11 +59,11 @@ export default function AboutPage() {
             <div className="lg:col-span-8">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-3 font-medium uppercase tracking-wider">
-                  About All in 1 Roofing and Building
+                  About ADM Plumbing Services
                 </span>
-                <WordRevealH1 text="Roofing & Building Services for your property." />
+                <WordRevealH1 text="Plumbing Services for your property." />
                 <div className="mt-8">
-                  <ScrubbedParagraph text="All in 1 Roofing and Building provides roofing and building services and repairs. Contact the team to discuss your property and the work you need." />
+                  <ScrubbedParagraph text="ADM Plumbing Services provides plumbing services and repairs. Contact the team to discuss your property and the work you need." />
                 </div>
               </AnimateOnScroll>
             </div>
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 <div className="p-6 bg-paper border border-mist space-y-3 font-body text-13 text-forest-ink/80 shadow-sm">
                   <div className="flex justify-between border-b border-mist pb-2">
                     <span>Call</span>
-                    <span className="font-medium text-forest">+44 1424 232873</span>
+                    <span className="font-medium text-forest">+65 8133 9461</span>
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -161,7 +161,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 4: Equipe All in 1 Roofing and Building */}
+      {/* SECTION 4: Equipe ADM Plumbing Services */}
       <section className="py-20 md:py-32 border-b border-mist">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <AnimateOnScroll animation="fade-up" duration={0.8}>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                   Our Team
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                  Meet the All in 1 Roofing and Building Team
+                  Meet the ADM Plumbing Services Team
                 </h2>
               </div>
               <Link
@@ -191,20 +191,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION 5: Roofing and Building Work */}
+      {/* SECTION 5: Plumbing Services Work */}
       <section className="py-20 md:py-32 border-b border-mist overflow-hidden">
         <div className="max-w-site mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6">
               <AnimateOnScroll animation="fade-right" duration={0.8}>
                 <span className="font-body text-13 text-forest-ink/60 block mb-2 font-medium uppercase tracking-wider">
-                  Our Roofing & Building Services
+                  Our Plumbing Services
                 </span>
                 <h2 className="font-display text-33 md:text-41 text-forest-ink mb-6">
-                  Roofing and building for your property
+                  Plumbing repairs for your property
                 </h2>
                 <p className="font-body text-15 md:text-17 text-forest-ink/80 leading-relaxed mb-6">
-                  The team can discuss roofing work, repairs and suitable next steps for your property.
+                  The team can discuss plumbing work, repairs and suitable next steps for your property.
                 </p>
                 <div className="space-y-2 font-body text-13 text-forest-ink/70">
                   <div className="flex items-center gap-2">
@@ -224,15 +224,15 @@ export default function AboutPage() {
                 <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                   <MediaParallax speed={0.08} className="w-full h-full">
                     <Image
-                      src="/images/roofing-hero.png"
-                      alt="Roofing work in progress"
+                      src="/images/plumbing-technician.jpg"
+                      alt="Plumbing work in progress"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover"
                     />
                   </MediaParallax>
                   <div className="absolute bottom-3 left-3 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-3 py-1 font-medium border border-mist/50">
-                    Roofing work
+                    Plumbing work
                   </div>
                 </div>
               </AnimateOnScroll>
@@ -250,7 +250,7 @@ export default function AboutPage() {
                 Project inspiration
               </span>
               <h2 className="font-display text-33 md:text-41 text-forest-ink">
-                Roofing and building inspiration
+                Plumbing service information
               </h2>
             </div>
           </AnimateOnScroll>
@@ -259,42 +259,42 @@ export default function AboutPage() {
             <AnimateOnScroll animation="zoom-in" delay={0.1}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/roofb3-1.jpg"
-                  alt="Roofing project"
+                  src="/images/plumbing-repair.jpg"
+                  alt="Plumbing project"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roofing reference
+                  Plumbing reference
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.2}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/roof-with-tiles.png"
-                  alt="Tiled roof project"
+                  src="/images/plumbing-pipes.jpg"
+                  alt="Plumbing pipes project"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Tiled roofing
+                  Plumbing pipes
                 </div>
               </div>
             </AnimateOnScroll>
             <AnimateOnScroll animation="zoom-in" delay={0.3}>
               <div className="relative aspect-[4/3] bg-mist overflow-hidden border border-mist shadow-sm">
                 <Image
-                  src="/images/roof-without-tiles.png"
-                  alt="Roofing project"
+                  src="/images/plumbing-hot-water.jpg"
+                  alt="Plumbing project"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover"
                 />
                 <div className="absolute bottom-2 left-2 bg-paper/95 backdrop-blur-sm text-forest-ink font-body text-13 px-2.5 py-0.5 border border-mist/50">
-                  Roof repair
+                  Plumbing repair
                 </div>
               </div>
             </AnimateOnScroll>
@@ -311,7 +311,7 @@ export default function AboutPage() {
                 Request a Quote
               </span>
               <h2 className="font-display text-33 md:text-41 text-paper">
-                Tell us about your roofing work plans
+                Tell us about your plumbing work plans
               </h2>
               <p className="font-body text-15 text-paper/80 mt-2 max-w-xl">
                 Call us to discuss the work you need and check availability.

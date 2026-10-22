@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
 export default function LegacyServiceRedirect() {
-  redirect('/gutter-repair/');
+  redirect('/pipe-leak-repair/');
 }

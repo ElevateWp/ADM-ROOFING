@@ -56,7 +56,7 @@ export default function SiteTextReveal() {
       const targetColor = getComputedStyle(paragraph).color;
 
       const context = gsap.context(() => {
-        gsap.fromTo(words, { color: '#65788B' }, {
+        gsap.fromTo(words, { color: '#756B75' }, {
           color: targetColor,
           ease: 'none',
           stagger: 0.015,
