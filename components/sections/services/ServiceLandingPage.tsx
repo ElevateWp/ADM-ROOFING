@@ -19,7 +19,6 @@ const RELATED_SERVICE_SLUGS: Record<string, string[]> = {
   'toilet-bowl-repair': ['toilet-flushing-repair', 'plumbing-repairs', 'plumbing-maintenance'],
   'kitchen-sink-repair': ['plumbing-services', 'hot-water-pipe-repair', 'toilet-bowl-repair'],
   'bidet-repair': ['plumbing-maintenance', 'toilet-flushing-repair', 'plumbing-repairs'],
-  'plumbing-repairs': ['plumbing-repairs', 'toilet-bowl-repair', 'plumbing-maintenance'],
 };
 
 export default function ServiceLandingPage({ slug }: { slug: string }) {
